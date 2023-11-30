@@ -1,0 +1,39 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Kanit:wght@100;200;300;400;500;600;700;900&display=swap');
+
+@mixin default{
+    font-family: 'Kanit', sans-serif;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+@mixin button-style{
+    padding: 10px 30px;
+    border-radius: 20px;
+}
+
+// @mixin button-style2{
+
+// }
+
+
+// =========== Color =============
+$my-white: white;
+$my-blue: #49488A;
+$my-gray: rgb(242, 242, 242);
+
+
+
+// ============= Screens =================
+$small-One : 320px;
+$small-Two : 480px;
+$medium-One : 481px ;
+$medium-Two : 768px;
+$large-One : 1025px;
+$large-Two : 1200px;
+
+
+// ================ Fonts Size ================
+$big-fonts : 60px;
+

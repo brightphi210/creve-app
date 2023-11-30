@@ -1,0 +1,191 @@
+
+@import '../variables.scss';
+
+*{@include default}
+
+
+// =================== NavBar =========================
+
+.navDivMain{
+    background-color: $my-white;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    width: 100%;
+    position: fixed;
+}
+
+.sectionSubDiv{
+    isolation: isolate;
+}
+
+.navDiv{
+    display: flex;
+    padding: 15px 5%;
+}
+
+.maimLogo{
+    display: none;
+}
+
+.firstNavDiv{
+    display: flex;
+    align-items: center;
+    gap: 60px;
+}
+
+
+.firstNavDiv img{
+    cursor: pointer;
+}
+
+
+// ========== NavUl =================
+.navUl{
+    display: flex;
+    gap: 20px;
+    width: 100%;
+}
+
+.navUl p{
+    cursor: pointer;
+}
+
+
+.dropDown{
+    display: flex;
+    align-items: center;
+}
+
+
+
+// ================== Second Nav =================
+
+.secondNavDiv{
+    margin-left: auto;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.apply{
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.secondNavDiv button{
+    @include button-style
+}
+
+.loginBtn{
+    background-color: $my-white;
+    border: 1px solid $my-blue;
+    color: $my-blue;
+}
+
+.signupBtn{
+    background-color: $my-blue;
+    border:none;
+    color: $my-white;
+}
+
+@media only screen and (min-width: $small-One) and (max-width: $medium-Two) {
+
+    // ========== main Logo ===============
+    .maimLogo{
+        display: flex;
+        padding: 15px 8%;
+        align-items: center;
+    }
+
+    .maimLogo img{
+        width: 80px;
+    }
+
+
+    // ============ First Div =============
+    .firstNavDiv{
+        display: block;
+        
+    }
+
+    .firstNavDiv img{
+        cursor: pointer;
+        display: none;
+        
+    }
+
+
+    // =========== Nav UL =============
+
+    .navDiv{
+        background-color:$my-gray;
+        display: block;
+        position: fixed;
+        width: 100%;
+        height: 100%;
+        top: 60px;
+        bottom: 0;
+        padding: 30px;
+        z-index: 100;
+        transition: transform 0.3s ease-in-out;
+    }
+      
+    .navDiv.open {
+        transform: translateY(100%);
+    }
+
+
+    .navUl{
+        display: block;
+        margin-bottom: 20px;
+    }
+
+    .navUl p{
+        margin-bottom: 10px;
+        font-size: 15px;
+        color: $my-blue;
+        width: fit-content;
+    }
+
+    .navIcons{
+        margin-left: auto;
+        font-size: 20px;
+    }
+
+
+    // ================ Second Div =================
+    .secondNavDiv{
+        display: block;
+        margin-top: 10px;
+    }
+
+    .apply{
+        width: fit-content;
+    }
+    
+    .loginBtn, .signupBtn{
+        display: block;
+        margin-top: 15px;
+        width: 50%;
+    }
+}
+
+
+@media only screen and (min-width: $large-One) and (max-width: $large-Two) {
+    .firstNavDiv{
+        display: flex;
+        align-items: center;
+        gap: 20px;
+    }
+
+    .navUl{
+        display: flex;
+        gap: 10px;
+        width: 100%;
+    }
+
+
+    .firstNavDiv img{
+        cursor: pointer;
+        width: 60px;
+    }
+}

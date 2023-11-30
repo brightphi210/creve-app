@@ -1,0 +1,110 @@
+
+@import '../variables.scss';
+
+*{@include default}
+
+
+// ======================= SectioOne  ==============================
+
+.sectionOne{
+    padding-top: 18%;
+    text-align: center;
+    background-color: $my-white;
+    height: 100vh;
+}
+
+
+.sectionOne::before{
+    background-image: url('./Images/back.png');
+    height: 90vh;
+    width: 100%;
+    position: absolute;
+    content: '';
+    background-repeat: no-repeat;
+    background-size: cover;
+    inset: 0;
+
+    transform: scale();
+    // animation-name: floating;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+}
+
+
+@keyframes floating {
+    0% { transform: translate(0,  0px); }
+    50%  { transform: translate(0, 10px); }
+    100%   { transform: translate(0, -0px); }   
+}
+
+
+
+
+
+.sectionOne h2{
+    font-size: $big-fonts;
+    font-weight: 500;
+    line-height: 70px;
+}
+
+.sectionSubDiv .pOne{
+    padding: 10px 0;
+}
+
+
+.searchDiv{
+    position: relative;
+}
+
+.searchDiv input{
+    width: 30%;
+    padding: 13px 50px;
+    margin-top: 10px;
+    border-radius: 30px;
+    border: 1px solid $my-blue;
+    outline: none;
+
+    &:focus {
+        border-color: $my-blue;
+        box-shadow: 0 0 5px rgba(172, 130, 214, 0.5);
+      }
+}
+
+
+.searchIcon{
+    position: absolute;
+    top: 25px;
+    left: 37%;
+}
+
+
+.searchDiv button{
+    padding: 13px 30px;
+    border-radius: 0 20px 20px 0 ;
+    background-color: $my-blue;
+    color: $my-white;
+    border: none;
+    position: absolute;
+    top: 11px;
+    right: 35%;
+    cursor: pointer;
+}
+
+
+.popularDiv{
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    margin-top: 20px;
+    align-items: center;
+}
+
+.popularDiv button{
+    padding: 10px 15px;
+    border-radius: 5px;
+    border: $my-blue solid 1px;
+    background-color: $my-white;
+    cursor: pointer;
+}
+
