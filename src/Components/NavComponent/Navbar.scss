@@ -11,15 +11,14 @@
     box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
     width: 100%;
     position: fixed;
+    z-index: 3;
 }
 
-.sectionSubDiv{
-    isolation: isolate;
-}
 
 .navDiv{
     display: flex;
     padding: 15px 5%;
+    isolation: isolate;
 }
 
 .maimLogo{
@@ -79,12 +78,18 @@
     background-color: $my-white;
     border: 1px solid $my-blue;
     color: $my-blue;
+    cursor: pointer;
 }
 
 .signupBtn{
     background-color: $my-blue;
     border:none;
     color: $my-white;
+    cursor: pointer;
+}
+
+.signupBtn:hover{
+    @include hover-blue
 }
 
 @media only screen and (min-width: $small-One) and (max-width: $medium-Two) {
@@ -125,7 +130,7 @@
         top: 60px;
         bottom: 0;
         padding: 30px;
-        z-index: 100;
+        z-index: 3;
         transition: transform 0.3s ease-in-out;
     }
       

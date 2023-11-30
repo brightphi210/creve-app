@@ -9,8 +9,9 @@
 .sectionOne{
     padding-top: 18%;
     text-align: center;
-    background-color: $my-white;
+    // background-color: $my-white;
     height: 100vh;
+    // z-index: -1;
 }
 
 
@@ -48,9 +49,14 @@
     line-height: 70px;
 }
 
+.sectionSubDiv{
+    z-index: 3;
+    isolation: isolate;
+}
 .sectionSubDiv .pOne{
     padding: 10px 0;
 }
+
 
 
 .searchDiv{
@@ -108,3 +114,68 @@
     cursor: pointer;
 }
 
+.smallImg{
+    display: none;
+}
+
+
+@media only screen and (min-width: $small-One) and (max-width: $small-Two) {
+
+    .sectionOne{
+        padding: 100px 5%;
+    }
+    .sectionOne::before{
+        display: none;
+    }
+
+    .sectionOne h2{
+        font-size: $medium-fonts;
+        font-weight: 500;
+        line-height: 35px;
+        text-align: left;
+    }
+
+    .pOne{
+        text-align: left;
+    }
+
+    .searchDiv input{
+        width: 100%;
+    }
+
+    .searchDiv button{
+        padding: 13px 30px;
+        right: 0;
+        cursor: pointer;
+    }
+
+    .searchIcon{
+        position: absolute;
+        top: 25px;
+        left: 25px;
+    }
+    
+
+    .popularDiv{
+        display: block;
+        justify-content: start;
+        text-align: left;
+    }
+
+    .popularDiv button{
+        margin-right: 10px;
+        margin-top: 10px;
+    }
+
+    .smallImg{
+        display: block;
+        margin-top: 30px;
+    }
+
+    .smallImg img{
+        display: block;
+        width: 100%;
+    }
+
+    
+}

@@ -13,15 +13,15 @@
     border-radius: 20px;
 }
 
-// @mixin button-style2{
 
-// }
-
+@mixin hover-blue{
+    background-color:#5b5aa1;
+}
 
 // =========== Color =============
 $my-white: white;
 $my-blue: #49488A;
-$my-gray: rgb(242, 242, 242);
+$my-gray: rgb(253, 253, 253);
 
 
 
@@ -36,4 +36,5 @@ $large-Two : 1200px;
 
 // ================ Fonts Size ================
 $big-fonts : 60px;
+$medium-fonts : 35px;
 
