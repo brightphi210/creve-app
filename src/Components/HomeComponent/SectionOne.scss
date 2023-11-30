@@ -180,3 +180,9 @@
 
     
 }
+
+@media only screen and (min-width: $medium-One) and (max-width: $medium-Two) {
+    .sectionOne::before{
+        display: none;
+    }
+}
