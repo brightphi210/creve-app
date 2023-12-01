@@ -1,0 +1,99 @@
+
+@import '../variables.scss';
+
+*{@include default}
+
+// =========================== sectionTwo ==========================
+
+.sectionTwo{
+    padding: 50px 30%;
+    background-color: rgb(245, 245, 245);
+}
+
+.sectionTwo h2{
+    text-align: center;
+    padding-bottom: 20px;
+    font-weight: 500;
+}
+
+
+.subSecTwo{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 30px;
+    box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
+    border-radius: 20px;
+    padding: 30px;
+}
+
+.subSecTwo img{
+    width: 180px;
+}
+
+.secImgDiv{
+}
+
+.exploreDiv h3{
+    font-size: 25px;
+    font-weight: 400;
+    line-height: 30px;
+}
+
+.exploreDiv p{
+    padding: 10px 0;
+}
+
+.exploreDiv button{
+    padding: 10px 20px;
+    background-color: $my-blue;
+    border: none;
+    border-radius: 20px;
+    color: $my-white;
+    display: flex;
+    gap: 5px;
+    align-items: center;
+    font-size: 13px;
+    cursor: pointer;
+}
+
+@media only screen and (min-width: $small-One) and (max-width: $small-Two) {
+    .sectionTwo{
+        padding: 50px 7%;
+        background-color: rgb(245, 245, 245);
+    }
+
+
+    .subSecTwo{
+        display: block;
+        margin-bottom: 0;
+    }
+    
+
+    .exploreDiv h3{
+        font-size: 16px;
+    }
+
+    .exploreDiv p{
+        font-size: 11px;
+        padding: 10px 0;
+    }
+
+    .subSecTwo img{
+        width: 40px;
+        // display: none;
+    }
+
+    .subSecTwo{
+        padding: 20px;
+    }
+
+    .exploreDiv button{
+        padding: 7px 15px;
+        font-size: 12px;
+    }
+    
+    
+}
+

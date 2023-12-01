@@ -17,7 +17,7 @@
 
 .sectionOne::before{
     background-image: url('./Images/back.png');
-    height: 90vh;
+    height: 100vh;
     width: 100%;
     position: absolute;
     content: '';
@@ -183,6 +183,15 @@
     background-color: $my-white;
     border-radius: 20px;
     cursor: pointer;
+    display: flex;
+    align-items: center;
+    margin: auto;
+    font-size: 15px;
+    gap: 5px;
+}
+
+.react-multiple-carousel__arrow {
+    z-index: 0;
 }
 
 
@@ -253,6 +262,7 @@
     .caroImageDiv{
         width: 100%;
         padding-right: 0;
+        margin-bottom: 10px;
     }
     
     .caroImageDiv img {
@@ -263,7 +273,7 @@
     // ===================== Carosel section ===================
     .caroselSection{
         padding: 10px 7%;
-        text-align: center;
+        text-align: left;
     }
 
     .caroselSection h2{
@@ -271,11 +281,48 @@
         line-height: 25px;
     }
 
+
+    .caroImageDiv p{
+        text-align: left;
+        font-size: 15px;
+    }
+
+    .allBtn{
+        padding: 7px 20px;
+        margin: 0;
+        font-size: 12px;
+        gap: 5px;
+    }
+
     
 }
 
-@media only screen and (min-width: $medium-One) and (max-width: $medium-Two) {
+@media only screen and (min-width: 481px) and (max-width: 768px) {
+    .sectionOne{
+        padding: 100px 7%;
+        padding-bottom: 50px;
+        height: 100%;
+    }
+
+
     .sectionOne::before{
         display: none;
     }
+
+
+    .searchDiv input{
+        width: 50%;
+    }
+    
+    
+    .searchIcon{
+        left: 28%;
+    }
+    
+    
+    .searchDiv button{
+        right: 25%;
+    }
 }
+
+

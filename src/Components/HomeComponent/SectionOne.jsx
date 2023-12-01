@@ -2,6 +2,7 @@ import React from 'react'
 import './SectionOne.scss'
 
 import { RiSearch2Line } from "react-icons/ri";
+import { IoIosSend } from "react-icons/io";
 
 import smallImg from './Images/back2.png'
 import sev1 from './Images/sev1.png'
@@ -11,6 +12,7 @@ import sev4 from './Images/sev4.png'
 
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
+
 
 const SectionOne = () => {
 
@@ -104,7 +106,7 @@ const SectionOne = () => {
             </div>
 
         </Carousel>
-        <button className='allBtn'>All Services</button>
+        <button className='allBtn'>All Services <IoIosSend /></button>
     </div>
     </div>
   )
