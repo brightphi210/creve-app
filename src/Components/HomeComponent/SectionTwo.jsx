@@ -54,8 +54,6 @@ const SectionTwo = () => {
                     <button>Explore Talent <IoIosSend /></button>
                 </div>
             </div>
-
-            
         </div>
     </div>
   )

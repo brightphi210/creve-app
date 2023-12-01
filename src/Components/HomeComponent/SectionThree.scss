@@ -1,0 +1,61 @@
+@import '../variables.scss';
+
+*{@include default}
+
+
+// =================== sectionThree =================================
+.sectionThree{
+    padding: 50px 5%;
+}
+
+.sectionThreeFlex{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    text-align: center;
+    gap: 50px;
+    padding-top: 20px;
+}
+
+.secThreeDiv img{
+    width: 70px;
+    background-color: rgb(243, 243, 243);
+    padding: 15px 10px;
+    border-radius: 50%;
+}
+
+@media only screen and (min-width: $small-One) and (max-width: $small-Two) {
+    .sectionThree{
+        padding: 50px 8%;
+        text-align: center;
+    }
+
+    .sectionThree h2{
+        font-size: 17px;
+        font-weight: 500;
+    }
+
+    .sectionThreeFlex{
+        display: block;
+    }
+
+    .secThreeDiv{
+        margin-bottom: 30px;
+    }
+
+
+    .secThreeDiv h3{
+        font-size: 15px;
+        font-weight: 500;
+    }
+
+
+    .secThreeDiv p{
+        font-size: 12px;
+        font-weight: 400;
+        padding-top: 10px;
+    }
+
+    .secThreeDiv img{
+        width: 50px;
+    }
+}
