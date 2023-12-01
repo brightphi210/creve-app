@@ -196,7 +196,13 @@
 
 
 
+
 @media only screen and (min-width: $small-One) and (max-width: $small-Two) {
+
+    .react-multiple-carousel__arrow {
+        z-index: 0;
+    }
+
 
     .sectionOne{
         padding: 100px 7%;
@@ -298,6 +304,9 @@
 }
 
 @media only screen and (min-width: 481px) and (max-width: 768px) {
+    .react-multiple-carousel__arrow {
+        z-index: 0;
+    }
     .sectionOne{
         padding: 100px 7%;
         padding-bottom: 50px;
