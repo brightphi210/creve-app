@@ -5,7 +5,12 @@
 
 // =================== sectionThree =================================
 .sectionThree{
-    padding: 50px 5%;
+    padding: 50px 8%;
+}
+
+.sectionThree h2{
+    font-size: 25px;
+    font-weight: 500;
 }
 
 .sectionThreeFlex{
@@ -16,6 +21,13 @@
     padding-top: 20px;
 }
 
+
+.secThreeDiv{
+    background-color: $my-white;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    padding: 20px 50px;
+}
+
 .secThreeDiv img{
     width: 70px;
     background-color: rgb(243, 243, 243);
@@ -23,10 +35,53 @@
     border-radius: 50%;
 }
 
+
+// ================== Become =====================
+
+.becomeDiv{
+    background-color: $my-pink;
+    padding: 30px;
+    display: flex;
+    margin-top: 40px;
+    padding: 40px 10%;
+    border-radius: 20px;
+    align-items: center;
+}
+
+.becomeDiv h3{
+    font-size: 40px;
+}
+
+.becomeDiv p{
+    padding: 20px 0;
+}
+
+.becomeDiv button{
+    padding: 13px 30px;
+    border: none;
+    background-color: $my-blue;
+    color: $my-white;
+    border-radius: 20px;
+}
+
+.becomeImgDiv{
+    margin-left: auto;
+}
+
+.becomeImgDiv img{
+    width: 250px;
+}
+
 @media only screen and (min-width: $small-One) and (max-width: $small-Two) {
     .sectionThree{
         padding: 50px 8%;
         text-align: center;
+    }
+
+    .secThreeDiv{
+        background-color: $my-white;
+        box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+        padding: 20px;
     }
 
     .sectionThree h2{
@@ -57,5 +112,34 @@
 
     .secThreeDiv img{
         width: 50px;
+    }
+
+
+    // ====================== becomeDiv ============================
+
+    .becomeDiv{
+        display: block;
+        text-align: left;
+    }
+
+    .becomeDiv h3{
+        font-size: 20px;
+        line-height: 20px;
+    }
+
+    .becomeDiv p{
+        font-size: 12px;
+    }
+
+
+    .becomeImgDiv img{
+        width: 100%;
+        margin-top: 20px;
+        display: none;
+    }
+
+    .becomeDiv button{
+        padding: 10px 20px;
+        border: none;
     }
 }
