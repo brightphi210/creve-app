@@ -7,6 +7,7 @@ import web2 from './Images/web2.png'
 import { IoIosSend } from "react-icons/io";
 
 const SectionTwo = () => {
+
   return (
     <div className='sectionTwo'>
         <h2>Why People Loves Creeve</h2>
@@ -40,7 +41,6 @@ const SectionTwo = () => {
                 </div>
             </div>
 
-
             <div className='subSecTwo'>
                 <div className='secImgDiv'>
                     <img src={web2} alt="" />
@@ -53,6 +53,7 @@ const SectionTwo = () => {
                     </p>
                     <button>Explore Talent <IoIosSend /></button>
                 </div>
+            
             </div>
         </div>
     </div>
