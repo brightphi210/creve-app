@@ -39,12 +39,14 @@ const SectionFour = () => {
             <h2>Thousands of people are getting <br /> their job done with Creve</h2>
             <Carousel 
                 responsive={responsive}
-                swipeable={false}
+                autoPlay={true}
+                swipeable={true}
                 draggable={true}
-                showDots={false}
+                showDots={true}
                 infinite={true}
-                autoPlaySpeed={1000}
+                autoPlaySpeed={3000}
                 keyBoardControl={true}
+                removeArrowOnDeviceType={["mobile"]}
             >
                 <div className='testimonyDiv'>
                     <BiSolidQuoteLeft className='qoute'/>

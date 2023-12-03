@@ -4,6 +4,7 @@ import Narvbar from './Components/NavComponent/Narvbar.jsx'
 import SectionTwo from './Components/HomeComponent/SectionTwo.jsx'
 import SectionThree from './Components/HomeComponent/SectionThree.jsx'
 import SectionFour from './Components/HomeComponent/SectionFour.jsx'
+import Footer from './Components/FooterComponent/Footer.jsx'
 
 const Home = () => {
   return (
@@ -13,6 +14,7 @@ const Home = () => {
       <SectionTwo />
       <SectionThree />
       <SectionFour />
+      {/* <Footer /> */}
     </div>
   )
 }

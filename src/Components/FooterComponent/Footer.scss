@@ -1,0 +1,23 @@
+@import '../variables.scss';
+
+*{@include default}
+
+
+// ========================= footer ==============================
+
+.footerSection{
+    display: flex;
+    padding: 40px 8%;
+}
+
+.footerIcon{
+    display: flex;
+    gap: 10px;
+}
+
+.footerRight{
+    margin-left: auto;
+    display: flex;
+    gap: 100px;
+    align-items: center;
+}
