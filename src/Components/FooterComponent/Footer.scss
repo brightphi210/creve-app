@@ -10,9 +10,13 @@
     padding: 40px 8%;
 }
 
-.footerIcon{
+.footerIconDiv{
     display: flex;
     gap: 10px;
+}
+
+.footerIcon{
+    font-size: 20px;
 }
 
 .footerRight{
@@ -20,4 +24,26 @@
     display: flex;
     gap: 100px;
     align-items: center;
+}
+
+.mailFlex{
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+@media only screen and (min-width: $small-One) and (max-width: $small-Two) {
+    .footerSection{
+        display: block;
+        padding: 40px 8%;
+    }
+
+    .footerRight{
+        display: block;
+        align-items: center;
+    }
+
+    .footerIconDiv{
+        margin: 20px 0;
+    }
 }

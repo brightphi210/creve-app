@@ -14,20 +14,20 @@ const Footer = () => {
     <div className='footerSection'>
 
         <div className='footerLogo'>
-            <img src={logo} alt="" width={100}/>
+            <img src={logo} alt="" width={80}/>
             <p>Home of the Best Talent all Over Africa</p>
         </div>
 
         <div className='footerRight'>
-            <div className='footerIcon'>
-                <FaLinkedin />
-                <BsTwitterX />
-                <FaInstagram />
+            <div className='footerIconDiv'>
+                <FaLinkedin className='footerIcon'/>
+                <BsTwitterX className='footerIcon'/>
+                <FaInstagram className='footerIcon'/>
             </div>
 
             <div>
                 <p>Help and support</p>
-                <p><IoMdMail /> creveafrica@gmai.com</p>
+                <p className='mailFlex'><IoMdMail /> creveafrica@gmai.com</p>
             </div>
         </div>
 
