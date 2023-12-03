@@ -47,8 +47,54 @@
 
 .starIcon{
     font-size: 10px;
+    color: rgb(197, 197, 197);
 }
 
+
+// ==================== hireDiv =================================
+
+.hireDiv{
+    display: flex;
+    align-items: center;
+    background-color: $my-blue;
+    padding: 30px 15%;
+    gap: 200px;
+    justify-content: center;
+}
+
+.hireDiv img{
+    width: 100%;
+}
+
+.hireText{
+    // margin-left: auto;
+}
+
+.hireText h3{
+    font-size: 40px;
+    color: $my-white;
+}
+
+.hireText p{
+    font-size: 20px;
+    color: $my-white;
+    padding: 10px 0;
+}
+
+.hireText button{
+    padding: 13px 30px;
+    background-color: $my-white;
+    color: black;
+    font-size: 15px;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+}
+
+.hireText button:hover{
+    background-color: aliceblue;
+    transition: all 0.2s ease;
+}
 
 @media only screen and (min-width: $small-One) and (max-width: $small-Two) {
     .testimonySection{
@@ -73,6 +119,34 @@
         font-size: 12px;
     }
 
+
+    .hireDiv{
+        display: block;
+        padding: 30px 6%;
+        gap: 0;
+    }
+
+    .hireText h3{
+        font-size: 22px;
+        color: $my-white;
+        padding-top: 10px;
+    }
+    
+    .hireText p{
+        font-size: 12px;
+        color: $my-white;
+        padding: 10px 0;
+    }
+
+    .hireText button{
+        padding: 10px 30px;
+        background-color: $my-white;
+        color: black;
+        font-size: 12px;
+        border: none;
+        border-radius: 30px;
+        cursor: pointer;
+    }
     
     
 }

@@ -12,6 +12,8 @@ import ava2 from './Images/Avatars2.png'
 import ava3 from './Images/Avatars3.png'
 import ava4 from './Images/Avatars.png'
 
+import group from './Images/group.png'
+
 const SectionFour = () => {
     const responsive = {
         desktop: {
@@ -32,119 +34,133 @@ const SectionFour = () => {
     };
 
   return (
-    <div className='testimonySection'>
-        <h2>Thousands of people are getting <br /> their job done with Creve</h2>
-        <Carousel 
-            responsive={responsive}
-            swipeable={false}
-            draggable={true}
-            showDots={false}
-            infinite={true}
-            autoPlaySpeed={1000}
-            keyBoardControl={true}
-        >
-            <div className='testimonyDiv'>
-                <BiSolidQuoteLeft className='qoute'/>
-                <p className='testimony'>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
-                    sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
-                    Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
-                </p>
-                
-                <div className='testProDiv'>
-                    <div>
-                        <img src={ava1} alt="" width={40}/>
-                    </div>
-                    <div>
-                        <p>Jane Doe</p>
-                        <div className='starDiv'>
-                            <FaStar className='starIcon' />
-                            <FaStar className='starIcon' />
-                            <FaStar className='starIcon' />
-                            <FaStar className='starIcon' />
+    <div>
+        <div className='testimonySection'>
+            <h2>Thousands of people are getting <br /> their job done with Creve</h2>
+            <Carousel 
+                responsive={responsive}
+                swipeable={false}
+                draggable={true}
+                showDots={false}
+                infinite={true}
+                autoPlaySpeed={1000}
+                keyBoardControl={true}
+            >
+                <div className='testimonyDiv'>
+                    <BiSolidQuoteLeft className='qoute'/>
+                    <p className='testimony'>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
+                        sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+                        Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
+                    </p>
+                    
+                    <div className='testProDiv'>
+                        <div>
+                            <img src={ava1} alt="" width={40}/>
+                        </div>
+                        <div>
+                            <p>Jane Doe</p>
+                            <div className='starDiv'>
+                                <FaStar className='starIcon' />
+                                <FaStar className='starIcon' />
+                                <FaStar className='starIcon' />
+                                <FaStar className='starIcon' />
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
 
-            <div className='testimonyDiv'>
-                <BiSolidQuoteLeft className='qoute'/>
-                <p className='testimony'>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
-                    sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
-                    Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
-                </p>
-                
-                <div className='testProDiv'>
-                    <div>
-                        <img src={ava1} alt="" width={40}/>
-                    </div>
-                    <div>
-                        <p>Jane Doe</p>
-                        <div className='starDiv'>
-                            <FaStar className='starIcon' />
-                            <FaStar className='starIcon' />
-                            <FaStar className='starIcon' />
-                            <FaStar className='starIcon' />
+                <div className='testimonyDiv'>
+                    <BiSolidQuoteLeft className='qoute'/>
+                    <p className='testimony'>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
+                        sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+                        Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
+                    </p>
+                    
+                    <div className='testProDiv'>
+                        <div>
+                            <img src={ava2} alt="" width={40}/>
+                        </div>
+                        <div>
+                            <p>Jane Doe</p>
+                            <div className='starDiv'>
+                                <FaStar className='starIcon' />
+                                <FaStar className='starIcon' />
+                                <FaStar className='starIcon' />
+                                <FaStar className='starIcon' />
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
 
 
 
-            <div className='testimonyDiv'>
-                <BiSolidQuoteLeft className='qoute'/>
-                <p className='testimony'>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
-                    sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
-                    Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
-                </p>
-                
-                <div className='testProDiv'>
-                    <div>
-                        <img src={ava1} alt="" width={40}/>
-                    </div>
-                    <div>
-                        <p>Jane Doe</p>
-                        <div className='starDiv'>
-                            <FaStar className='starIcon' />
-                            <FaStar className='starIcon' />
-                            <FaStar className='starIcon' />
-                            <FaStar className='starIcon' />
+                <div className='testimonyDiv'>
+                    <BiSolidQuoteLeft className='qoute'/>
+                    <p className='testimony'>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
+                        sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+                        Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
+                    </p>
+                    
+                    <div className='testProDiv'>
+                        <div>
+                            <img src={ava3} alt="" width={40}/>
+                        </div>
+                        <div>
+                            <p>Jane Doe</p>
+                            <div className='starDiv'>
+                                <FaStar className='starIcon' />
+                                <FaStar className='starIcon' />
+                                <FaStar className='starIcon' />
+                                <FaStar className='starIcon' />
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
 
 
-            <div className='testimonyDiv'>
-                <BiSolidQuoteLeft className='qoute'/>
-                <p className='testimony'>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
-                    sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
-                    Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
-                </p>
-                
-                <div className='testProDiv'>
-                    <div>
-                        <img src={ava1} alt="" width={40}/>
-                    </div>
-                    <div>
-                        <p>Jane Doe</p>
-                        <div className='starDiv'>
-                            <FaStar className='starIcon' />
-                            <FaStar className='starIcon' />
-                            <FaStar className='starIcon' />
-                            <FaStar className='starIcon' />
+                <div className='testimonyDiv'>
+                    <BiSolidQuoteLeft className='qoute'/>
+                    <p className='testimony'>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
+                        sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+                        Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
+                    </p>
+                    
+                    <div className='testProDiv'>
+                        <div>
+                            <img src={ava4} alt="" width={40}/>
+                        </div>
+                        <div>
+                            <p>Jane Doe</p>
+                            <div className='starDiv'>
+                                <FaStar className='starIcon' />
+                                <FaStar className='starIcon' />
+                                <FaStar className='starIcon' />
+                                <FaStar className='starIcon' />
+                            </div>
                         </div>
                     </div>
                 </div>
+
+
+
+            </Carousel>
+        </div>
+
+        <div className='hireDiv'>
+            <div>
+                <img src={group} alt="" />
             </div>
 
-
-
-        </Carousel>
+            <div className='hireText'>
+                <h3>Hire Talented Professionals <br /> for any Task</h3>
+                <p>Creve is your Go-To Platform for Both Digital and Local Services.</p>
+                <button>Find Talent</button>
+            </div>
+        </div>
     </div>
   )
 }
