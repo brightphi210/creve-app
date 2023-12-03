@@ -1,0 +1,78 @@
+@import '../variables.scss';
+
+*{@include default}
+
+
+// ======================== testimonyDiv ==============================
+
+
+.testimonySection{
+    padding: 50px 8%;
+}
+
+.testimonySection h2{
+    font-size: 30px;
+    font-weight: 500;
+    margin-bottom: 20px;
+}
+
+
+
+.testimonyDiv{
+    border: rgb(182, 182, 182) solid 1px;
+    padding: 30px;
+    margin-right: 20px;
+    border-radius: 15px;
+}
+
+
+.testimony{
+    text-align: justify;
+}
+
+.qoute{
+    font-size: 20px;
+}
+
+.testProDiv{
+    display: flex;
+    gap: 10px;
+    padding-top: 20px;
+}
+
+.starDiv{
+    display: flex;
+    gap: 5px;
+}
+
+.starIcon{
+    font-size: 10px;
+}
+
+
+@media only screen and (min-width: $small-One) and (max-width: $small-Two) {
+    .testimonySection{
+        padding: 20px 8%;
+    }
+    
+    
+    .testimonySection h2{
+        font-size: 18px;
+        font-weight: 500;
+        margin-bottom: 20px;
+    }
+
+    .testimonyDiv{
+        border: rgb(182, 182, 182) solid 1px;
+        padding: 20px ;
+        margin-right: 0;
+    }
+
+    .testimony{
+        text-align: justify;
+        font-size: 12px;
+    }
+
+    
+    
+}

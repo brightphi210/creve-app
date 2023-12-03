@@ -62,7 +62,15 @@
     background-color: $my-blue;
     color: $my-white;
     border-radius: 20px;
+    transition: background-color 0.3s ease;
+    cursor: pointer;
 }
+
+.becomeDiv button:hover {
+    background-color: #ad91cd;
+}
+
+
 
 .becomeImgDiv{
     margin-left: auto;
