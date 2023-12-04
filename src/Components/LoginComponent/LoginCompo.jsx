@@ -3,10 +3,9 @@ import './LoginCompo.scss'
 import { Link } from 'react-router-dom'
 import { useState } from 'react';
 
-import logo from './images/craves.png'
 import videoFile from './images/dribbble.mp4'
 
-import { FaArrowLeft } from "react-icons/fa6";
+import { IoIosArrowDropleftCircle } from "react-icons/io";
 import { IoMdEyeOff } from "react-icons/io";
 import { MdRemoveRedEye } from "react-icons/md";
 import { IoLogoGoogle } from "react-icons/io";
@@ -28,8 +27,9 @@ const LoginCompo = () => {
 
           <div className='loginInputDiv'>
               <div>
-                <img src={logo} alt="" width={80} />
-                <Link to={'/'}><p className='arrow'><FaArrowLeft /> Go back home</p></Link>
+                {/* <img src={logo} alt="" width={80} /> */}
+                <Link to={'/'}><IoIosArrowDropleftCircle className='arrow'/></Link>
+                
                 <h2>Welcome Back</h2>
                 <div>
                   <div className='inputDiv'>
@@ -56,7 +56,7 @@ const LoginCompo = () => {
 
                   <div className='googleDiv'>
                     <button><IoLogoGoogle />Login with Google</button>
-                    <p className='dontFlex'>Don’t have an account? <p className='dontpFlex'>Create New Account</p></p>
+                    <p className='dontFlex'>Don’t have an account? <p className='dontpFlex'><Link to={'/signup'}>Create New Account</Link></p></p>
                   </div>
                 </div>
               </div>
