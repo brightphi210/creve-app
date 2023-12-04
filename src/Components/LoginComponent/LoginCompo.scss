@@ -1,0 +1,77 @@
+@import '../variables.scss';
+
+*{@include default}
+
+// =================== Login Form =================
+
+.loginSection{
+    display: flex;
+    overflow: hidden;
+    justify-content: center;
+    align-items: center;
+    background-color: $my-white;
+    border: gray 1px solid;
+}
+
+
+
+.loginInputDiv{
+    width: 100%;
+    padding: 0 10%;
+}
+
+.loginInputDiv h2{
+    font-size: 40px;
+    font-weight: 400;
+}
+
+.inputDiv{
+    padding-top: 20px;
+}
+
+.inputDiv input{
+    width: 100%;
+    padding: 15px;
+}
+
+.loginInputDiv .loginBtn{
+    width: 100%;
+    padding: 12px;
+    background-color: $my-blue;
+    color: $my-white;
+    margin-top: 20px;
+    border-radius: 30px;
+}
+
+
+.hrDiv {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    margin: 20px 0;
+    align-items: center;
+}
+
+
+.googleDiv button{
+    padding: 15px;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+
+.hrDiv hr{
+    width: 100%;
+    height: 0;
+}
+.videoDiv{
+    width: 100%;
+    overflow: hidden;
+}
+
+.videoDiv video{
+    width: 100%;
+    height: 100vh;
+    object-fit: cover;
+}
+

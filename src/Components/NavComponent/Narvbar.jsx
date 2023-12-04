@@ -1,6 +1,7 @@
 import React from 'react'
 import logo from './Images/craves.png'
 import { useState } from 'react';
+import { Link } from 'react-router-dom';
 
 import { CgMenuLeft } from "react-icons/cg";
 import { MdClose } from "react-icons/md";
@@ -50,7 +51,7 @@ const Narvbar = () => {
 
           <div className='secondNavDiv'>
             <p className='apply'>Apply as a Creative</p>
-            <button className='loginBtn'>Login</button>
+            <Link to={'/login'}><button className='loginBtn'>Login</button></Link>
             <button className='signupBtn'>Sing-up</button>
           </div>
         </div>
