@@ -1,14 +1,27 @@
 import React from 'react'
 import './LoginCompo.scss'
+import { Link } from 'react-router-dom'
+import { useState } from 'react';
 
 import logo from './images/craves.png'
 import videoFile from './images/dribbble.mp4'
 
 import { FaArrowLeft } from "react-icons/fa6";
-import { Link } from 'react-router-dom'
+import { IoMdEyeOff } from "react-icons/io";
+import { MdRemoveRedEye } from "react-icons/md";
+import { IoLogoGoogle } from "react-icons/io";
+
+
 
 
 const LoginCompo = () => {
+
+  const [showPassword, setShowPassword] = useState(false);
+
+  const togglePasswordVisibility = () => {
+    setShowPassword(!showPassword);
+  };
+
   return (
     <div className=''>
         <div className='loginSection'>
@@ -16,7 +29,7 @@ const LoginCompo = () => {
           <div className='loginInputDiv'>
               <div>
                 <img src={logo} alt="" width={80} />
-                <p className=''><FaArrowLeft /> Go back home</p>
+                <Link to={'/'}><p className='arrow'><FaArrowLeft /> Go back home</p></Link>
                 <h2>Welcome Back</h2>
                 <div>
                   <div className='inputDiv'>
@@ -25,11 +38,16 @@ const LoginCompo = () => {
                   </div>
 
                   <div className='inputDiv'>
-                    <p>Email Address</p>
-                    <input type="text" placeholder='Enter your email address' />
-                    <p>Forgot Password</p>
+                    <p>Password</p>
+
+                    <input 
+                      type={showPassword ? 'text' : 'password'} 
+                      placeholder='Enter Password' 
+                    />
+                    <div onClick={togglePasswordVisibility}>{showPassword ? <MdRemoveRedEye className='eye'/> : <IoMdEyeOff className='eye'/>}</div>
                   </div>
 
+                  <p className='forget'>Forgot Password</p>
                   <button className='loginBtn'>Login</button>
 
                   <div className='hrDiv'>
@@ -37,7 +55,7 @@ const LoginCompo = () => {
                   </div>
 
                   <div className='googleDiv'>
-                    <button>Login with Google</button>
+                    <button><IoLogoGoogle />Login with Google</button>
                     <p className='dontFlex'>Don’t have an account? <p className='dontpFlex'>Create New Account</p></p>
                   </div>
                 </div>

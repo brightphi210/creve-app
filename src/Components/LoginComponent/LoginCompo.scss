@@ -10,9 +10,16 @@
     justify-content: center;
     align-items: center;
     background-color: $my-white;
-    border: gray 1px solid;
 }
 
+
+.arrow {
+    padding: 20px 0;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    color: $my-blue;
+}
 
 
 .loginInputDiv{
@@ -25,26 +32,47 @@
     font-weight: 400;
 }
 
-.inputDiv{
+.forget{
     padding-top: 20px;
 }
 
+.inputDiv{
+    padding-top: 20px;
+    position: relative;
+}
+
+
+.eye{
+    position: absolute;
+    right: 20px;
+    bottom: 15px;
+    font-size: 17px;
+    cursor: pointer;
+}
 .inputDiv p{
     padding-bottom: 10px;
 }
 
 .inputDiv input{
     width: 100%;
-    padding: 15px;
+    padding: 18px;
+    outline: none;
+    border: rgb(204, 204, 204) solid 1px;
+    &:focus {
+        // border-color: $my-blue;
+        box-shadow: 0 0 5px rgba(172, 130, 214, 0.5);
+      }
 }
+
 
 .loginInputDiv .loginBtn{
     width: 100%;
-    padding: 12px;
+    padding: 13px;
     background-color: $my-blue;
     color: $my-white;
     margin-top: 20px;
     border-radius: 30px;
+    font-size: 15px;
 }
 
 
@@ -61,6 +89,14 @@
     padding: 15px;
     width: 100%;
     margin-bottom: 20px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    justify-content: center;
+    font-size: 15px;
 }
 
 
@@ -77,8 +113,13 @@
 
 .dontpFlex{
     margin-left: auto;
+    color: $my-blue;
+    cursor: pointer;
 }
 
+
+
+// ===================================== Video div ============================
 
 .videoDiv{
     width: 100%;
@@ -91,3 +132,75 @@
     object-fit: cover;
 }
 
+
+
+
+// ============================ Responsiveness =============================
+
+
+@media only screen and (min-width: $small-One) and (max-width: $small-Two) {
+    .videoDiv{
+        display: none;
+    }
+
+    .loginSection{
+        padding-top: 50px;
+    }
+
+    .loginInputDiv{
+        width: 100%;
+        padding: 0 7%;
+    }
+
+    .loginInputDiv img{
+        width: 60px;
+    }
+
+    .loginInputDiv h2{
+        font-size: 20px;
+    }
+
+    .arrow {
+        padding: 20px 0;
+        display: flex;
+        font-size: 12px;
+    }
+
+    .inputDiv input{
+        padding: 15px;
+    }
+
+    .loginInputDiv .loginBtn{
+        padding: 12px;
+        font-size: 12px;
+    }
+
+    .googleDiv button{
+        font-size: 12px;
+        padding: 12px;
+    }
+
+    .dontFlex{
+        font-size: 12px;
+    }
+    
+}
+
+
+
+@media only screen and (min-width: 481px) and (max-width: 768px) {
+    .loginSection{
+        display: flex;
+        overflow: hidden;
+        justify-content: center;
+        align-items: center;
+        background-color: $my-white;
+        border: gray 1px solid;
+    }
+
+
+    .loginInputDiv{
+        width: 100%;
+        padding: 0 3%;
+    }
+}
