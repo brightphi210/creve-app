@@ -1,0 +1,85 @@
+@import '../variables.scss';
+
+*{@include default}
+
+
+// ========================== Categories ===========================
+
+.CatSectionBack{
+    background-color: $my-blue;
+    padding: 70px 5%;
+    padding-top: 120px;
+    color: $my-white;
+    position: relative;
+}
+
+.catFlexDiv{
+    display: flex;
+    align-items: center;
+}
+
+
+.catFirstDiv h2{
+    font-size: 30px;
+}
+
+.catFirstDiv p{
+    font-size: 15px;
+    padding: 20px 0;
+    cursor: pointer;
+}
+.catSeconDiv{
+    margin-left: auto;
+}
+
+.catSeconDiv button{
+    padding: 12px 30px;
+    border-radius: 20px;
+    border: none;
+    cursor: pointer;
+}
+
+
+.catOption{
+    display: flex;
+    gap: 30px;
+    position: absolute;
+    bottom: 10px;
+}
+
+.catOption p{
+    color: rgb(202, 227, 248);
+    cursor: pointer;
+}
+
+
+
+// ============================== Digital Section  =========================
+
+.DigitalSection{
+    padding: 30px 5%;
+}
+
+
+.DigitalDivFlex{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    gap: 20px;
+}
+
+
+.DigImageDiv img{
+    width: 100%;
+    border-radius: 10px;
+}
+
+
+.DigImageDiv{
+    cursor: pointer;
+}
+
+
+.DigImageDiv:hover{
+    transform: scale(0.98);
+    transition: all ease 0.5s;
+}

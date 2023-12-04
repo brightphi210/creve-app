@@ -13,6 +13,8 @@ import sev4 from './Images/sev4.png'
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 
+import { Link } from 'react-router-dom';
+
 
 const SectionOne = () => {
 
@@ -63,7 +65,7 @@ const SectionOne = () => {
 
 
     <div className='caroselSection'>
-        <h2>Explore Popular <br /> Categories</h2>
+        <h2>Explore Popular  Categories</h2>
         <Carousel 
             responsive={responsive}
             swipeable={false}
@@ -106,7 +108,7 @@ const SectionOne = () => {
             </div>
 
         </Carousel>
-        <button className='allBtn'>All Services <IoIosSend /></button>
+        <Link to={'/category'}><button className='allBtn'>All Services <IoIosSend /></button></Link>
     </div>
     </div>
   )

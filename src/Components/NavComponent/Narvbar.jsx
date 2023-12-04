@@ -24,7 +24,7 @@ const Narvbar = () => {
     <div className='navDivMain '> 
 
         <div className='maimLogo'>
-          <div><img src={logo} alt="" width={100}/></div>
+          <Link to={'/'}><div><img src={logo} alt="" width={100}/></div></Link>
 
           <div className='navIcons'>
             {openNavbar ? <CgMenuLeft onClick={toggleNav}/> : <MdClose onClick={toggleNav}/>}
@@ -32,13 +32,9 @@ const Narvbar = () => {
         </div>
 
 
-
-        {/* <div className={`navbar ${isNavbarOpen ? 'open' : ''}`}></div> */}
         <div className={`navDiv ${openNavbar ? 'open' : ''}`}>
           <div className='firstNavDiv'>
-            <div>
-              <img src={logo} alt="" width={100}/>
-            </div>
+          <Link to={'/'}><div><img src={logo} alt="" width={100}/></div></Link>
 
             <div className='navUl'>
               <p>How it works</p>
