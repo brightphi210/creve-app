@@ -15,7 +15,7 @@ const Footer = () => {
 
         <div className='footerLogo'>
             <img src={logo} alt="" width={80}/>
-            <p>Home of the Best Talent all Over Africa</p>
+            <p>Home of the Best Talent all <br /> Over Africa</p>
         </div>
 
         <div className='footerRight'>
@@ -26,7 +26,7 @@ const Footer = () => {
             </div>
 
             <div>
-                <p>Help and support</p>
+                <p className='help'>Help and support</p>
                 <p className='mailFlex'><IoMdMail /> creveafrica@gmai.com</p>
             </div>
         </div>
