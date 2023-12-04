@@ -151,3 +151,98 @@
         border: none;
     }
 }
+
+
+@media only screen and (min-width: 481px) and (max-width: 768px) {
+    .sectionThreeFlex{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        text-align: center;
+        gap: 20px;
+        padding-top: 20px;
+    }
+
+    .secThreeDiv p{
+        font-size: 12px;
+    }
+
+    .becomeDiv{
+        display: flex;
+    }
+
+    .becomeDiv h3{
+        font-size: 20px;
+    }
+
+    .becomeImgDiv img{
+        width: 150px;
+    }
+
+    .becomeDiv button{
+        padding: 10px 20px;
+        border: none;
+    }
+}
+
+@media only screen and (min-width: 769px) and (max-width: 1023px) {
+    .sectionThreeFlex{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        text-align: center;
+        gap: 20px;
+        padding-top: 20px;
+    }
+
+    .secThreeDiv p{
+        font-size: 12px;
+    }
+
+    .becomeDiv{
+        display: flex;
+    }
+
+    .becomeDiv h3{
+        font-size: 20px;
+    }
+
+    .becomeImgDiv img{
+        width: 150px;
+    }
+
+    .becomeDiv button{
+        padding: 10px 20px;
+        border: none;
+    }
+}
+
+
+@media only screen and (min-width: $large-One) and (max-width: $large-Two) {
+    .sectionThreeFlex{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        text-align: center;
+        gap: 15px;
+        padding-top: 20px;
+    }
+
+    .secThreeDiv p{
+        font-size: 12px;
+    }
+
+    .becomeDiv{
+        display: flex;
+    }
+
+    .becomeDiv h3{
+        font-size: 20px;
+    }
+
+    .becomeImgDiv img{
+        width: 150px;
+    }
+
+    .becomeDiv button{
+        padding: 10px 20px;
+        border: none;
+    }
+}

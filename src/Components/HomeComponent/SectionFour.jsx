@@ -17,10 +17,16 @@ import group from './Images/group.png'
 const SectionFour = () => {
     const responsive = {
         desktop: {
-          breakpoint: { max: 3000, min: 1024 },
+          breakpoint: { max: 3000, min: 1025 },
           items: 4,
           slidesToSlide: 3 // optional, default to 1.
         },
+
+        smallDesktop: {
+            breakpoint: { max: 1023, min: 769 },
+            items: 3,
+            slidesToSlide: 3 // optional, default to 1.
+          },
         tablet: {
           breakpoint: { max: 1024, min: 464 },
           items: 2,

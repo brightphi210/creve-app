@@ -98,7 +98,31 @@
         padding: 7px 15px;
         font-size: 12px;
     }
+
+
     
     
 }
 
+@media only screen and (min-width: 481px) and (max-width: 768px) {
+    .sectionTwo{
+        padding: 50px 10%;
+        background-color: rgb(245, 245, 245);
+    }
+}
+
+
+@media only screen and (min-width: 769px) and (max-width: 1023px) {
+    .sectionTwo{
+        padding: 50px 10%;
+        background-color: rgb(245, 245, 245);
+    }
+}
+
+
+@media only screen and (min-width: $large-One) and (max-width: $large-Two) {
+    .sectionTwo{
+        padding: 50px 10%;
+        background-color: rgb(245, 245, 245);
+    }
+}

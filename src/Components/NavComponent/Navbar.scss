@@ -177,6 +177,47 @@
 }
 
 
+@media only screen and (min-width: 769px) and (max-width: 1023px) {
+    .navDiv{
+        display: flex;
+        padding: 15px 2%;
+        isolation: isolate;
+    }
+    .firstNavDiv{
+        display: flex;
+        align-items: center;
+        gap: 20px;
+    }
+
+    .firstNavDiv img{
+        cursor: pointer;
+        width: 60px;
+    }
+
+    .navUl p{
+        cursor: pointer;
+        font-size: 12px;
+    }
+
+    .apply{
+        text-decoration: underline;
+        cursor: pointer;
+        font-size: 12px;
+    }
+
+    .loginBtn{
+        font-size: 12px;
+        padding: 6px 15px !important;
+    }
+    
+    .signupBtn{
+        font-size: 12px;
+        padding: 6px 15px !important;
+    }
+    
+}
+
+
 @media only screen and (min-width: $large-One) and (max-width: $large-Two) {
     .firstNavDiv{
         display: flex;
@@ -186,7 +227,7 @@
 
     .navUl{
         display: flex;
-        gap: 10px;
+        gap: 20px;
         width: 100%;
     }
 
