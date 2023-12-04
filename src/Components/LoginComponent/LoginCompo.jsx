@@ -16,7 +16,7 @@ const LoginCompo = () => {
           <div className='loginInputDiv'>
               <div>
                 <img src={logo} alt="" width={80} />
-                <p><FaArrowLeft /> Go back home</p>
+                <p className=''><FaArrowLeft /> Go back home</p>
                 <h2>Welcome Back</h2>
                 <div>
                   <div className='inputDiv'>
@@ -38,7 +38,7 @@ const LoginCompo = () => {
 
                   <div className='googleDiv'>
                     <button>Login with Google</button>
-                    <p>Don’t have an account? Create New Account</p>
+                    <p className='dontFlex'>Don’t have an account? <p className='dontpFlex'>Create New Account</p></p>
                   </div>
                 </div>
               </div>

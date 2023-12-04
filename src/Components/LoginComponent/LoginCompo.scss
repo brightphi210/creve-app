@@ -29,6 +29,10 @@
     padding-top: 20px;
 }
 
+.inputDiv p{
+    padding-bottom: 10px;
+}
+
 .inputDiv input{
     width: 100%;
     padding: 15px;
@@ -60,10 +64,22 @@
 }
 
 
+
 .hrDiv hr{
     width: 100%;
     height: 0;
 }
+
+
+.dontFlex{
+    display: flex;
+}
+
+.dontpFlex{
+    margin-left: auto;
+}
+
+
 .videoDiv{
     width: 100%;
     overflow: hidden;
