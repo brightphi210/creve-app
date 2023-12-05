@@ -1,0 +1,156 @@
+
+@import '../variables.scss';
+
+*{@include default}
+
+
+
+// ===================== User Narvbar =================================
+
+.userNavbarSection{
+    display: flex;
+    align-items: center;
+    padding: 10px 5%;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+    background-color: $my-white;
+    width: 100%;
+    position: fixed;
+    z-index: 3;
+
+}
+
+
+.userNavFirstDiv{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    gap: 40px;
+}
+
+
+.userSearchDiv{
+    position: relative;
+    width: 100%;
+}
+
+.userSearchDiv input{
+    width: 40%;
+    padding: 12px 50px;
+    margin-top: 10px;
+    border-radius: 30px;
+    border: 1px solid $my-blue;
+    outline: none;
+
+    &:focus {
+        border-color: $my-blue;
+        box-shadow: 0 0 5px rgba(172, 130, 214, 0.5);
+      }
+}
+
+
+.userSearchIcon{
+    position: absolute;
+    top: 25px;
+    left: 2%;
+}
+
+
+.searchBtn{
+    display: none;
+}
+
+
+.userSearchDiv button{
+    padding: 12px 30px;
+    border-radius: 0 20px 20px 0 ;
+    background-color: $my-blue;
+    color: $my-white;
+    border: none;
+    position: absolute;
+    top: 11px;
+    left: 31.6%;
+    cursor: pointer;
+}
+
+
+.userNavSecondDiv{
+    margin-left: auto;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+
+.userNavIcon{
+    background-color: rgb(244, 244, 244);
+    width: 10%;
+    padding: 8px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.userIcon{
+    font-size: 15px;
+}
+
+.userNavProfile{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+
+.userNavProfile p{
+    font-size: 12px;
+    font-weight: 400;
+}
+
+
+
+@media only screen and (min-width: $small-One) and (max-width: $small-Two) {
+    .userNavbarSection{
+        padding: 10px 7%;
+    }
+    
+    .userLogo img{
+        width: 60px;
+    }
+    
+    .searchBtn{
+        display: block;
+    }
+
+
+    .userSearchDiv{
+        display: none;
+    }
+
+    .nameEmail{
+        display: none;
+    }
+
+    .userNavIcon{
+        padding: 0;
+        background-color: white;
+        width: 100%;
+    }
+
+
+    .userIcon{
+        font-size: 15px;
+    }
+
+
+    .userNavProfile{
+        margin-left: auto;
+        display: block;
+    }
+
+
+    .userNavProfile img{
+        width: 30px;
+    }
+}

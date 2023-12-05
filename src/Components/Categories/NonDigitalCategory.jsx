@@ -9,7 +9,7 @@ import sevf from './images/sevf.png'
 const NonDigitalCategory = () => {
     return (
         <div className='DigitalSection'>
-            <h2>Digital Skills</h2>
+            <h2>In-person Professions</h2>
             <div className='DigitalDivFlex'>
                 <div className='DigImageDiv'>
                     <img src={seva} alt="" />

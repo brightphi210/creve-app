@@ -9,6 +9,8 @@ import Narvbar from '../Components/NavComponent/Narvbar'
 import { useState } from 'react'
 import Footer from '../Components/FooterComponent/Footer'
 
+import { Link } from 'react-router-dom'
+
 
 const Category = () => {
 
@@ -49,7 +51,7 @@ const Category = () => {
                 <p>We Provide the best talents on all kinds of talent. Whether it’s skilled or <br /> unskilled, you are in the right place.</p>
             </div>
             <div className='catSeconDiv'>
-                <button>Explore All Talent</button>
+                <Link to={'/talents'}><button>Explore All Talent</button></Link>
             </div>
         </div>
 
