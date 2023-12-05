@@ -28,7 +28,7 @@ const LoginCompo = () => {
           <div className='loginInputDiv'>
               <div>
                 {/* <img src={logo} alt="" width={80} /> */}
-                <Link to={'/'}><IoIosArrowDropleftCircle className='arrow'/></Link>
+                <Link to={'/registerOption'}><IoIosArrowDropleftCircle className='arrow'/></Link>
                 
                 <h2>Welcome Back</h2>
                 <div>
@@ -56,7 +56,7 @@ const LoginCompo = () => {
 
                   <div className='googleDiv'>
                     <button><IoLogoGoogle />Login with Google</button>
-                    <p className='dontFlex'>Don’t have an account? <p className='dontpFlex'><Link to={'/signup'}>Create New Account</Link></p></p>
+                    <p className='dontFlex'>Don’t have an account? <p className='dontpFlex'><Link to={'/registerOption'}>Create New Account</Link></p></p>
                   </div>
                 </div>
               </div>

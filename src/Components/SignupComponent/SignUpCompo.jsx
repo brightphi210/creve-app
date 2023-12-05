@@ -24,8 +24,8 @@ const SignUpCompo = () => {
 
       <div className='loginInputDiv'>
           <div>
-          <Link to={'/'}><IoIosArrowDropleftCircle className='arrow'/></Link>
-            <h2>Welcome Back</h2>
+          <Link to={'/registerOption'}><IoIosArrowDropleftCircle className='arrow'/></Link>
+            <h2>Sign up for an account</h2>
             <div>
               <div className='inputDiv'>
                 <p>Full Name</p>
@@ -50,14 +50,14 @@ const SignUpCompo = () => {
               </div>
 
               <p className='forget'>Forgot Password</p>
-              <button className='loginBtn'>Login</button>
+              <button className='loginBtn'>Join as User</button>
 
               <div className='hrDiv'>
                 <hr /> <p>or</p> <hr />
               </div>
 
               <div className='googleDiv'>
-                <button><IoLogoGoogle />Login with Google</button>
+                <button><IoLogoGoogle />Signup with Google</button>
                 <p className='dontFlex'>Already have an account? <p className='dontpFlex'><Link to={'/login'}>Login to account</Link></p></p>
               </div>
             </div>
@@ -75,7 +75,7 @@ const SignUpCompo = () => {
         </video>
       </div>
     </div>
-</div>
+    </div>
   )
 }
 

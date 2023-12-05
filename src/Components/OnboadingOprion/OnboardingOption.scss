@@ -1,3 +1,88 @@
 @import '../variables.scss';
 
 *{@include default}
+
+
+// ======================== Registration Option ================= ==========
+
+
+.optionSection{
+    padding: 70px 10%;
+    cursor: pointer;
+}
+
+
+.optionGenDiv{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 150px;
+}
+
+
+.optionGenDiv h2{
+    text-align: center;
+    font-size: 25px;
+    font-weight: 400;
+}
+
+.optioDivs {
+    padding: 30px;
+    border: grey solid 1px;
+    margin: 20px 0;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: transform ease 0.5s;
+    color: black;
+}
+
+.optioDivs:hover {
+    background-color: rgb(244, 244, 244);
+    transform: scale(0.9);
+}
+
+.optioDivs h3{
+    font-size: 20px;
+    align-items: center;
+    display: flex;
+    gap: 10px;
+}
+
+
+.optioDivs p{
+    padding-top: 10px;
+}
+
+
+@media only screen and (min-width: $small-One) and (max-width: $small-Two) {
+    .optionSection{
+        padding: 80px 8%;
+        cursor: pointer;
+    }
+
+
+    .optionGenDiv{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding-top: 50px;
+    }
+
+
+    .optionGenDiv h2{
+        text-align: left;
+        font-size: 20px;
+        font-weight: 400;
+    }
+
+
+    .optioDivs {
+        padding: 20px;
+        border: grey solid 1px;
+    }
+
+
+    .optioDivs p{
+        font-size: 12px;
+    }
+}
