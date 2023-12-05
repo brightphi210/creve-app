@@ -22,10 +22,10 @@ const UserNavbar = () => {
           <div className='userSearchDiv'>
                 <RiSearch2Line className='userSearchIcon'/>
                 <input type="text" placeholder='Search for any service...'/>
-                <RiSearch2Line className='searchBtn'/>
                 <button>Search</button>
             </div>
         </div>
+        <div className='searchIconDiv'><RiSearch2Line className='searchBtn'/></div>
 
         <div className='userNavSecondDiv'>
           <div className='userNavIcon'><MdFavoriteBorder className='userIcon'/></div>
