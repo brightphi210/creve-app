@@ -48,7 +48,7 @@ const Narvbar = () => {
           <div className='secondNavDiv'>
             <p className='apply'>Apply as a Creative</p>
             <Link to={'/login'}><button className='loginBtn'>Login</button></Link>
-            <button className='signupBtn'>Sing-up</button>
+            <Link to={'/registerOption'}><button className='signupBtn'>Sing-up</button></Link>
           </div>
         </div>
 

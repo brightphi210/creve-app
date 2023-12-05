@@ -63,3 +63,89 @@
     background-color: $my-blue;
     color: $my-white;
 }
+
+
+
+// ============================ imagecard =============================
+
+.imageSectionCard{
+    padding-top: 50px;
+}
+.imagecard{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 30px;
+}
+
+
+.cardDiv{
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+    background-color: $my-white;
+    border-radius: 15px;
+    cursor: pointer;
+}
+
+.imgCard img{
+    width: 100%;
+    border-radius: 15x 15px 0 0;
+}
+
+.cardProfileDiv{
+    padding: 20px;
+}
+
+
+.cardProfileDiv h3{
+    font-weight: 400;
+}
+
+
+.cardProfileDiv2{
+    display: flex;
+    align-items: center;
+}
+
+
+.cardProfileDivImg{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding-bottom: 10px;
+
+}
+.cardProfileDivImg img{
+    width: 30px;
+}
+
+
+.cardProBtn{
+    margin-left: auto;
+}
+
+
+.cardProBtn2 {
+    margin-left: auto;
+}
+
+.cardProBtn button{
+    display: flex;
+    gap: 5px;
+    padding: 8px 20px;
+    border: none;
+    background-color: $my-blue;
+    color: $my-white;
+    align-items: center;
+    border-radius: 20px;
+}
+
+
+.cardProBtn2 button{
+    display: flex;
+    gap: 5px;
+    padding: 8px 20px;
+    border: none;
+    background-color: rgb(231, 231, 231);
+    color: $my-blue;
+    align-items: center;
+    border-radius: 20px;
+}

@@ -20,11 +20,11 @@
 
 
 .catFirstDiv h2{
-    font-size: 30px;
+    font-size: 40px;
 }
 
 .catFirstDiv p{
-    font-size: 15px;
+    font-size: 18px;
     padding: 20px 0;
     cursor: pointer;
 }
@@ -37,6 +37,9 @@
     border-radius: 20px;
     border: none;
     cursor: pointer;
+    background-color: $my-white;
+    // box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
+    box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
 }
 
 

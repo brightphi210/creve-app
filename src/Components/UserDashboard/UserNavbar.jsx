@@ -1,4 +1,6 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
+
 import logo from './images/craves.png'
 import avatar from './images/Avatars1.png'
 
@@ -16,7 +18,7 @@ const UserNavbar = () => {
 
         <div className='userNavFirstDiv'>
           <div className='userLogo'>
-            <img src={logo} alt="" width={90}/>
+            <Link to={'/'}><img src={logo} alt="" width={90}/></Link>
           </div>
 
           <div className='userSearchDiv'>
