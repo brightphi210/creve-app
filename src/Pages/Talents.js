@@ -1,13 +1,13 @@
 import React from 'react'
 
-// import Narvbar from '../Components/NavComponent/Narvbar'
 import UserNavbar from '../Components/UserDashboard/UserNavbar'
+import TalentCompo from '../Components/UserDashboard/TalentCompo'
 
 const Talents = () => {
   return (
     <div>
         <UserNavbar />
-        THis is a Talent Page
+        <TalentCompo />
     </div>
   )
 }

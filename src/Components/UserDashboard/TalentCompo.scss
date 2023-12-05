@@ -1,0 +1,65 @@
+@import '../variables.scss';
+
+*{@include default}
+
+
+
+// ===================== TalentCompo ==============================
+
+
+.talentSection{
+    display: flex;
+    background-color: $my-blue;
+    color: $my-white;
+    padding: 40px 5%;
+    padding-top: 100px;
+    align-items: center;
+}
+
+
+.talentImgDiv{
+    margin-left: auto;
+}
+
+.talentExplore h2{
+    font-size: 45px;
+    line-height: 50px;
+}
+
+.talentImgDiv img{
+    width: 300px;
+}
+
+
+
+// ====================== Find Main section ==============================
+
+.findMainSection{
+    padding: 30px 5%;
+}
+
+.findDiv{
+    display: flex;
+    gap: 30px;
+    align-items: center;
+}
+
+.findDiv p{
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.mapIcon{
+    color: orange;
+}
+
+
+.findDiv button{ 
+    padding: 10px 40px;
+    border: none;
+    border-radius: 20px;
+    background-color: $my-blue;
+    color: $my-white;
+}
