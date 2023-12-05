@@ -87,7 +87,7 @@
 
 .imgCard img{
     width: 100%;
-    border-radius: 15x 15px 0 0;
+    border-radius: 20x 20px 0 0;
 }
 
 .cardProfileDiv{
@@ -149,3 +149,38 @@
     align-items: center;
     border-radius: 20px;
 }
+
+
+
+@media only screen and (min-width: $small-One) and (max-width: $small-Two) {
+    
+    .talentSection{
+        display: block;
+        padding: 100px 5%;
+        padding-bottom: 20px;
+    }
+    
+    .imagecard{
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+
+    .talentExplore h2{
+        font-size: 25px;
+        line-height: 30px;
+        margin-bottom: 20px;
+    }
+
+
+    .findDiv{
+        display: block;
+    }
+
+
+    .findDiv button{
+        margin-top: 20px;
+    }
+}
+
