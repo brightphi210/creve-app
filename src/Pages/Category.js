@@ -1,15 +1,18 @@
 import React from 'react'
+
+import '../Components/Categories/Category.scss'
 import DigitalCategory from '../Components/Categories/DigitalCategory'
 import NonDigitalCategory from '../Components/Categories/NonDigitalCategory'
 import Narvbar from '../Components/NavComponent/Narvbar'
 
 
 import { useState } from 'react'
+import Footer from '../Components/FooterComponent/Footer'
 
 
 const Category = () => {
 
-  const [showCategory, setShowCategory] = useState(false)
+  const [showCategory, setShowCategory] = useState(true)
 
   const showDigital = () =>{
     setShowCategory(true)
@@ -20,14 +23,24 @@ const Category = () => {
   }
 
 
+  
+  
+  let activeClass1 = ''
+  let activeClass2 = ''
+
+  if(showCategory === true){
+    activeClass1 = 'underlineClass1'
+  }
+
+
+  else if(showCategory === false){
+    activeClass2 = 'underlineClass2'
+  }
 
 
   return (
     <div>
-
-      
       <Narvbar />
-
 
       <div className='CatSectionBack'>
         <div className='catFlexDiv'>
@@ -41,13 +54,14 @@ const Category = () => {
         </div>
 
         <div className='catOption'>
-            <p>Digital skills</p>
-            <p>In-person Professions</p>
+            <p onClick={showDigital} className={activeClass1}>Digital skills</p>
+            <p onClick={showNonDigital} className={activeClass2}>In-person Professions</p>
         </div>
       </div>
 
+      {showCategory ? <DigitalCategory />  : <NonDigitalCategory /> }
 
-      {showCategory ? <NonDigitalCategory /> : <DigitalCategory />}
+      <Footer />
     </div>
   )
 }

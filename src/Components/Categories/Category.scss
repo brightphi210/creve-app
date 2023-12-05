@@ -44,7 +44,7 @@
     display: flex;
     gap: 30px;
     position: absolute;
-    bottom: 10px;
+    bottom: 20px;
 }
 
 .catOption p{
@@ -52,6 +52,60 @@
     cursor: pointer;
 }
 
+
+
+.underlineClass1{
+    color: white !important;
+    border-bottom: 2px solid $my-white;
+    padding-bottom: 5px;
+}
+
+
+.underlineClass2{
+    color: white !important;
+    border-bottom: 2px solid $my-white;
+    padding-bottom: 5px;
+}
+
+
+@media only screen and (min-width: $small-One) and (max-width: $small-Two) {
+    
+    .CatSectionBack{
+        background-color: $my-blue;
+        padding: 70px 7%;
+        padding-top: 80px;
+        color: $my-white;
+        position: relative;
+    }
+
+
+    .catFirstDiv h2{
+        font-size: 25px;
+    }
+    
+    .catFlexDiv{
+        display: block;
+        align-items: center;
+    }
+
+    .catFirstDiv p{
+        font-size: 12px;
+        padding: 15px 0;
+        cursor: pointer;
+    }
+
+
+    .catOption p{
+        color: rgb(202, 227, 248);
+        cursor: pointer;
+        font-size: 12px;
+    }
+
+
+    .catSeconDiv button{
+        padding: 10px 20px;
+    }
+}
 
 
 // ============================== Digital Section  =========================
@@ -82,4 +136,22 @@
 .DigImageDiv:hover{
     transform: scale(0.98);
     transition: all ease 0.5s;
+}
+
+
+.DigitalSection h2{
+    padding-bottom: 20px;
+}
+
+
+@media only screen and (min-width: $small-One) and (max-width: $small-Two) {
+    .DigitalDivFlex{
+        display: grid;
+        grid-template-columns: 1fr ;
+        gap: 10px;
+    }
+
+    .DigitalSection{
+        padding: 30px 7%;
+    }
 }
