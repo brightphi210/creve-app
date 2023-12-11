@@ -1,4 +1,4 @@
-import React from 'react'
+// import React, { useEffect, useState } from 'react'
 import './TalentCompo.scss'
 
 
@@ -9,6 +9,7 @@ import avatar from './images/Avatars1.png'
 
 import { MdOutlineVerified } from "react-icons/md";
 import { PiMapPinLineFill } from "react-icons/pi";
+import { IoIosStar } from "react-icons/io";
  
 
 
@@ -37,6 +38,13 @@ const TalentCompo = () => {
             <div className='imageSectionCard'>
                 <p>Recently Viewed</p>
 
+
+                {/* {product.map((pro=>(
+                    <>
+                        <img src={pro.image} alt="" />
+                        {console.log(pro)}
+                    </>
+                )))} */}
                 <div className='imagecard'>
 
 
@@ -48,7 +56,7 @@ const TalentCompo = () => {
                                     <img src={avatar} alt="" />
                                     <div>
                                         <p>Cassie Daniels</p>
-                                        <p>4.0</p>
+                                        <p>4.0 <IoIosStar /> </p>
                                     </div>
                                 </div>
 
@@ -59,7 +67,7 @@ const TalentCompo = () => {
 
                             <div>
                                 <h3>Frontend developer proficient in CSS, Javasc...</h3>
-                                <p>From #20,000</p>
+                                <p>#20,000</p>
                             </div>
                         </div>
                     </div>
@@ -73,7 +81,7 @@ const TalentCompo = () => {
                                     <img src={avatar} alt="" />
                                     <div>
                                         <p>Cassie Daniels</p>
-                                        <p>4.0</p>
+                                        <p>4.0 <IoIosStar /></p>
                                     </div>
                                 </div>
 
@@ -84,7 +92,7 @@ const TalentCompo = () => {
 
                             <div>
                                 <h3>Frontend developer proficient in CSS, Javasc...</h3>
-                                <p>From #20,000</p>
+                                <p>#20,000</p>
                             </div>
                         </div>
                     </div>
@@ -99,7 +107,7 @@ const TalentCompo = () => {
                                     <img src={avatar} alt="" />
                                     <div>
                                         <p>Cassie Daniels</p>
-                                        <p>4.0</p>
+                                        <p>4.0 <IoIosStar /></p>
                                     </div>
                                 </div>
 
@@ -110,7 +118,7 @@ const TalentCompo = () => {
 
                             <div>
                                 <h3>Frontend developer proficient in CSS, Javasc...</h3>
-                                <p>From #20,000</p>
+                                <p>#20,000</p>
                             </div>
                         </div>
                     </div>
@@ -125,7 +133,7 @@ const TalentCompo = () => {
                                     <img src={avatar} alt="" />
                                     <div>
                                         <p>Cassie Daniels</p>
-                                        <p>4.0</p>
+                                        <p className='proRating'>4.0 <IoIosStar /></p>
                                     </div>
                                 </div>
 
@@ -136,7 +144,7 @@ const TalentCompo = () => {
 
                             <div>
                                 <h3>Frontend developer proficient in CSS, Javasc...</h3>
-                                <p>From #20,000</p>
+                                <p>#20,000</p>
                             </div>
                         </div>
                     </div>

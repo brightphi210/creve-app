@@ -74,29 +74,41 @@
 .imagecard{
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
-    gap: 30px;
+    gap: 50px;
+    align-items: center;
 }
 
 
 .cardDiv{
     box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
     background-color: $my-white;
-    border-radius: 15px;
+    border-radius: 10px;
     cursor: pointer;
+    padding: 10px;
+}
+
+.imgCard img{
+    border-radius: 10px;
 }
 
 .imgCard img{
     width: 100%;
-    border-radius: 20x 20px 0 0;
 }
 
+
+
 .cardProfileDiv{
-    padding: 20px;
+    padding: 20px 10px;
 }
 
 
 .cardProfileDiv h3{
     font-weight: 400;
+    padding: 15px 0;
+}
+
+.cardProfileDiv p{
+    font-size: 12px;
 }
 
 
@@ -117,6 +129,12 @@
     width: 30px;
 }
 
+
+.proRating{
+    display: flex;
+    gap: 5px;
+    align-items: center;
+}
 
 .cardProBtn{
     margin-left: auto;
