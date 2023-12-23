@@ -73,9 +73,8 @@
 }
 
 .imagecard{
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    gap: 50px;
+    display: flex;
+    gap: 30px;
     align-items: center;
 }
 
@@ -92,13 +91,16 @@
     padding: 10px;
 }
 
-.imgCard img{
-    border-radius: 10px;
+.cardDivCarol{
+    margin: 20px 10px;
+    margin-bottom: 30px;
 }
 
 .imgCard img{
+    border-radius: 10px;
     width: 100%;
 }
+
 
 .cardProfileDiv{
     padding: 20px 10px;
@@ -172,27 +174,46 @@
 }
 
 
-.ExploreCategory{
-    background-color: rgb(251, 251, 251);
+
+// ======================== Explore Section =========================
+.ExploreCategoryAll{
+    background-color: rgb(243, 243, 243);
     padding: 30px;
     margin-top: 30px;
     border-radius: 10px;
 }
 
+.exploreDivAll{
+    display: flex;
+}
+
+.exploreDivAll h2{
+    font-weight: 400;
+}
+
+.exploreDivAll p{
+    margin-left: auto;
+    cursor: pointer;
+}
+
 .categorybtn{
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+    display: flex;
+    flex-wrap: wrap;
     gap: 20px;
     padding-top: 10px;
 }
 
-.categorybtn button{
-    padding: 15px 10px;
+.categorybtn span{
+    padding: 10px 15px;
     border-radius: 10px;
     border: gray 1px solid;
-    background-color: white;
+    // background-color: white;
     background: nones;
+    cursor: pointer;
 }
+
+
+
 
 
 
@@ -226,5 +247,18 @@
     .findDiv button{
         margin-top: 20px;
     }
+
+    .imagecardCarol{
+
+    }
+
+
+    .cardDivCarol{
+        padding: 0;
+        margin: 0;
+        margin-bottom: 25px;
+    }
+
+    
 }
 

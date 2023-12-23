@@ -10,11 +10,33 @@ import avatar from './images/Avatars1.png'
 import { MdOutlineVerified } from "react-icons/md";
 import { PiMapPinLineFill } from "react-icons/pi";
 import { IoIosStar } from "react-icons/io";
+
+import Carousel from "react-multi-carousel";
+import "react-multi-carousel/lib/styles.css";
  
 
 
 
 const TalentCompo = () => {
+
+        const responsive = {
+        desktop: {
+          breakpoint: { max: 3000, min: 1024 },
+          items: 4,
+          slidesToSlide: 3 // optional, default to 1.
+        },
+        tablet: {
+          breakpoint: { max: 1024, min: 464 },
+          items: 3,
+          slidesToSlide: 2 // optional, default to 1.
+        },
+        mobile: {
+          breakpoint: { max: 464, min: 0 },
+          items: 1,
+          slidesToSlide: 1 // optional, default to 1.
+        }
+      };
+
   return (
     <div>
         <div className='talentSection'>
@@ -148,10 +170,44 @@ const TalentCompo = () => {
             <div className='imageSectionCard'>
                 <p className='imageSectP'>Verified Profiles</p>
 
-                <div className='imagecard'>
+                <div className='imagecardCarol'>
+                <Carousel 
+                    responsive={responsive}
+                    autoPlay={true}
+                    swipeable={true}
+                    draggable={true}
+                    showDots={true}
+                    infinite={true}
+                    autoPlaySpeed={3000}
+                    keyBoardControl={true}
+                    removeArrowOnDeviceType={["mobile"]}
+                >
 
+                    <div className='cardDiv cardDivCarol'>
+                        <div className='imgCard'><img src={imageCard} alt="" /></div>
+                        <div className='cardProfileDiv'>
+                            <div className='cardProfileDiv2'>
+                                <div className='cardProfileDivImg'>
+                                    <img src={avatar} alt="" />
+                                    <div>
+                                        <p>Cassie Daniels</p>
+                                        <p>4.0 <IoIosStar /> </p>
+                                    </div>
+                                </div>
 
-                <div className='cardDiv'>
+                                <div className='cardProBtn2'>
+                                    <button><MdOutlineVerified/> Verified</button>
+                                </div>
+                            </div>
+
+                            <div>
+                                <h3>Frontend developer proficient in CSS, Javasc...</h3>
+                                <p>#20,000</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div className='cardDiv cardDivCarol'>
                         <div className='imgCard'><img src={imageCard} alt="" /></div>
                         <div className='cardProfileDiv'>
                             <div className='cardProfileDiv2'>
@@ -176,7 +232,7 @@ const TalentCompo = () => {
                     </div>
 
 
-                    <div className='cardDiv'>
+                    <div className='cardDiv cardDivCarol'>
                         <div className='imgCard'><img src={imageCard} alt="" /></div>
                         <div className='cardProfileDiv'>
                             <div className='cardProfileDiv2'>
@@ -184,33 +240,7 @@ const TalentCompo = () => {
                                     <img src={avatar} alt="" />
                                     <div>
                                         <p>Cassie Daniels</p>
-                                        <p>4.0 <IoIosStar /></p>
-                                    </div>
-                                </div>
-
-                                <div className='cardProBtn'>
-                                    <button><MdOutlineVerified/> Verified</button>
-                                </div>
-                            </div>
-
-                            <div>
-                                <h3>Frontend developer proficient in CSS, Javasc...</h3>
-                                <p>#20,000</p>
-                            </div>
-                        </div>
-                    </div>
-
-
-
-                    <div className='cardDiv'>
-                        <div className='imgCard'><img src={imageCard} alt="" /></div>
-                        <div className='cardProfileDiv'>
-                            <div className='cardProfileDiv2'>
-                                <div className='cardProfileDivImg'>
-                                    <img src={avatar} alt="" />
-                                    <div>
-                                        <p>Cassie Daniels</p>
-                                        <p>4.0 <IoIosStar /></p>
+                                        <p>4.0 <IoIosStar /> </p>
                                     </div>
                                 </div>
 
@@ -227,8 +257,7 @@ const TalentCompo = () => {
                     </div>
 
 
-
-                    <div className='cardDiv'>
+                    <div className='cardDiv cardDivCarol'>
                         <div className='imgCard'><img src={imageCard} alt="" /></div>
                         <div className='cardProfileDiv'>
                             <div className='cardProfileDiv2'>
@@ -236,11 +265,11 @@ const TalentCompo = () => {
                                     <img src={avatar} alt="" />
                                     <div>
                                         <p>Cassie Daniels</p>
-                                        <p className='proRating'>4.0 <IoIosStar /></p>
+                                        <p>4.0 <IoIosStar /> </p>
                                     </div>
                                 </div>
 
-                                <div className='cardProBtn'>
+                                <div className='cardProBtn2'>
                                     <button><MdOutlineVerified/> Verified</button>
                                 </div>
                             </div>
@@ -252,25 +281,30 @@ const TalentCompo = () => {
                         </div>
                     </div>
 
+                    
+                </Carousel>
                 </div>
             </div>
 
-            <div className='ExploreCategory'>
-                <h2>Explore by categories</h2>
+            <div className='ExploreCategoryAll'>
+                <div className='exploreDivAll'>
+                    <h2>Explore by categories</h2>
+                    <p>See All</p>
+                </div>
                 <div className='categorybtn'>
-                    <button>Furniture</button>
-                    <button>Fashion Design</button>
-                    <button>Shoe Making</button>
-                    <button>Mechanics</button>
-                    <button>Electrician</button>
-                    <button>Graphic Design</button>
-                    <button>Content Creation</button>
-                    <button>Frontend Development</button>
-                    <button>Backend Developement</button>
-                    <button>Mobile Developement</button>
-                    <button>Nranding & Repair</button>
-                    <button>Accessories Repair</button>
-                    <button>UI / UX Design</button>
+                    <span>Furniture</span>
+                    <span>Fashion Design</span>
+                    <span>Shoe Making</span>
+                    <span>Mechanics</span>
+                    <span>Electrician</span>
+                    <span>Graphic Design</span>
+                    <span>Content Creation</span>
+                    <span>Frontend Development</span>
+                    <span>Backend Developement</span>
+                    <span>Mobile Developement</span>
+                    <span>Nranding & Repair</span>
+                    <span>Accessories Repair</span>
+                    <span>UI / UX Design</span>
                 </div>
             </div>
         </div>

@@ -52,6 +52,7 @@ const SectionFour = () => {
                 infinite={true}
                 autoPlaySpeed={3000}
                 keyBoardControl={true}
+                
                 removeArrowOnDeviceType={["mobile"]}
             >
                 <div className='testimonyDiv'>
