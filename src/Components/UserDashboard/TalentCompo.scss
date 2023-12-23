@@ -71,6 +71,7 @@
 .imageSectionCard{
     padding-top: 50px;
 }
+
 .imagecard{
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
@@ -78,6 +79,10 @@
     align-items: center;
 }
 
+
+.imageSectP{
+    padding-bottom: 20px;
+}
 
 .cardDiv{
     box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
@@ -94,8 +99,6 @@
 .imgCard img{
     width: 100%;
 }
-
-
 
 .cardProfileDiv{
     padding: 20px 10px;
@@ -166,6 +169,29 @@
     color: $my-blue;
     align-items: center;
     border-radius: 20px;
+}
+
+
+.ExploreCategory{
+    background-color: rgb(251, 251, 251);
+    padding: 30px;
+    margin-top: 30px;
+    border-radius: 10px;
+}
+
+.categorybtn{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+    gap: 20px;
+    padding-top: 10px;
+}
+
+.categorybtn button{
+    padding: 15px 10px;
+    border-radius: 10px;
+    border: gray 1px solid;
+    background-color: white;
+    background: nones;
 }
 
 

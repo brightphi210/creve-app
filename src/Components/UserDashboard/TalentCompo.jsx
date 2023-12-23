@@ -36,15 +36,118 @@ const TalentCompo = () => {
             </div>
 
             <div className='imageSectionCard'>
-                <p>Recently Viewed</p>
+                <p className='imageSectP'>Recently Viewed</p>
+
+                <div className='imagecard'>
 
 
-                {/* {product.map((pro=>(
-                    <>
-                        <img src={pro.image} alt="" />
-                        {console.log(pro)}
-                    </>
-                )))} */}
+                    <div className='cardDiv'>
+                        <div className='imgCard'><img src={imageCard} alt="" /></div>
+                        <div className='cardProfileDiv'>
+                            <div className='cardProfileDiv2'>
+                                <div className='cardProfileDivImg'>
+                                    <img src={avatar} alt="" />
+                                    <div>
+                                        <p>Cassie Daniels</p>
+                                        <p>4.0 <IoIosStar /> </p>
+                                    </div>
+                                </div>
+
+                                <div className='cardProBtn2'>
+                                    <button><MdOutlineVerified/> Verified</button>
+                                </div>
+                            </div>
+
+                            <div>
+                                <h3>Frontend developer proficient in CSS, Javasc...</h3>
+                                <p>#20,000</p>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div className='cardDiv'>
+                        <div className='imgCard'><img src={imageCard} alt="" /></div>
+                        <div className='cardProfileDiv'>
+                            <div className='cardProfileDiv2'>
+                                <div className='cardProfileDivImg'>
+                                    <img src={avatar} alt="" />
+                                    <div>
+                                        <p>Cassie Daniels</p>
+                                        <p>4.0 <IoIosStar /></p>
+                                    </div>
+                                </div>
+
+                                <div className='cardProBtn'>
+                                    <button><MdOutlineVerified/> Verified</button>
+                                </div>
+                            </div>
+
+                            <div>
+                                <h3>Frontend developer proficient in CSS, Javasc...</h3>
+                                <p>#20,000</p>
+                            </div>
+                        </div>
+                    </div>
+
+
+
+                    <div className='cardDiv'>
+                        <div className='imgCard'><img src={imageCard} alt="" /></div>
+                        <div className='cardProfileDiv'>
+                            <div className='cardProfileDiv2'>
+                                <div className='cardProfileDivImg'>
+                                    <img src={avatar} alt="" />
+                                    <div>
+                                        <p>Cassie Daniels</p>
+                                        <p>4.0 <IoIosStar /></p>
+                                    </div>
+                                </div>
+
+                                <div className='cardProBtn2'>
+                                    <button><MdOutlineVerified/> Verified</button>
+                                </div>
+                            </div>
+
+                            <div>
+                                <h3>Frontend developer proficient in CSS, Javasc...</h3>
+                                <p>#20,000</p>
+                            </div>
+                        </div>
+                    </div>
+
+
+
+                    <div className='cardDiv'>
+                        <div className='imgCard'><img src={imageCard} alt="" /></div>
+                        <div className='cardProfileDiv'>
+                            <div className='cardProfileDiv2'>
+                                <div className='cardProfileDivImg'>
+                                    <img src={avatar} alt="" />
+                                    <div>
+                                        <p>Cassie Daniels</p>
+                                        <p className='proRating'>4.0 <IoIosStar /></p>
+                                    </div>
+                                </div>
+
+                                <div className='cardProBtn'>
+                                    <button><MdOutlineVerified/> Verified</button>
+                                </div>
+                            </div>
+
+                            <div>
+                                <h3>Frontend developer proficient in CSS, Javasc...</h3>
+                                <p>#20,000</p>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <div className='imageSectionCard'>
+                <p className='imageSectP'>Verified Profiles</p>
+
                 <div className='imagecard'>
 
 
@@ -149,6 +252,25 @@ const TalentCompo = () => {
                         </div>
                     </div>
 
+                </div>
+            </div>
+
+            <div className='ExploreCategory'>
+                <h2>Explore by categories</h2>
+                <div className='categorybtn'>
+                    <button>Furniture</button>
+                    <button>Fashion Design</button>
+                    <button>Shoe Making</button>
+                    <button>Mechanics</button>
+                    <button>Electrician</button>
+                    <button>Graphic Design</button>
+                    <button>Content Creation</button>
+                    <button>Frontend Development</button>
+                    <button>Backend Developement</button>
+                    <button>Mobile Developement</button>
+                    <button>Nranding & Repair</button>
+                    <button>Accessories Repair</button>
+                    <button>UI / UX Design</button>
                 </div>
             </div>
         </div>
