@@ -294,17 +294,16 @@ const TalentCompo = () => {
                 <div className='categorybtn'>
                     <span>Furniture</span>
                     <span>Fashion Design</span>
-                    <span>Shoe Making</span>
                     <span>Mechanics</span>
+                    <span>Accessories Repair</span>
+                    <span>Content Creation</span>
                     <span>Electrician</span>
                     <span>Graphic Design</span>
-                    <span>Content Creation</span>
-                    <span>Frontend Development</span>
-                    <span>Backend Developement</span>
-                    <span>Mobile Developement</span>
-                    <span>Nranding & Repair</span>
-                    <span>Accessories Repair</span>
-                    <span>UI / UX Design</span>
+                    <span>Backend Dev</span>
+                    <span>Mobile Dev</span>
+                    <span>Frontend Dev</span>
+                    <span>UI/UX Design</span>
+                    <span>Shoe Making</span>
                 </div>
             </div>
         </div>

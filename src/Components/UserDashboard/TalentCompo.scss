@@ -185,6 +185,7 @@
 
 .exploreDivAll{
     display: flex;
+    align-items: center;
 }
 
 .exploreDivAll h2{
@@ -260,5 +261,30 @@
     }
 
     
+
+    // ================== Explore Div ======================
+    .ExploreCategoryAll{
+        padding: 20px 20px;
+    }
+
+    .exploreDivAll h2{
+        font-size: 15px;
+    }
+
+    .exploreDivAll p{
+        font-size: 12px;
+    }
+
+    .categorybtn{
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+        padding-top: 20px;
+    }
+
+    .categorybtn span{
+        font-size: 12px;
+        padding: 10px 15px;
+    }
 }
 
