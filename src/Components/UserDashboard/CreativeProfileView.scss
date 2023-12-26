@@ -1,0 +1,379 @@
+@import '../variables.scss';
+
+*{@include default}
+
+
+
+// ===================== creativeProfileModal =====================
+
+.creativeProfileModal{
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.3);
+    align-items: center;
+    justify-content: center;
+    z-index: 100;
+}
+
+
+.creativeProfileContent{
+    background: rgb(249, 249, 249);
+    position: absolute;
+    padding: 30px 30px;
+    width: 65%;
+    height: 100vh;
+    right: 0;
+    top: 0;
+    overflow-y: scroll;
+}
+
+
+
+// =========================== Creative Left and Right ============================
+
+
+.creativeViewcloseBtn{
+    font-size: 16px;
+    background-color: white;
+    padding: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    width: fit-content;
+    cursor: pointer;
+}
+
+.creativeProfilePart{
+    display: flex;
+    margin-top: 20px;
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+}
+
+.creativeLeftPart{
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+.subLeftPart h2{
+    font-weight: 400;
+}
+
+.subLeftPart div{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+
+.subLeftPart div span{
+    padding: 5px 17px;
+    background-color: $my-blue;
+    color: white;
+    border-radius: 20px;
+    font-size: 12px;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    font-weight: 200;
+}
+
+.subLeftPart p{
+    font-weight: 300;
+}
+
+.creativeProfileLocation{
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+
+.creativeViewIcons{
+    color: $my-blue;
+}
+
+
+// =================== creativeRightPart ======================
+.creativeRightPart{
+    margin-left: auto;
+}
+
+.creativeRightPart div{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+
+.creativeRightPart div p{
+    font-size: 16px;
+    background-color: rgb(255, 241, 241);
+    padding: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    width: fit-content;
+    cursor: pointer;
+}
+
+
+.creativeRightPart div button{
+    padding: 10px 30px;
+    border-radius: 20px;
+    border: none;
+    background-color: $my-blue;
+    color: white;
+}
+
+.creativeLink{
+    text-align: right;
+    margin-top: 10px;
+    font-size: 13px;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    justify-content: flex-end;
+}
+
+
+
+// ===================== creativeProfileViewDescriptionPart ====================
+
+.creativeProfileViewDescriptionPart{
+    display: flex;
+    gap: 30px;
+    padding-top: 30px;
+}
+
+
+// ============================ Left ======================
+.creativeProfileViewDescriptionLeft{
+    background-color: white;
+    box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+    width: 40%;
+    padding: 30px;
+    border-radius: 10px;
+}
+
+
+.creativeProfileViewDescriptionLeft h2{
+    font-size: 16px;
+    font-weight: 400;
+}
+
+.creativeProfileViewDescriptionLeft h3{
+    font-size: 15px;
+    font-weight: 500;
+    padding-top: 10px;
+    padding-bottom: 5px;
+}
+
+.creativeProfileViewDescriptionLeft p{
+    font-size: 12px;
+    font-weight: 300;
+}
+
+
+.openDays{
+    display: flex;
+    align-items: center;
+    padding-top: 6px;
+}
+
+
+.openDays .time{
+    margin-left: auto;
+}
+
+
+.creativeProfileViewDescriptionLeft div img{
+    width: 100%;
+}
+
+// ==================== Right ======================
+.creativeProfileViewDescriptionRight{
+    box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+    width: 60%;
+    background-color: white;
+    padding: 30px;
+    border-radius: 10px;
+}
+
+
+.creativeProfileViewDescriptionRight h2{
+    font-weight: 400;
+    font-size: 16px;
+}
+
+
+.creativeProfileViewDescriptionRight .detailsView{
+
+}
+
+
+.creativeProfileViewDescriptionRight .detailsView h3{
+    font-size: 20px;
+    font-weight: 500;
+    padding: 10px 0;
+}
+
+
+.detailsViewFLex div h3{
+    padding: 0 !important;
+}
+
+.detailsViewFLex p{
+    font-size: 12px;
+    font-weight: 300;
+}
+
+
+.creativeProfileViewDescriptionRight .detailsViewFLex{
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.creativeProfileViewDescriptionRight .detailsViewFLex p{
+    width: 100%;
+}
+
+.creativeProfileViewDescriptionRight .detailsViewFLex div{
+    width: 40%;
+    margin-left: auto;
+    text-align: right;
+}
+
+
+.webViewsDiv {
+    padding-bottom: 20px;
+}
+
+.webViewsDiv .web{
+    padding-bottom: 10px;
+    color: $my-blue;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.webViewsDiv div{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding-bottom: 10px;
+}
+
+.webViewsDiv div span{
+    border: solid 1px $my-blue;
+    padding: 6px 15px;
+    font-size: 12px;
+}
+
+
+.bioView{
+    text-align: justify;
+    font-size: 12px;
+    font-weight: 300;
+}
+
+.creativeProfileViewRightImage{
+    width: 100%;
+}
+
+
+.creativeProfileViewRightImage img{
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+
+.rightImageDiv{
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.rightImageDiv img{
+    width: 100px;
+}
+
+
+.frequentlyAsked {
+    padding-top: 20px;
+}
+
+
+.frequentlyDiv{
+    padding: 10px 0;
+}
+
+.frequentlyDiv h3{
+    font-size: 15px;
+    font-weight: 400;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+hr{
+    margin-top: 10px;
+}
+
+.freqIcon{
+    margin-left: auto;
+    font-size: 15px;
+}
+
+.frequentlyDiv p{
+    font-size: 12px;
+    font-weight: 300;
+    text-align: justify;
+}
+
+
+.reviews{
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+
+.reviews h3{
+    font-size: 15px;
+    font-weight: 400;
+    padding-bottom: 10px;
+}
+
+.reviews p{
+    font-size: 12px;
+    font-weight: 300;
+
+}
+
+.reviews .reviewsProf{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    justify-content: center;
+}
+
+
+.react-multiple-carousel__arrow{
+    min-width: 25px;
+    min-height: 25px;
+    bottom: 70px;
+}
+
+.react-multiple-carousel__arrow::before{
+    font-size: 13px;
+}

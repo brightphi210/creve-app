@@ -11,6 +11,7 @@ import avatar from './images/Avatars1.png'
 
 import { MdOutlineVerified } from "react-icons/md";
 import { IoIosStar } from "react-icons/io";
+import CreativeProfileView from './CreativeProfileView';
 
 
 const SearchedResultCompo = () => {
@@ -345,6 +346,8 @@ const SearchedResultCompo = () => {
                 </div>
             </div>
         </div>
+
+        <CreativeProfileView />
     </div>
   )
 }
