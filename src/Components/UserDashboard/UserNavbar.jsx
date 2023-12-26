@@ -17,6 +17,8 @@ import { FaExchangeAlt } from "react-icons/fa";
 import { MdOutlineLogout } from "react-icons/md";
 import { GrHomeRounded } from "react-icons/gr";
 
+import { RiSendPlaneFill } from "react-icons/ri";
+
 
 import './UserNavbar.scss'
 
@@ -24,6 +26,8 @@ import './UserNavbar.scss'
 const UserNavbar = () => {
 
   const [show, setShow] = useState(false)
+  const [show2, setShow2] = useState(false)
+  const [showSearch, setShowSearch] = useState(false)
 
   const openModal = () =>{
     setShow(true);
@@ -35,8 +39,6 @@ const UserNavbar = () => {
   }
 
 
-  const [show2, setShow2] = useState(false)
-
   const openModal2 = () =>{
     setShow2(true);
   }
@@ -45,6 +47,14 @@ const UserNavbar = () => {
   const closeModal2 = () =>{
     setShow2(false);
   }
+
+
+  const toggleSearch = () =>{
+    setShowSearch(!showSearch)
+  }
+
+
+
   return (
     <div className='userNavbarSection'>
 
@@ -59,7 +69,14 @@ const UserNavbar = () => {
                 <button>Search</button>
             </div>
         </div>
-        <div className='searchIconDiv'><RiSearch2Line className='searchBtn'/></div>
+        <div className='searchIconDiv' onClick={toggleSearch}><RiSearch2Line className='searchBtn'/></div>
+
+      {showSearch && (
+        <div className='smallSearchInput'>
+          <input type="text" placeholder='search for any service . . .'/>
+          <button><RiSendPlaneFill /></button>
+        </div>
+      )}
 
 
 
