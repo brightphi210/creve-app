@@ -132,8 +132,13 @@ const UserNavbar = () => {
           <div className='userNavIcon'>
             <Link to={'/favourites'} className='link'><MdFavoriteBorder className='userIcon'/></Link>
           </div>
-          <div className='userNavIcon'><AiOutlineMessage className='userIcon'/></div>
-          <div className='userNavIcon' onClick={openModal}><MdOutlineNotifications className='userIcon'/></div>
+          <div className='userNavIcon'><AiOutlineMessage className='userIcon'/>
+            <p></p>
+          </div>
+          
+          <div className='userNavIcon' onClick={openModal}><MdOutlineNotifications className='userIcon'/>
+            <p></p>
+          </div>
 
           <div className='userNavProfile' onClick={openModal2}>
             <div>
