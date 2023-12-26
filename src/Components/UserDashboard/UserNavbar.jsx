@@ -75,7 +75,7 @@ const UserNavbar = () => {
           <div>
             <hr />
             <div className='notProf'>
-              <img src={avatar} alt="" width={40}/>
+              <img src={avatar} alt="" width={30}/>
               <div>
                 <p>We have Exciting new talents in Web Development. Explore now!</p>
                 <p>3 days ago</p>
@@ -83,7 +83,7 @@ const UserNavbar = () => {
             </div>
             <hr />
             <div className='notProf'>
-              <img src={avatar} alt="" width={40}/>
+              <img src={avatar} alt="" width={30}/>
               <div>
                 <p>We have Exciting new talents in Web Development. Explore now!</p>
                 <p>3 days ago</p>
