@@ -11,6 +11,7 @@ import { HiLocationMarker } from "react-icons/hi";
 import { GrFavorite } from "react-icons/gr";
 import { IoCopyOutline } from "react-icons/io5";
 import { MdOutlineKeyboardArrowDown } from "react-icons/md";
+import { AiOutlineMessage } from "react-icons/ai";
 
 
 
@@ -66,7 +67,7 @@ const CreativeProfileView = () => {
           <div className='creativeRightPart'>
             <div>
               <p><GrFavorite /></p>
-              <button>Message Creative</button>
+              <button>Message Creative <AiOutlineMessage /></button>
             </div>
               
             <p className='creativeLink'>081-123-123-23 <IoCopyOutline /></p>
