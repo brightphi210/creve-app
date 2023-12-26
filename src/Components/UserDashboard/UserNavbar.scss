@@ -207,6 +207,11 @@ hr{
     font-weight: 300;
 }
 
+
+.smallSearchInput{
+    display: none;
+}
+
 @media only screen and (min-width: $small-One) and (max-width: $small-Two) {
     .userNavbarSection{
         padding: 10px 7%;
