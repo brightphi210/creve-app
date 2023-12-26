@@ -30,6 +30,12 @@
     font-weight: 400;
 }
 
+.searchedSpanDiv{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
 .searchedBtnsDiv span{
     display: flex;
     align-items: center;
@@ -168,15 +174,50 @@
 }
 
 .first{
-    background-color: white;
-    color: $my-blue;
-    border: solid 1px $my-blue;
+    background-color: white !important;
+    color: $my-blue !important;
+    border: solid 1px $my-blue !important;
 }
 
 @media only screen and (min-width: $small-One) and (max-width: $small-Two) {
+    
+
+    .searchedResultDiv{
+        padding: 50px 5%;
+    }
+    .searchedBtnsDiv{
+        display: block;
+    }
+
+    .searchedSpanDiv{
+        flex-wrap: wrap;
+        gap: 10px;
+        margin-top: 10px;
+    }
+
+
+    .searchedBtnsDiv p{
+        font-size: 13px;
+        width: auto;
+    }
+
+    .searchedBtnsDiv span{
+        font-size: 12px;
+    }
+
+
+    .searchedResultDiv h2{
+        font-size: 20px;
+    }
+    
     .searchedImagecard{
         display: grid;
         grid-template-columns: 1fr;
         gap: 30px;
+        
+    }
+
+    .searchedCardDiv{
+        box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
     }
 }

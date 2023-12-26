@@ -20,10 +20,12 @@ const SearchedResultCompo = () => {
             <h2>Search Result for Hair Dresser</h2>
             <div className='searchedBtnsDiv'>
                 <p>Filter Option</p>
-                <span>Location <MdKeyboardArrowDown /></span>
-                <span>Verification Status <MdKeyboardArrowDown /></span>
-                <span>Starting Price <MdKeyboardArrowDown /></span>
-                <span>Work type <MdKeyboardArrowDown /></span>
+                <div className='searchedSpanDiv'>
+                    <span>Location <MdKeyboardArrowDown /></span>
+                    <span>Verification Status <MdKeyboardArrowDown /></span>
+                    <span>Starting Price <MdKeyboardArrowDown /></span>
+                    <span>Work type <MdKeyboardArrowDown /></span>
+                </div>
             </div>
 
             <div className='resultsDiv'>
@@ -333,7 +335,7 @@ const SearchedResultCompo = () => {
             </div>
 
             <div className='searchedArror'>
-                <div className='searchArrorDiv first '>
+                <div className='searchArrorDiv first'>
                     <MdOutlineArrowBackIos />
                     <p>Previous</p>
                 </div>
