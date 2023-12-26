@@ -84,6 +84,13 @@
     padding-bottom: 20px;
 }
 
+
+.imageSectionCard h2{
+    padding-top: 30px;
+    font-weight: 400;
+    font-size: 18px;
+}
+
 .cardDiv{
     box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
     background-color: $my-white;
@@ -231,6 +238,10 @@
         display: grid;
         grid-template-columns: 1fr;
         gap: 30px;
+    }
+
+    .imageSectionCard h2{
+        padding-top: 0;
     }
 
 
