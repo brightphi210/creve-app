@@ -14,6 +14,9 @@ import { IoIosStar } from "react-icons/io";
 
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
+import { useState } from 'react'
+import CreativeProfileView from './CreativeProfileView'
+import MapSearched from './MapSearched'
  
 
 
@@ -38,6 +41,29 @@ const TalentCompo = () => {
         }
       };
 
+
+      const [show, setShow] = useState(false)
+
+      const openModal = () =>{
+        setShow(true)
+      }
+
+      const closeModal =()=>{
+        setShow(false)
+      }
+
+
+
+      const [showMap, setShowMap] = useState(false)
+
+      const openModalMap = ()=>{
+        setShowMap(true);
+      } 
+  
+      const closeModalMap = ()=>{
+        setShowMap(false);
+      }
+
   return (
     <div>
         <div className='talentSection'>
@@ -55,7 +81,8 @@ const TalentCompo = () => {
         <div className='findMainSection'>
             <div className='findDiv'>
                 <p>Find Talents by Location <PiMapPinLineFill className='mapIcon'/></p>
-                <Link to={'/searchedResult'}><button>Search </button></Link>
+                <button onClick={openModalMap}>Search </button>
+                <Link to={'/searchedResult'}><button>Search Link</button></Link>
             </div>
 
             <div className='imageSectionCard'>
@@ -64,7 +91,7 @@ const TalentCompo = () => {
                 <div className='imagecard'>
 
 
-                    <div className='cardDiv'>
+                    <div className='cardDiv' onClick={openModal}>
                         <div className='imgCard'><img src={imageCard} alt="" /></div>
                         <div className='cardProfileDiv'>
                             <div className='cardProfileDiv2'>
@@ -89,7 +116,7 @@ const TalentCompo = () => {
                     </div>
 
 
-                    <div className='cardDiv'>
+                    <div className='cardDiv' onClick={openModal}>
                         <div className='imgCard'><img src={imageCard} alt="" /></div>
                         <div className='cardProfileDiv'>
                             <div className='cardProfileDiv2'>
@@ -115,7 +142,7 @@ const TalentCompo = () => {
 
 
 
-                    <div className='cardDiv'>
+                    <div className='cardDiv' onClick={openModal}>
                         <div className='imgCard'><img src={imageCard} alt="" /></div>
                         <div className='cardProfileDiv'>
                             <div className='cardProfileDiv2'>
@@ -141,7 +168,7 @@ const TalentCompo = () => {
 
 
 
-                    <div className='cardDiv'>
+                    <div className='cardDiv' onClick={openModal}>
                         <div className='imgCard'><img src={imageCard} alt="" /></div>
                         <div className='cardProfileDiv'>
                             <div className='cardProfileDiv2'>
@@ -186,7 +213,7 @@ const TalentCompo = () => {
 
                     <div className='cardDiv cardDivCarol'>
                         <div className='imgCard'><img src={imageCard} alt="" /></div>
-                        <div className='cardProfileDiv'>
+                        <div className='cardProfileDiv' onClick={openModal}>
                             <div className='cardProfileDiv2'>
                                 <div className='cardProfileDivImg'>
                                     <img src={avatar} alt="" />
@@ -208,7 +235,7 @@ const TalentCompo = () => {
                         </div>
                     </div>
 
-                    <div className='cardDiv cardDivCarol'>
+                    <div className='cardDiv cardDivCarol' onClick={openModal}>
                         <div className='imgCard'><img src={imageCard} alt="" /></div>
                         <div className='cardProfileDiv'>
                             <div className='cardProfileDiv2'>
@@ -233,7 +260,7 @@ const TalentCompo = () => {
                     </div>
 
 
-                    <div className='cardDiv cardDivCarol'>
+                    <div className='cardDiv cardDivCarol' onClick={openModal}>
                         <div className='imgCard'><img src={imageCard} alt="" /></div>
                         <div className='cardProfileDiv'>
                             <div className='cardProfileDiv2'>
@@ -258,7 +285,7 @@ const TalentCompo = () => {
                     </div>
 
 
-                    <div className='cardDiv cardDivCarol'>
+                    <div className='cardDiv cardDivCarol' onClick={openModal}>
                         <div className='imgCard'><img src={imageCard} alt="" /></div>
                         <div className='cardProfileDiv'>
                             <div className='cardProfileDiv2'>
@@ -309,6 +336,8 @@ const TalentCompo = () => {
             </div>
         </div>
 
+        {show && <CreativeProfileView closeModal={closeModal}/>}
+        {showMap && <MapSearched closeModal={closeModalMap}/>}
 
     </div>
   )

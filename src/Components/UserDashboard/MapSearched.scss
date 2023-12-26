@@ -1,0 +1,122 @@
+@import '../variables.scss';
+
+*{@include default}
+
+
+.mapModal{
+    display: flex;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.3);
+    align-items: center;
+    justify-content: center;
+    z-index: 100;
+}
+
+
+.mapModalContent {
+    background: white;
+    position: relative;
+    padding: 30px;
+    width: 53%; 
+    max-height: 80vh;
+}
+
+.mapDivFlex{
+    display: flex;
+    gap: 30px;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.mapDivFlex div{
+    width: 100%;
+}
+
+.mapDivFlex div img{
+    width: 100%;
+}
+
+
+.mapDivInputs{
+}
+
+
+.mapDivInputsLoca{
+    margin-top: 20px;
+}
+
+.mapDivInputsLoca input{
+    width: 100%;
+    box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+    padding: 15px 20px;
+    outline: none;
+    border-radius:6px ;
+    border: solid 1px white;
+}
+
+
+.mapDivInputsFilt{
+    margin-top: 20px;
+}
+
+.mapDivInputsFilt select{
+    box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+    display: block;
+    padding: 10px;
+    border-radius: 6px;
+    margin-bottom: 10px;
+    border: none;
+}
+
+.mapDivFlex button{
+    padding: 10px;
+    width: 100%;
+    border-radius: 20px;
+    border: none;
+    background-color: $my-blue;
+    color: white;
+    margin-top: 30px;
+    cursor: pointer;
+}
+
+
+@media only screen and (min-width: $small-One) and (max-width: $small-Two) {
+    .mapDivFlex{
+        display: block;
+    }
+
+    .mapModalContent {
+        padding: 20px;
+        width: 100%; 
+        max-height: 100vh;
+        overflow-y: scroll;
+    }
+
+    .mapDivInputs h2{
+        font-size: 18px;
+        font-weight: 400;
+    }
+
+    .mapDivInputs p{
+        font-size: 12px;
+    }
+
+
+    .mapDivInputsLoca input{ 
+        padding: 10px;
+        margin-top: 3px;
+    }
+
+    .mapDivInputsFilt p{
+        margin-bottom: 3px;
+    }
+    
+
+    .mapDivFlex button{
+        margin-top: 10px;
+    }
+}

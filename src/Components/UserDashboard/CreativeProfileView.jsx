@@ -18,7 +18,8 @@ import { AiOutlineMessage } from "react-icons/ai";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 
-const CreativeProfileView = () => {
+const CreativeProfileView = ({closeModal}) => {
+
 
   const responsive = {
     desktop: {
@@ -43,7 +44,7 @@ const CreativeProfileView = () => {
     <div className='creativeProfileModal'>
       <div className='creativeProfileContent'>
 
-        <p className='creativeViewcloseBtn'><IoArrowBackOutline /></p>
+        <p className='creativeViewcloseBtn' onClick={closeModal}><IoArrowBackOutline /></p>
 
         <div className='creativeProfilePart'>
           <div className='creativeLeftPart'>

@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import './SearchedResultCompo.scss'
 
 import { MdKeyboardArrowDown } from "react-icons/md";
@@ -15,7 +15,19 @@ import CreativeProfileView from './CreativeProfileView';
 
 
 const SearchedResultCompo = () => {
+
+    const [show, setShow] = useState(false);
+
+    const openModal =()=>{
+      setShow(true);
+    }
+  
+    const closeModal =()=>{
+      setShow(false);
+    }
+    
   return (
+    
     <div>
         <div className='searchedResultDiv'>
             <h2>Search Result for Hair Dresser</h2>
@@ -33,7 +45,7 @@ const SearchedResultCompo = () => {
                 <p>Creve Recommended</p>
                 <div className='searchedImagecard'>
 
-                    <div className='searchedCardDiv'>
+                    <div className='searchedCardDiv' onClick={openModal}>
                         <div className='imgCard'><img src={imageCard} alt="" /></div>
                         <div className='searchedCardProfileDiv'>
                             <div className='cardProfileDiv2'>
@@ -58,7 +70,7 @@ const SearchedResultCompo = () => {
                     </div>
 
 
-                    <div className='searchedCardDiv'>
+                    <div className='searchedCardDiv' onClick={openModal}>
                         <div className='imgCard'><img src={imageCard} alt="" /></div>
                         <div className='searchedCardProfileDiv'>
                             <div className='searchedCardProfileDiv2'>
@@ -82,7 +94,7 @@ const SearchedResultCompo = () => {
                         </div>
                     </div>
 
-                    <div className='searchedCardDiv'>
+                    <div className='searchedCardDiv' onClick={openModal}>
                         <div className='imgCard'><img src={imageCard} alt="" /></div>
                         <div className='searchedCardProfileDiv'>
                             <div className='searchedCardProfileDiv2'>
@@ -106,7 +118,7 @@ const SearchedResultCompo = () => {
                         </div>
                     </div>
 
-                    <div className='searchedCardDiv'>
+                    <div className='searchedCardDiv' onClick={openModal}>
                         <div className='imgCard'><img src={imageCard} alt="" /></div>
                         <div className='searchedCardProfileDiv'>
                             <div className='searchedCardProfileDiv2'>
@@ -134,7 +146,7 @@ const SearchedResultCompo = () => {
 
                 <div className='searchedImagecard'>
 
-                    <div className='searchedCardDiv'>
+                    <div className='searchedCardDiv' onClick={openModal}>
                         <div className='imgCard'><img src={imageCard} alt="" /></div>
                         <div className='searchedCardProfileDiv'>
                             <div className='cardProfileDiv2'>
@@ -159,7 +171,7 @@ const SearchedResultCompo = () => {
                     </div>
 
 
-                    <div className='searchedCardDiv'>
+                    <div className='searchedCardDiv' onClick={openModal}>
                     <div className='imgCard'><img src={imageCard} alt="" /></div>
                     <div className='searchedCardProfileDiv'>
                     <div className='searchedCardProfileDiv2'>
@@ -183,7 +195,7 @@ const SearchedResultCompo = () => {
                     </div>
                     </div>
 
-                    <div className='searchedCardDiv'>
+                    <div className='searchedCardDiv' onClick={openModal}>
                     <div className='imgCard'><img src={imageCard} alt="" /></div>
                     <div className='searchedCardProfileDiv'>
                     <div className='searchedCardProfileDiv2'>
@@ -207,7 +219,7 @@ const SearchedResultCompo = () => {
                     </div>
                     </div>
 
-                    <div className='searchedCardDiv'>
+                    <div className='searchedCardDiv' onClick={openModal}>
                     <div className='imgCard'><img src={imageCard} alt="" /></div>
                     <div className='searchedCardProfileDiv'>
                     <div className='searchedCardProfileDiv2'>
@@ -232,107 +244,6 @@ const SearchedResultCompo = () => {
                     </div>
 
                 </div>
-
-                <div className='searchedImagecard'>
-
-                    <div className='searchedCardDiv'>
-                        <div className='imgCard'><img src={imageCard} alt="" /></div>
-                        <div className='searchedCardProfileDiv'>
-                            <div className='cardProfileDiv2'>
-                                <div className='searchedCardProfileDivImg'>
-                                    <img src={avatar} alt="" />
-                                    <div>
-                                        <p>Cassie Daniels</p>
-                                        <p>4.0 <IoIosStar /> </p>
-                                    </div>
-                                </div>
-
-                                <div className='searchedCardProBtn2'>
-                                    <button><MdOutlineVerified/> Verified</button>
-                                </div>
-                            </div>
-
-                            <div>
-                                <h3>Frontend developer proficient in CSS, Javasc...</h3>
-                                <p>#20,000</p>
-                            </div>
-                        </div>
-                    </div>
-
-
-                    <div className='searchedCardDiv'>
-                        <div className='imgCard'><img src={imageCard} alt="" /></div>
-                        <div className='searchedCardProfileDiv'>
-                            <div className='searchedCardProfileDiv2'>
-                                <div className='searchedCardProfileDivImg'>
-                                    <img src={avatar} alt="" />
-                                    <div>
-                                        <p>Cassie Daniels</p>
-                                        <p>4.0 <IoIosStar /></p>
-                                    </div>
-                                </div>
-
-                                <div className='searchedCardProBtn'>
-                                    <button><MdOutlineVerified/> Verified</button>
-                                </div>
-                            </div>
-
-                            <div>
-                                <h3>Frontend developer proficient in CSS, Javasc...</h3>
-                                <p>#20,000</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div className='searchedCardDiv'>
-                        <div className='imgCard'><img src={imageCard} alt="" /></div>
-                        <div className='searchedCardProfileDiv'>
-                            <div className='searchedCardProfileDiv2'>
-                                <div className='searchedCardProfileDivImg'>
-                                    <img src={avatar} alt="" />
-                                    <div>
-                                        <p>Cassie Daniels</p>
-                                        <p>4.0 <IoIosStar /></p>
-                                    </div>
-                                </div>
-
-                                <div className='searchedCardProBtn2'>
-                                    <button><MdOutlineVerified/> Verified</button>
-                                </div>
-                            </div>
-
-                            <div>
-                                <h3>Frontend developer proficient in CSS, Javasc...</h3>
-                                <p>#20,000</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div className='searchedCardDiv'>
-                        <div className='imgCard'><img src={imageCard} alt="" /></div>
-                        <div className='searchedCardProfileDiv'>
-                            <div className='searchedCardProfileDiv2'>
-                                <div className='cardProfileDivImg'>
-                                    <img src={avatar} alt="" />
-                                    <div>
-                                        <p>Cassie Daniels</p>
-                                        <p className='proRating'>4.0 <IoIosStar /></p>
-                                    </div>
-                                </div>
-
-                                <div className='cardProBtn'>
-                                    <button><MdOutlineVerified/> Verified</button>
-                                </div>
-                            </div>
-
-                            <div>
-                                <h3>Frontend developer proficient in CSS, Javasc...</h3>
-                                <p>#20,000</p>
-                            </div>
-                        </div>
-                    </div>
-
-                </div>
             </div>
 
             <div className='searchedArror'>
@@ -347,7 +258,8 @@ const SearchedResultCompo = () => {
             </div>
         </div>
 
-        <CreativeProfileView />
+        {show && <CreativeProfileView  closeModal={closeModal}/>}
+        
     </div>
   )
 }
