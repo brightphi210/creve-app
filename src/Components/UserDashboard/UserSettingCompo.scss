@@ -1,0 +1,127 @@
+@import '../variables.scss';
+
+*{@include default}
+
+
+// =========================== userSetting============================
+
+.userSetting{
+    padding: 150px 5%;
+    display: flex;
+    justify-content: center;
+}
+
+.userDiv{
+    box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+    width: 50%;
+    padding: 50px;
+}
+
+
+.userDivEach {
+    padding: 20px 0;
+}
+
+.userDivEach h2{
+    font-size: 18px;
+    font-weight: 400;
+}
+
+.userDivEach p{
+    padding-top: 10px;
+}
+
+
+.userDivEach input{
+    padding: 15px;
+    width: 100%;
+    box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+    border: none;
+    margin-top: 8px;
+}
+
+.userDivEach form button{
+    background-color: $my-blue;
+    padding: 10px 20px;
+    color: white;
+    border: none;
+    border-radius: 20px;
+    margin-top: 20px;
+    cursor: pointer;
+}
+
+
+.myP{
+    color: rgb(170, 157, 196);
+}
+
+.bcome{
+    border: solid 1px $my-blue;
+    padding: 10px 20px;
+    color: $my-blue;
+    background-color: white;
+    border-radius: 20px;
+    margin-top: 20px;
+    cursor: pointer;
+}
+
+
+.deleteBtn {
+    color: orange;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    padding-top: 10px;
+    cursor: pointer;
+}
+
+
+
+@media only screen and (min-width: $small-One) and (max-width: $small-Two) {
+    .userSetting{
+        padding: 80px 5%;
+        display: flex;
+        justify-content: center;
+    }
+    
+    .userDiv{
+        box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+        width: 100%;
+        padding: 20px;
+    }
+
+
+    .userDivEach input{
+        padding: 10px;
+        width: 100%;
+    }
+
+
+    .userDivEach h2{
+        font-size: 15px;
+        font-weight: 400;
+    }
+
+    .userDivEach p{
+        padding-top: 10px;
+        font-size: 12px;
+    }
+
+    .userDivEach form button{
+        font-size: 10px;
+        width: 100%;
+        border-radius: 10px;
+    }
+
+
+    .bcome{
+        font-size: 10px;
+        width: 100%;
+        border-radius: 10px;
+    }
+    
+
+    .deleteBtn{
+        font-size: 12px;
+    }
+}

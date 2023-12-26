@@ -130,7 +130,7 @@ const UserNavbar = () => {
           <div className='accountNot'>
             <span>Client Account</span>
 
-            <p><IoSettingsSharp />Settings</p>
+            <Link to={'/user-settings'}><p><IoSettingsSharp />Settings</p></Link>
             <p><IoPersonAddOutline />Refer a friend</p>
             <p><FaExchangeAlt />Become a Talent</p>
 

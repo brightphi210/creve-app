@@ -10,6 +10,7 @@ import RegistraionOption from "./Pages/RegistraionOption";
 import SignUp2 from "./Pages/SignUp2";
 import SearchResulte from "./Pages/TalentPages/SearchResulte";
 import Favourite from "./Pages/TalentPages/Favourite";
+import UserSetting from "./Pages/UserSetting";
 
 function App() {
   return (
@@ -25,6 +26,7 @@ function App() {
           <Route path="/talents" element={<Talents />}></Route>
           <Route path="/favourites" element={<Favourite />}></Route>
           <Route path="/searchedResult" element={<SearchResulte />}></Route>
+          <Route path="/user-settings" element={<UserSetting />}></Route>
         </Routes>
       </BrowserRouter>
     </div>
