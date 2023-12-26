@@ -7,6 +7,7 @@ import avatar from './images/Avatars1.png'
 import { RiSearch2Line } from "react-icons/ri";
 import { MdFavoriteBorder } from "react-icons/md";
 import { MdOutlineNotifications } from "react-icons/md";
+import { AiOutlineMessage } from "react-icons/ai";
 
 
 import './UserNavbar.scss'
@@ -31,6 +32,7 @@ const UserNavbar = () => {
 
         <div className='userNavSecondDiv'>
           <div className='userNavIcon'><MdFavoriteBorder className='userIcon'/></div>
+          <div className='userNavIcon'><AiOutlineMessage className='userIcon'/></div>
           <div className='userNavIcon'><MdOutlineNotifications className='userIcon'/></div>
 
           <div className='userNavProfile'>

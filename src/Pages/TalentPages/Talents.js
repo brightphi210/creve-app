@@ -1,7 +1,7 @@
 import React from 'react'
 
-import UserNavbar from '../Components/UserDashboard/UserNavbar'
-import TalentCompo from '../Components/UserDashboard/TalentCompo'
+import UserNavbar from '../../Components/UserDashboard/UserNavbar'
+import TalentCompo from '../../Components/UserDashboard/TalentCompo'
 
 const Talents = () => {
   return (

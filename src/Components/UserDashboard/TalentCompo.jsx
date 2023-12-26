@@ -1,5 +1,6 @@
 // import React, { useEffect, useState } from 'react'
 import './TalentCompo.scss'
+import { Link } from 'react-router-dom'
 
 
 import myImage from './images/talentImg.png'
@@ -54,7 +55,7 @@ const TalentCompo = () => {
         <div className='findMainSection'>
             <div className='findDiv'>
                 <p>Find Talents by Location <PiMapPinLineFill className='mapIcon'/></p>
-                <button>Search </button>
+                <Link to={'/searchedResult'}><button>Search </button></Link>
             </div>
 
             <div className='imageSectionCard'>
