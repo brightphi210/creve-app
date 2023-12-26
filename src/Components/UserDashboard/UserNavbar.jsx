@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
 
-import logo from './images/craves.png'
+import logo from './images/Logo2.png'
 import avatar from './images/Avatars1.png'
 
 import { RiSearch2Line } from "react-icons/ri";
@@ -15,6 +15,7 @@ import { IoSettingsSharp } from "react-icons/io5";
 import { IoPersonAddOutline } from "react-icons/io5";
 import { FaExchangeAlt } from "react-icons/fa";
 import { MdOutlineLogout } from "react-icons/md";
+import { GrHomeRounded } from "react-icons/gr";
 
 
 import './UserNavbar.scss'
@@ -49,7 +50,7 @@ const UserNavbar = () => {
 
         <div className='userNavFirstDiv'>
           <div className='userLogo'>
-            <Link to={'/talents'}><img src={logo} alt="" width={90}/></Link>
+            <Link to={'/'}><img src={logo} alt="" width={40}/></Link>
           </div>
 
           <div className='userSearchDiv'>
@@ -130,8 +131,15 @@ const UserNavbar = () => {
         <div className='userNavSecondDiv'>
           
           <div className='userNavIcon'>
+            <Link to={'/talents'} className='link'><GrHomeRounded className='userIcon'/></Link>
+          </div>
+
+
+          <div className='userNavIcon'>
             <Link to={'/favourites'} className='link'><MdFavoriteBorder className='userIcon'/></Link>
           </div>
+
+          
           <div className='userNavIcon'><AiOutlineMessage className='userIcon'/>
             <p></p>
           </div>
