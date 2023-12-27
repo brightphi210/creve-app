@@ -39,7 +39,7 @@ const Narvbar = () => {
             <div className='navUl'>
               <p>How it works</p>
               <p>About us</p>
-              <p className='dropDown'>Category <IoMdArrowDropdown /></p>
+              <Link to={'/category'}><p className='dropDown'>Category <IoMdArrowDropdown /></p></Link>
               <p>Find Talent</p>
             </div>
           </div>
