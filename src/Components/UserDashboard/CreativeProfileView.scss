@@ -467,18 +467,37 @@ hr{
 
     .creativeRightPart{
         margin-top: 20px;
+        display: block;
     }
 
-    .creativeRightPart div button{
+    .creativeRightPart  button{
         box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
         padding: 7px 15px;
-        background-color: white;
-        color: $my-blue;
         display: flex;
         align-items: center;
         gap: 6px;
+        font-size: 12px;
+        background-color: $my-blue;
+        color: white;
+        border: none;
     }
 
+
+    .creativeRightPart .favo{
+        margin-bottom: 10px;
+        padding: 10px;
+    }
+    
+
+    .creativeRightPart .start{
+        background-color: white;
+        color: $my-blue;
+    }
+
+
+    .creatIconsBtn{
+        font-size: 15px;
+    }
     .creativeLink{
         text-align: left;
         justify-content: flex-start;
