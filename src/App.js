@@ -12,6 +12,7 @@ import SearchResulte from "./Pages/TalentPages/SearchResulte";
 import Favourite from "./Pages/TalentPages/Favourite";
 import UserSetting from "./Pages/UserSetting";
 import CreativeProView from "./Pages/CreativeProView";
+import UserChat from "./Pages/TalentPages/UserChat";
 
 function App() {
   return (
@@ -29,6 +30,7 @@ function App() {
           <Route path="/favourites" element={<Favourite />}></Route>
           <Route path="/searchedResult" element={<SearchResulte />}></Route>
           <Route path="/user-settings" element={<UserSetting />}></Route>
+          <Route path="/chats" element={<UserChat />}></Route>
         </Routes>
       </BrowserRouter>
     </div>

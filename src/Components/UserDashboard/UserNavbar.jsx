@@ -157,7 +157,8 @@ const UserNavbar = () => {
           </div>
 
           
-          <div className='userNavIcon'><AiOutlineMessage className='userIcon'/>
+          <div className='userNavIcon'>
+            <Link to={'/chats'}><AiOutlineMessage className='userIcon'/></Link>
             <p></p>
           </div>
           
