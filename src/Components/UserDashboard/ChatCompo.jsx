@@ -27,6 +27,12 @@ const ChatCompo = () => {
             <div className='messageOverFlow'>
 
             </div>
+
+            <div className='messageBottom'>
+                <div className='msgBottomInput'>
+                    <input type="text" />
+                </div>
+            </div>
         </div>
     </div>
   )
