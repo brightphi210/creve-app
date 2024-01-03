@@ -91,7 +91,8 @@ const TalentCompo = () => {
                 <div className='imagecard'>
 
 
-                    <div className='cardDiv' onClick={openModal}>
+                    <Link to={'/talentsProfiles'}>
+                    <div className='cardDiv'>
                         <div className='imgCard'><img src={imageCard} alt="" /></div>
                         <div className='cardProfileDiv'>
                             <div className='cardProfileDiv2'>
@@ -114,6 +115,8 @@ const TalentCompo = () => {
                             </div>
                         </div>
                     </div>
+                    </Link>
+
 
 
                     <div className='cardDiv' onClick={openModal}>

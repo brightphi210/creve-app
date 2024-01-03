@@ -1,24 +1,24 @@
-import React from 'react'
+import React, { useState } from 'react'
 import profImage from './images/Avatars1.png'
 import map from './images/map.png'
 import mapImage from './images/bigImage.png'
 
 import './CreativeProfileView.scss'
-import { IoArrowBackOutline } from "react-icons/io5";
+import { FaEye } from "react-icons/fa6";
 import { HiStar } from "react-icons/hi2";
 import { RiVerifiedBadgeFill } from "react-icons/ri";
 import { HiLocationMarker } from "react-icons/hi";
 import { GrFavorite } from "react-icons/gr";
-import { IoCopyOutline } from "react-icons/io5";
 import { MdOutlineKeyboardArrowDown } from "react-icons/md";
-import { AiOutlineMessage } from "react-icons/ai";
+import { BsChatDots } from "react-icons/bs";
+import { FaRegCopy } from "react-icons/fa6";
 
 
 
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 
-const CreativeProfileView = ({closeModal}) => {
+const CreativeProfileView = () => {
 
 
   const responsive = {
@@ -40,11 +40,21 @@ const CreativeProfileView = ({closeModal}) => {
   };
 
 
+  const [show, setShow] = useState(false);
+
+  const closeModal = () =>{
+    setShow(false);
+  }
+
+  const toggleShow = () =>{
+    setShow(!show);
+  }
+
   return (
-    <div className='creativeProfileModal'>
+    <div className='creativeProfileModal' onClick={closeModal}>
       <div className='creativeProfileContent'>
 
-        <p className='creativeViewcloseBtn' onClick={closeModal}><IoArrowBackOutline /></p>
+        {/* <p className='creativeViewcloseBtn' ><IoArrowBackOutline /></p> */}
 
         <div className='creativeProfilePart'>
           <div className='creativeLeftPart'>
@@ -65,13 +75,36 @@ const CreativeProfileView = ({closeModal}) => {
 
           </div>
 
-          <div className='creativeRightPart'>
-            <div>
-              <p><GrFavorite /></p>
-              <button>Message Creative <AiOutlineMessage /></button>
-            </div>
+          <div className='creativeRightPart' onClick={(e) => e.stopPropagation()}>
+              <p className='favo'><GrFavorite /></p>
+
+              <div>
+                <button className='start'>Start Chat <BsChatDots className='creatIconsBtn'/></button>
+                <button onClick={toggleShow}>View Contact <FaEye className='creatIconsBtn'/></button>
+              </div>
+
+              { show && (
+                <div className='messageModalDiv' >
+                <div>
+                  <p className='messageModalTitle'>Phone number</p>
+                  <div className='phoneDiv'>
+                    <h3>081-123-123-23</h3>
+                    <p>Copy <FaRegCopy /></p>
+                  </div>
+                </div>
+
+                <hr />
+                <div>
+                  <p className='messageModalTitle'>WhatsApp</p>
+                  <div className='phoneDiv'>
+                    <h3>081-123-123-23</h3>
+                    <p>Chat on Whatsapp</p>
+                  </div>
+                </div>
+              </div>
+              )}
               
-            <p className='creativeLink'>081-123-123-23 <IoCopyOutline /></p>
+            {/* <p className='creativeLink'>081-123-123-23 <IoCopyOutline /></p> */}
           </div>
 
         </div>

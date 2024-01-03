@@ -11,6 +11,7 @@ import SignUp2 from "./Pages/SignUp2";
 import SearchResulte from "./Pages/TalentPages/SearchResulte";
 import Favourite from "./Pages/TalentPages/Favourite";
 import UserSetting from "./Pages/UserSetting";
+import CreativeProView from "./Pages/CreativeProView";
 
 function App() {
   return (
@@ -24,6 +25,7 @@ function App() {
           <Route path="/category" element={<Category />}></Route>
           <Route path="/registerOption" element={<RegistraionOption />}></Route>
           <Route path="/talents" element={<Talents />}></Route>
+          <Route path="/talentsProfiles" element={<CreativeProView />}></Route>
           <Route path="/favourites" element={<Favourite />}></Route>
           <Route path="/searchedResult" element={<SearchResulte />}></Route>
           <Route path="/user-settings" element={<UserSetting />}></Route>

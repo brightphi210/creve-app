@@ -7,28 +7,11 @@
 // ===================== creativeProfileModal =====================
 
 .creativeProfileModal{
-    display: block;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.3);
-    align-items: center;
-    justify-content: center;
-    z-index: 100;
+    padding: 100px 8%;
 }
 
 
 .creativeProfileContent{
-    background: rgb(249, 249, 249);
-    position: absolute;
-    padding: 30px 30px;
-    width: 65%;
-    height: 100vh;
-    right: 0;
-    top: 0;
-    overflow-y: scroll;
 }
 
 
@@ -105,16 +88,18 @@
 // =================== creativeRightPart ======================
 .creativeRightPart{
     margin-left: auto;
+    position: relative;
 }
 
-.creativeRightPart div{
+.creativeRightPart {
     display: flex;
-    align-items: center;
-    gap: 10px;
+    align-items: start;
+    gap: 20px;
 }
 
 
-.creativeRightPart div p{
+
+.creativeRightPart .favo{
     font-size: 16px;
     background-color: rgb(255, 241, 241);
     padding: 5px;
@@ -127,14 +112,69 @@
 }
 
 
-.creativeRightPart div button{
+
+
+.creativeRightPart button{
     padding: 10px 30px;
     border-radius: 20px;
     border: none;
     background-color: $my-blue;
     color: white;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+    width: 100%;
+    justify-content: center;
+    margin-bottom: 10px;
+    font-size: 15px;
 }
 
+.creativeRightPart .start{
+    background-color: white;
+    border: $my-blue solid 1px;
+    color: $my-blue;
+}
+
+.creatIconsBtn{
+    font-size: 17px;
+}
+
+.messageModalDiv{
+    box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background-color: white;
+    width: 300px;
+    padding: 30px;
+    border-radius: 6px;
+}
+
+
+.messageModalDiv .messageModalTitle{
+    padding: 6px 0;
+    font-weight: 300;
+}
+
+.phoneDiv{
+    display: flex;
+}
+
+.phoneDiv h3{
+    font-size: 15px;
+    font-weight: 400;
+}
+
+.phoneDiv p{
+    margin-left: auto;
+    align-items: center;
+    display: flex;
+    gap: 10px;
+    color: $my-blue;
+    cursor: pointer;
+    text-decoration: underline;
+}
 .creativeLink{
     text-align: right;
     margin-top: 10px;
@@ -381,9 +421,11 @@ hr{
 
 
 @media only screen and (min-width: $small-One) and (max-width: $small-Two) {
+    .creativeProfileModal{
+        padding: 50px 5%;
+    }
+    
     .creativeProfileContent{
-        width: 100%;
-        height: 100vh;
         padding: 10px;
     }
 

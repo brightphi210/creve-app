@@ -56,9 +56,9 @@ const UserNavbar = () => {
 
 
   return (
-    <div className='userNavbarSection'>
+    <div className='userNavbarSection' onClick={closeModal} >
 
-        <div className='userNavFirstDiv'>
+        <div className='userNavFirstDiv' >
           <div className='userLogo'>
             <Link to={'/'}><img src={logo} alt="" width={40}/></Link>
           </div>
@@ -145,7 +145,7 @@ const UserNavbar = () => {
 
 {/* ==================================== End of Profile ================================= */}
 
-        <div className='userNavSecondDiv'>
+        <div className='userNavSecondDiv' onClick={(e) => e.stopPropagation()}>
           
           <div className='userNavIcon'>
             <Link to={'/talents'} className='link'><GrHomeRounded className='userIcon'/></Link>
