@@ -12,6 +12,8 @@ import { GrFavorite } from "react-icons/gr";
 import { MdOutlineKeyboardArrowDown } from "react-icons/md";
 import { BsChatDots } from "react-icons/bs";
 import { FaRegCopy } from "react-icons/fa6";
+import { IoIosCloseCircleOutline } from "react-icons/io";
+import { RiSendPlaneFill } from "react-icons/ri";
 
 
 
@@ -50,6 +52,11 @@ const CreativeProfileView = () => {
     setShow(!show);
   }
 
+
+  const [show2, setShow2] = useState(false);
+  const openShow2 = () =>{setShow2(!show2)}
+  const closeShow2 = () =>{setShow2(false)}
+
   return (
     <div className='creativeProfileModal' onClick={closeModal}>
       <div className='creativeProfileContent'>
@@ -78,10 +85,24 @@ const CreativeProfileView = () => {
           <div className='creativeRightPart' onClick={(e) => e.stopPropagation()}>
               <p className='favo'><GrFavorite /></p>
 
-              <div>
-                <button className='start'>Start Chat <BsChatDots className='creatIconsBtn'/></button>
-                <button onClick={toggleShow}>View Contact <FaEye className='creatIconsBtn'/></button>
+              <div >
+                <button className='start' onClick={openShow2}>Start Chat <BsChatDots className='creatIconsBtn'/></button>
+                {show2 ? (
+                  <div className='messageChat' >
+                    <div>
+                      <h3>Send Message</h3>
+                      <p onClick={closeShow2}><IoIosCloseCircleOutline /></p>
+                    </div>
+                    <form action="">
+                      <input type="text" placeholder='Send Message to Creative' />
+                      <span><RiSendPlaneFill className='spaIcon'/></span>
+                    </form>
+                  </div>
+                ) : <button onClick={toggleShow}>View Contact <FaEye className='creatIconsBtn'/></button>}
               </div>
+
+
+
 
               { show && (
                 <div className='messageModalDiv' >

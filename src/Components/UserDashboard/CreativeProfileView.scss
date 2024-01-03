@@ -157,6 +157,49 @@
     font-weight: 300;
 }
 
+
+.messageChat div{
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
+    // justify-content: flex-end;
+}
+
+.messageChat h3{
+    font-weight: 400;
+}
+
+.messageChat p{
+    margin-left: auto;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.messageChat form{
+    display: flex;
+    // align-items: center;
+}
+
+
+.messageChat form input{
+    box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+    width: 250px;
+    padding: 13px;
+    border: none;
+    outline: none;
+}
+
+
+.messageChat form span{
+    background-color: $my-blue;
+    padding: 13px;
+    color: white;
+    cursor: pointer;
+}
+
+.spaIcon{
+    font-size: 20px;
+}
 .phoneDiv{
     display: flex;
 }
