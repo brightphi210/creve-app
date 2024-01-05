@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import './ChatCompo.scss'
 
 import ava from './images/Avatars1.png'
@@ -7,12 +7,23 @@ import { GrEmoji } from "react-icons/gr";
 import { MdAdd } from "react-icons/md";
 import { IoSend } from "react-icons/io5";
 const ChatCompo = () => {
+
+    const [show, setShow] = useState(false)
+
+    const showFunc = () =>{
+        setShow(true)
+    }
+
+
+    const hideFunc = () =>{
+        setShow(false)
+    }
   return (
     <div className='chatSec'>
         <div className='sideBar'>
             <h2>My Messages</h2>
             <div className='sideBarDiv'>
-                <div className='sideBarFlex'>
+                <div className='sideBarFlex' onClick={showFunc}>
                     <div><img src={ava} alt="" /></div>
                     <div>
                         <h3>Jane Doe</h3>
@@ -22,7 +33,7 @@ const ChatCompo = () => {
                     <div className='unreadCount'><p>3</p></div>
                 </div>
 
-                <div className='sideBarFlex'>
+                <div className='sideBarFlex' onClick={showFunc}>
                     <div><img src={ava} alt="" /></div>
                     <div>
                         <h3>Jane Doe</h3>
@@ -32,7 +43,7 @@ const ChatCompo = () => {
                     </div>
                 </div>
 
-                <div className='sideBarFlex'>
+                <div className='sideBarFlex' onClick={showFunc}>
                     <div><img src={ava} alt="" /></div>
                     <div>
                         <h3>Jane Doe</h3>
@@ -99,22 +110,42 @@ const ChatCompo = () => {
         </div>
 
 
-        <div className='smallMessage'>
-            <div>
-                <div></div>
+        {show && (
+            <div className='smallMessage'>
 
-                <div className='messageBottom'>
-                    <div className='msgBottomInput'>
-                        <input type="text" placeholder='Type your message here...'/>
+                <div className='smallMessageContent'>
+
+                    <div className='messageHeader'>
+                        <div className='messageAvaDiv'>
+                            <img src={ava}  alt="" />
+                            <div>
+                                <h2>Jane Doe</h2>
+                                <p>Frontend Developer</p>
+                            </div>
+                        </div>
+
+                        <div className='msgBtn'>
+                            <button>View Contact</button>
+                        </div>
                     </div>
-                    <div className='msgIcons'>
-                        <p><GrEmoji /></p>
-                        <p><MdAdd /></p>
-                        <button><IoSend /></button>
+
+                    <div>
+                        
+                    </div>
+
+                    <div className='messageBottom'>
+                        <div className='msgBottomInput'>
+                            <input type="text" placeholder='Type your message here...'/>
+                        </div>
+                        <div className='msgIcons'>
+                            <p><GrEmoji /></p>
+                            <p><MdAdd /></p>
+                            <button><IoSend /></button>
+                        </div>
                     </div>
                 </div>
-            </div>
         </div>
+        )}
 
         
     </div>
