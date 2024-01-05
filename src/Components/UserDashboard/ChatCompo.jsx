@@ -5,13 +5,43 @@ import ava from './images/Avatars1.png'
 
 import { GrEmoji } from "react-icons/gr";
 import { MdAdd } from "react-icons/md";
-import { RiSendPlaneFill } from "react-icons/ri";
+import { IoSend } from "react-icons/io5";
 const ChatCompo = () => {
   return (
     <div className='chatSec'>
         <div className='sideBar'>
             <h2>My Messages</h2>
-            <div></div>
+            <div className='sideBarDiv'>
+                <div className='sideBarFlex'>
+                    <div><img src={ava} alt="" /></div>
+                    <div>
+                        <h3>Jane Doe</h3>
+                        <p>Frontend Developer Proficient, Java...</p>
+                        <span>I need your service on sunday</span>
+                    </div>
+                    <div className='unreadCount'><p>3</p></div>
+                </div>
+
+                <div className='sideBarFlex'>
+                    <div><img src={ava} alt="" /></div>
+                    <div>
+                        <h3>Jane Doe</h3>
+                        <p>Frontend Developer Proficient, Java...</p>
+                        <span>I need your service on sunday</span>
+
+                    </div>
+                </div>
+
+                <div className='sideBarFlex'>
+                    <div><img src={ava} alt="" /></div>
+                    <div>
+                        <h3>Jane Doe</h3>
+                        <p>Frontend Developer Proficient, Java...</p>
+                        <span>I need your service on sunday</span>
+                    </div>
+                    <div className='unreadCount'><p>1</p></div>
+                </div>
+            </div>
         </div>
 
         <div className='message'>
@@ -52,9 +82,6 @@ const ChatCompo = () => {
                             </div>
                         </div >
                         
-
-
-                        
                     </div>
                 </div>
             </div>
@@ -66,12 +93,30 @@ const ChatCompo = () => {
                 <div className='msgIcons'>
                     <p><GrEmoji /></p>
                     <p><MdAdd /></p>
-                    <button><RiSendPlaneFill /></button>
+                    <button><IoSend /></button>
                 </div>
             </div>
-
-
         </div>
+
+
+        <div className='smallMessage'>
+            <div>
+                <div></div>
+
+                <div className='messageBottom'>
+                    <div className='msgBottomInput'>
+                        <input type="text" placeholder='Type your message here...'/>
+                    </div>
+                    <div className='msgIcons'>
+                        <p><GrEmoji /></p>
+                        <p><MdAdd /></p>
+                        <button><IoSend /></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        
     </div>
   )
 }
