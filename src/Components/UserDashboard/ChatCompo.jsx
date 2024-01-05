@@ -6,7 +6,7 @@ import ava from './images/Avatars1.png'
 import { GrEmoji } from "react-icons/gr";
 import { MdAdd } from "react-icons/md";
 import { IoSend } from "react-icons/io5";
-import { IoArrowUpCircle } from "react-icons/io5";
+import { IoArrowBack } from "react-icons/io5";
 
 
 const ChatCompo = () => {
@@ -121,7 +121,7 @@ const ChatCompo = () => {
 
                     <div className='messageHeader'>
                         <div className='messageAvaDiv'>
-                            <div className='chatBackIcon' onClick={hideFunc}><IoArrowUpCircle /></div>
+                            <div className='chatBackIcon' onClick={hideFunc}><IoArrowBack /></div>
                             <img src={ava}  alt="" />
                             <div>
                                 <h2>Jane Doe</h2>
