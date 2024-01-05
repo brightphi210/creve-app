@@ -342,6 +342,7 @@
             z-index: 1;
         }
 
+
         .messageAvaDiv img{
             width: 40px;
             height: 40px;
@@ -357,13 +358,18 @@
             font-size: 12px;
         }
 
-
-
+        
+        
         .messageAvaDiv {
+            align-items: center;
             display: flex;
             gap: 15px;
         }
 
+        .chatBackIcon{
+            font-size: 20px;
+            cursor: pointer;
+        }
 
 
         .msgBtn button{

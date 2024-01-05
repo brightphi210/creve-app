@@ -6,6 +6,8 @@ import ava from './images/Avatars1.png'
 import { GrEmoji } from "react-icons/gr";
 import { MdAdd } from "react-icons/md";
 import { IoSend } from "react-icons/io5";
+import { FaArrowLeftLong } from "react-icons/fa6";
+
 const ChatCompo = () => {
 
     const [show, setShow] = useState(false)
@@ -60,6 +62,7 @@ const ChatCompo = () => {
 
             <div className='messageHeader'>
                 <div className='messageAvaDiv'>
+                    
                     <img src={ava}  alt="" />
                     <div>
                         <h2>Jane Doe</h2>
@@ -117,6 +120,7 @@ const ChatCompo = () => {
 
                     <div className='messageHeader'>
                         <div className='messageAvaDiv'>
+                            <div className='chatBackIcon' onClick={hideFunc}><FaArrowLeftLong /></div>
                             <img src={ava}  alt="" />
                             <div>
                                 <h2>Jane Doe</h2>
