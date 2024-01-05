@@ -15,6 +15,8 @@ const ChatCompo = () => {
         </div>
 
         <div className='message'>
+
+
             <div className='messageHeader'>
                 <div className='messageAvaDiv'>
                     <img src={ava}  alt="" />
@@ -28,34 +30,32 @@ const ChatCompo = () => {
                     <button>View Contact</button>
                 </div>
             </div>
+
+
             <div className='messageOverFlow'>
-                {/* <span className='date'>20 october, 2024</span> */}
                 <div className='msgText'>
                     <div className='msgTextDiv'>
 
-                        <div  className='recieveMsg received-message'>
-                            <div>
-                            <p>Hello, how are you?</p>
-                            <span>12:00pm</span>
-                            </div>
-                        </div >
-                        
+
                         <div className='sendMsg sent-message'>
                             <div>
-                            <p>I'm good, thank you!</p>
+                            <p>Hello, how are you?</p>
                             <span>12:50pm</span>
                             </div>
                         </div>
 
+
                         <div  className='recieveMsg received-message'>
                             <div>
-                            <p>Hello, how are you?</p>
+                            <p>I'm good, thank you!</p>
                             <span>12:00pm</span>
                             </div>
                         </div >
+                        
+
+
+                        
                     </div>
-
-
                 </div>
             </div>
 
@@ -69,6 +69,8 @@ const ChatCompo = () => {
                     <button><RiSendPlaneFill /></button>
                 </div>
             </div>
+
+
         </div>
     </div>
   )
