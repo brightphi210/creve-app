@@ -171,8 +171,7 @@ const ChatCompo = () => {
                     </div>
 
 
-
-                    {/* <div className='messageBottom'>
+                    <div className='messageBottom'>
                         <div className='msgBottomInput'>
                             <input type="text" placeholder='Type your message here...'/>
                         </div>
@@ -181,7 +180,7 @@ const ChatCompo = () => {
                             <p><MdAdd /></p>
                             <button><IoSend /></button>
                         </div>
-                    </div> */}
+                    </div>
                 </div>
         </div>
         )}
