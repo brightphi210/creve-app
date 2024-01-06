@@ -74,7 +74,6 @@ const ChatCompo = () => {
             <div className='smallMessage'>
 
                 <div className='smallMessageContent'>
-
                     <div className='messageHeader'>
                         <div className='messageAvaDiv'>
                             <div className='chatBackIcon' onClick={hideFunc}><IoArrowBack /></div>
