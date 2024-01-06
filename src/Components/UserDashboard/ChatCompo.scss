@@ -397,12 +397,13 @@
 
         .msgText{
             padding: 0 5%;
-            padding-top: 10%;
+            padding-top: 13%;
             padding-bottom: 5%;
             display: flex;
             justify-content: center;
             flex-direction: column;
-            height: 85%;
+            overflow-y: scroll;
+            margin-top: auto;
         }
 
         .msgTextDiv{

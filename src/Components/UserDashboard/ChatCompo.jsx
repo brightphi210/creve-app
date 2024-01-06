@@ -7,6 +7,9 @@ import { GrEmoji } from "react-icons/gr";
 import { MdAdd } from "react-icons/md";
 import { IoSend } from "react-icons/io5";
 import { IoArrowBack } from "react-icons/io5";
+import ChatHeader from './ChatItems/ChatHeader';
+import ChatBody from './ChatItems/ChatBody';
+import ChatBottom from './ChatItems/ChatBottom';
 
 
 const ChatCompo = () => {
@@ -60,57 +63,10 @@ const ChatCompo = () => {
 
         <div className='message'>
 
+            <ChatHeader />
+            <ChatBody />
+            <ChatBottom />
 
-            <div className='messageHeader'>
-                <div className='messageAvaDiv'>
-                    
-                    <img src={ava}  alt="" />
-                    <div>
-                        <h2>Jane Doe</h2>
-                        <p>Frontend Developer Proficient in CSS, JavaScript and React</p>
-                    </div>
-                </div>
-
-                <div className='msgBtn'>
-                    <button>View Contact</button>
-                </div>
-            </div>
-
-
-            <div className='messageOverFlow'>
-                <div className='msgText'>
-                    <div className='msgTextDiv'>
-
-
-                        <div className='sendMsg sent-message'>
-                            <div>
-                            <p>Hello, how are you?</p>
-                            <span>12:50pm</span>
-                            </div>
-                        </div>
-
-
-                        <div  className='recieveMsg received-message'>
-                            <div>
-                            <p>I'm good, thank you!</p>
-                            <span>12:00pm</span>
-                            </div>
-                        </div >
-                        
-                    </div>
-                </div>
-            </div>
-
-            <div className='messageBottom'>
-                <div className='msgBottomInput'>
-                    <input type="text" placeholder='Type your message here...'/>
-                </div>
-                <div className='msgIcons'>
-                    <p><GrEmoji /></p>
-                    <p><MdAdd /></p>
-                    <button><IoSend /></button>
-                </div>
-            </div>
         </div>
 
 
@@ -134,50 +90,10 @@ const ChatCompo = () => {
                         </div>
                     </div>
 
+                    <ChatBody />
+                    <ChatBottom />
 
 
-
-                    <div className='messageOverFlow'>
-                        <div className='msgText'>
-                            <div className='msgTextDiv'>
-
-
-                                <div className='sendMsg sent-message'>
-                                    <div>
-                                    <p>Hello, how are you?</p>
-                                    <span>12:50pm</span>
-                                    </div>
-                                </div>
-
-
-                                <div  className='recieveMsg received-message'>
-                                    <div>
-                                    <p>I'm good, thank you!</p>
-                                    <span>12:00pm</span>
-                                    </div>
-                                </div >
-
-                                <div className='sendMsg sent-message'>
-                                    <div>
-                                    <p>Hello, how are you?</p>
-                                    <span>12:50pm</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-
-                    <div className='messageBottom'>
-                        <div className='msgBottomInput'>
-                            <input type="text" placeholder='Type your message here...'/>
-                        </div>
-                        <div className='msgIcons'>
-                            <p><GrEmoji /></p>
-                            <p><MdAdd /></p>
-                            <button><IoSend /></button>
-                        </div>
-                    </div>
                 </div>
         </div>
         )}
