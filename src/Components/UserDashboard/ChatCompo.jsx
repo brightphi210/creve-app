@@ -163,9 +163,6 @@ const ChatCompo = () => {
                                     <span>12:50pm</span>
                                     </div>
                                 </div>
-
-                                
-                                
                             </div>
                         </div>
                     </div>
