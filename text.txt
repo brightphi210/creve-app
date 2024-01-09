@@ -1,0 +1,2 @@
+1. User Registration => https://creve.onrender.com/auth/user/
+2. Creative Registration => https://creve.onrender.com/auth/creative/

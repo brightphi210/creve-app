@@ -13,6 +13,7 @@ import Favourite from "./Pages/TalentPages/Favourite";
 import UserSetting from "./Pages/UserSetting";
 import CreativeProView from "./Pages/CreativeProView";
 import UserChat from "./Pages/TalentPages/UserChat";
+import ConfirmPage from "./Pages/ConfirmPage";
 
 function App() {
   return (
@@ -22,6 +23,7 @@ function App() {
           <Route path="/" element={<Home />}></Route>
           <Route path="/login" element={<Login />}></Route>
           <Route path="/signup" element={<SignUp />}></Route>
+          <Route path="/confirm" element={<ConfirmPage />}></Route>
           <Route path="/signupCreative" element={<SignUp2 />}></Route>
           <Route path="/category" element={<Category />}></Route>
           <Route path="/registerOption" element={<RegistraionOption />}></Route>
