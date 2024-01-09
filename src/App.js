@@ -14,6 +14,9 @@ import UserSetting from "./Pages/UserSetting";
 import CreativeProView from "./Pages/CreativeProView";
 import UserChat from "./Pages/TalentPages/UserChat";
 import ConfirmPage from "./Pages/ConfirmPage";
+import PrivateRoute from "./Pages/TalentPages/Utils/Utils";
+
+
 
 function App() {
   return (
@@ -33,6 +36,11 @@ function App() {
           <Route path="/searchedResult" element={<SearchResulte />}></Route>
           <Route path="/user-settings" element={<UserSetting />}></Route>
           <Route path="/chats" element={<UserChat />}></Route>
+
+
+          <Route element={<PrivateRoute />}>
+
+          </Route>
         </Routes>
       </BrowserRouter>
     </div>
