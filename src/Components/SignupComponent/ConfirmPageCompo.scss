@@ -1,4 +1,8 @@
 
+@import '../variables.scss';
+
+*{@include default}
+
 
 .confirmDiv{
     display: flex;
@@ -16,6 +20,7 @@
 .confirmText h2{
     font-size: 30px;
     font-weight: 400;
+    color: $my-blue;
 }
 
 .confirmText p{
@@ -34,4 +39,28 @@
 
 
 
+@media only screen and (min-width: $small-One) and (max-width: $small-Two) {
 
+    .confirmDiv img{
+        width: 200px;
+        margin: auto;
+    }
+    
+    .confirmText h2{
+        font-size: 20px;
+        font-weight: 400;
+    }
+    
+    .confirmText p{
+        font-size: 13px;
+    }
+    
+    .contactCareDiv{
+        padding-top: 50px;
+    }
+    
+    .contactCareDiv p{
+        font-size: 12px;
+        color: gray;
+    }
+}
