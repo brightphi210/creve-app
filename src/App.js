@@ -30,17 +30,18 @@ function App() {
           <Route path="/signupCreative" element={<SignUp2 />}></Route>
           <Route path="/category" element={<Category />}></Route>
           <Route path="/registerOption" element={<RegistraionOption />}></Route>
-          <Route path="/talents" element={<Talents />}></Route>
-          <Route path="/talentsProfiles" element={<CreativeProView />}></Route>
-          <Route path="/favourites" element={<Favourite />}></Route>
-          <Route path="/searchedResult" element={<SearchResulte />}></Route>
-          <Route path="/user-settings" element={<UserSetting />}></Route>
-          <Route path="/chats" element={<UserChat />}></Route>
 
-
+          
           <Route element={<PrivateRoute />}>
-
+            <Route path="/talents" element={<Talents />}></Route>
+            <Route path="/talentsProfiles" element={<CreativeProView />}></Route>
+            <Route path="/favourites" element={<Favourite />}></Route>
+            <Route path="/searchedResult" element={<SearchResulte />}></Route>
+            <Route path="/user-settings" element={<UserSetting />}></Route>
+            <Route path="/chats" element={<UserChat />}></Route>
           </Route>
+
+
         </Routes>
       </BrowserRouter>
     </div>

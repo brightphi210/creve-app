@@ -18,6 +18,10 @@ import { MdOutlineLogout } from "react-icons/md";
 import { GrHomeRounded } from "react-icons/gr";
 
 import { RiSendPlaneFill } from "react-icons/ri";
+import { Navigate, useNavigate } from 'react-router-dom';
+
+
+import { jwtDecode } from "jwt-decode";
 
 
 import './UserNavbar.scss'
@@ -28,6 +32,14 @@ const UserNavbar = () => {
   const [show, setShow] = useState(false)
   const [show2, setShow2] = useState(false)
   const [showSearch, setShowSearch] = useState(false)
+
+  const token = localStorage.getItem('authToken');
+  const [user, setUser] = useState(() => token)
+
+  const decoded = jwtDecode(token);
+  console.log(decoded);
+
+  const [isLoading, setIsLoading] = useState(false)
 
   const openModal = () =>{
     setShow(true);
@@ -52,6 +64,23 @@ const UserNavbar = () => {
   const toggleSearch = () =>{
     setShowSearch(!showSearch)
   }
+
+
+
+  
+
+
+  const navigate = useNavigate()
+
+  const logout = async (e) => {
+    setIsLoading(true)
+    e.preventDefault()
+    setUser(null)
+    localStorage.removeItem('authToken')
+    navigate('/', { state: { successMessage: 'Successfully logged Out !!' }})
+  }
+
+
 
 
 
@@ -136,7 +165,7 @@ const UserNavbar = () => {
 
             <hr />
 
-            <p><MdOutlineLogout />Log Out</p>
+            <p onClick={logout} style={{cursor : 'pointer'}}><MdOutlineLogout />Log Out</p>
           </div>
 
         </div>
@@ -168,16 +197,24 @@ const UserNavbar = () => {
 
           <div className='userNavProfile' onClick={openModal2}>
             <div>
-              <img src={avatar} alt="" width={40}/> 
+              <img src={decoded.profile_pics} alt="" width={40}/> 
             </div>
 
             <div className='nameEmail'>
               <p className=''>Jane Doe</p>
-              <p className=''>Janedoe@creevemail.com</p>
+              <p className=''>{decoded.email}</p>
             </div>
           </div>
         </div>
 
+
+        {isLoading ? 
+          (<>
+            <div className='loaderModal'>
+              <span className="loader"></span>
+            </div>
+          </>) : ''
+        }
     </div>
   )
 }

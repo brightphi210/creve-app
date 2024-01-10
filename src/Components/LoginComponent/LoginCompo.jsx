@@ -11,6 +11,8 @@ import { MdRemoveRedEye } from "react-icons/md";
 import { IoLogoGoogle } from "react-icons/io";
 import { AiOutlineClose } from "react-icons/ai";
 
+import { Navigate, useNavigate } from 'react-router-dom';
+
 
 
 
@@ -34,6 +36,8 @@ const LoginCompo = () => {
 
   const logUrl = 'https://creve.onrender.com/api/token/'
 
+  const navigate = useNavigate()
+
   const handleLogin = async (e) =>{
     setIsLoading(true);
     e.preventDefault();
@@ -54,7 +58,7 @@ const LoginCompo = () => {
           localStorage.setItem('authToken', data.access);
           setIsLoading(false)
           console.log('Details Are Found')
-          // navigate('/dashboard', { myMessage: 'Successfully logged in!' });
+          navigate('/talents');
           
       }
 
