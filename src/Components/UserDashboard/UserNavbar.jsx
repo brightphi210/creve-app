@@ -85,7 +85,7 @@ const UserNavbar = () => {
 
 
   return (
-    <div className='userNavbarSection' onClick={closeModal} >
+    <div className='userNavbarSection'  >
 
         <div className='userNavFirstDiv' >
           <div className='userLogo'>
