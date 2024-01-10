@@ -22,7 +22,7 @@ const UserSettingCompo = () => {
             <hr />
 
 
-            <div className='userDivEach'>
+            {/* <div className='userDivEach'>
                 <h2>Change Password</h2>
                 <form action="">
                     <div>
@@ -37,7 +37,7 @@ const UserSettingCompo = () => {
 
                     <button>Save Changes</button>
                 </form>
-            </div>
+            </div> */}
 
             <hr />
 
