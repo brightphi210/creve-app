@@ -177,7 +177,7 @@ const UserNavbar = () => {
         <div className='userNavSecondDiv' onClick={(e) => e.stopPropagation()}>
           
           <div className='userNavIcon'>
-            <Link to={'/talents'} className='link'><GrHomeRounded className='userIcon'/></Link>
+            <Link to={'/dashboard'} className='link'><GrHomeRounded className='userIcon'/></Link>
           </div>
 
 
