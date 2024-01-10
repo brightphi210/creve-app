@@ -56,9 +56,8 @@ const LoginCompo = () => {
       if (response.ok ) {
           const data = await response.json();
           localStorage.setItem('authToken', data.access);
-          setIsLoading(false)
-          console.log('Details Are Found')
           navigate('/talents');
+          setIsLoading(false)
           
       }
 
