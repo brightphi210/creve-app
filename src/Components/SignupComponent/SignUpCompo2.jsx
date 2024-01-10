@@ -28,7 +28,7 @@ const SignUpCompo2 = () => {
 
 
 
-    const useUrl = 'https://creve.onrender.com/auth/creative/'
+    const useUrl1 = 'https://creve.onrender.com/auth/creative/'
     const [isLoading, setIsLoading] = useState(false)
     const [formData, setFormData] = useState({
       fullname : '',
@@ -68,7 +68,7 @@ const SignUpCompo2 = () => {
 
 
       try {
-        const response = await fetch(useUrl,{
+        const response = await fetch(useUrl1,{
           method : 'POST',
           headers :{
             'Content-Type': 'application/json',

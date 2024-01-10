@@ -15,12 +15,6 @@ const UserSettingCompo = () => {
                         <p>Full Name: </p>
                         <input type="text"  placeholder='Enter your Full Name'/>
                     </div>
-
-                    <div>
-                        <p>Enter Email Address: </p>
-                        <input type="text" placeholder='Enter your email address'/>
-                    </div>
-
                     <button>Save Changes</button>
                 </form>
             </div>

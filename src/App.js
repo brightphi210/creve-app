@@ -5,7 +5,6 @@ import Home from "./Pages/Home";
 import Login from "./Pages/Login";
 import SignUp from "./Pages/SignUp";
 import Category from "./Pages/Category";
-import Talents from "./Pages/TalentPages/Talents";
 import RegistraionOption from "./Pages/RegistraionOption";
 import SignUp2 from "./Pages/SignUp2";
 import SearchResulte from "./Pages/TalentPages/SearchResulte";
@@ -15,6 +14,7 @@ import CreativeProView from "./Pages/CreativeProView";
 import UserChat from "./Pages/TalentPages/UserChat";
 import ConfirmPage from "./Pages/ConfirmPage";
 import PrivateRoute from "./Pages/TalentPages/Utils/Utils";
+import UserDashboard from "./Pages/TalentPages/UserDashboard";
 
 
 
@@ -33,7 +33,7 @@ function App() {
 
           
           <Route element={<PrivateRoute />}>
-            <Route path="/talents" element={<Talents />}></Route>
+            <Route path="/dashboard" element={<UserDashboard />}></Route>
             <Route path="/talentsProfiles" element={<CreativeProView />}></Route>
             <Route path="/favourites" element={<Favourite />}></Route>
             <Route path="/searchedResult" element={<SearchResulte />}></Route>

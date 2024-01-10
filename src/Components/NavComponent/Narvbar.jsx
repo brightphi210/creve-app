@@ -51,7 +51,7 @@ const Narvbar = () => {
           {user ? 
           (<>
             <div className='secondNavDiv'>
-              <Link to={'/talents'}><button className='loginBtn'>Dashboard</button></Link>
+              <Link to={'/dashboard'}><button className='loginBtn'>Dashboard</button></Link>
             </div>
           </>) :  
           (<>

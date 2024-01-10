@@ -152,7 +152,7 @@ const UserNavbar = () => {
       <div className='navNotifyModal'>
         <div className='navNotifyContent'>
           <div className='notDiv'>
-            <h2>Zainab Wahab</h2>
+            <h2>{decoded.name}</h2>
             <p onClick={closeModal2}><IoCloseCircleOutline /></p>
           </div>
 
@@ -197,11 +197,13 @@ const UserNavbar = () => {
 
           <div className='userNavProfile' onClick={openModal2}>
             <div>
-              <img src={decoded.profile_pics} alt="" width={40}/> 
+              <img src={decoded.profile_pics} alt="" width={30}/> 
+
+              {/* <a href="">{decoded.profile_pics}</a> */}
             </div>
 
             <div className='nameEmail'>
-              <p className=''>Jane Doe</p>
+              <p className=''>{decoded.name}</p>
               <p className=''>{decoded.email}</p>
             </div>
           </div>
