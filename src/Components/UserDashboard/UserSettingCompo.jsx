@@ -1,6 +1,8 @@
 import React from 'react'
 import './UserSettingCompo.scss'
 
+import {Link} from 'react-router-dom'
+
 import { FaRegTrashCan } from "react-icons/fa6";
 
 
@@ -18,9 +20,6 @@ const UserSettingCompo = () => {
                     <button>Save Changes</button>
                 </form>
             </div>
-
-            <hr />
-
 
             {/* <div className='userDivEach'>
                 <h2>Change Password</h2>
@@ -48,7 +47,7 @@ const UserSettingCompo = () => {
                     with the same account
                 </p>
 
-                <button className='bcome'>Become a Talent</button>
+                <Link to={'/signupCreative'}><button className='bcome'>Become a Talent</button></Link>
             </div>
 
             <hr />

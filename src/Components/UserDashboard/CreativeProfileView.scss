@@ -463,9 +463,27 @@ hr{
 
 
 
+
+
 @media only screen and (min-width: $small-One) and (max-width: $small-Two) {
+
+
+    element.style {
+        z-index: 3;
+        position: absolute;
+        height: 100%;
+        width: 50% !important;
+        padding: 0px;
+        border-width: 0px;
+        margin: 0px;
+        left: 0px;
+        top: 0px;
+    }
+
+
+
     .creativeProfileModal{
-        padding: 50px 5%;
+        padding: 50px 0;
     }
     
     .creativeProfileContent{
@@ -483,7 +501,6 @@ hr{
     .creativeLeftPart img{
         width: 40px;
     }
-
 
     .creativeLeftPart{
         display: block;
