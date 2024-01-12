@@ -6,6 +6,7 @@ import {Link} from 'react-router-dom'
 import { FaRegTrashCan } from "react-icons/fa6";
 import {useNavigate} from 'react-router-dom'
 import prof from './images/profilePics.png'
+import { AiOutlineClose } from "react-icons/ai";
 
 const UserSettingCompo = () => {
 
@@ -20,11 +21,14 @@ const UserSettingCompo = () => {
     const [name, setName] = useState('')
     const [profile_pics, setProfile_pics] = useState(null)
 
-    
-    // const handleChange = (e) => {
-    //     setProfile_pics(e.target.value);
-    // };
 
+
+    const [successMessage, setSuccessMessage] = useState(false)
+
+
+    const closeMessage = () => {
+        setSuccessMessage(false)
+      } 
 
     const handleImageChange = (e) => {
         setProfile_pics(e.target.files[0]);
@@ -84,6 +88,7 @@ const UserSettingCompo = () => {
           .then((response) => {
             if (response.ok) {
                 console.log("Successfully updated")
+                setSuccessMessage('Profile Successfully Updated')
                 // navigate('/dashboard')
                 setIsLoading(false)
             } else {
@@ -103,6 +108,12 @@ const UserSettingCompo = () => {
     <div className='userSetting'>
         <div className='userDiv'>
             <div className='userDivEach'>
+
+            {successMessage && (
+                <div className='errorMessage'>
+                  <p>{successMessage} <AiOutlineClose onClick={closeMessage} className='closeMsgIcon'/></p>
+                </div>
+              )}
                 <h2>Account Settings</h2>
 
 
