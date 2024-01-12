@@ -3,6 +3,7 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 
 import Home from "./Pages/Home";
 import Login from "./Pages/Login";
+import Login2 from "./Pages/Login2";
 import SignUp from "./Pages/SignUp";
 import Category from "./Pages/Category";
 import RegistraionOption from "./Pages/RegistraionOption";
@@ -25,6 +26,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />}></Route>
           <Route path="/login" element={<Login />}></Route>
+          <Route path="/loginCreative" element={<Login2 />}></Route>
           <Route path="/signup" element={<SignUp />}></Route>
           <Route path="/confirm" element={<ConfirmPage />}></Route>
           <Route path="/signupCreative" element={<SignUp2 />}></Route>
