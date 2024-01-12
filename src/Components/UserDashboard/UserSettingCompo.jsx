@@ -18,7 +18,7 @@ const UserSettingCompo = () => {
     const navigate = useNavigate()
 
 
-    const [name, setName] = useState('')
+    const [fullname, setName] = useState('')
     const [profile_pics, setProfile_pics] = useState(null)
 
 
@@ -44,7 +44,7 @@ const UserSettingCompo = () => {
             method: 'GET',
             headers: {
               "Authorization": `Bearer ${token}`,
-            //   "Content-Type": "application/json"
+              "Content-Type": "application/json"
             },
           });
 
@@ -52,8 +52,10 @@ const UserSettingCompo = () => {
           const userData = await response.json();
           console.log("This is the user data: " + JSON.stringify(userData));
 
-          setName(userData.name);
-          setProfile_pics(userData.profile_pics);
+          setName(userData.fullname);
+          setProfile_pics(userData.clientprofile.profile_pics);
+
+          console.log('THis is User Full name ' + userData.clientprofile.profile_pics)
         } catch (error) {
           console.error('Error fetching user data:', error);
           setIsLoading(false)
@@ -66,7 +68,7 @@ const UserSettingCompo = () => {
 
 
 
-      console.log()
+      console.log('THis is my profile' + profile_pics)
 
       function handleSubmit(e) {
         e.preventDefault();
@@ -74,7 +76,7 @@ const UserSettingCompo = () => {
         setIsLoading(true);
 
         const newFormData = new FormData();
-        newFormData.append('name', name);
+        newFormData.append('name', fullname);
         newFormData.append('profile_pics', profile_pics);
 
       
@@ -153,8 +155,8 @@ const UserSettingCompo = () => {
                         <p>Full Name: </p>
                         <input type="text"  
                         placeholder='Enter your Full Name'
-                        name="name"
-                        value={name}
+                        name="fullname"
+                        value={fullname}
                         onChange={(e) => setName(e.target.value)}
                         />
                     </div>

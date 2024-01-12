@@ -6,6 +6,7 @@ import { Link } from 'react-router-dom';
 import { CgMenuLeft } from "react-icons/cg";
 import { MdClose } from "react-icons/md";
 import { IoMdArrowDropdown } from "react-icons/io";
+import { Navigate, useNavigate } from 'react-router-dom';
 
 import './Navbar.scss'
 
@@ -14,9 +15,18 @@ import './Navbar.scss'
 
 const Narvbar = () => {
   const [openNavbar, setOpenNavvbar] = useState(true)
+  const navigate = useNavigate()
 
   const toggleNav = () => {
     setOpenNavvbar(!openNavbar)
+  }
+
+  const logout = async (e) => {
+
+    e.preventDefault()
+    setUser(null)
+    localStorage.removeItem('authToken')
+    navigate('/')
   }
 
 
@@ -52,6 +62,7 @@ const Narvbar = () => {
           (<>
             <div className='secondNavDiv'>
               <Link to={'/dashboard'}><button className='loginBtn'>Dashboard</button></Link>
+              <button className='signupBtn' onClick={logout}>Logout</button>
             </div>
           </>) :  
           (<>
