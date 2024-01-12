@@ -72,9 +72,9 @@ const TalentCompo = () => {
                 <h2>Explore the Best Talents <br /> around Africa</h2>
             </div>
 
-            <div className='talentImgDiv'>
+            {/* <div className='talentImgDiv'>
                 <img src={myImage} alt="" />
-            </div>
+            </div> */}
 
         </div>
 
@@ -82,7 +82,7 @@ const TalentCompo = () => {
             <div className='findDiv'>
                 <p>Find Talents by Location <PiMapPinLineFill className='mapIcon'/></p>
                 <button onClick={openModalMap}>Search </button>
-                <Link to={'/searchedResult'}><button>Search Link</button></Link>
+                {/* <Link to={'/searchedResult'}><button>Search Link</button></Link> */}
             </div>
 
             <div className='imageSectionCard'>
