@@ -164,8 +164,9 @@
 
 .notDiv p{
     margin-left: auto;
-    font-size: 20px;
+    font-size: 25px !important;
     cursor: pointer;
+    font-weight: 100;
 }
 
 .notDiv h2{
@@ -343,17 +344,21 @@ hr{
 
 
     .notProf p{
-        font-size: 12px;
+        font-size: 15px;
     }
 
 
     .accountNot span{
-        font-size: 12px;
+        font-size: 15px;
     }
 
     .accountNot p{
-        font-size: 12px;
+        font-size: 15px;
     }
+
+    // .navNotifyContent p{
+    //     font-size: 15px !important;
+    // }
 }
 
 
