@@ -99,7 +99,16 @@ label{
     border-radius: 50%;
 }
 
+.static{
+    position: relative;
+}
 
+.onTop{
+    position: absolute;
+    top: 0;
+    // top: 0;
+    left: 0;
+}
 
 @media only screen and (min-width: $small-One) and (max-width: $small-Two) {
     .userSetting{

@@ -109,18 +109,21 @@ const UserSettingCompo = () => {
                 <form action="" onSubmit={handleSubmit}>
                     <hr />
                     <div className='proImageDiv'>
-                    <img src={prof} alt="" />
+                        <div className='static'>
+                            <img src={prof} alt="" />
+                        
                         {isLoading ? (
                             <>
-                                <img src={prof} alt="" />
+                                
                             </>
                         ) 
                         : (
 
                             <>
-                                <img src={profile_pics} alt=""/>
+                                <img src={profile_pics} alt="" className='onTop'/>
                             </>
                         )}
+                        </div>
 
                         <input 
                             type="file" 
@@ -144,7 +147,7 @@ const UserSettingCompo = () => {
                         onChange={(e) => setName(e.target.value)}
                         />
                     </div>
-                    <button>{isLoading ? 'Save  . . .' : 'Saving Changes'}</button>
+                    <button>Saving Changes</button>
                 </form>
             </div>
 
