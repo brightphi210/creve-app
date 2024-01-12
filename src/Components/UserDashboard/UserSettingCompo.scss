@@ -79,6 +79,27 @@
 }
 
 
+label{
+    display: block;
+    background-color: indigo;
+    color: white;
+    padding: 0.5rem;
+    font-family: sans-serif;
+    border-radius: 0.3rem;
+    cursor: pointer;
+    margin-top: 1rem;
+    width: 15%;
+}
+
+.proImageDiv{
+    padding: 20px 0;
+}
+.proImageDiv img{
+    width: 80px;
+    border-radius: 50%;
+}
+
+
 
 @media only screen and (min-width: $small-One) and (max-width: $small-Two) {
     .userSetting{
@@ -127,5 +148,19 @@
 
     .deleteBtn{
         font-size: 12px;
+    }
+
+
+    label{
+        display: block;
+        background-color: indigo;
+        color: white;
+        padding: 0.5rem;
+        font-family: sans-serif;
+        border-radius: 0.3rem;
+        cursor: pointer;
+        margin-top: 1rem;
+        width: 40%;
+        text-align: center;
     }
 }
