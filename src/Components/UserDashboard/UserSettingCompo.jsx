@@ -7,22 +7,20 @@ import { FaRegTrashCan } from "react-icons/fa6";
 import {useNavigate} from 'react-router-dom'
 import prof from './images/profilePics.png'
 import { AiOutlineClose } from "react-icons/ai";
+import { jwtDecode } from "jwt-decode";
 
 const UserSettingCompo = () => {
 
 
     let token = localStorage.getItem('authToken');
+    const decoded = jwtDecode(token);
+
+    console.log(decoded.user_id)
 
     const [isLoading, setIsLoading] = useState(false);
-
     const navigate = useNavigate()
-
-
     const [fullname, setName] = useState('')
     const [profile_pics, setProfile_pics] = useState(null)
-
-
-
     const [successMessage, setSuccessMessage] = useState(false)
 
 
@@ -40,7 +38,7 @@ const UserSettingCompo = () => {
         setIsLoading(true)
 
         try {
-          const response = await fetch(`https://creve.onrender.com/clientupdate/`, {
+          const response = await fetch(`https://creve.onrender.com/auth/user/${decoded.user_id}/`, {
             method: 'GET',
             headers: {
               "Authorization": `Bearer ${token}`,
@@ -53,9 +51,6 @@ const UserSettingCompo = () => {
           console.log("This is the user data: " + JSON.stringify(userData));
 
           setName(userData.fullname);
-          setProfile_pics(userData.clientprofile.profile_pics);
-
-          console.log('THis is User Full name ' + userData.clientprofile.profile_pics)
         } catch (error) {
           console.error('Error fetching user data:', error);
           setIsLoading(false)
@@ -67,20 +62,16 @@ const UserSettingCompo = () => {
       }, []);
 
 
-
-      console.log('THis is my profile' + profile_pics)
-
       function handleSubmit(e) {
         e.preventDefault();
 
         setIsLoading(true);
 
         const newFormData = new FormData();
-        newFormData.append('name', fullname);
-        newFormData.append('profile_pics', profile_pics);
+        newFormData.append('fullname', fullname);
 
       
-        fetch(`https://creve.onrender.com/clientupdate/`, {
+        fetch(`https://creve.onrender.com/auth/user/${decoded.user_id}/`, {
           method: 'PUT',
           headers: {
             "Authorization": `Bearer ${token}`
