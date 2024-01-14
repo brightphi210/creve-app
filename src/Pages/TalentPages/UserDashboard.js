@@ -11,10 +11,10 @@ import CreativeDasboard from '../../Components/CreativeDashboard/CreativeDasboar
 
 const UserDashboard = () => {
 
-  const token = localStorage.getItem('authToken');
-  const [user, setUser] = useState(() => token)
+  let [authTokens, setAuthTokens] = useState(()=> localStorage.getItem('authTokens') ? JSON.parse(localStorage.getItem('authTokens')) : null)
 
-  const decoded = jwtDecode(token);
+  let decoded = jwtDecode(authTokens.access)
+
   console.log(decoded.role)
   return (
     <div>
@@ -32,6 +32,7 @@ const UserDashboard = () => {
           <CreativeDasboard />
         </>
       )}
+
 
         <Footer />
     </div>

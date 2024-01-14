@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
 
 import logo from './images/Logo2.png'
@@ -18,7 +18,7 @@ import { MdOutlineLogout } from "react-icons/md";
 import { GrHomeRounded } from "react-icons/gr";
 
 import { RiSendPlaneFill } from "react-icons/ri";
-import { Navigate, useNavigate } from 'react-router-dom';
+import {useNavigate } from 'react-router-dom';
 
 
 import { jwtDecode } from "jwt-decode";
@@ -33,13 +33,15 @@ const UserNavbar = () => {
   const [show2, setShow2] = useState(false)
   const [showSearch, setShowSearch] = useState(false)
 
-  const token = localStorage.getItem('authToken');
-  const [user, setUser] = useState(() => token)
 
-  const decoded = jwtDecode(token);
-  console.log(decoded);
+  let [tokentoken, setAuthTokens] = useState(()=> localStorage.getItem('authTokens') ? JSON.parse(localStorage.getItem('authTokens')) : null)
+  
+
+  const decoded = jwtDecode(tokentoken.access);
+  console.log(decoded.user_id);
 
   const [isLoading, setIsLoading] = useState(false)
+
 
   const openModal = () =>{
     setShow(true);
@@ -65,17 +67,38 @@ const UserNavbar = () => {
     setShowSearch(!showSearch)
   }
 
-
-
-  
-
-
   const navigate = useNavigate()
+  const [fullname, setFullname] = useState('')
+
+  const url = `https://creve.onrender.com/auth/user/${decoded.user_id}/`
+
+  const getUserDetails = async ()=>{
+    try {
+      const response = await fetch(url,{
+        method: 'GET',
+        headers : {
+          'Authorization' : `Bearer ${tokentoken.access}`,
+          'Content-Type':'Application/json'
+        },
+      })
+
+      const data = await response.json()
+      // const userData = await response.json();
+      setFullname(data.fullname)
+    } catch (error) {
+      console.log(error)
+    }
+  }
+
+
+  useEffect(() => {
+    getUserDetails()
+  },[])
 
   const logout = async (e) => {
     setIsLoading(true)
     e.preventDefault()
-    setUser(null)
+    setAuthTokens(null)
     localStorage.removeItem('authToken')
     navigate('/', { state: { successMessage: 'Successfully logged Out !!' }})
   }
@@ -152,7 +175,7 @@ const UserNavbar = () => {
       <div className='navNotifyModal'>
         <div className='navNotifyContent'>
           <div className='notDiv'>
-            <h2>{decoded.name}</h2>
+            <h2>{fullname}</h2>
             <p onClick={closeModal2}><IoCloseCircleOutline /></p>
           </div>
 

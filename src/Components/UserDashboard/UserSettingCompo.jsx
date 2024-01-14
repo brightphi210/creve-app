@@ -12,8 +12,9 @@ import { jwtDecode } from "jwt-decode";
 const UserSettingCompo = () => {
 
 
-    let token = localStorage.getItem('authToken');
-    const decoded = jwtDecode(token);
+  let [authTokens, setAuthTokens] = useState(()=> localStorage.getItem('authTokens') ? JSON.parse(localStorage.getItem('authTokens')) : null)
+
+    const decoded = jwtDecode(authTokens.access);
 
     console.log(decoded.user_id)
 
@@ -41,7 +42,7 @@ const UserSettingCompo = () => {
           const response = await fetch(`https://creve.onrender.com/auth/user/${decoded.user_id}/`, {
             method: 'GET',
             headers: {
-              "Authorization": `Bearer ${token}`,
+              "Authorization": `Bearer ${authTokens.access}`,
               "Content-Type": "application/json"
             },
           });
@@ -74,7 +75,7 @@ const UserSettingCompo = () => {
         fetch(`https://creve.onrender.com/auth/user/${decoded.user_id}/`, {
           method: 'PUT',
           headers: {
-            "Authorization": `Bearer ${token}`
+            "Authorization": `Bearer ${authTokens.access}`
           },
           body: newFormData,
         })
