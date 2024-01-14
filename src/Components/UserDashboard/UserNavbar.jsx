@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useState, useLayoutEffect } from 'react'
 import { Link } from 'react-router-dom'
 
 import logo from './images/Logo2.png'
@@ -70,6 +70,9 @@ const UserNavbar = () => {
   const navigate = useNavigate()
   const [fullname, setFullname] = useState('')
 
+
+  
+
   const url = `https://creve.onrender.com/auth/user/${decoded.user_id}/`
 
   const getUserDetails = async ()=>{
@@ -91,7 +94,7 @@ const UserNavbar = () => {
   }
 
 
-  useEffect(() => {
+  useLayoutEffect(() => {
     getUserDetails()
   },[])
 
@@ -226,7 +229,7 @@ const UserNavbar = () => {
             </div>
 
             <div className='nameEmail'>
-              <p className=''>{decoded.name}</p>
+              <p className=''>{fullname}</p>
               <p className=''>{decoded.email}</p>
             </div>
           </div>

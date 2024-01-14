@@ -25,12 +25,17 @@ const UserSettingCompo = () => {
     const [successMessage, setSuccessMessage] = useState(false)
 
 
-    const closeMessage = () => {
-        setSuccessMessage(false)
-      } 
+    // const closeMessage = () => {
+    //     setSuccessMessage(false)
+    // } 
 
     const handleImageChange = (e) => {
         setProfile_pics(e.target.files[0]);
+    };
+
+
+    const refreshPage = () => {
+      window.location.reload();
     };
 
 
@@ -105,7 +110,7 @@ const UserSettingCompo = () => {
 
             {successMessage && (
                 <div className='errorMessage'>
-                  <p>{successMessage} <AiOutlineClose onClick={closeMessage} className='closeMsgIcon'/></p>
+                  <p>{successMessage} <AiOutlineClose onClick={refreshPage} className='closeMsgIcon'/></p>
                 </div>
               )}
                 <h2>Account Settings</h2>
