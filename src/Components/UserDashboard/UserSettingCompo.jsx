@@ -1,4 +1,4 @@
-import React,{useState, useEffect} from 'react'
+import React,{useState, useEffect, useLayoutEffect} from 'react'
 import './UserSettingCompo.scss'
 
 import {Link} from 'react-router-dom'
@@ -21,17 +21,15 @@ const UserSettingCompo = () => {
     const [isLoading, setIsLoading] = useState(false);
     const navigate = useNavigate()
     const [fullname, setName] = useState('')
-    const [profile_pics, setProfile_pics] = useState(null)
     const [successMessage, setSuccessMessage] = useState(false)
+    const [profile_pics, setProfilePics] = useState(null)
 
 
     // const closeMessage = () => {
     //     setSuccessMessage(false)
     // } 
 
-    const handleImageChange = (e) => {
-        setProfile_pics(e.target.files[0]);
-    };
+
 
 
     const refreshPage = () => {
@@ -75,7 +73,6 @@ const UserSettingCompo = () => {
 
         const newFormData = new FormData();
         newFormData.append('fullname', fullname);
-
       
         fetch(`https://creve.onrender.com/auth/user/${decoded.user_id}/`, {
           method: 'PUT',
@@ -88,7 +85,6 @@ const UserSettingCompo = () => {
             if (response.ok) {
                 console.log("Successfully updated")
                 setSuccessMessage('Profile Successfully Updated')
-                // navigate('/dashboard')
                 setIsLoading(false)
             } else {
               console.log("Failed to update")
@@ -102,7 +98,78 @@ const UserSettingCompo = () => {
       }
       
 
+      // ===================== Profile Pics ===============================
 
+      const profileUrl = `https://creve.onrender.com/auth/userprofile/${decoded.profile_id}/`
+
+
+      const handleImageChange = (e) => {
+        setProfilePics(e.target.files[0]);
+    };
+
+      const handleUpdateProfilePic = async (e) => {
+        e.preventDefault();
+        setIsLoading(true);
+
+        const formProfileData = new FormData();
+        formProfileData.append('profile_pics', profile_pics);
+    
+        try {
+          const response = await fetch(profileUrl, {
+            method: 'PATCH',
+            headers: {
+              "Authorization": `Bearer ${authTokens.access}`
+            },
+            body: formProfileData,
+
+          });
+    
+          if (response.ok || response.status === 200 ) {
+            setSuccessMessage('Profile Successfully Updated')
+            setIsLoading(false)
+
+            console.log('Profile picture updated!');
+            
+          } else {
+            console.error('Failed to update profile picture');
+            setIsLoading(false)
+          }
+        } catch (error) {
+          console.error('Error updating profile picture:', error);
+          setIsLoading(false)
+        }
+      };
+
+
+
+    const getUserProfile = async ()=>{
+      try {
+        const response = await fetch(profileUrl,{
+          method: 'GET',
+          headers : {
+            'Authorization' : `Bearer ${authTokens.access}`,
+            'Content-Type':'Application/json'
+          },
+        })
+  
+        setIsLoading(false)
+        const data = await response.json()
+        setProfilePics(data.profile_pics)
+
+      } catch (error) {
+        console.log(error)
+        setIsLoading(false)
+      }
+    }
+  
+  
+    useLayoutEffect(() => {
+      getUserProfile()
+    },[])
+
+
+
+  
   return (
     <div className='userSetting'>
         <div className='userDiv'>
@@ -116,8 +183,8 @@ const UserSettingCompo = () => {
                 <h2>Account Settings</h2>
 
 
-                <form action="" onSubmit={handleSubmit}>
-                    <hr />
+                <form action="" onSubmit={handleUpdateProfilePic}>
+                  <hr />
                     <div className='proImageDiv'>
                         <div className='static'>
                             <img src={prof} alt="" />
@@ -138,7 +205,7 @@ const UserSettingCompo = () => {
                         <input 
                             type="file" 
                             id='image' 
-                            name="profile_pics" 
+                            name="profilePics" 
                             accept="image/*"
                             onChange ={handleImageChange} 
                             hidden
@@ -146,6 +213,10 @@ const UserSettingCompo = () => {
                         <label for="image">Choose file</label>
                     </div>
 
+                    <button >Save Changes</button>
+                </form>
+
+                <form action="" onSubmit={handleSubmit}>
                     <hr />
 
                     <div>
@@ -157,7 +228,7 @@ const UserSettingCompo = () => {
                         onChange={(e) => setName(e.target.value)}
                         />
                     </div>
-                    <button>Saving Changes</button>
+                    <button>Save Changes</button>
                 </form>
             </div>
 

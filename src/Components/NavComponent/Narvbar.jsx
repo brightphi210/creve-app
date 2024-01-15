@@ -17,6 +17,13 @@ const Narvbar = () => {
   const [openNavbar, setOpenNavvbar] = useState(true)
   const navigate = useNavigate()
 
+    // const token = localStorage.getItem('authToken');
+  
+    let [tokentoken, setAuthTokens] = useState(()=> localStorage.getItem('authTokens') ? JSON.parse(localStorage.getItem('authTokens')) : null)
+  
+    // const [user, setUser] = useState(() => token)
+    
+
   const toggleNav = () => {
     setOpenNavvbar(!openNavbar)
   }
@@ -24,15 +31,13 @@ const Narvbar = () => {
   const logout = async (e) => {
 
     e.preventDefault()
-    setUser(null)
+    setAuthTokens(null)
     localStorage.removeItem('authToken')
     navigate('/')
   }
 
 
-  const token = localStorage.getItem('authToken');
-  const [user, setUser] = useState(() => token)
-  
+
   return (
     <div className='navDivMain '> 
 
@@ -58,7 +63,7 @@ const Narvbar = () => {
           </div>
 
 
-          {user ? 
+          {tokentoken ? 
           (<>
             <div className='secondNavDiv'>
               <Link to={'/dashboard'}><button className='loginBtn'>Dashboard</button></Link>

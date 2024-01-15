@@ -26,6 +26,8 @@ import { jwtDecode } from "jwt-decode";
 
 import './UserNavbar.scss'
 
+import prof from './images/profilePics.png'
+
 
 const UserNavbar = () => {
 
@@ -40,7 +42,7 @@ const UserNavbar = () => {
   const decoded = jwtDecode(tokentoken.access);
   console.log(decoded.user_id);
 
-  const [isLoading, setIsLoading] = useState(false)
+  const [isLoading, setIsLoading] = useState(true)
 
 
   const openModal = () =>{
@@ -69,11 +71,13 @@ const UserNavbar = () => {
 
   const navigate = useNavigate()
   const [fullname, setFullname] = useState('')
+  const [profilePics, setProfilePics] = useState(null)
 
 
   
 
   const url = `https://creve.onrender.com/auth/user/${decoded.user_id}/`
+  const profileUrl = `https://creve.onrender.com/auth/userprofile/${decoded.profile_id}`
 
   const getUserDetails = async ()=>{
     try {
@@ -88,6 +92,7 @@ const UserNavbar = () => {
       const data = await response.json()
       // const userData = await response.json();
       setFullname(data.fullname)
+      setIsLoading(false)
     } catch (error) {
       console.log(error)
     }
@@ -98,6 +103,33 @@ const UserNavbar = () => {
     getUserDetails()
   },[])
 
+
+
+
+  const getUserProfile = async ()=>{
+    try {
+      const response = await fetch(profileUrl,{
+        method: 'GET',
+        headers : {
+          'Authorization' : `Bearer ${tokentoken.access}`,
+          'Content-Type':'Application/json'
+        },
+      })
+
+      const data = await response.json()
+      console.log(data.profile_pics)
+      setProfilePics(data.profile_pics)
+      setIsLoading(false)
+    } catch (error) {
+      console.log(error)
+    }
+  }
+
+
+  useLayoutEffect(() => {
+    getUserProfile()
+  },[])
+
   const logout = async (e) => {
     setIsLoading(true)
     e.preventDefault()
@@ -105,6 +137,8 @@ const UserNavbar = () => {
     localStorage.removeItem('authToken')
     navigate('/', { state: { successMessage: 'Successfully logged Out !!' }})
   }
+
+
 
 
 
@@ -187,7 +221,7 @@ const UserNavbar = () => {
 
             <Link to={'/user-settings'}><p><IoSettingsSharp />Settings</p></Link>
             <p><IoPersonAddOutline />Refer a friend</p>
-            <p><FaExchangeAlt />Become a Talent</p>
+            <Link to={'/signupCreative'}><p><FaExchangeAlt />Become a Talent</p></Link>
 
             <hr />
 
@@ -222,10 +256,11 @@ const UserNavbar = () => {
           </div>
 
           <div className='userNavProfile' onClick={openModal2}>
-            <div>
-              <img src={decoded.profile_pics} alt="" width={30}/> 
+            <div className='myStatic'>
 
-              {/* <a href="">{decoded.profile_pics}</a> */}
+              <img src={prof} alt="" width={30}/> 
+              
+              {isLoading === false ? <img src={profilePics} alt="" width={30} className='myOnTop'/>  : '' }
             </div>
 
             <div className='nameEmail'>

@@ -129,6 +129,21 @@
     font-weight: 400;
 }
 
+.myStatic{
+    position: relative;
+}
+
+.myOnTop{
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.userNavProfile img{
+    border-radius: 50%;
+    height: 30px;
+}
+
 
 // ======================== Navbar notify ====================
 
