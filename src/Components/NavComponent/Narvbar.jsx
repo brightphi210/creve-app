@@ -32,7 +32,7 @@ const Narvbar = () => {
 
     e.preventDefault()
     setAuthTokens(null)
-    localStorage.removeItem('authToken')
+    localStorage.removeItem('authTokens')
     navigate('/')
   }
 

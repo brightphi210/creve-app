@@ -12,11 +12,16 @@ import { IoLogoGoogle } from "react-icons/io";
 import { AiOutlineClose } from "react-icons/ai";
 
 import { Navigate, useNavigate } from 'react-router-dom';
+import { jwtDecode } from "jwt-decode";
 
 
 
 
 const LoginCompo2 = () => {
+
+  let [authTokens, setAuthTokens] = useState(()=> localStorage.getItem('authTokens') ? JSON.parse(localStorage.getItem('authTokens')) : null)
+  let [user, setUser] = useState(()=> localStorage.getItem('authTokens') ? jwtDecode(localStorage.getItem('authTokens')) : null)
+
 
   const [showPassword, setShowPassword] = useState(false);
 
@@ -55,11 +60,15 @@ const LoginCompo2 = () => {
 
       if (response.ok ) {
           const data = await response.json();
-          localStorage.setItem('authToken', data.access);
-          navigate('/');
+          navigate('/welcomeCreative');
           setIsLoading(false)
+          setAuthTokens(data)
+          setUser(jwtDecode(data.access))
+          // localStorage.setItem('authToken', data.access);
+          localStorage.setItem('authTokens', JSON.stringify(data))
           
       }
+
 
       else if(response.status === 401){
         setEmailError('No account found with the given credentials')

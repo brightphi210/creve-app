@@ -3,6 +3,7 @@ import './SectionFour.scss'
 
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
+import {Link} from 'react-router-dom'
 
 import { BiSolidQuoteLeft } from "react-icons/bi";
 import { FaStar } from "react-icons/fa6";
@@ -13,6 +14,7 @@ import ava3 from './Images/Avatars3.png'
 import ava4 from './Images/Avatars.png'
 
 import group from './Images/group.png'
+
 
 const SectionFour = () => {
     const responsive = {
@@ -167,7 +169,7 @@ const SectionFour = () => {
             <div className='hireText'>
                 <h3>Hire Talented Professionals <br /> for any Task</h3>
                 <p>Creve is your Go-To Platform for Both Digital and Local Services.</p>
-                <button>Find Talent</button>
+                <Link to={'/dashboard'}><button>Find Talent</button></Link>
             </div>
         </div>
     </div>

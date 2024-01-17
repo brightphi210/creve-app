@@ -3,8 +3,10 @@ import './SectionTwo.scss'
 import React from 'react'
 import web1 from './Images/web1.png'
 import web2 from './Images/web2.png'
+import {Link} from 'react-router-dom'
 
 import { IoIosSend } from "react-icons/io";
+
 
 const SectionTwo = () => {
 
@@ -23,7 +25,8 @@ const SectionTwo = () => {
                         Browse a wide range of talents offering services 
                         in digital skills, creative arts, and local expertise
                     </p>
-                    <button>Explore Talent <IoIosSend /></button>
+                    {/* <Link to></Link> */}
+                    <Link to={'dashboard'}><button>Explore Talent <IoIosSend /></button></Link>
                 </div>
             </div>
 
@@ -37,7 +40,7 @@ const SectionTwo = () => {
                         Hire with confidence using our easy-to-use platform. 
                         Find the perfect talent for your project or task
                     </p>
-                    <button>Explore Talent <IoIosSend /></button>
+                    <Link to={'/dashboard'}><button>Explore Talent <IoIosSend /></button></Link>
                 </div>
             </div>
 
@@ -51,7 +54,7 @@ const SectionTwo = () => {
                         Make informed decisions with our review and 
                         rating system. See what others say about each talent
                     </p>
-                    <button>Explore Talent <IoIosSend /></button>
+                    <Link to={'/dashboard'}><button>Explore Talent <IoIosSend /></button></Link>
                 </div>
             
             </div>

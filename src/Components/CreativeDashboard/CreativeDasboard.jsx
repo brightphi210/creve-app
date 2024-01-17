@@ -3,10 +3,10 @@ import React,{useState} from 'react'
 import { jwtDecode } from "jwt-decode";
 const CreativeDasboard = () => {
 
-    const token = localStorage.getItem('authToken');
-    const [user, setUser] = useState(() => token)
+  let [authTokens, setAuthTokens] = useState(()=> localStorage.getItem('authTokens') ? JSON.parse(localStorage.getItem('authTokens')) : null)
+
   
-    const decoded = jwtDecode(token);
+    const decoded = jwtDecode(authTokens.access);
 
   return (
     <div>CreativeDasboard

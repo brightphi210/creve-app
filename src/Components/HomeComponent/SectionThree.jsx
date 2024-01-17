@@ -1,6 +1,8 @@
 import React from 'react'
 import './SectionThree.scss'
 
+import {Link} from 'react-router-dom'
+
 import icon1 from './Images/icons (1).png'
 import icon2 from './Images/icons (2).png'
 import icon3 from './Images/icons (3).png'
@@ -50,7 +52,8 @@ const SectionThree = () => {
                     Showcase Your Skills and Thrive by Joining Our 
                     Community of <br /> Talented Professionals
                 </p>
-                <button>Apply as a Creative</button>
+                
+                <Link to={'/signupCreative'}><button>Apply as a Creative</button></Link>
             </div>
 
             <div className='becomeImgDiv'>
