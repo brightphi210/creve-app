@@ -72,7 +72,7 @@ const FavouritesCompo = () => {
                             </div>
 
                             <div>
-                                <h3>Frontend developer proficient in CSS, Javasc...</h3>
+                                <h3>Frontend developer proficient in CSS</h3>
                                 <p>#20,000</p>
                             </div>
                         </div>
@@ -97,7 +97,7 @@ const FavouritesCompo = () => {
                             </div>
 
                             <div>
-                                <h3>Frontend developer proficient in CSS, Javasc...</h3>
+                                <h3>Frontend developer proficient in CSS</h3>
                                 <p>#20,000</p>
                             </div>
                         </div>
@@ -123,7 +123,7 @@ const FavouritesCompo = () => {
                             </div>
 
                             <div>
-                                <h3>Frontend developer proficient in CSS, Javasc...</h3>
+                                <h3>Frontend developer proficient in CSS</h3>
                                 <p>#20,000</p>
                             </div>
                         </div>
@@ -149,7 +149,7 @@ const FavouritesCompo = () => {
                             </div>
 
                             <div>
-                                <h3>Frontend developer proficient in CSS, Javasc...</h3>
+                                <h3>Frontend developer proficient in CSS</h3>
                                 <p>#20,000</p>
                             </div>
                         </div>
@@ -192,7 +192,7 @@ const FavouritesCompo = () => {
                             </div>
 
                             <div>
-                                <h3>Frontend developer proficient in CSS, Javasc...</h3>
+                                <h3>Frontend developer proficient in CSS</h3>
                                 <p>#20,000</p>
                             </div>
                         </div>
@@ -216,32 +216,7 @@ const FavouritesCompo = () => {
                             </div>
 
                             <div>
-                                <h3>Frontend developer proficient in CSS, Javasc...</h3>
-                                <p>#20,000</p>
-                            </div>
-                        </div>
-                    </div>
-
-
-                    <div className='cardDiv cardDivCarol' onClick={openModal}>
-                        <div className='imgCard'><img src={imageCard} alt="" /></div>
-                        <div className='cardProfileDiv'>
-                            <div className='cardProfileDiv2'>
-                                <div className='cardProfileDivImg'>
-                                    <img src={avatar} alt="" />
-                                    <div>
-                                        <p>Cassie Daniels</p>
-                                        <p>4.0 <IoIosStar /> </p>
-                                    </div>
-                                </div>
-
-                                <div className='cardProBtn2'>
-                                    <button><MdOutlineVerified/> Verified</button>
-                                </div>
-                            </div>
-
-                            <div>
-                                <h3>Frontend developer proficient in CSS, Javasc...</h3>
+                                <h3>Frontend developer proficient in CSS</h3>
                                 <p>#20,000</p>
                             </div>
                         </div>
@@ -266,7 +241,32 @@ const FavouritesCompo = () => {
                             </div>
 
                             <div>
-                                <h3>Frontend developer proficient in CSS, Javasc...</h3>
+                                <h3>Frontend developer proficient in CSS</h3>
+                                <p>#20,000</p>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div className='cardDiv cardDivCarol' onClick={openModal}>
+                        <div className='imgCard'><img src={imageCard} alt="" /></div>
+                        <div className='cardProfileDiv'>
+                            <div className='cardProfileDiv2'>
+                                <div className='cardProfileDivImg'>
+                                    <img src={avatar} alt="" />
+                                    <div>
+                                        <p>Cassie Daniels</p>
+                                        <p>4.0 <IoIosStar /> </p>
+                                    </div>
+                                </div>
+
+                                <div className='cardProBtn2'>
+                                    <button><MdOutlineVerified/> Verified</button>
+                                </div>
+                            </div>
+
+                            <div>
+                                <h3>Frontend developer proficient in CSS</h3>
                                 <p>#20,000</p>
                             </div>
                         </div>
