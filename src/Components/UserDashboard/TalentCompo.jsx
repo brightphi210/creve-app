@@ -72,9 +72,9 @@ const TalentCompo = () => {
                 <h2>Explore the Best Talents <br /> around Africa</h2>
             </div>
 
-            {/* <div className='talentImgDiv'>
+            <div className='talentImgDiv'>
                 <img src={myImage} alt="" />
-            </div> */}
+            </div>
 
         </div>
 

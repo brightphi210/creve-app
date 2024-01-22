@@ -19,6 +19,7 @@ import { GrHomeRounded } from "react-icons/gr";
 
 import { RiSendPlaneFill } from "react-icons/ri";
 import {useNavigate } from 'react-router-dom';
+import { MdArrowBack } from "react-icons/md";
 
 
 import { jwtDecode } from "jwt-decode";
@@ -65,8 +66,12 @@ const UserNavbar = () => {
   }
 
 
-  const toggleSearch = () =>{
-    setShowSearch(!showSearch)
+  const showSearchFun = () =>{
+    setShowSearch(true)
+  }
+
+  const hideSearchFun = () =>{
+    setShowSearch(false)
   }
 
   const navigate = useNavigate()
@@ -158,12 +163,12 @@ const UserNavbar = () => {
                 <button>Search</button>
             </div>
         </div>
-        <div className='searchIconDiv' onClick={toggleSearch}><RiSearch2Line className='searchBtn'/></div>
+        <div className='searchIconDiv' onClick={showSearchFun}><RiSearch2Line className='searchBtn'/></div>
 
       {showSearch && (
         <div className='smallSearchInput'>
+          <p className='arrowback' onClick={hideSearchFun}><MdArrowBack /></p>
           <input type="text" placeholder='search for any service . . .'/>
-          <button><RiSendPlaneFill /></button>
         </div>
       )}
 
