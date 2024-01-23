@@ -180,6 +180,7 @@ const LoginCompo = () => {
           </div>
 
 
+
           <div className='videoDiv'>
             <video src={videoFile} 
               autoPlay 
