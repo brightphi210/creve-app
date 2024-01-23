@@ -69,7 +69,7 @@ const TalentCompo = () => {
         <div className='talentSection'>
 
             <div className='talentExplore'>
-                <h2>Explore the Best Talents <br /> around Africa</h2>
+                <h2>Explore the Best <br /> talents around Africa</h2>
             </div>
 
             <div className='talentImgDiv'>
