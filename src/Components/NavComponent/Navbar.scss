@@ -95,6 +95,13 @@
     @include hover-blue
 }
 
+.userNavLinks{
+    display: flex;
+    align-items: center;
+    font-size: 15px;
+    gap: 20px;
+}
+
 @media only screen and (min-width: $small-One) and (max-width: $medium-Two) {
 
     // ========== main Logo ===============

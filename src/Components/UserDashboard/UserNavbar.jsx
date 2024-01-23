@@ -1,4 +1,4 @@
-import React, { useEffect, useState, useLayoutEffect } from 'react'
+import React, {  useState, useLayoutEffect } from 'react'
 import { Link } from 'react-router-dom'
 
 import logo from './images/Logo2.png'
@@ -6,7 +6,7 @@ import avatar from './images/Avatars1.png'
 
 import { RiSearch2Line } from "react-icons/ri";
 import { MdFavoriteBorder } from "react-icons/md";
-import { MdOutlineNotifications } from "react-icons/md";
+import { GrNotification } from "react-icons/gr";
 import { AiOutlineMessage } from "react-icons/ai";
 
 import { IoCloseCircleOutline } from "react-icons/io5";
@@ -17,7 +17,6 @@ import { FaExchangeAlt } from "react-icons/fa";
 import { MdOutlineLogout } from "react-icons/md";
 import { GrHomeRounded } from "react-icons/gr";
 
-import { RiSendPlaneFill } from "react-icons/ri";
 import {useNavigate } from 'react-router-dom';
 import { MdArrowBack } from "react-icons/md";
 
@@ -106,7 +105,7 @@ const UserNavbar = () => {
 
   useLayoutEffect(() => {
     getUserDetails()
-  },[])
+  })
 
 
 
@@ -133,7 +132,7 @@ const UserNavbar = () => {
 
   useLayoutEffect(() => {
     getUserProfile()
-  },[])
+  })
 
   const logout = async (e) => {
     setIsLoading(true)
@@ -256,7 +255,7 @@ const UserNavbar = () => {
             <p></p>
           </div>
           
-          <div className='userNavIcon' onClick={openModal}><MdOutlineNotifications className='userIcon'/>
+          <div className='userNavIcon' onClick={openModal}><GrNotification className='userIcon'/>
             <p></p>
           </div>
 

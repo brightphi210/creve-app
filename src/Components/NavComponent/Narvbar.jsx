@@ -66,7 +66,7 @@ const Narvbar = () => {
           {tokentoken ? 
           (<>
             <div className='secondNavDiv'>
-              <Link to={'/dashboard'}><button className='loginBtn'>Dashboard</button></Link>
+              <Link to={'/dashboardMain'}><button className='loginBtn'>Dashboard</button></Link>
               <button className='signupBtn' onClick={logout}>Logout</button>
             </div>
           </>) :  

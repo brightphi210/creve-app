@@ -1,0 +1,353 @@
+
+@import '../variables.scss';
+
+*{@include default}
+
+
+
+// ================= creativeDashDiv ==================
+
+.creativeDashDiv{
+    padding: 5% 10%;
+}
+
+.creativeDashDivFlex {
+    display: flex;
+    gap: 40px;
+
+}
+
+
+.creativeBanner{
+    background-color: $my-blue;
+    display: flex;
+    align-items: center;
+    padding: 30px 5%;
+    border-radius: 20px;
+    color : white;
+    height: 250px;
+}
+
+.creativeBannerAndInput{
+    width:75%;
+    display: block;
+}
+
+
+
+.creativeBannerText p{
+    font-size: 18px;
+}
+
+.creativeBannerText h2{
+    font-size: 30px;
+    padding: 10px 0;
+}
+
+
+.creativeBannerText button{
+    font-size: 12px;
+    padding: 8px 50px;
+    border-radius: 30px;
+    border: none;
+    background-color: white;
+    cursor: pointer;
+}
+
+
+.creativeBannerImg{
+    margin-left: auto;
+
+}
+
+.creativeBannerImg img{
+    width: 180px;
+}
+
+.creativeDashInput {
+    width: 100%;
+    margin-top: 20px;
+    position: relative;
+}
+
+.creativeDashInput input{
+    width: 100%;
+    padding: 15px 60px;
+    border-radius: 30px;
+    border: none;
+    outline: none;
+    box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+}
+
+.creativeSearch {
+    position: absolute;
+    top: 10px;
+    left: 20px;
+    font-size: 20px;
+}
+
+
+.creativeDashMessDiv h2{
+    font-weight: 500;
+    padding: 20px 0;
+    font-size: 20px;
+}
+
+.creativeDashMess{
+    background-color: #f7f7fa;
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: rgba(17, 17, 26, 0.1) 0px 1px 0px;
+}
+
+.creativeDashMessFlex {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    padding: 20px;
+    margin: 20px 0;
+}
+
+.creativeDashMessFlex:hover{
+    background-color: #e1e0e8;
+    transition: all 0.5s ease;
+    border-radius: 10px;
+}
+
+
+.creativeDashMessProf img{
+    width: 40px;
+}
+
+.creativeDashMessProf{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.creativeDashMessProf h2{
+    padding: 0 !important;
+}
+.time{
+    margin-left: auto ;
+}
+
+
+.creativeDashProfileHide{
+    display: none;
+}
+
+// ====================== Responsive ====================
+
+@media only screen and (min-width: $small-One) and (max-width: $small-Two) {
+    .creativeDashProfileHide{
+        display: block;
+    }
+
+
+    .creativeDashProfileShow {
+        display: none;
+    }
+
+
+    .creativeDashDiv{
+        padding: 20% 5%;
+        padding-bottom: 20px;
+    }
+    
+    .creativeDashDivFlex {
+        display: block;
+    
+    }
+
+
+    .creativeBannerAndInput{
+        width:100%;
+        display: block;
+    }
+
+
+    .creativeBanner{
+        background-color: $my-blue;
+        display: block;
+        padding: 30px 8%;
+        height: 100%;
+        justify-content: center;
+    }
+
+
+    .creativeBannerImg{
+        margin-left: auto;
+    
+    }
+    
+    .creativeBannerImg img{
+        width: 60%;
+        margin-top: 20px;
+    }
+
+
+    .creativeBannerText p{
+        font-size: 15px;
+    }
+    
+    .creativeBannerText h2{
+        font-size: 20px;
+        padding: 10px 0;
+    }
+
+    .creativeBannerText button{
+        padding: 13px 50px;
+    }
+
+    .creativeDashMess{
+        background-color: #f7f7fa;
+        padding: 10px;
+    }
+    
+    .creativeDashMessFlex {
+        display: flex;
+        align-items: center;
+        cursor: pointer;
+        padding: 10px;
+    }
+
+    .creativeDashMessProf h2{
+        padding: 0 !important;
+        font-size: 15px;
+    }
+    .time{
+        margin-left: auto ;
+        font-size: 12px;
+    }
+    
+}
+
+
+
+
+
+// ================ PROFILE PART =========================
+.creativeDashProfileDiv{
+    width: 100%;
+}
+
+.creativeDashProfile{
+    border-radius: 20px;
+    background-color: #f7f7fa;
+    padding: 40px 20px;
+    margin-bottom: 30px;
+}
+
+.profileCard{
+    display: flex;
+    gap: 20px;
+}
+
+
+.profileCard h3{
+    font-size: 20px;
+    font-weight: 400;
+}
+.completeProf {
+    padding-top: 10px;
+}
+
+
+
+.completeProf p{
+    color: $my-blue;
+    font-size: 15px;
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+.progressDiv{
+    position: relative;
+    display: flex;
+}
+
+.grayProgress{
+    width: 80%;
+    background-color: #e0e8e0;
+    height: 5px;
+    position: absolute;
+    top: 20px;
+    left: 0;
+    border-radius: 40px;
+    
+}
+
+.colorProgress{
+    width: 30%;
+    background-color: $my-blue;
+    height: 5px;
+    position: absolute;
+    top: 20px;
+    left: 0;
+    border-radius: 40px;
+}
+
+.progressDiv span{
+    margin-left: auto;
+    padding-top: 20px;
+}
+
+
+@media only screen and (min-width: $small-One) and (max-width: $small-Two) {
+    .creativeDashProfile{
+        border-radius: 20px;
+        background-color: #f7f7fa;
+        padding: 20px 20px;
+        margin-top: 30px;
+    }
+}
+
+
+// =====================creativeDashNot======================
+.creativeDashProfile h2{
+    font-size: 20px;
+    font-weight: 400;
+    align-items: center;
+    display: flex;
+    gap: 10px;
+    padding-bottom: 20px;
+}
+.creativeDashNot{
+    display: flex;
+    gap: 20px;
+    padding-top: 20px;
+    cursor: pointer;
+    padding: 10px;
+
+}
+
+.creativeDashNot:hover{
+    background-color: #e1e0e8;
+    border-radius: 10px;
+}
+
+.creativeDashNot h4{
+    font-weight: 400;
+}
+
+.creativeDashNot p{
+    font-size: 13px;
+    font-weight: 300;
+    color: #919191;
+}
+
+.creativeDashProfile ul{
+    padding: 0 20px;
+}
+
+.creativeDashProfile ul li{
+    list-style: none;
+    padding-top: 20px;
+    font-size: 15px;
+    align-items: center;
+    display: flex;
+    gap: 10px;
+    text-decoration: underline;
+    cursor: pointer;
+}
