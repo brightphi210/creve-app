@@ -3,7 +3,7 @@ import './TalentCompo.scss'
 import { Link } from 'react-router-dom'
 
 
-import myImage from './images/talentImg.png'
+import myImage from './images/img6.png'
 import imageCard from './images/talentcardImg.png'
 import avatar from './images/Avatars1.png'
 
