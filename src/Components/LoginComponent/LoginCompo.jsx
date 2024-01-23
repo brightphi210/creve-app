@@ -93,7 +93,7 @@ const LoginCompo = () => {
 
       if (response.ok ) {
           const data = await response.json();
-          navigate('/dashboard');
+          navigate('/dashboardMain');
           setIsLoading(false)
           setAuthTokens(data)
           setUser(jwtDecode(data.access))

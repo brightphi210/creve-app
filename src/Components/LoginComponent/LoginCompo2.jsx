@@ -60,7 +60,7 @@ const LoginCompo2 = () => {
 
       if (response.ok ) {
           const data = await response.json();
-          navigate('/welcomeCreative');
+          navigate('/dashboard');
           setIsLoading(false)
           setAuthTokens(data)
           setUser(jwtDecode(data.access))

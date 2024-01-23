@@ -7,10 +7,9 @@ import Footer from '../../Components/FooterComponent/Footer'
 import { jwtDecode } from "jwt-decode";
 import CreativeNavbar from '../../Components/CreativeDashboard/CreativeNavbar';
 import CreativeDasboard from '../../Components/CreativeDashboard/CreativeDasboard';
-import CreativeWelcom from '../CreativeProfileCreate/CreativeWelcom';
 
 
-const UserDashboard = () => {
+const UserDasboardMain = () => {
 
   let [authTokens, setAuthTokens] = useState(()=> localStorage.getItem('authTokens') ? JSON.parse(localStorage.getItem('authTokens')) : null)
 
@@ -25,18 +24,23 @@ const UserDashboard = () => {
         <>
           <UserNavbar />
           <TalentCompo />
-          <Footer />
         </>
       ) : (
         <>
 
-          <CreativeWelcom />
+          <CreativeNavbar />
+          <CreativeDasboard />
         </>
       )}
 
 
+        <Footer />
     </div>
   )
 }
 
-export default UserDashboard
+export default UserDasboardMain
+
+
+
+

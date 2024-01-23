@@ -1,0 +1,82 @@
+@import '../../Components/variables.scss';
+
+*{@include default}
+
+
+.welcomelogoDiv{
+    position: relative;
+}
+
+.welcomelogoDiv img{
+    top: 70px;
+    left: 70px;
+    position: absolute;
+    width: 80px;
+    cursor: pointer;
+}
+
+.welcomeSection {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    text-align: center;
+}
+
+.welcomeSection h2{
+    font-size: 40px;
+    padding-top: 20px;
+}
+
+
+.welcomeSection p{
+    font-size: 15px;
+    padding: 20px 0;
+}
+
+
+.welcomeSection button{
+    font-size: 15px;
+    padding: 13px;
+    width: 100%;
+    background-color: $my-blue;
+    color: white;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+}
+
+
+@media only screen and (min-width: $small-One) and (max-width: $small-Two) {
+    
+    .welcomeSection {
+        padding: 0 5%;
+    }
+    
+    .welcomeSection img{
+        width: 220px;
+    }
+
+    .welcomeSection button{
+        font-size: 13px;
+        padding: 11px;
+        width: 100%;
+        background-color: $my-blue;
+        color: white;
+        border: none;
+        border-radius: 30px;
+        cursor: pointer;
+    }
+
+    .welcomeSection p{
+        font-size: 13px;
+        padding: 10px 0;
+        padding-bottom: 20px;
+    }
+
+    .welcomeSection h2{
+        font-size: 30px;
+        padding-top: 20px;
+    }
+    
+}

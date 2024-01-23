@@ -17,6 +17,7 @@ import ConfirmPage from "./Pages/ConfirmPage";
 import PrivateRoute from "./Pages/TalentPages/Utils/Utils";
 import UserDashboard from "./Pages/TalentPages/UserDashboard";
 import CreativeWelcom from "./Pages/CreativeProfileCreate/CreativeWelcom";
+import UserDasboardMain from "./Pages/TalentPages/UserDasboardMain";
 
 
 
@@ -36,6 +37,7 @@ function App() {
 
           
           <Route element={<PrivateRoute />}>
+            <Route path="/dashboardMain" element={<UserDasboardMain />}></Route>
             <Route path="/dashboard" element={<UserDashboard />}></Route>
             <Route path="/talentsProfiles" element={<CreativeProView />}></Route>
             <Route path="/favourites" element={<Favourite />}></Route>
