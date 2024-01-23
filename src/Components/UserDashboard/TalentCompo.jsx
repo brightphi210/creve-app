@@ -66,15 +66,17 @@ const TalentCompo = () => {
 
   return (
     <div>
+        <div className='talentSectionDiv'>
+
         <div className='talentSection'>
-
             <div className='talentExplore'>
-                <h2>Explore the Best <br /> talents around Africa</h2>
-            </div>
+                    <h2>Explore the Best <br /> talents around Africa</h2>
+                </div>
 
-            <div className='talentImgDiv'>
-                <img src={myImage} alt="" />
+                <div className='talentImgDiv'>
+                    <img src={myImage} alt="" />
             </div>
+        </div>
 
         </div>
 
