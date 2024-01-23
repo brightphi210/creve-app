@@ -142,7 +142,7 @@ const CreativeDasboard = () => {
                     </div>
                     <div>
                       <h2>Mark Jones</h2>
-                      <p>MJ: I need your service on sunday</p>
+                      <p>MJ: I need your service</p>
                     </div>
                   </div>
                   <p className='time'>Just Now</p>
@@ -157,7 +157,7 @@ const CreativeDasboard = () => {
                       </div>
                       <div>
                         <h2>Mark Jones</h2>
-                        <p>MJ: I need your service on sunday</p>
+                        <p>MJ: I need your service</p>
                       </div>
                     </div>
                     <p className='time'>Just Now</p>
@@ -174,7 +174,7 @@ const CreativeDasboard = () => {
                       </div>
                       <div>
                         <h2>Mark Jones</h2>
-                        <p>MJ: I need your service on sunday</p>
+                        <p>MJ: I need your service</p>
                       </div>
                     </div>
                     <p className='time'>Just Now</p>

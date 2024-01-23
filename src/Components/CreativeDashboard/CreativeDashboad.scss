@@ -207,18 +207,37 @@
     
     .creativeDashMessFlex {
         display: flex;
-        align-items: center;
+        align-items: flex-end;
         cursor: pointer;
         padding: 10px;
+    }
+
+    .creativeDashMessProf {
+        gap: 5px;
+        align-items: center;
     }
 
     .creativeDashMessProf h2{
         padding: 0 !important;
         font-size: 15px;
     }
+
+    .creativeDashMessProf p{
+        padding: 0 !important;
+        font-size: 12px;
+    }
+
+
     .time{
         margin-left: auto ;
         font-size: 12px;
+    }
+
+    .creativeDashMessDiv h2{
+        font-weight: 500;
+        padding: 20px 0;
+        padding-bottom: 10px;
+        font-size: 15px;
     }
     
 }
@@ -294,15 +313,6 @@
 }
 
 
-@media only screen and (min-width: $small-One) and (max-width: $small-Two) {
-    .creativeDashProfile{
-        border-radius: 20px;
-        background-color: #f7f7fa;
-        padding: 20px 20px;
-        margin-top: 30px;
-    }
-}
-
 
 // =====================creativeDashNot======================
 .creativeDashProfile h2{
@@ -310,7 +320,7 @@
     font-weight: 400;
     align-items: center;
     display: flex;
-    gap: 10px;
+    gap: 20px;
     padding-bottom: 20px;
 }
 .creativeDashNot{
@@ -332,7 +342,7 @@
 }
 
 .creativeDashNot p{
-    font-size: 13px;
+    font-size: 12px;
     font-weight: 300;
     color: #919191;
 }
@@ -350,4 +360,40 @@
     gap: 10px;
     text-decoration: underline;
     cursor: pointer;
+}
+
+
+@media only screen and (min-width: $small-One) and (max-width: $small-Two) {
+    .creativeDashProfile{
+        border-radius: 20px;
+        background-color: #f7f7fa;
+        padding: 20px 20px;
+        margin-top: 30px;
+    }
+
+    .creativeDashProfile h2{
+        font-size: 15px;
+        gap: 10px;
+        padding-bottom: 20px;
+    }
+
+    .creativeDashNot{
+        display: flex;
+        gap: 10px;
+        padding-top: 20px;
+        cursor: pointer;
+        padding: 10px;
+    }
+
+
+    .creativeDashProfile ul li{
+        list-style: none;
+        padding-top: 20px;
+        font-size: 13px;
+        align-items: center;
+        display: flex;
+        gap: 10px;
+        text-decoration: underline;
+        cursor: pointer;
+    }
 }
