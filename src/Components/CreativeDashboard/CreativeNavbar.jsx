@@ -14,6 +14,7 @@ import { IoPersonAddOutline } from "react-icons/io5";
 import { FaExchangeAlt } from "react-icons/fa";
 import { MdOutlineLogout } from "react-icons/md";
 import { GrHomeRounded } from "react-icons/gr";
+import { MdOutlineManageAccounts } from "react-icons/md";
 
 import {useNavigate } from 'react-router-dom';
 
@@ -219,6 +220,13 @@ const CreativeNavbar = () => {
             <Link to={'/dashboardMain'} className='link'><GrHomeRounded className='userIcon'/></Link>
           </div>
 
+          
+
+
+          <div className='userNavIcon' onClick={openModal}>
+            <Link to={'/dashboardMain'} className='link'><MdOutlineManageAccounts className='userIcon'/></Link>
+
+          </div>
           
           <div className='userNavIcon' onClick={openModal}><GrNotification className='userIcon'/>
             <p></p>
