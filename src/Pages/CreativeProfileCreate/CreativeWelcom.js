@@ -23,7 +23,9 @@ const CreativeWelcom = () => {
               <p>Clients are looking for talented individuals like you, 
                   and your profile is the key to making a lasting impression.
               </p>
-              <button>Create a Profile</button>
+              <Link to={`${'/'}creativeProfileCategory`}>
+                <button>Create a Profile</button>
+              </Link>
           </div>
         </div>
     </div>

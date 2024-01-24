@@ -1,0 +1,25 @@
+@import '../../Components/variables.scss';
+
+*{@include default}
+
+
+.CreativeCatSection{
+    display: flex;
+    gap: 30px;
+}
+
+.CreativeCatpart{
+    padding-top: 100px;
+    width: 100%;
+
+}
+
+
+
+.selectCat select{
+    width: 40%;
+    padding: 20px;
+}
+
+
+

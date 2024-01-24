@@ -18,6 +18,7 @@ import PrivateRoute from "./Pages/TalentPages/Utils/Utils";
 import UserDashboard from "./Pages/TalentPages/UserDashboard";
 import CreativeWelcom from "./Pages/CreativeProfileCreate/CreativeWelcom";
 import UserDasboardMain from "./Pages/TalentPages/UserDasboardMain";
+import CreativeOnboardCategory from "./Pages/CreativeProfileCreate/CreativeOnboardCategory";
 
 
 
@@ -45,6 +46,7 @@ function App() {
             <Route path="/user-settings" element={<UserSetting />}></Route>
             <Route path="/chats" element={<UserChat />}></Route>
             <Route path="/welcomeCreative" element={<CreativeWelcom />}></Route>
+            <Route path="/creativeProfileCategory" element={<CreativeOnboardCategory />}></Route>
           </Route>
 
 
