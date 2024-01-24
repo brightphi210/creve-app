@@ -3,7 +3,7 @@ import logo from './Images/craves.png'
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
 
-import { CgMenuLeft } from "react-icons/cg";
+import { VscMenu } from "react-icons/vsc";
 import { MdClose } from "react-icons/md";
 import { IoMdArrowDropdown } from "react-icons/io";
 import { Navigate, useNavigate } from 'react-router-dom';
@@ -45,7 +45,7 @@ const Narvbar = () => {
           <Link to={'/'}><div><img src={logo} alt="" width={100}/></div></Link>
 
           <div className='navIcons'>
-            {openNavbar ? <CgMenuLeft onClick={toggleNav}/> : <MdClose onClick={toggleNav}/>}
+            {openNavbar ? <VscMenu onClick={toggleNav}/> : <MdClose onClick={toggleNav}/>}
           </div>
         </div>
 
