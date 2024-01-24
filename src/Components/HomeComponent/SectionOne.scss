@@ -68,12 +68,12 @@
     padding: 13px 50px;
     margin-top: 10px;
     border-radius: 30px;
-    border: 1px solid $my-blue;
+    border: 1px solid gainsboro;
     outline: none;
 
     &:focus {
         border-color: $my-blue;
-        box-shadow: 0 0 5px rgba(172, 130, 214, 0.5);
+        box-shadow: 0 0 5px rgba(212, 212, 212, 0.5);
       }
 }
 
@@ -109,7 +109,7 @@
 .popularDiv button{
     padding: 10px 15px;
     border-radius: 5px;
-    border: $my-blue solid 1px;
+    border: rgb(192, 192, 192) solid 1px;
     background-color: $my-white;
     cursor: pointer;
 }
@@ -202,6 +202,7 @@
     .react-multiple-carousel__arrow {
         z-index: 0;
     }
+    
 
 
     .sectionOne{
@@ -216,14 +217,15 @@
     }
 
     .sectionOne h2{
-        font-size: $medium-fonts;
+        font-size: 35px;
         font-weight: 500;
-        line-height: 35px;
+        line-height: 40px;
         text-align: left;
     }
 
     .pOne{
         text-align: left;
+        font-size: 15px;
     }
 
     .searchDiv input{

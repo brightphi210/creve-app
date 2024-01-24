@@ -4,7 +4,7 @@ import './SectionOne.scss'
 import { RiSearch2Line } from "react-icons/ri";
 import { IoIosSend } from "react-icons/io";
 
-import smallImg from './Images/back2.png'
+import smallImg from './Images/ggh.png'
 import sev1 from './Images/sev1.png'
 import sev2 from './Images/sev2.png'
 import sev3 from './Images/sev3.png'
@@ -38,78 +38,83 @@ const SectionOne = () => {
 
   return (
     <div>
-            <div className='sectionOne'>
-        <div className='sectionSubDiv'>
-            <h2>Discover the Best <br /> Talents Across Africa</h2>
-            <p className='pOne'>
-                We Provide the best talents on all fields. Whether it’s digital skilled or </p>
-            <div className='searchDiv'>
-                <RiSearch2Line className='searchIcon'/>
-                <input type="text" placeholder='Search for any service...'/>
-                <button>Search</button>
+        <div className='sectionOne'>
+            
+            <div className='sectionSubDiv'>
+                <h2>Discover the Best <br /> Talents Globally</h2>
+                <p className='pOne'>
+                    We are here to connect you to right client and creative
+                </p>
+                <div className='searchDiv'>
+                    <RiSearch2Line className='searchIcon'/>
+                    <input type="text" placeholder='Search for any service...'/>
+                    <button>Search</button>
+                </div>
+
+                <div className='smallImg'>
+                    <img src={smallImg} alt="" />
+                </div>
+
+                <div className='popularDiv'>
+                    <p className='Two'>Popular Service:</p>
+                    <button>Frontend Development</button>
+                    <button>UI/UX Design</button>
+                    <button>Shoe Making</button>
+                    <button>Fashion Design</button>
+                </div>
+        
             </div>
 
-            <div className='popularDiv'>
-                <p className='Two'>Popular Service:</p>
-                <button>Frontend Development</button>
-                <button>UI/UX Design</button>
-                <button>Shoe Making</button>
-                <button>Fashion Design</button>
-            </div>
+
         </div>
 
-        <div className='smallImg'>
-            <img src={smallImg} alt="" />
+
+        <div className='caroselSection'>
+            <h2>Explore Popular  Categories</h2>
+            <Carousel 
+                responsive={responsive}
+                swipeable={false}
+                draggable={true}
+                showDots={false}
+                infinite={true}
+                autoPlaySpeed={1000}
+                keyBoardControl={true}
+            >
+                <div className='caroImageDiv'>
+                    <div className='overlayDiv'>
+                        <img src={sev1} alt="" />
+                        <div class="overlay"></div>
+                    </div>
+                    <p>Frontend Development</p>
+                </div>
+
+                <div className='caroImageDiv'>
+                    <div className='overlayDiv'>
+                        <img src={sev2} alt="" />
+                        <div class="overlay"></div>
+                    </div>
+                    <p>Graphic Design</p>
+                </div>
+
+                <div className='caroImageDiv'>
+                    <div className='overlayDiv'>
+                        <img src={sev3} alt="" />
+                        <div class="overlay"></div>
+                    </div>
+                    <p>Electrician</p>
+                </div>
+
+                <div className='caroImageDiv'>
+                    <div className='overlayDiv'>
+                        <img src={sev4} alt="" />
+                        <div class="overlay"></div>
+                    </div>
+                    <p>Fashion Design</p>
+                </div>
+
+            </Carousel>
+            <Link to={'/category'}><button className='allBtn'>All Services <IoIosSend /></button></Link>
         </div>
-    </div>
-
-
-    <div className='caroselSection'>
-        <h2>Explore Popular  Categories</h2>
-        <Carousel 
-            responsive={responsive}
-            swipeable={false}
-            draggable={true}
-            showDots={false}
-            infinite={true}
-            autoPlaySpeed={1000}
-            keyBoardControl={true}
-        >
-            <div className='caroImageDiv'>
-                <div className='overlayDiv'>
-                    <img src={sev1} alt="" />
-                    <div class="overlay"></div>
-                </div>
-                <p>Frontend Development</p>
-            </div>
-
-            <div className='caroImageDiv'>
-                <div className='overlayDiv'>
-                    <img src={sev2} alt="" />
-                    <div class="overlay"></div>
-                </div>
-                <p>Graphic Design</p>
-            </div>
-
-            <div className='caroImageDiv'>
-                <div className='overlayDiv'>
-                    <img src={sev3} alt="" />
-                    <div class="overlay"></div>
-                </div>
-                <p>Electrician</p>
-            </div>
-
-            <div className='caroImageDiv'>
-                <div className='overlayDiv'>
-                    <img src={sev4} alt="" />
-                    <div class="overlay"></div>
-                </div>
-                <p>Fashion Design</p>
-            </div>
-
-        </Carousel>
-        <Link to={'/category'}><button className='allBtn'>All Services <IoIosSend /></button></Link>
-    </div>
     </div>
   )
 }
