@@ -43,7 +43,7 @@ const SectionOne = () => {
             <div className='sectionSubDiv'>
                 <h2>Discover the Best <br /> Talents Globally</h2>
                 <p className='pOne'>
-                    We are here to connect you to right client and creative
+                    Find the right talent/client to work with. .
                 </p>
                 <div className='searchDiv'>
                     <RiSearch2Line className='searchIcon'/>
