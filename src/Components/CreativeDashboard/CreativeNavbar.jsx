@@ -220,13 +220,7 @@ const CreativeNavbar = () => {
             <Link to={'/dashboardMain'} className='link'><GrHomeRounded className='userIcon'/></Link>
           </div>
 
-          
-
-
-          <div className='userNavIcon' onClick={openModal}>
-            <Link to={'/dashboardMain'} className='link'><MdOutlineManageAccounts className='userIcon'/></Link>
-
-          </div>
+        
           
           <div className='userNavIcon' onClick={openModal}><GrNotification className='userIcon'/>
             <p></p>
@@ -235,6 +229,12 @@ const CreativeNavbar = () => {
           <div className='userNavIcon'>
             <Link to={'/dashboardMain'}><AiOutlineMessage className='userIcon'/></Link>
             <p></p>
+          </div>
+
+
+          
+          <div className='userNavIcon' onClick={openModal}>
+            <Link to={''} className='link'><MdOutlineManageAccounts className='userIcon'/></Link>
           </div>
 
           <div className='userNavProfile' onClick={openModal2}>
