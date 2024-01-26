@@ -82,6 +82,11 @@ const CreativeOnboardCategory = () => {
                                 <img src={one6} alt="" />
                                 <p>Frontend Development</p>
                             </div>
+
+                            <div>
+                                <img src={one6} alt="" />
+                                <p>Frontend Development</p>
+                            </div>
                         </div>
                     )}
 

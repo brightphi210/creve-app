@@ -43,6 +43,7 @@
     font-size: 15px;
     font-weight: 500;
     padding-top: 10px;
+    padding: 10px 20px;
 }
 
 
@@ -57,11 +58,31 @@
     gap: 30px;
 }
 
+.catSecDiv div{
+    background-color: #f7f7fa;
+    border-radius: 10px;
+    padding: 10px;
+    cursor: pointer;
+}
+
 .catSecDiv img{
     width: 280px;
     cursor: pointer;
     border-radius: 10px;
+    transition: transform 0.3s ease-in-out;
 }
 
+
+.catSecDiv img:hover{
+    transform: scale(0.9);
+}
+
+
+.catSec p{
+    font-size: 15px;
+    font-weight: 500;
+    padding-top: 10px;
+
+}
 
 
