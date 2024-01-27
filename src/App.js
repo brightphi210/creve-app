@@ -19,6 +19,7 @@ import UserDashboard from "./Pages/TalentPages/UserDashboard";
 import CreativeWelcom from "./Pages/CreativeProfileCreate/CreativeWelcom";
 import UserDasboardMain from "./Pages/TalentPages/UserDasboardMain";
 import CreativeOnboardCategory from "./Pages/CreativeProfileCreate/CreativeOnboardCategory";
+import CreativeOnboardProfile from "./Pages/CreativeProfileCreate/CreativeOnboardProfile";
 
 
 
@@ -47,6 +48,7 @@ function App() {
             <Route path="/chats" element={<UserChat />}></Route>
             <Route path="/welcomeCreative" element={<CreativeWelcom />}></Route>
             <Route path="/creativeProfileCategory" element={<CreativeOnboardCategory />}></Route>
+            <Route path="/creativeOnboardProfile" element={<CreativeOnboardProfile />}></Route>
           </Route>
 
 

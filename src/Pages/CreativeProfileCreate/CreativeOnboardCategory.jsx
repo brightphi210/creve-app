@@ -10,6 +10,7 @@ import one3 from './images/sev8.png'
 import one4 from './images/sev7.png'
 import one5 from './images/img10.png'
 import one6 from './images/img11.png'
+import one7 from './images/s (12).png'
 
 import non1 from './images/s (1).png'
 import non2 from './images/s (2).png'
@@ -21,6 +22,8 @@ import non7 from './images/seve.png'
 import non8 from './images/s (7).png'
 import non9 from './images/s (8).png'
 import non10 from './images/s (9).png'
+
+import { Link } from 'react-router-dom'
 
 const CreativeOnboardCategory = () => {
 
@@ -52,10 +55,14 @@ const CreativeOnboardCategory = () => {
 
                     {selectedOption === 'digital' && (
                         <div className='catSecDiv'>
+
+                            <Link to={'/creativeOnboardProfile'}>
                             <div>
                                 <img src={one1} alt="" />
                                 <p>Backend Development</p>
                             </div>
+                            </Link>
+
                             <div>
                                 <img src={one5} alt="" />
                                 <p>Mobile Development</p>
@@ -84,8 +91,8 @@ const CreativeOnboardCategory = () => {
                             </div>
 
                             <div>
-                                <img src={one6} alt="" />
-                                <p>Frontend Development</p>
+                                <img src={one7} alt="" />
+                                <p>Photography</p>
                             </div>
                         </div>
                     )}

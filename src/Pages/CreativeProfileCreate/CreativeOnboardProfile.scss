@@ -1,0 +1,86 @@
+
+
+@import '../../Components/variables.scss';
+
+*{@include default}
+
+
+.CreativeDetailsGenSec{
+    display: flex;
+    gap: 30px;
+}
+
+
+.creativeDetailSec{
+    width: 100%;
+    padding: 100px ;
+    padding-left: 17%;
+}
+
+
+.personalDetailsForm{
+    width: 100%;
+}
+
+.personalDetailsForm input{
+    width: 50%;
+    padding: 20px;
+    margin: 10px 0;
+    border: rgb(126, 126, 147) solid 2px;
+    outline: none;
+    font-size: 13px;
+    border-radius: 5px;
+    // transition: border-color 0.3s;
+}
+
+
+  .personalDetailsForm input:focus {
+    border: rgb(126, 126, 147) solid 2px;
+    box-shadow: rgba(87, 6, 130, 0.2) 0px 2px 8px 0px;
+  }
+
+.personalDetailsForm textarea{
+    width: 50%;
+    padding: 15px;
+    max-width: 50%;
+    height: 100px;
+    min-width: 50%;
+    min-height: 100px;
+    max-height: 100px;
+    margin: 10px 0;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    border: rgb(126, 126, 147) solid 2px;
+
+}
+
+.personalDetailsBtn{
+    display: flex;
+    gap: 20px;
+}
+
+
+.personalDetailsBtn button{
+    width: 24%;
+    padding: 15px;
+    background-color: $my-blue;
+    border-radius: 10px;
+    color: white;
+    font-size: 15px;
+    border: none;
+    cursor: pointer;
+}
+
+.personalDetailsBtn a p{
+    width: 100%;
+    padding: 15px;
+    background-color: $my-blue;
+    border-radius: 10px;
+    color: white;
+    font-size: 15px;
+    border: none;
+    cursor: pointer;
+}
+
+
