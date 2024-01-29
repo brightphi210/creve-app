@@ -40,7 +40,7 @@ const LoginCompo = () => {
   const [isLoading, setIsLoading] = useState(false)
   const [emailError, setEmailError] = useState(false)
 
-  const logUrl = 'https://creve.onrender.com/api/token/'
+  const logUrl = 'http://18.233.101.101:8000/api/token/'
 
   const navigate = useNavigate()
 
