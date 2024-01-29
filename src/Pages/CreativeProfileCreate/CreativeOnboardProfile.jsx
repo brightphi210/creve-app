@@ -3,6 +3,9 @@ import CreativeOnboardNav from '../../Components/CreativeOnboardComponent/Creati
 import CreativeOnbardSide from '../../Components/CreativeOnboardComponent/CreativeOnbardSide'
 import { Link } from 'react-router-dom'
 import './CreativeOnboardProfile.scss'
+
+
+import prof from './images/profilePics.png'
 const CreativeOnboardProfile = () => {
   return (
     <div className=''>
@@ -13,11 +16,22 @@ const CreativeOnboardProfile = () => {
           <div className='creativeDetailSec'>
             <h2>Personal Details</h2>
 
-            <div>
-              <p>Profile pics*</p>
+            <div className=''>
+              <p className='pp'>Profile pics*</p>
 
               <form action="" className='personalDetailsForm'>
-                <input type="file" required/>
+
+
+                <div className='profDetSec'>
+                  <img src={prof} alt="" width={60}/>
+
+                  <label class="custom-file-upload">
+                    <input type="file" id="fileInput" />
+                    Choose file
+                  </label>
+                </div>
+
+                {/* <div id="fileName"></div> */}
 
                 <div>
                   <p >Display Name*</p>
@@ -56,7 +70,7 @@ const CreativeOnboardProfile = () => {
                 </div>
 
                 <div className='personalDetailsBtn'>
-                  <Link to={'/' + 'creativeProfileCategory'}><p>Back</p></Link>
+                  <Link to={'/' + 'creativeProfileCategory'}><button>Back</button></Link>
                   <button>Next</button>
                 </div>
               </form>

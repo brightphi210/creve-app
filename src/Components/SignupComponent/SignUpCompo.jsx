@@ -24,7 +24,7 @@ const SignUpCompo = () => {
       setShowPassword(!showPassword);
     };
 
-    const useUrl = 'https://creve.onrender.com/auth/user/'
+    const useUrl = 'http://18.233.101.101:8000/auth/user/'
     const [isLoading, setIsLoading] = useState(false)
     const [formData, setFormData] = useState({
       fullname : '',
@@ -53,7 +53,6 @@ const SignUpCompo = () => {
     const closeMessage = () => {
       setEmailError(false)
     } 
-
 
 
     // ================ Login Function ========================

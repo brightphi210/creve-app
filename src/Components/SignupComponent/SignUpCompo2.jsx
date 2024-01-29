@@ -28,7 +28,7 @@ const SignUpCompo2 = () => {
 
 
 
-    const useUrl1 = 'https://creve.onrender.com/auth/creative/'
+    const useUrl1 = 'http://18.233.101.101:8000/creative/'
     const [isLoading, setIsLoading] = useState(false)
     const [formData, setFormData] = useState({
       fullname : '',

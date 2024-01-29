@@ -57,7 +57,7 @@ const LoginCompo = () => {
 
   let updateToken = async ()=> {
 
-    let response = await fetch('https://creve.onrender.com/api/token/refresh/', {
+    let response = await fetch('http://18.233.101.101:8000/api/token/refresh/', {
         method:'POST',
         headers:{
             'Content-Type':'application/json'
