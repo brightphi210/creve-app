@@ -18,6 +18,9 @@ import {useNavigate } from 'react-router-dom';
 import prof from './profilePics.png'
 import { jwtDecode } from "jwt-decode";
 
+import { VscMenu } from "react-icons/vsc";
+import { GrClose } from "react-icons/gr";
+
 
 
 const CreativeOnboardNav = () => {
@@ -137,6 +140,7 @@ const CreativeOnboardNav = () => {
     <div className='userNavbarSection'  >
 
         <div className='userNavFirstDiv' >
+          <p><VscMenu /></p>
           <div className='userLogo'>
             <Link to={'/'}><img src={logo} alt="" width={80}/></Link>
           </div>

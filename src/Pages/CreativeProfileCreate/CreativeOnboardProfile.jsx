@@ -1,18 +1,29 @@
-import React from 'react'
+import React, { useState } from 'react'
 import CreativeOnboardNav from '../../Components/CreativeOnboardComponent/CreativeOnboardNav'
 import CreativeOnbardSide from '../../Components/CreativeOnboardComponent/CreativeOnbardSide'
 import { Link } from 'react-router-dom'
 import './CreativeOnboardProfile.scss'
 
 
+
+
 import prof from './images/profilePics.png'
 const CreativeOnboardProfile = () => {
+
+  const [isSidebarVisible, setSidebarVisible] = useState(true);
+
+  const toggleSidebar = () => {
+    setSidebarVisible(!isSidebarVisible);
+  };
+
+
   return (
     <div className=''>
         <CreativeOnboardNav />
 
         <div className='CreativeDetailsGenSec'>
-          <CreativeOnbardSide />
+
+          <p className={`sidebar ${isSidebarVisible ? 'visible' : 'hidden'}`}><CreativeOnbardSide /></p>
           <div className='creativeDetailSec'>
             <h2>Personal Details</h2>
 
