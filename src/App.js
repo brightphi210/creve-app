@@ -38,7 +38,7 @@ function App() {
           <Route path="/registerOption" element={<RegistraionOption />}></Route>
 
           
-          {/* <Route element={<PrivateRoute />}> */}
+          <Route element={<PrivateRoute />}>
             <Route path="/dashboardMain" element={<UserDasboardMain />}></Route>
             <Route path="/dashboard" element={<UserDashboard />}></Route>
             <Route path="/talentsProfiles" element={<CreativeProView />}></Route>
@@ -49,7 +49,7 @@ function App() {
             <Route path="/welcomeCreative" element={<CreativeWelcom />}></Route>
             <Route path="/creativeProfileCategory" element={<CreativeOnboardCategory />}></Route>
             <Route path="/creativeOnboardProfile" element={<CreativeOnboardProfile />}></Route>
-          {/* </Route> */}
+          </Route>
 
 
         </Routes>
