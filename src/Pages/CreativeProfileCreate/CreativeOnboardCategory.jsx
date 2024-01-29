@@ -32,12 +32,20 @@ const CreativeOnboardCategory = () => {
     const handleOptionChange = (event) => {
       setSelectedOption(event.target.value);
     };
+
+
+    const [isSidebarVisible, setSidebarVisible] = useState(false);
+
+    const toggleSidebar = () => {
+      setSidebarVisible(!isSidebarVisible);
+      console.log('Click successfull')
+    };
   return (
     <div>
-        <CreativeOnboardNav />
+        <CreativeOnboardNav onclick={toggleSidebar}/>
 
         <div className='CreativeCatSection'>
-            <CreativeOnbardSide />
+        <p className={`sidebar ${isSidebarVisible ? 'visible' : 'hidden'}`}><CreativeOnbardSide /></p>
 
             <div className='CreativeCatpart'>
                 <h2>Choose a Category</h2>

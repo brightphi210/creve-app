@@ -23,7 +23,10 @@ import { GrClose } from "react-icons/gr";
 
 
 
-const CreativeOnboardNav = () => {
+const CreativeOnboardNav = ({onclick}) => {
+
+
+
 
   const [show, setShow] = useState(false)
   const [show2, setShow2] = useState(false)
@@ -68,8 +71,8 @@ const CreativeOnboardNav = () => {
 
   
 
-  const url = `https://creve.onrender.com/auth/user/${decoded.user_id}/`
-  const profileUrl = `https://creve.onrender.com/auth/userprofile/${decoded.profile_id}`
+  const url = `http://18.233.101.101:8000/auth/user/${decoded.user_id}/`
+  const profileUrl = `http://18.233.101.101:8000/auth/userprofile/${decoded.profile_id}`
 
   const getUserDetails = async ()=>{
     try {
@@ -140,7 +143,9 @@ const CreativeOnboardNav = () => {
     <div className='userNavbarSection'  >
 
         <div className='userNavFirstDiv' >
-          <p><VscMenu /></p>
+          <p onClick={onclick}><VscMenu /></p>
+
+          
           <div className='userLogo'>
             <Link to={'/'}><img src={logo} alt="" width={80}/></Link>
           </div>

@@ -10,16 +10,17 @@ import './CreativeOnboardProfile.scss'
 import prof from './images/profilePics.png'
 const CreativeOnboardProfile = () => {
 
-  const [isSidebarVisible, setSidebarVisible] = useState(true);
+  const [isSidebarVisible, setSidebarVisible] = useState(false);
 
   const toggleSidebar = () => {
     setSidebarVisible(!isSidebarVisible);
+    console.log('Click successfull')
   };
 
 
   return (
     <div className=''>
-        <CreativeOnboardNav />
+        <CreativeOnboardNav onclick={toggleSidebar}/>
 
         <div className='CreativeDetailsGenSec'>
 
