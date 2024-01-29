@@ -67,13 +67,13 @@ const CreativeOnboardCategory = () => {
                             <Link to={'/creativeOnboardProfile'}>
                             <div>
                                 <img src={one1} alt="" />
-                                <p>Backend Development</p>
+                                <p>Backend Dev</p>
                             </div>
                             </Link>
 
                             <div>
                                 <img src={one5} alt="" />
-                                <p>Mobile Development</p>
+                                <p>Mobile Dev</p>
                             </div>
                             <div>
                                 <img src={one2} alt="" />
@@ -81,7 +81,7 @@ const CreativeOnboardCategory = () => {
                             </div>
                             <div>
                                 <img src={one} alt="" />
-                                <p>Branding and Printing</p>
+                                <p>Branding & Printing</p>
                             </div>
                             <div>
                                 <img src={one3} alt="" />
@@ -95,7 +95,7 @@ const CreativeOnboardCategory = () => {
     
                             <div>
                                 <img src={one6} alt="" />
-                                <p>Frontend Development</p>
+                                <p>Frontend Dev</p>
                             </div>
 
                             <div>
