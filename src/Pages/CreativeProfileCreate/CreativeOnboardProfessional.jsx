@@ -2,13 +2,14 @@ import React, { useState } from 'react'
 import CreativeOnboardNav from '../../Components/CreativeOnboardComponent/CreativeOnboardNav'
 import CreativeOnbardSide from '../../Components/CreativeOnboardComponent/CreativeOnbardSide'
 import { Link } from 'react-router-dom'
+import { IoAddOutline } from "react-icons/io5";
 import './CreativeOnboardProfile.scss'
 
 
 
 
 import prof from './images/profilePics.png'
-const CreativeOnboardProfile = () => {
+const CreativeOnboardProfessional = () => {
 
   const [isSidebarVisible, setSidebarVisible] = useState(false);
 
@@ -26,46 +27,44 @@ const CreativeOnboardProfile = () => {
 
           <p className={`sidebar ${isSidebarVisible ? 'visible' : 'hidden'}`}><CreativeOnbardSide /></p>
           <div className='creativeDetailSec'>
-            <h2>Personal Details</h2>
+            <h2>Professional Details</h2>
 
             <div className=''>
-              <p className='pp'>Profile pics*</p>
+              {/* <p className='pp'>Summary Of Profile*</p> */}
 
               <form action="" className='personalDetailsForm'>
 
 
-                <div className='profDetSec'>
-                  <img src={prof} alt="" width={60}/>
-
-                  <label class="custom-file-upload">
-                    <input type="file" id="fileInput" />
-                    Choose file
-                  </label>
-                </div>
-
-                {/* <div id="fileName"></div> */}
-
                 <div>
-                  <p >Display Name*</p>
-                  <input type="Full" placeholder='Enter Display Name'required/>
+                  <p >Summary Of Profile*</p>
+                  <input type="Full" placeholder='E.g. Frontend Developer Proficient in CSS, JavaScript and React'required/>
                 </div>
 
 
                 <div>
-                  <p >Email address*</p>
-                  <input type="email" placeholder='Enter your email address'required/>
+                  <p >Starting Price</p>
+                  <input type="email" placeholder='Enter starting price'required/>
+                </div>
+
+                <div>
+                    <p >Skills*</p>
+                    <p>Maximum of 10 skills</p>
+                    <select >
+                        <option value="digital" >Digital Skills</option>
+                        <option value="nondigital" >Non-Digital Skills</option>
+                    </select>
                 </div>
 
 
                 <div>
-                  <p >Language*</p>
-                  <input type="email" placeholder='Enter Language'required/>
+                    <p >Whatsapp*</p>
+                    <label class="custom-file-upload2">
+                        <input type="file" id="fileInput" />
+                        Click to add image from your file <IoAddOutline className='addIcon'/>
+                    </label>
                 </div>
 
-                <div>
-                  <p >Location*</p>
-                  <input type="email" placeholder='Enter Location'required/>
-                </div>
+
 
 
                 <div>
@@ -82,9 +81,7 @@ const CreativeOnboardProfile = () => {
                 </div>
 
                 <div className='personalDetailsBtn'>
-                  <Link to={'/' + 'creativeProfileCategory'}><button className='btnBlue1'>Back</button></Link>
-                  <Link to={'/' + 'creativeOnboardProfessional'}><button className='btnBlue2'>Next</button></Link>
-                  
+                  <button>save</button>
                 </div>
               </form>
             </div>
@@ -94,4 +91,4 @@ const CreativeOnboardProfile = () => {
   )
 }
 
-export default CreativeOnboardProfile
+export default CreativeOnboardProfessional

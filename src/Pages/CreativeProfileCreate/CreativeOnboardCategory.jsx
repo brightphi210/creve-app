@@ -40,6 +40,8 @@ const CreativeOnboardCategory = () => {
       setSidebarVisible(!isSidebarVisible);
       console.log('Click successfull')
     };
+
+    
   return (
     <div>
         <CreativeOnboardNav onclick={toggleSidebar}/>
