@@ -10,8 +10,13 @@
 }
 
 @mixin button-style{
-    padding: 10px 30px;
+    padding: 13px 30px;
     border-radius: 5px;
+    font-size: 15px;
+}
+
+@mixin small-font{
+    font-weight: 400;
     font-size: 15px;
 }
 

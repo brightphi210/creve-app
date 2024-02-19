@@ -43,46 +43,52 @@
 
 .exploreDiv p{
     padding: 10px 0;
+    @include small-font
 }
 
 .exploreDiv button{
     padding: 10px 20px;
     background-color: $my-blue;
     border: none;
-    border-radius: 20px;
+    border-radius: 5px;
     color: $my-white;
     display: flex;
     gap: 5px;
     align-items: center;
-    font-size: 13px;
+    font-size: 15px;
     cursor: pointer;
+    @include button-style
 }
 
 @media only screen and (min-width: $small-One) and (max-width: $small-Two) {
     .sectionTwo{
         padding: 50px 7%;
         background-color: rgb(245, 245, 245);
+        border-radius: 5px !important;
     }
 
     .sectionTwo h2{
-        font-size: 17px;
-        font-weight: 400;
+        font-size: 20px;
+        font-weight: 500;
     }
 
 
     .subSecTwo{
         display: block;
         margin-bottom: 10px;
+        border-radius: 5px;
     }
     
 
     .exploreDiv h3{
-        font-size: 16px;
+        font-size: 20px;
+        font-weight: 500;
     }
 
     .exploreDiv p{
         font-size: 11px;
         padding: 10px 0;
+        @include small-font
     }
 
     .subSecTwo img{
@@ -90,13 +96,10 @@
         // display: none;
     }
 
-    .subSecTwo{
-        padding: 20px;
-    }
-
     .exploreDiv button{
         padding: 7px 15px;
         font-size: 12px;
+        @include button-style
     }
 
 
