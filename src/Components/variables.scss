@@ -1,8 +1,9 @@
 
-@import url('https://fonts.googleapis.com/css2?family=Kanit:wght@100;200;300;400;500;600;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Lilita+One&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
 
 @mixin default{
-    font-family: 'Kanit', sans-serif;
+    font-family: "DM Sans", sans-serif;
+    // font-optical-sizing: auto;
     padding: 0;
     margin: 0;
     box-sizing: border-box;
@@ -10,17 +11,20 @@
 
 @mixin button-style{
     padding: 10px 30px;
-    border-radius: 20px;
+    border-radius: 5px;
+    font-size: 15px;
 }
 
 
 @mixin hover-blue{
-    background-color:indigo;
+    background-color:#1127e3;
 }
 
 // =========== Color =============
 $my-white: white;
-$my-blue: #49488A;
+$my-blue: #1127e3;
+$my-orange: #E45865;
+
 $my-gray: rgb(253, 253, 253);
 $my-pink: #FDF0EA;
 

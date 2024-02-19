@@ -4,7 +4,7 @@ import './SectionOne.scss'
 import { RiSearch2Line } from "react-icons/ri";
 import { IoIosSend } from "react-icons/io";
 
-import smallImg from './Images/ggh.png'
+import smallImg from './Images/back2.png'
 import sev1 from './Images/sev1.png'
 import sev2 from './Images/sev2.png'
 import sev3 from './Images/sev3.png'

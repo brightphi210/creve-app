@@ -69,8 +69,13 @@
 }
 
 .apply{
-    text-decoration: underline;
+    text-decoration: none;
     cursor: pointer;
+}
+
+.apply:hover{
+    color: $my-orange;
+    transition: all ease 0.5s;
 }
 
 .secondNavDiv button{

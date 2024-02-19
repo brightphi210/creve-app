@@ -169,9 +169,7 @@ const SignUpCompo = () => {
 
 
               <div className='warining'>
-                <p>Password Length must be up to 8 characters</p>
-                <p>Password must contain a small & capital letter</p>
-                <p>Password must contain any of the characters [!@#$%^&*]</p>
+                <p>Password: At least 8 characters, alphanumeric, upper & lower case</p>
               </div>
             </div>
             </form>
