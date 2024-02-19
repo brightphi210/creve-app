@@ -82,7 +82,7 @@
 
 @media only screen and (min-width: $small-One) and (max-width: $small-Two) {
     .sectionThree{
-        padding: 50px 8%;
+        padding: 50px 7%;
         text-align: center;
     }
 
@@ -90,6 +90,7 @@
         background-color: $my-white;
         box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
         padding: 20px;
+        text-align: left;
     }
 
     .sectionThree h2{
@@ -107,19 +108,22 @@
 
 
     .secThreeDiv h3{
-        font-size: 15px;
+        font-size: 20px;
         font-weight: 500;
+        text-align: left;
     }
 
 
     .secThreeDiv p{
-        font-size: 12px;
+        font-size: 13px;
         font-weight: 400;
         padding-top: 10px;
+        text-align: left;
     }
 
     .secThreeDiv img{
         width: 50px;
+        text-align: left;
     }
 
 
@@ -128,6 +132,7 @@
     .becomeDiv{
         display: block;
         text-align: left;
+        border-radius: 5px;
     }
 
     .becomeDiv h3{
@@ -136,7 +141,7 @@
     }
 
     .becomeDiv p{
-        font-size: 12px;
+        font-size: 13px;
     }
 
 
@@ -149,6 +154,7 @@
     .becomeDiv button{
         padding: 10px 20px;
         border: none;
+        @include button-style
     }
 }
 

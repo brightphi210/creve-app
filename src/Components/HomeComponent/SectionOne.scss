@@ -119,11 +119,10 @@
 }
 
 .popularDiv button{
-    padding: 10px 15px;
-    border-radius: 5px;
     border: rgb(192, 192, 192) solid 1px;
     background-color: $my-white;
     cursor: pointer;
+    @include button-style
 }
 
 .smallImg{
@@ -162,7 +161,7 @@
 
 .caroImageDiv p{
     text-align: left;
-    font-size: 20px;
+    font-size: 13px !important;
 }
 
 
@@ -225,6 +224,14 @@
     }
 
 
+    .caroImageDiv{
+        padding-left: 10px;
+    }
+
+    .overlayDiv img{
+        border-radius: 5px;
+    }
+
     .react-multiple-carousel__arrow {
         z-index: 0;
     }
@@ -273,15 +280,20 @@
     
 
     .popularDiv{
-        display: block;
+        display: grid;
+        grid-template-columns: 1fr;
         justify-content: start;
         text-align: left;
     }
 
+  
     .popularDiv button{
-        margin-right: 10px;
-        margin-top: 10px;
-        padding: 7px 15px;
+        border: rgb(192, 192, 192) solid 1px;
+        background-color: $my-white;
+        cursor: pointer;
+        width: 100%;
+        @include button-style;
+        text-align: left;
     }
 
     .smallImg{
@@ -336,6 +348,12 @@
     .react-multiple-carousel__arrow {
         z-index: 0;
     }
+
+
+    .overlayDiv img{
+        border-radius: 5px !important;
+    }
+
     .sectionOne{
         padding: 100px 7%;
         padding-bottom: 50px;
