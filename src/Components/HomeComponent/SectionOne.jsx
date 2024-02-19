@@ -41,7 +41,10 @@ const SectionOne = () => {
         <div className='sectionOne'>
             
             <div className='sectionSubDiv'>
-                <h2>Discover the Best <br /> Talents Globally</h2>
+                <h2 className='h2Show'>Hire the Best <br /> <span>Talents</span> Globally</h2>
+
+                <h2 className='h2Hide'>Hire the Best <span>Talents</span> Globally</h2>
+
                 <p className='pOne'>
                     Find the right talent/client to work with. .
                 </p>

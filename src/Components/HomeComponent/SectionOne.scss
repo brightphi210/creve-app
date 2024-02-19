@@ -15,6 +15,18 @@
     // z-index: -1;
 }
 
+.h2Show{
+    display: block;
+}
+
+
+.sectionSubDiv span{
+    color: $my-blue;
+}
+.h2Hide{
+    display: none;
+}
+
 
 .sectionOne::before{
     background-image: url('./Images/back.png');
@@ -198,6 +210,20 @@
 
 
 @media only screen and (min-width: $small-One) and (max-width: $small-Two) {
+    .h2Show{
+        display: none;
+    }
+
+    .h2Hide{
+        display: block;
+    }
+
+    .sectionSubDiv span{
+        color: $my-blue;
+        font-style: italic;
+        font-weight: 500;
+    }
+
 
     .react-multiple-carousel__arrow {
         z-index: 0;
@@ -217,9 +243,9 @@
     }
 
     .sectionOne h2{
-        font-size: 35px;
-        font-weight: 500;
-        line-height: 40px;
+        font-size: 40px;
+        font-weight: 400;
+        line-height: 50px;
         text-align: left;
     }
 
