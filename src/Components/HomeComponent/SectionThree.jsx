@@ -50,7 +50,7 @@ const SectionThree = () => {
                 <h3>Become a Creve Creative</h3>
                 <p>
                     Showcase Your Skills and Thrive by Joining Our 
-                    Community of <br /> Talented Professionals
+                    Community of  Talented Professionals
                 </p>
                 
                 <Link to={'/signupCreative'}><button>Apply as a Creative</button></Link>

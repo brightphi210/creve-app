@@ -73,7 +73,7 @@ const SectionOne = () => {
 
 
         <div className='caroselSection'>
-            <h2>Explore Popular  Categories</h2>
+            <h2>Popular Categories</h2>
             <Carousel 
                 responsive={responsive}
                 swipeable={false}

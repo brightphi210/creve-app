@@ -61,7 +61,7 @@
     border: none;
     background-color: $my-blue;
     color: $my-white;
-    border-radius: 20px;
+    border-radius: 5px;
     transition: background-color 0.3s ease;
     cursor: pointer;
 }
@@ -94,8 +94,8 @@
     }
 
     .sectionThree h2{
-        font-size: 17px;
-        font-weight: 500;
+        font-size: 20px;
+        font-weight: bold;
     }
 
     .sectionThreeFlex{

@@ -15,7 +15,7 @@ const Footer = () => {
 
         <div className='footerLogo'>
             <img src={logo} alt="" width={80}/>
-            <p>Home of the Best Talent all <br /> Over Africa</p>
+            <p>Home of the Best Talent all  Over Africa</p>
         </div>
 
         <div className='footerRight'>

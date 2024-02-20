@@ -22,13 +22,14 @@
     border: rgb(182, 182, 182) solid 1px;
     padding: 30px;
     margin-right: 20px;
-    border-radius: 15px;
+    border-radius: 5px;
     margin-bottom: 30px;
 }
 
 
 .testimony{
-    text-align: justify;
+    text-align: left;
+    font-size: 15px;
 }
 
 .qoute{
@@ -121,8 +122,8 @@
     }
 
     .testimony{
-        text-align: justify;
-        font-size: 12px;
+        text-align: left;
+        font-size: 13px;
     }
 
 

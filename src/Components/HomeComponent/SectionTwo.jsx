@@ -12,7 +12,7 @@ const SectionTwo = () => {
 
   return (
     <div className='sectionTwo'>
-        <h2>Why People Loves Creeve</h2>
+        <h2>Why People Loves Creve</h2>
         <div>
 
             <div className='subSecTwo'>
