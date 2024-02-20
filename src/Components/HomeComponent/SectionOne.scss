@@ -240,7 +240,7 @@
 
     .sectionOne{
         padding: 100px 7%;
-        padding-bottom: 50px;
+        padding-bottom: 20px;
         height: 100%;
     }
 
@@ -335,10 +335,15 @@
     }
 
     .allBtn{
-        padding: 7px 20px;
-        margin: 0;
-        font-size: 12px;
+        padding: 13px 30px;
+        border-radius: 5px;
+        font-size: 15px;
         gap: 5px;
+        width: 60%;
+        margin: 0;
+        align-self: center;
+        text-align: left;
+        margin-bottom: 30px;
     }
 
     
