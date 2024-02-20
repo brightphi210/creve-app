@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 
 import logo from './craves.png'
 import './OnboardingOption.scss'
+import logOption from './logOption.png'
 
 import { FaArrowRightLong } from "react-icons/fa6";
 
@@ -10,10 +11,17 @@ import { FaArrowRightLong } from "react-icons/fa6";
 const OnboardingOption = () => {
   return (
     <div className='optionSection'>
-        <div className='optioImageDiv'><Link to={'/'}><img src={logo} alt="" width={70}/></Link></div>
         <div className='optionGenDiv'>
+            <div className='optioImageDiv newOp'><Link to={'/'}><img src={logo} alt="" width={70}/></Link></div>
+
+            <div className='optionImageDiv'>
+                <img src={logOption} alt="" />
+            </div>
+
+
             <div>
-                <h2>Welcome to Creve. Begin your journey with us. .</h2>
+                <div className='optioImageDiv'><Link to={'/'}><img src={logo} alt="" width={70}/></Link></div>
+                <h2>Begin your journey with us. .</h2>
                 <Link to={'/signup'}>
                 <div className='optioDivs'>
                     <h3>Join As a Client <FaArrowRightLong /> </h3>
