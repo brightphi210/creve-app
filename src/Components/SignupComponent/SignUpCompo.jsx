@@ -1,5 +1,5 @@
 import React from 'react'
-
+import apiEnpoint from '../api/api';
 import { Link } from 'react-router-dom'
 import { useState, useEffect } from 'react';
 import { Navigate, useNavigate } from 'react-router-dom';
@@ -24,7 +24,7 @@ const SignUpCompo = () => {
       setShowPassword(!showPassword);
     };
 
-    const useUrl = 'http://18.233.101.101:8000/auth/user/'
+    const useUrl = `${apiEnpoint}auth/user/`
     const [isLoading, setIsLoading] = useState(false)
     const [formData, setFormData] = useState({
       fullname : '',

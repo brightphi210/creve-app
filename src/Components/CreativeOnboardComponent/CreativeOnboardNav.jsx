@@ -20,6 +20,7 @@ import { jwtDecode } from "jwt-decode";
 
 import { VscMenu } from "react-icons/vsc";
 import { GrClose } from "react-icons/gr";
+import apiEnpoint from '../api/api';
 
 
 
@@ -71,8 +72,8 @@ const CreativeOnboardNav = ({onclick}) => {
 
   
 
-  const url = `http://18.233.101.101:8000/auth/user/${decoded.user_id}/`
-  const profileUrl = `http://18.233.101.101:8000/auth/userprofile/${decoded.profile_id}`
+  const url = `${apiEnpoint}auth/user/${decoded.user_id}/`
+  const profileUrl = `${apiEnpoint}auth/userprofile/${decoded.profile_id}`
 
   const getUserDetails = async ()=>{
     try {

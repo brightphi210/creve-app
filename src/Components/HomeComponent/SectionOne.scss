@@ -77,9 +77,9 @@
 
 .searchDiv input{
     width: 30%;
-    padding: 13px 50px;
+    padding: 20px 50px;
     margin-top: 10px;
-    border-radius: 30px;
+    border-radius: 5px;
     border: 1px solid gainsboro;
     outline: none;
 
@@ -92,14 +92,15 @@
 
 .searchIcon{
     position: absolute;
-    top: 25px;
-    left: 37%;
+    top: 27px;
+    left: 36%;
+    font-size: 20px;
 }
 
 
 .searchDiv button{
-    padding: 13px 30px;
-    border-radius: 0 20px 20px 0 ;
+    padding: 20px 30px;
+    border-radius: 0 5px 5px 0 ;
     background-color: $my-blue;
     color: $my-white;
     border: none;
@@ -263,11 +264,11 @@
 
     .searchDiv input{
         width: 100%;
-        padding: 10px 50px;
+        padding: 16px 40px;
     }
 
     .searchDiv button{
-        padding: 10px 30px;
+        padding: 16px 20px;
         right: 0;
         cursor: pointer;
     }
@@ -275,7 +276,8 @@
     .searchIcon{
         position: absolute;
         top: 25px;
-        left: 25px;
+        left: 16px;
+        font-size: 16px;
     }
     
 
@@ -335,11 +337,11 @@
     }
 
     .allBtn{
-        padding: 13px 30px;
+        padding: 10px 30px;
         border-radius: 5px;
-        font-size: 15px;
+        font-size: 13px;
         gap: 5px;
-        width: 60%;
+        width: 50%;
         margin: 0;
         align-self: center;
         text-align: left;

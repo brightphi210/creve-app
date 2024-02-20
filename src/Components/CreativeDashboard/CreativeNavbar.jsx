@@ -21,6 +21,7 @@ import {useNavigate } from 'react-router-dom';
 
 import prof from './images/profilePics.png'
 import { jwtDecode } from "jwt-decode";
+import apiEnpoint from '../api/api';
 
 
 
@@ -69,8 +70,8 @@ const CreativeNavbar = () => {
 
   
 
-  const url = `https://creve.onrender.com/auth/user/${decoded.user_id}/`
-  const profileUrl = `https://creve.onrender.com/auth/userprofile/${decoded.profile_id}`
+  const url = `${apiEnpoint}auth/user/${decoded.user_id}/`
+  const profileUrl = `${apiEnpoint}auth/userprofile/${decoded.profile_id}`
 
   const getUserDetails = async ()=>{
     try {

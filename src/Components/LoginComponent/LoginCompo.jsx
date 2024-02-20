@@ -13,6 +13,7 @@ import { AiOutlineClose } from "react-icons/ai";
 
 import { Navigate, useNavigate } from 'react-router-dom';
 import { jwtDecode } from "jwt-decode";
+import apiEnpoint from '../api/api';
 
 
 
@@ -40,7 +41,7 @@ const LoginCompo = () => {
   const [isLoading, setIsLoading] = useState(false)
   const [emailError, setEmailError] = useState(false)
 
-  const logUrl = 'http://18.233.101.101:8000/api/token/'
+  const logUrl = `${apiEnpoint}api/token/`
 
   const navigate = useNavigate()
 
@@ -57,7 +58,7 @@ const LoginCompo = () => {
 
   let updateToken = async ()=> {
 
-    let response = await fetch('http://18.233.101.101:8000/api/token/refresh/', {
+    let response = await fetch(`${apiEnpoint}api/token/refresh/`, {
         method:'POST',
         headers:{
             'Content-Type':'application/json'

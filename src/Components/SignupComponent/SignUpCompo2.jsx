@@ -11,6 +11,7 @@ import { IoLogoGoogle } from "react-icons/io";
 import { AiOutlineClose } from "react-icons/ai";
 
 import { Navigate, useNavigate } from 'react-router-dom';
+import apiEnpoint from '../api/api';
 
 
 
@@ -28,7 +29,7 @@ const SignUpCompo2 = () => {
 
 
 
-    const useUrl1 = 'http://18.233.101.101:8000/creative/'
+    const useUrl1 = `${apiEnpoint}creative/`
     const [isLoading, setIsLoading] = useState(false)
     const [formData, setFormData] = useState({
       fullname : '',
@@ -169,9 +170,7 @@ const SignUpCompo2 = () => {
 
 
               <div className='warining'>
-                <p>Password Length must be up to 8 characters</p>
-                <p>Password must contain a small & capital letter</p>
-                <p>Password must contain any of the characters [!@#$%^&*]</p>
+                <p>Password: At least 8 characters, alphanumeric, upper & lower case</p>
               </div>
             </div>
             </form>
