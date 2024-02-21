@@ -206,6 +206,7 @@
     .loginInputDiv h2{
         font-size: 25px;
         padding: 20px 0;
+        padding-bottom: 0;
         font-weight: bold;
     }
 
@@ -218,22 +219,24 @@
 
     .inputDiv input{
         padding: 15px;
+        font-size: 13px;
+        border-radius: 5px;
     }
 
 
     .inputDiv p{
-        font-size: 15px;
+        font-size: 13px;
         font-weight: 600;
-        padding-top: 15px;
+        padding-top: 10px;
     }
 
     .loginInputDiv .loginBtn{
         padding: 15px;
-        font-size: 15px;
+        font-size: 13px;
     }
 
     .googleDiv button{
-        font-size: 15px;
+        font-size: 13px;
         padding: 15px;
         border-radius: 5px;
     }
@@ -244,8 +247,9 @@
     
 
     .forget{
-        font-size: 15px;
+        font-size: 13px;
         padding-top: 30px;
+        font-weight: bold;
     }
 
     .errorMessage p {
