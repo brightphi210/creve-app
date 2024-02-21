@@ -40,15 +40,13 @@ const LoginCompo2 = () => {
   const [isLoading, setIsLoading] = useState(false)
   const [emailError, setEmailError] = useState(false)
 
-  const logUrl = `${apiEnpoint}api/token/`
-
   const navigate = useNavigate()
 
   const handleLogin = async (e) =>{
     setIsLoading(true);
     e.preventDefault();
     try {
-      const response = await fetch(logUrl, {
+      const response = await fetch('https://creve.onrender.com/api/token/', {
           method: 'POST',
           headers: {
               'Content-Type': 'application/json',
@@ -132,8 +130,8 @@ const LoginCompo2 = () => {
                     </div>
 
                     <p className='forget'>Forgot Password</p>
-                    <button className='loginBtn'>Login</button>
-
+                    {/* <button className='loginBtn'>Login</button> */}
+                    <button className='loginBtn'>{ isLoading ? <span className="loader"></span> : 'Login'}</button>
                     <div className='hrDiv'>
                       <hr /> <p>or</p> <hr />
                     </div>
@@ -159,12 +157,12 @@ const LoginCompo2 = () => {
           </div>
         </div>
 
-        {isLoading ? 
+        {/* {isLoading ? 
       (<>
         <div className='loaderModal'>
           <span className="loader"></span>
         </div>
-      </>) : ''}
+      </>) : ''} */}
     </div>
   )
 }

@@ -29,7 +29,7 @@ const SignUpCompo2 = () => {
 
 
 
-    const useUrl1 = `${apiEnpoint}creative/`
+    const useUrl1 = `https://creve.onrender.com/auth/creative/`
     const [isLoading, setIsLoading] = useState(false)
     const [formData, setFormData] = useState({
       fullname : '',
@@ -157,7 +157,8 @@ const SignUpCompo2 = () => {
               </div>
 
               <p className='forget'>Forgot Password</p>
-              <button className='loginBtn' type='submit'>Join as Creative</button>
+          
+              <button className='loginBtn' type='submit'>{isLoading ? <span className="loader"></span> : 'Join as Creative'}</button>
 
               <div className='hrDiv'>
                 <hr /> <p>or</p> <hr />
@@ -189,12 +190,12 @@ const SignUpCompo2 = () => {
       </div>
     </div>
 
-    {isLoading ? 
+    {/* {isLoading ? 
       (<>
         <div className='loaderModal'>
           <span className="loader"></span>
         </div>
-      </>) : ''}
+      </>) : ''} */}
     </div>
   )
 }

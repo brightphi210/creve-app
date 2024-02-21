@@ -25,9 +25,9 @@ const UserSettingCompo = () => {
     const [profile_pics, setProfilePics] = useState(null)
 
 
-    // const closeMessage = () => {
-    //     setSuccessMessage(false)
-    // } 
+    const closeMessage = () => {
+        setSuccessMessage(false)
+    } 
 
 
 
@@ -42,7 +42,7 @@ const UserSettingCompo = () => {
         setIsLoading(true)
 
         try {
-          const response = await fetch(`http://18.233.101.101:8000/auth/user/${decoded.user_id}/`, {
+          const response = await fetch(`https://creve.onrender.com/auth/user/${decoded.user_id}/`, {
             method: 'GET',
             headers: {
               "Authorization": `Bearer ${authTokens.access}`,
@@ -177,7 +177,7 @@ const UserSettingCompo = () => {
 
             {successMessage && (
                 <div className='errorMessage'>
-                  <p>{successMessage} <AiOutlineClose onClick={refreshPage} className='closeMsgIcon'/></p>
+                  <p>{successMessage} <AiOutlineClose onClick={closeMessage} className='closeMsgIcon'/></p>
                 </div>
               )}
                 <h2>Account Settings</h2>
@@ -210,7 +210,7 @@ const UserSettingCompo = () => {
                             onChange ={handleImageChange} 
                             hidden
                         />
-                        <label for="image">Choose file</label>
+                        <label className='myLabel' for="image">Choose file</label>
                     </div>
 
                     <button >Save Changes</button>

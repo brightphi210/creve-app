@@ -1,4 +1,4 @@
 
-const apiEnpoint = 'http://18.233.101.101:8000/'
+const apiEnpoint = 'http://creve.onrender.com/'
 
 export default apiEnpoint

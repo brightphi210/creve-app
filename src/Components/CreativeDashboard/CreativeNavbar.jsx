@@ -70,8 +70,8 @@ const CreativeNavbar = () => {
 
   
 
-  const url = `${apiEnpoint}auth/user/${decoded.user_id}/`
-  const profileUrl = `${apiEnpoint}auth/userprofile/${decoded.profile_id}`
+  const url = `https://creve.onrender.com/auth/user/decoded.user_id/`
+  const profileUrl = `https://creve.onrender.com/auth/userprofile/decoded.profile_id`
 
   const getUserDetails = async ()=>{
     try {

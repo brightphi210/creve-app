@@ -24,7 +24,7 @@ const SignUpCompo = () => {
       setShowPassword(!showPassword);
     };
 
-    const useUrl = `${apiEnpoint}auth/user/`
+    const useUrl = `https://creve.onrender.com/auth/user/`
     const [isLoading, setIsLoading] = useState(false)
     const [formData, setFormData] = useState({
       fullname : '',
@@ -32,6 +32,8 @@ const SignUpCompo = () => {
       password: '',
     })
 
+
+    console.log('This is my URL', useUrl)
 
     const handleChange = (event) => {
       const { name, value, type, checked } = event.target;
@@ -156,7 +158,8 @@ const SignUpCompo = () => {
               </div>
 
               <p className='forget'>Forgot Password</p>
-              <button className='loginBtn' type='submit'>Join as User</button>
+              <button className='loginBtn' type='submit'>{isLoading ? <span className="loader"></span> : 'Join as Creative'}</button>
+
 
               <div className='hrDiv'>
                 <hr /> <p>or</p> <hr />
@@ -188,12 +191,12 @@ const SignUpCompo = () => {
       </div>
     </div>
 
-    {isLoading ? 
+    {/* {isLoading ? 
       (<>
         <div className='loaderModal'>
           <span className="loader"></span>
         </div>
-      </>) : ''}
+      </>) : ''} */}
     </div>
   )
 }
