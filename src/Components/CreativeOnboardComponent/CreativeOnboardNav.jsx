@@ -72,8 +72,8 @@ const CreativeOnboardNav = ({onclick}) => {
 
   
 
-  const url = `${apiEnpoint}auth/user/${decoded.user_id}/`
-  const profileUrl = `${apiEnpoint}auth/userprofile/${decoded.profile_id}`
+  const url = `https://creve.onrender.com/auth/creative/${decoded.user_id}/`
+  const profileUrl = `https://creve.onrender.com/auth/creativeprofile/${decoded.profile_id}`
 
   const getUserDetails = async ()=>{
     try {
