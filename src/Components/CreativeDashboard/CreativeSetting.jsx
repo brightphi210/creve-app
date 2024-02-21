@@ -1,5 +1,6 @@
+
 import React,{useState, useEffect, useLayoutEffect} from 'react'
-import './UserSettingCompo.scss'
+// import './UserSettingCompo.scss'
 
 import {Link} from 'react-router-dom'
 
@@ -9,7 +10,7 @@ import prof from './images/profilePics.png'
 import { AiOutlineClose } from "react-icons/ai";
 import { jwtDecode } from "jwt-decode";
 
-const UserSettingCompo = () => {
+const CreativeSetting = () => {
 
 
   let [authTokens, setAuthTokens] = useState(()=> localStorage.getItem('authTokens') ? JSON.parse(localStorage.getItem('authTokens')) : null)
@@ -25,9 +26,9 @@ const UserSettingCompo = () => {
     const [profile_pics, setProfilePics] = useState(null)
 
 
-    // const closeMessage = () => {
-    //     setSuccessMessage(false)
-    // } 
+    const closeMessage = () => {
+        setSuccessMessage(false)
+    } 
 
 
 
@@ -42,7 +43,7 @@ const UserSettingCompo = () => {
         setIsLoading(true)
 
         try {
-          const response = await fetch(`https://creve.onrender.com/auth/user/${decoded.user_id}/`, {
+          const response = await fetch(`https://creve.onrender.com/auth/creative/${decoded.user_id}/`, {
             method: 'GET',
             headers: {
               "Authorization": `Bearer ${authTokens.access}`,
@@ -74,7 +75,7 @@ const UserSettingCompo = () => {
         const newFormData = new FormData();
         newFormData.append('fullname', fullname);
       
-        fetch(`https://creve.onrender.com/auth/user/${decoded.user_id}/`, {
+        fetch(`https://creve.onrender.com/auth/creative/${decoded.user_id}/`, {
           method: 'PUT',
           headers: {
             "Authorization": `Bearer ${authTokens.access}`
@@ -100,7 +101,7 @@ const UserSettingCompo = () => {
 
       // ===================== Profile Pics ===============================
 
-      const profileUrl = `https://creve.onrender.com/auth/userprofile/${decoded.profile_id}/`
+      const profileUrl = `https://creve.onrender.com/auth/creativeprofile/${decoded.profile_id}/`
 
 
       const handleImageChange = (e) => {
@@ -177,7 +178,7 @@ const UserSettingCompo = () => {
 
             {successMessage && (
                 <div className='errorMessage'>
-                  <p>{successMessage} <AiOutlineClose onClick={refreshPage} className='closeMsgIcon'/></p>
+                  <p>{successMessage} <AiOutlineClose onClick={closeMessage} className='closeMsgIcon'/></p>
                 </div>
               )}
                 <h2>Account Settings</h2>
@@ -241,7 +242,7 @@ const UserSettingCompo = () => {
                     with the same account
                 </p>
 
-                <Link to={'/signupCreative'}><button className='bcome'>Become a Talent</button></Link>
+                <Link to={'/signup'}><button className='bcome'>Become a Client</button></Link>
             </div>
 
             <hr />
@@ -261,4 +262,4 @@ const UserSettingCompo = () => {
   )
 }
 
-export default UserSettingCompo
+export default CreativeSetting

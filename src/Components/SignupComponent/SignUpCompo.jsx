@@ -160,7 +160,7 @@ const SignUpCompo = () => {
               </div>
 
               <p className='forget'>Forgot Password</p>
-              <button className='loginBtn' type='submit'>{isLoading ? <span className="loader"></span> : 'Join as Creative'}</button>
+              <button className='loginBtn' type='submit'>{isLoading ? <span className="loader"></span> : 'Join as User'}</button>
 
 
               <div className='hrDiv'>

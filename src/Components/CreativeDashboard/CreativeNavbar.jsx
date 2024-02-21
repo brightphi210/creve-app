@@ -70,8 +70,8 @@ const CreativeNavbar = () => {
 
   
 
-  const url = `https://creve.onrender.com/auth/user/decoded.user_id/`
-  const profileUrl = `https://creve.onrender.com/auth/userprofile/decoded.profile_id`
+  const url = `https://creve.onrender.com/auth/creative/${decoded.user_id}/`
+  const profileUrl = `https://creve.onrender.com/auth/creativeprofile/${decoded.profile_id}`
 
   const getUserDetails = async ()=>{
     try {
@@ -152,7 +152,7 @@ const CreativeNavbar = () => {
 
 {/* ========================= Notify ============================= */}
     {show && (
-      <div className='navNotifyModal'>
+      <div className='navNotifyModal' onClick={closeModal}>
         <div className='navNotifyContent'>
           <div className='notDiv'>
             <h2>Notifications</h2>
@@ -190,7 +190,7 @@ const CreativeNavbar = () => {
 {/* =========================== Profile ==================================== */}
 
 {show2 && (
-      <div className='navNotifyModal'>
+      <div className='navNotifyModal' onClick={closeModal2}>
         <div className='navNotifyContent'>
           <div className='notDiv'>
             <h2>{fullname}</h2>
@@ -200,7 +200,7 @@ const CreativeNavbar = () => {
           <div className='accountNot'>
             <span>Client Account</span>
 
-            <Link to={'/user-settings'}><p><IoSettingsSharp />Settings</p></Link>
+            <Link to={'/creative-settings'}><p><IoSettingsSharp />Settings</p></Link>
             <p><IoPersonAddOutline />Refer a friend</p>
             <Link to={'/signupCreative'}><p><FaExchangeAlt />Become a Talent</p></Link>
 
@@ -248,7 +248,7 @@ const CreativeNavbar = () => {
 
             <div className='nameEmail'>
               <p className=''>{fullname}</p>
-              <p className=''>{decoded.email}</p>
+              {/* <p className=''>{decoded.email}</p> */}
             </div>
           </div>
         </div>
