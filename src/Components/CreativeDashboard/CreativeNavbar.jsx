@@ -133,11 +133,6 @@ const CreativeNavbar = () => {
   }
 
 
-
-
-
-
-
   return (
     <div className='userNavbarSection'  >
 
@@ -145,8 +140,6 @@ const CreativeNavbar = () => {
           <div className='userLogo'>
             <Link to={'/'}><img src={logo} alt="" width={40}/></Link>
           </div>
-
-
         </div>  
 
 
@@ -221,9 +214,9 @@ const CreativeNavbar = () => {
             <Link to={'/dashboardMain'} className='link'><GrHomeRounded className='userIcon'/></Link>
           </div>
 
-        
-          
-          <div className='userNavIcon' onClick={openModal}><GrNotification className='userIcon'/>
+    
+          <div className='userNavIcon' onClick={openModal}>
+            <Link to={'/dashboardMain'}><GrNotification className='userIcon'/></Link>
             <p></p>
           </div>
 
