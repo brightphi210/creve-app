@@ -186,7 +186,7 @@ const UserNavbar = () => {
           <div>
             <hr />
             <div className='notProf'>
-              <img src={avatar} alt="" width={30}/>
+              <img src={avatar} alt="" width={20}/>
               <div>
                 <p>We have Exciting new talents in Web Development. Explore now!</p>
                 <p>3 days ago</p>
@@ -255,7 +255,8 @@ const UserNavbar = () => {
             <p></p>
           </div>
           
-          <div className='userNavIcon' onClick={openModal}><GrNotification className='userIcon'/>
+          <div className='userNavIcon' onClick={openModal}>
+            <Link to={'/dashboard'}><GrNotification className='userIcon'/></Link>
             <p></p>
           </div>
 
@@ -268,8 +269,8 @@ const UserNavbar = () => {
             </div>
 
             <div className='nameEmail'>
-              <p className=''>{fullname}</p>
-              <p className=''>{decoded.email}</p>
+              {/* <p className=''>{fullname}</p> */}
+              {/* <p className=''>{decoded.email}</p> */}
             </div>
           </div>
         </div>
