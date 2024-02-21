@@ -3,6 +3,7 @@ import apiEnpoint from '../api/api';
 import { Link } from 'react-router-dom'
 import { useState, useEffect } from 'react';
 import { Navigate, useNavigate } from 'react-router-dom';
+import logo from './images/Logo2.png'
 
 
 import videoFile2 from './images/integrations.mp4'
@@ -107,7 +108,8 @@ const SignUpCompo = () => {
 
       <div className='loginInputDiv'>
           <div>
-          <Link to={'/registerOption'}><IoIosArrowDropleftCircle className='arrow'/></Link>
+          <img src={logo} alt="" width={50} />
+          {/* <Link to={'/registerOption'}><IoIosArrowDropleftCircle className='arrow'/></Link> */}
             <h2>Sign up for an account</h2>
               <>
               {emailError && (

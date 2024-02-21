@@ -14,6 +14,7 @@ import { AiOutlineClose } from "react-icons/ai";
 import { Navigate, useNavigate } from 'react-router-dom';
 import { jwtDecode } from "jwt-decode";
 import apiEnpoint from '../api/api';
+import logo from './images/Logo2.png'
 
 
 
@@ -124,8 +125,8 @@ const LoginCompo = () => {
 
           <div className='loginInputDiv'>
               <div>
-                {/* <img src={logo} alt="" width={80} /> */}
-                <Link to={'/registerOption'}><IoIosArrowDropleftCircle className='arrow'/></Link>
+                <img src={logo} alt="" width={50} />
+                {/* <Link to={'/registerOption'}><IoIosArrowDropleftCircle className='arrow'/></Link> */}
                 
                 <h2>Welcome Back</h2>
 

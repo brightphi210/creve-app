@@ -200,12 +200,13 @@
     }
 
     .loginInputDiv img{
-        width: 60px;
+        width: 40px;
     }
 
     .loginInputDiv h2{
-        font-size: 20px;
-        padding-top: 10px;
+        font-size: 25px;
+        padding: 20px 0;
+        font-weight: bold;
     }
 
     .arrow {
@@ -219,6 +220,13 @@
         padding: 15px;
     }
 
+
+    .inputDiv p{
+        font-size: 15px;
+        font-weight: 600;
+        padding-top: 15px;
+    }
+
     .loginInputDiv .loginBtn{
         padding: 15px;
         font-size: 15px;
@@ -226,7 +234,8 @@
 
     .googleDiv button{
         font-size: 15px;
-        padding: 12px;
+        padding: 15px;
+        border-radius: 5px;
     }
 
     .dontFlex{
@@ -236,6 +245,7 @@
 
     .forget{
         font-size: 15px;
+        padding-top: 30px;
     }
 
     .errorMessage p {
