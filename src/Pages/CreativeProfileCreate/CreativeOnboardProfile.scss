@@ -19,6 +19,12 @@
 }
 
 
+.creativeDetailSec h2{
+    font-size: 20px;
+    font-weight: bold;
+}
+
+
 .personalDetailsForm{
     width: 100%;
 }
@@ -31,7 +37,6 @@
     outline: none;
     font-size: 13px;
     border-radius: 5px;
-    // transition: border-color 0.3s;
 }
 
 
@@ -121,9 +126,6 @@
 }
 
 
-.pp{
-    padding-top: 20px;
-}
 
 .custom-file-upload {
     display: inline-block;
@@ -176,6 +178,38 @@
   .addIcon{
     font-size: 18px;
   }
+
+
+  .creativeIconText{
+    display : flex;
+    gap : 10px;
+    align-items : center; 
+    padding-bottom : 20px;
+    color: $my-blue;
+}
+
+.uploadImage{
+    width: 50%;
+}
+
+.uploadImage input{
+    border: none !important;
+    padding-left: 0;
+    cursor: pointer;
+    width: 50%;
+}
+
+
+.uploadImage button{
+    padding: 5px 10px !important;
+    background-color: $my-blue;
+    color: white;
+    font-size: 10px !important;
+    border: none;
+    border-radius: 2px;
+}
+
+
   @media only screen and (min-width: $small-One) and (max-width: $small-Two) {
     .CreativeDetailsGenSec{
         display: block;
@@ -193,6 +227,24 @@
         padding-bottom: 20px;
     }
 
+
+    .creativeIconText{
+        display : flex;
+        gap : 10px;
+        align-items : center; 
+        padding-bottom : 10px;
+        color: $my-blue;
+    }
+
+
+    .creativeDetailSec h2{
+        font-size: 20px !important;
+        font-weight: bold;
+        padding: 0;
+        
+    }
+
+
     .personalDetailsForm input{
         width: 100%;
         padding: 10px;
@@ -207,10 +259,6 @@
         border: rgb(171, 171, 175) solid 1px;
     }
 
-    .personalDetailsForm p{
-        font-size: 12px;
-    }
-
     .personalDetailsBtn button{
         width: 100%;
         padding: 12px;
@@ -218,10 +266,6 @@
 
     }
     
-    .personalDetailsBtn a{
-        display: block;
-        width: 100%;
-    }
     .personalDetailsBtn button{
         width: 100%;
         padding: 10px;
@@ -229,10 +273,16 @@
         box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
     }
 
-    .pp{
-        padding-top: 10px;
+    .uploadImage button{
+        padding: 5px 15px !important;
+        border:solid 1px gray !important;
+        color: black ;
+        font-size: 10px !important;
+        border: none;
+        border-radius: 3px;
     }
-    
+
+
     .custom-file-upload {
         display: inline-block;
         padding: 10px !important;
@@ -286,6 +336,30 @@
         gap: 10px;
         margin: 0 20px;
         margin-bottom: 40px;
+    }
+    
+    .personalDetailsForm div p{
+        padding-top: 10px;
+        font-size: 13px;
+        font-weight: 500;
+    }
+
+    .personalDetailsForm div input{
+        padding: 13px;
+        font-size: 13px;
+        border-radius: 5px;
+    }
+
+    .uploadImage input{
+        border: none !important;
+        padding-left: 0 !important;
+        padding-bottom: 0 !important;
+        cursor: pointer;
+        width: 80%;
+    }
+
+    .uploadImage{
+        width: 100%;
     }
     
     

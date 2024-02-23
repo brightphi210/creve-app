@@ -1,8 +1,9 @@
 import React, { useState } from 'react'
 import CreativeOnboardNav from '../../Components/CreativeOnboardComponent/CreativeOnboardNav'
 import CreativeOnbardSide from '../../Components/CreativeOnboardComponent/CreativeOnbardSide'
-import { Link } from 'react-router-dom'
 import './CreativeOnboardProfile.scss'
+import { MdOutlineWorkspacePremium } from "react-icons/md";
+import { CgProfile } from "react-icons/cg";
 
 
 
@@ -26,29 +27,15 @@ const CreativeOnboardProfile = () => {
 
           <p className={`sidebar ${isSidebarVisible ? 'visible' : 'hidden'}`}><CreativeOnbardSide /></p>
           <div className='creativeDetailSec'>
+
+          <div className='creativeIconText'>
+            <CgProfile style={{fontSize : '20px'}}/>
             <h2>Personal Details</h2>
+          </div>
 
             <div className=''>
-              <p className='pp'>Profile pics*</p>
 
               <form action="" className='personalDetailsForm'>
-
-                  <div className='proImageDiv'>
-                      <div className='static'>
-                          <img src={prof} alt="" />
-                      </div>
-
-                      <input 
-                          type="file" 
-                          id='image' 
-                          name="profilePics" 
-                          accept="image/*"
-                          // onChange ={handleImageChange} 
-                          hidden
-                      />
-                      <label className='myLabel' for="image">Choose file</label>
-                  </div>
-
 
                 <div>
                   <p >Display Name*</p>

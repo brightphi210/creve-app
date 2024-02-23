@@ -4,6 +4,7 @@ import CreativeOnbardSide from '../../Components/CreativeOnboardComponent/Creati
 import { Link } from 'react-router-dom'
 import { IoAddOutline } from "react-icons/io5";
 import './CreativeOnboardProfile.scss'
+import { MdOutlineWorkspacePremium } from "react-icons/md";
 
 
 
@@ -52,7 +53,12 @@ const CreativeOnboardProfessional = () => {
 
           <p className={`sidebar ${isSidebarVisible ? 'visible' : 'hidden'}`}><CreativeOnbardSide /></p>
           <div className='creativeDetailSec'>
-            <h2>Professional Details</h2>
+
+
+            <div className='creativeIconText' >
+              <MdOutlineWorkspacePremium style={{fontSize : '20px', padding : '0'}}/>
+              <h2>Professional Details</h2>
+            </div>
 
             <div className=''>
               {/* <p className='pp'>Summary Of Profile*</p> */}
@@ -62,7 +68,7 @@ const CreativeOnboardProfessional = () => {
 
                 <div>
                   <p >Summary Of Profile*</p>
-                  <input type="Full" placeholder='E.g. Frontend Developer Proficient in CSS, JavaScript and React'required/>
+                  <input type="Full" placeholder='E.g. Frontend Developer with  React'required/>
                 </div>
 
 
@@ -72,19 +78,15 @@ const CreativeOnboardProfessional = () => {
                 </div>
 
                 <div>
-                    <p >Skills*</p>
-                    <p>Maximum of 10 skills</p>
-                    <select >
-                        <option value="digital" >Digital Skills</option>
-                        <option value="nondigital" >Non-Digital Skills</option>
-                    </select>
+                    <p >Skills* <span style={{color : 'gray', fontStyle : 'italic'}}>Maximum of 10 skills</span></p>
+                    
+                    <input type="Full" placeholder='E.g. Java'required/>
                 </div>
 
 
-                <div>
-                    <p >Gallery*</p>
-                    <p>Maximum of 10 skills</p>
-                        <input type="file" id="" onChange={handleImageChange} />                        
+                <div className='uploadImage'>
+                    <p >Gallery* <span style={{color : 'gray', fontStyle : 'italic'}}>Maximum of 10 skills</span></p>
+                    <input type="file" id="" onChange={handleImageChange} />                        
                     <button onClick={handleSubmit} disabled={selectedImage === null} style={{fontSize : '20px', padding : '10px'}}>Add</button>
                 </div>
 

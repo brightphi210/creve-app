@@ -84,13 +84,13 @@
     font-family: sans-serif;
     border-radius: 0.3rem;
     cursor: pointer;
-    margin-top: 1rem;
     width: 15%;
 }
 
 .proImageDiv{
     padding: 20px 0;
     display: flex;
+    align-items: center;
 }
 .proImageDiv img{
     width: 50px;
@@ -164,9 +164,8 @@
         font-family: sans-serif;
         border-radius: 0.3rem;
         cursor: pointer;
-        margin-top: 1rem;
-        // text-align: center;
         width: 100%;
+        font-weight: bold;
     }
 
     .proImageDiv{
