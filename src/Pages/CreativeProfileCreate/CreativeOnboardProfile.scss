@@ -15,6 +15,7 @@
     width: 100%;
     padding: 100px ;
     padding-left: 17%;
+    padding-bottom: 20px;
 }
 
 
@@ -68,6 +69,8 @@
 .personalDetailsBtn{
     display: flex;
     gap: 20px;
+    margin-left: 19%;
+    margin-bottom: 40px;
 }
 
 
@@ -75,22 +78,18 @@
     width: 20%;
     padding: 15px;
     background-color: $my-blue;
-    border-radius: 10px;
+    border-radius: 5px;
     color: white;
     font-size: 15px;
     border: none;
     cursor: pointer;
 }
 
-.personalDetailsBtn a{
-    display: block;
+.personalDetailsBtn .btnBlue1{
     width: 20%;
-}
-.personalDetailsBtn a .btnBlue1{
-    width: 100%;
     padding: 15px;
     background-color: white;
-    border-radius: 10px;
+    border-radius: 5px;
     color: $my-blue;
     font-size: 15px;
     border: none;
@@ -99,12 +98,12 @@
 }
 
 
-.personalDetailsBtn a .btnBlue2{
-    width: 100%;
+.personalDetailsBtn .btnBlue2{
+    width: 20%;
     padding: 15px;
     background-color: $my-blue;
     color: white;
-    border-radius: 10px;
+    border-radius: 5px;
     font-size: 15px;
     border: none;
     cursor: pointer;
@@ -191,6 +190,7 @@
     .creativeDetailSec{
         width: 100%;
         padding: 80px 5%;
+        padding-bottom: 20px;
     }
 
     .personalDetailsForm input{
@@ -222,7 +222,7 @@
         display: block;
         width: 100%;
     }
-    .personalDetailsBtn a button{
+    .personalDetailsBtn button{
         width: 100%;
         padding: 10px;
         font-size: 13px;
@@ -263,5 +263,30 @@
         
     }
 
+
+    .personalDetailsBtn .btnBlue1{
+        width: 100%;
+        margin: 0;
+        display: flex;
+        justify-content: center;
+        margin: auto;
+    }
+    
+    
+    .personalDetailsBtn .btnBlue2{
+        width: 100%;
+        margin: 0;
+        display: flex;
+        justify-content: center;
+        margin: auto;
+    }
+
+    .personalDetailsBtn{
+        display: flex;
+        gap: 10px;
+        margin: 0 20px;
+        margin-bottom: 40px;
+    }
+    
     
   }

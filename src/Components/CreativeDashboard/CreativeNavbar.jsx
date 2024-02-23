@@ -36,7 +36,7 @@ const CreativeNavbar = () => {
   
 
   const decoded = jwtDecode(tokentoken.access);
-  console.log(decoded.user_id);
+  // console.log(decoded.user_id);
 
   const [isLoading, setIsLoading] = useState(true)
 
@@ -70,32 +70,32 @@ const CreativeNavbar = () => {
 
   
 
-  const url = `https://creve.onrender.com/auth/creative/${decoded.user_id}/`
+  // const url = `https://creve.onrender.com/auth/creative/${decoded.user_id}/`
   const profileUrl = `https://creve.onrender.com/auth/creativeprofile/${decoded.profile_id}`
 
-  const getUserDetails = async ()=>{
-    try {
-      const response = await fetch(url,{
-        method: 'GET',
-        headers : {
-          'Authorization' : `Bearer ${tokentoken.access}`,
-          'Content-Type':'Application/json'
-        },
-      })
+  // const getUserDetails = async ()=>{
+  //   try {
+  //     const response = await fetch(url,{
+  //       method: 'GET',
+  //       headers : {
+  //         'Authorization' : `Bearer ${tokentoken.access}`,
+  //         'Content-Type':'Application/json'
+  //       },
+  //     })
 
-      const data = await response.json()
-      // const userData = await response.json();
-      setFullname(data.fullname)
-      setIsLoading(false)
-    } catch (error) {
-      console.log(error)
-    }
-  }
+  //     const data = await response.json()
+  //     // const userData = await response.json();
+  //     setFullname(data.fullname)
+  //     setIsLoading(false)
+  //   } catch (error) {
+  //     console.log(error)
+  //   }
+  // }
 
 
-  useEffect(() => {
-    getUserDetails()
-  })
+  // useEffect(() => {
+  //   getUserDetails()
+  // })
 
 
 

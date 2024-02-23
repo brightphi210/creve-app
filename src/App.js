@@ -22,6 +22,7 @@ import CreativeOnboardCategory from "./Pages/CreativeProfileCreate/CreativeOnboa
 import CreativeOnboardProfile from "./Pages/CreativeProfileCreate/CreativeOnboardProfile";
 import CreativeOnboardProfessional from "./Pages/CreativeProfileCreate/CreativeOnboardProfessional";
 import CreatingSetting from "./Pages/CreatingSetting";
+import CreativeOnboardAll from "./Pages/CreativeOnboardAll";
 
 
 
@@ -52,8 +53,7 @@ function App() {
 
             <Route path="/creative-settings" element={<CreatingSetting />}></Route>
             <Route path="/creativeProfileCategory" element={<CreativeOnboardCategory />}></Route>
-            <Route path="/creativeOnboardProfile" element={<CreativeOnboardProfile />}></Route>
-            <Route path="/creativeOnboardProfessional" element={<CreativeOnboardProfessional />}></Route>
+            <Route path="/creative-onboard-all" element={<CreativeOnboardAll />}></Route>
           </Route>
 
 

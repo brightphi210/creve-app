@@ -33,29 +33,27 @@ const CreativeOnboardProfile = () => {
 
               <form action="" className='personalDetailsForm'>
 
+                  <div className='proImageDiv'>
+                      <div className='static'>
+                          <img src={prof} alt="" />
+                      </div>
 
-                <div className='profDetSec'>
-                  <img src={prof} alt="" width={60}/>
+                      <input 
+                          type="file" 
+                          id='image' 
+                          name="profilePics" 
+                          accept="image/*"
+                          // onChange ={handleImageChange} 
+                          hidden
+                      />
+                      <label className='myLabel' for="image">Choose file</label>
+                  </div>
 
-                  <label class="custom-file-upload">
-                    <input type="file" id="fileInput" />
-                    Choose file
-                  </label>
-                </div>
-
-                {/* <div id="fileName"></div> */}
 
                 <div>
                   <p >Display Name*</p>
                   <input type="Full" placeholder='Enter Display Name'required/>
                 </div>
-
-
-                <div>
-                  <p >Email address*</p>
-                  <input type="email" placeholder='Enter your email address'required/>
-                </div>
-
 
                 <div>
                   <p >Language*</p>
@@ -75,16 +73,10 @@ const CreativeOnboardProfile = () => {
 
 
                 <div>
-                  <p >Short Summary*</p>
+                  <p >Bio*</p>
                   <textarea name="" placeholder='Enter short summary' required>
                     
                   </textarea>
-                </div>
-
-                <div className='personalDetailsBtn'>
-                  <Link to={'/' + 'creativeProfileCategory'}><button className='btnBlue1'>Back</button></Link>
-                  <Link to={'/' + 'creativeOnboardProfessional'}><button className='btnBlue2'>Next</button></Link>
-                  
                 </div>
               </form>
             </div>

@@ -41,6 +41,40 @@ const CreativeOnboardCategory = () => {
       console.log('Click successfull')
     };
 
+
+
+
+
+    // {
+    //     "id": 7,
+    //     "skills": [],
+    //     "gallery": {
+    //         "images": null
+    //     },
+    //     "questions": [],
+    //     "work_type": [],
+    //     "work_schedule": [],
+    //     "user": "1e53429f-3426-4091-b22e-25802a2c1794",
+    //     "digital_skills": "BackendDevelopment",
+    //     "summary_of_profile": "I Am Emeka Backend Developer",
+    //     "starting_price": 2000,
+    //     "nondigital_skills": "",
+    //     "display_name": "Michael",
+    //     "category": "DigitalSkills",
+    //     "profile_pics": null,
+    //     "location": "Sagbama",
+    //     "language": "Hausa",
+    //     "about": "I am Emeka, this is my about page",
+    //     "website_link": "",
+    //     "resume_link": "",
+    //     "linked_in_url": "",
+    //     "facebook_url": "",
+    //     "x_url": "",
+    //     "instagram_url": "",
+    //     "github_url": "",
+    //     "behance_url": "",
+    //     "medium_url": ""
+    // }
     
   return (
     <div>
@@ -66,7 +100,7 @@ const CreativeOnboardCategory = () => {
                     {selectedOption === 'digital' && (
                         <div className='catSecDiv'>
 
-                            <Link to={'/creativeOnboardProfile'}>
+                            <Link to={'/creative-onboard-all'}>
                             <div>
                                 <img src={one1} alt="" />
                                 <p>Backend Dev</p>

@@ -18,7 +18,32 @@ const CreativeOnboardProfessional = () => {
     console.log('Click successfull')
   };
 
+  const [selectedImage, setSelectedImage] = useState(null);
+  const [imageArray, setImageArray] = useState([]);
+  const [imageError, setImageError] = useState('')
 
+
+  const handleImageChange = (e) => {
+    const image = e.target.files[0];
+    setSelectedImage(image);
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    setImageArray((prevArray) => [...prevArray, selectedImage]);
+    setSelectedImage(null);
+  };
+
+
+  const handleRemoveImage = (index) => {
+    const newArray = [...imageArray];
+    newArray.splice(index, 1);
+    setImageArray(newArray);
+  };
+
+
+
+  // console.log(imageArray)
   return (
     <div className=''>
         <CreativeOnboardNav onclick={toggleSidebar}/>
@@ -57,31 +82,35 @@ const CreativeOnboardProfessional = () => {
 
 
                 <div>
-                    <p >Whatsapp*</p>
-                    <label class="custom-file-upload2">
-                        <input type="file" id="fileInput" />
-                        Click to add image from your file <IoAddOutline className='addIcon'/>
-                    </label>
+                    <p >Gallery*</p>
+                    <p>Maximum of 10 skills</p>
+                        <input type="file" id="" onChange={handleImageChange} />                        
+                    <button onClick={handleSubmit} disabled={selectedImage === null} style={{fontSize : '20px', padding : '10px'}}>Add</button>
                 </div>
 
+                {
+                  imageArray.map((myImage, index) => (
+                    <div key={index}>
+                      <img src={URL.createObjectURL(myImage)} alt="" width={50} /> 
+                      <button onClick={handleRemoveImage}>remove</button>
+                      {console.log('This is my Image', myImage.name)}
+                    </div>
+                  ))
+                }
+
+                <p>{imageError}</p>
+
+
+                <div>
+                  <p >Website Link</p>
+                  <input type="text" placeholder='Enter Website Link' required/>
+                </div>
 
 
 
                 <div>
-                  <p >Whatsapp*</p>
-                  <input type="number" placeholder='Enter Phone Number' required/>
-                </div>
-
-
-                <div>
-                  <p >Short Summary*</p>
-                  <textarea name="" placeholder='Enter short summary' required>
-                    
-                  </textarea>
-                </div>
-
-                <div className='personalDetailsBtn'>
-                  <button>save</button>
+                  <p >Resume Link</p>
+                  <input type="number" placeholder='Enter Resume Link' required/>
                 </div>
               </form>
             </div>
