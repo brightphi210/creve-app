@@ -36,7 +36,7 @@ const CreativeOnboardProfile = ({formData, setFormData, onSubmit, onChange}) => 
                   <p >Display Name*</p>
                   <input 
                     type="text" 
-                    placeholder='Enter Display Name e.g Senior Engr.'
+                    placeholder='Enter Display Name e.g Joe Branding.'
                     name='summary_of_profile'
                     value={formData.summary_of_profile}
                     onChange={onChange}
