@@ -19,8 +19,6 @@ import UserDashboard from "./Pages/TalentPages/UserDashboard";
 import CreativeWelcom from "./Pages/CreativeProfileCreate/CreativeWelcom";
 import UserDasboardMain from "./Pages/TalentPages/UserDasboardMain";
 import CreativeOnboardCategory from "./Pages/CreativeProfileCreate/CreativeOnboardCategory";
-import CreativeOnboardProfile from "./Pages/CreativeProfileCreate/CreativeOnboardProfile";
-import CreativeOnboardProfessional from "./Pages/CreativeProfileCreate/CreativeOnboardProfessional";
 import CreatingSetting from "./Pages/CreatingSetting";
 import CreativeOnboardAll from "./Pages/CreativeOnboardAll";
 

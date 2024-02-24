@@ -189,26 +189,78 @@
 }
 
 .uploadImage{
-    width: 50%;
+    width: 30%;
+    
+}
+
+.uploadImage div{
+    gap: 10px;
+    display: flex;
+    align-items: center;
 }
 
 .uploadImage input{
     border: none !important;
     padding-left: 0;
     cursor: pointer;
-    width: 50%;
 }
 
+
+
+.uploadImage input[type="file"]::file-selector-button {
+    border-radius: 4px;
+    padding: 0 16px;
+    padding-right: 10px;
+    height: 40px;
+    cursor: pointer;
+    background-color: white;
+    border: 1px solid rgb(202, 202, 202);
+    margin-right: 16px;
+    transition: background-color 200ms;
+}
+  
+.uploadImage input[type="file"]::file-selector-button:hover {
+    background-color: #f3f4f6;
+}
+  
+.uploadImage input[type="file"]::file-selector-button:active {
+    background-color: #e5e7eb;
+  }
 
 .uploadImage button{
     padding: 5px 10px !important;
-    background-color: $my-blue;
-    color: white;
     font-size: 10px !important;
-    border: none;
+    border: solid 1px;
     border-radius: 2px;
+    cursor: pointer;
 }
 
+.imageShow{
+    display: flex;
+    gap: 10px;
+}
+
+
+.imageShow img{
+    width: 50px;
+    height: 40px;
+    border-radius: 5px;
+}
+
+
+
+.skillBtn{
+    position : absolute; 
+    left : 45%; 
+    top : 29px;
+    padding : 15px 30px;
+    border: none;
+    border-radius: 0 5px 5px 0;
+    background-color: $my-blue;
+    color: white;
+    font-size: 13px;
+    cursor: pointer;
+}
 
   @media only screen and (min-width: $small-One) and (max-width: $small-Two) {
     .CreativeDetailsGenSec{
@@ -273,14 +325,7 @@
         box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
     }
 
-    .uploadImage button{
-        padding: 5px 15px !important;
-        border:solid 1px gray !important;
-        color: black ;
-        font-size: 10px !important;
-        border: none;
-        border-radius: 3px;
-    }
+
 
 
     .custom-file-upload {
@@ -350,17 +395,53 @@
         border-radius: 5px;
     }
 
+
+
+    .skillBtn{
+        position : absolute; 
+        left : 86%; 
+        top : 36px;
+        padding : 14px 20px;
+        border: none;
+        border-radius: 0 5px 5px 0;
+        background-color: $my-blue;
+        color: white;
+        font-size: 13px;
+        cursor: pointer;
+    }
+
     .uploadImage input{
         border: none !important;
+        padding: 5px 10px !important;
         padding-left: 0 !important;
-        padding-bottom: 0 !important;
         cursor: pointer;
         width: 80%;
     }
 
+
+
     .uploadImage{
         width: 100%;
+    }
+
+    .uploadImage button{
+        padding: 5px 15px !important;
+        border: solid 1px !important;
+        font-size: 10px !important;
+        border: none;
+        border-radius: 3px;
+        width: 20%;
+    }
+
+
+    .imageShow{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        gap: 10px;
     }
     
     
   }
+
+
+

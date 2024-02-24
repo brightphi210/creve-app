@@ -2,13 +2,8 @@ import React, { useState } from 'react'
 import CreativeOnboardNav from '../../Components/CreativeOnboardComponent/CreativeOnboardNav'
 import CreativeOnbardSide from '../../Components/CreativeOnboardComponent/CreativeOnbardSide'
 import './CreativeOnboardProfile.scss'
-import { MdOutlineWorkspacePremium } from "react-icons/md";
 import { CgProfile } from "react-icons/cg";
 
-
-
-
-import prof from './images/profilePics.png'
 const CreativeOnboardProfile = () => {
 
   const [isSidebarVisible, setSidebarVisible] = useState(false);
