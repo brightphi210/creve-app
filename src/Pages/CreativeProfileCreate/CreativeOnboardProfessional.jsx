@@ -9,7 +9,22 @@ import { IoClose } from "react-icons/io5";
 
 
 
-const CreativeOnboardProfessional = () => {
+const CreativeOnboardProfessional = ({
+  formData, 
+  setFormData, 
+  onSubmit, 
+  onChange,
+  handleImageChange,
+  handleSkillChange,
+  handleImageSubmit,
+  handleSkillSubmit,
+  handleRemoveImage,
+  handleRemoveSkill,
+  selectedImage,
+  imageArray,
+  selectedSkill,
+  skilsArray,
+}) => {
 
   const [isSidebarVisible, setSidebarVisible] = useState(false);
 
@@ -18,50 +33,7 @@ const CreativeOnboardProfessional = () => {
     console.log('Click successfull')
   };
 
-  const [selectedImage, setSelectedImage] = useState(null);
-  const [imageArray, setImageArray] = useState([]);
-
-  const [selectedSkill, setSelectedSkill] = useState('');
-  const [skilsArray, setSkillsArray] = useState([]); 
-
-
-  const handleImageChange = (e) => {
-    const image = e.target.files[0];
-    setSelectedImage(image);
-  };
-
-
-  const handleSkillChange = (e) => {
-    const skill = e.target.value;
-    setSelectedSkill(skill);
-  };
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    setImageArray((prevArray) => [...prevArray, selectedImage]);
-    setSelectedImage(null);
-  };
-
-
-  const handleSkillSubmit = (e) => {
-    e.preventDefault();
-    setSkillsArray((prevArray) => [...prevArray, selectedSkill]);
-    setSelectedSkill('');
-  };
-
-
-  const handleRemoveImage = (index) => {
-    const newArray = [...imageArray];
-    newArray.splice(index, 1);
-    setImageArray(newArray);
-  };
-
-
-  const handleRemoveSkill= (index) => {
-    const newArray = [...skilsArray];
-    newArray.splice(index, 1);
-    setSkillsArray(newArray);
-  };
+  
 
 
 
@@ -87,26 +59,36 @@ const CreativeOnboardProfessional = () => {
 
                 <div>
                   <p >Summary Of Profile*</p>
-                  <input type="Full" placeholder='E.g. Frontend Developer with  React'required/>
+                  <input type="Full" 
+                    placeholder='E.g. Frontend Developer with  React'
+                    name='display_name'
+                    value={formData.display_name}
+                    onChange={onChange}
+                    required/>
                 </div>
-
+                
 
                 <div>
                   <p >Starting Price</p>
-                  <input type="email" placeholder='Enter starting price'required/>
+                  <input type="number" 
+                    placeholder='Enter starting price'
+                    name='starting_price'
+                    value={formData.starting_price}
+                    onChange={onChange}
+                    required/>
                 </div>
 
                 <div>
                     <div style={{position : 'relative'}}>
                       <p >Skills* <span style={{color : 'gray', fontStyle : 'italic'}}>Maximum of 10 skills</span></p>
                       <input 
-                        type="Full" 
+                        type="text" 
                         placeholder='E.g. Java'
                         required
                         value={selectedSkill}
                         onChange={handleSkillChange}
                       />
-                      <button className='skillBtn' onClick={handleSkillSubmit}>+</button>
+                      <button className='skillBtn' disabled={selectedSkill === ''} onClick={handleSkillSubmit}>+</button>
                     </div>
 
                     <div className='skillMainDiv'>
@@ -130,7 +112,7 @@ const CreativeOnboardProfessional = () => {
 
                     <div>
                       <input type="file" id="" onChange={handleImageChange} />   
-                      <button onClick={handleSubmit} disabled={selectedImage === null} style={{fontSize : '20px', padding : '10px'}}>Add</button>
+                      <button onClick={handleImageSubmit} disabled={selectedImage === null} style={{fontSize : '20px', padding : '10px'}}>Add</button>
                     </div>
                 </div>
 
@@ -154,14 +136,25 @@ const CreativeOnboardProfessional = () => {
 
                 <div>
                   <p >Website Link</p>
-                  <input type="text" placeholder='Enter Website Link' required/>
+                  <input type="text" 
+                    placeholder='Enter Website Link' 
+                    name='website_link'
+                    value={formData.website_link}
+                    onChange={onChange}
+                    required/>
                 </div>
 
 
 
                 <div>
                   <p >Resume Link</p>
-                  <input type="text" placeholder='Enter Resume Link' required/>
+                  <input 
+                    type="text" 
+                    placeholder='Enter Resume Link' 
+                    name='resume_link'
+                    value={formData.resume_link}
+                    onChange={onChange}
+                    required/>
                 </div>
               </form>
             </div>

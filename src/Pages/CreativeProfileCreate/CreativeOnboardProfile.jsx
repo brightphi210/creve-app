@@ -4,7 +4,7 @@ import CreativeOnbardSide from '../../Components/CreativeOnboardComponent/Creati
 import './CreativeOnboardProfile.scss'
 import { CgProfile } from "react-icons/cg";
 
-const CreativeOnboardProfile = () => {
+const CreativeOnboardProfile = ({formData, setFormData, onSubmit, onChange}) => {
 
   const [isSidebarVisible, setSidebarVisible] = useState(false);
 
@@ -34,30 +34,55 @@ const CreativeOnboardProfile = () => {
 
                 <div>
                   <p >Display Name*</p>
-                  <input type="Full" placeholder='Enter Display Name'required/>
+                  <input 
+                    type="text" 
+                    placeholder='Enter Display Name e.g Senior Engr.'
+                    name='summary_of_profile'
+                    value={formData.summary_of_profile}
+                    onChange={onChange}
+                    required/>
                 </div>
 
                 <div>
                   <p >Language*</p>
-                  <input type="email" placeholder='Enter Language'required/>
+                  <input type="text" 
+                    placeholder='Enter Language e.g English'
+                    name='language'
+                    value={formData.language}
+                    onChange={onChange}
+                    required/>
                 </div>
 
                 <div>
                   <p >Location*</p>
-                  <input type="email" placeholder='Enter Location'required/>
+                  <input type="text" 
+                    name='location'
+                    value={formData.location}
+                    onChange={onChange}
+                    placeholder='Enter Location e.g #64 joe avenue, Port Harcourt'
+                    required/>
                 </div>
 
 
                 <div>
-                  <p >Whatsapp*</p>
-                  <input type="number" placeholder='Enter Phone Number' required/>
+                  <p >Whatsapp Link*</p>
+                  <input type="text" 
+                    name='medium_url'
+                    value={formData.medium_url}
+                    onChange={onChange}
+                    placeholder='Enter Whatsapp link e.g https://whatsapplink.com' 
+                    required/>
                 </div>
 
 
                 <div>
                   <p >Bio*</p>
-                  <textarea name="" placeholder='Enter short summary' required>
-                    
+                  <textarea 
+                    name='about'
+                    value={formData.about}
+                    onChange={onChange}
+                    placeholder='Enter short summary' 
+                    required>
                   </textarea>
                 </div>
               </form>
