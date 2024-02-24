@@ -114,7 +114,7 @@ const CreativeOnboardAll = () => {
           });
     
           if (response.ok || response.status === 200 ) {
-            setSuccessMessage('Profile Successfully Updated')
+            setSuccessMessage('Profile Setup Successfull')
             setIsLoading(false)
             console.log('Profile picture updated!');
             

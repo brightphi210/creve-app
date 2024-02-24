@@ -279,6 +279,83 @@
     margin-bottom: 10px;
 }
 
+
+
+
+
+.succssModal{
+    display: flex;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.3);
+    align-items: center;
+    justify-content: center;
+    z-index: 100;
+}
+
+
+.succssModalContent {
+    background: white;
+    position: relative;
+    padding: 50px;
+    padding-top: 30px;
+    width: 35%; 
+    max-height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+}
+
+
+.succssModalContent img{
+    width: 200px;
+    text-align: center;
+    margin: auto;
+    display: flex;
+}
+
+.succssModalBtn{
+    display: flex;
+    gap: 10px;
+    padding-top: 20px;
+}
+
+
+.succssModalContent button{
+    background-color: $my-blue;
+    padding: 13px 30px;
+    font-size: 13px;
+    border: none;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.succssModalContent #firstBtn{
+    background-color: white;
+    padding: 13px 30px;
+    font-size: 13px;
+    border: solid 1px gainsboro;
+    color:#340858;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.succssModalContent button:hover{
+    background-color: #340858;
+    transform: scale(0.99);
+    transition: all ease 0.5s;
+}
+
+.succssModalContent p{
+    font-size: 20px;
+    text-align: center;
+}
+
   @media only screen and (min-width: $small-One) and (max-width: $small-Two) {
     .CreativeDetailsGenSec{
         display: block;
@@ -476,82 +553,37 @@
         gap: 5px;
         margin-bottom: 10px;
     }
+
+
+
+    .succssModalContent {
+        background: white;
+        position: relative;
+        padding: 20px !important;
+        padding-top: 20px !important;
+        width: 90% !important; 
+    }
+
+    .succssModalContent button{
+        background-color: $my-blue;
+        padding: 13px 30px;
+        font-size: 13px;
+        border: none;
+        color: white;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+
+
+    .succssModalContent img{
+        width: 150px;
+        text-align: center;
+        margin: auto;
+        display: flex;
+    }
     
     
   }
 
 
 
-
-  .succssModal{
-    display: flex;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.3);
-    align-items: center;
-    justify-content: center;
-    z-index: 100;
-}
-
-
-.succssModalContent {
-    background: white;
-    position: relative;
-    padding: 50px;
-    padding-top: 30px;
-    width: 35%; 
-    max-height: 80vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 10px;
-}
-
-
-.succssModalContent img{
-    width: 200px;
-    text-align: center;
-    margin: auto;
-    display: flex;
-}
-
-.succssModalBtn{
-    display: flex;
-    gap: 10px;
-    padding-top: 20px;
-}
-
-
-.succssModalContent button{
-    background-color: $my-blue;
-    padding: 13px 30px;
-    font-size: 13px;
-    border: none;
-    color: white;
-    border-radius: 5px;
-    cursor: pointer;
-}
-
-.succssModalContent #firstBtn{
-    background-color: white;
-    padding: 13px 30px;
-    font-size: 13px;
-    border: solid 1px gainsboro;
-    color:#340858;
-    border-radius: 5px;
-    cursor: pointer;
-}
-
-.succssModalContent button:hover{
-    background-color: #340858;
-    transform: scale(0.99);
-    transition: all ease 0.5s;
-}
-
-.succssModalContent p{
-    font-size: 20px;
-    text-align: center;
-}
