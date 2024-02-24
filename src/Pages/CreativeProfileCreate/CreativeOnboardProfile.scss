@@ -262,6 +262,23 @@
     cursor: pointer;
 }
 
+
+.skillMainDiv{
+    display: flex;
+    gap: 10px;
+}
+
+.skillDiv div{
+    background-color: #f1f1f1;
+    color: #340858;
+    padding: 5px 10px;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    margin-bottom: 10px;
+}
+
   @media only screen and (min-width: $small-One) and (max-width: $small-Two) {
     .CreativeDetailsGenSec{
         display: block;
@@ -438,6 +455,26 @@
         display: grid;
         grid-template-columns: 1fr 1fr 1fr 1fr;
         gap: 10px;
+    }
+
+
+    .skillMainDiv{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        gap: 10px;
+    }
+    
+
+    .skillDiv div{
+        background-color: #f1f1f1;
+        color: #340858;
+        padding: 5px 10px;
+        border-radius: 5px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 5px;
+        margin-bottom: 10px;
     }
     
     

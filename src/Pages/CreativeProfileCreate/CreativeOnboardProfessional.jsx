@@ -4,6 +4,7 @@ import CreativeOnbardSide from '../../Components/CreativeOnboardComponent/Creati
 import './CreativeOnboardProfile.scss'
 import { MdOutlineWorkspacePremium } from "react-icons/md";
 import { MdDelete } from "react-icons/md";
+import { IoClose } from "react-icons/io5";
 
 
 
@@ -20,7 +21,7 @@ const CreativeOnboardProfessional = () => {
   const [selectedImage, setSelectedImage] = useState(null);
   const [imageArray, setImageArray] = useState([]);
 
-  const [selectedSkill, setSelectedSkill] = useState(null);
+  const [selectedSkill, setSelectedSkill] = useState('');
   const [skilsArray, setSkillsArray] = useState([]); 
 
 
@@ -45,7 +46,7 @@ const CreativeOnboardProfessional = () => {
   const handleSkillSubmit = (e) => {
     e.preventDefault();
     setSkillsArray((prevArray) => [...prevArray, selectedSkill]);
-    setSelectedSkill(null);
+    setSelectedSkill('');
   };
 
 
@@ -53,6 +54,13 @@ const CreativeOnboardProfessional = () => {
     const newArray = [...imageArray];
     newArray.splice(index, 1);
     setImageArray(newArray);
+  };
+
+
+  const handleRemoveSkill= (index) => {
+    const newArray = [...skilsArray];
+    newArray.splice(index, 1);
+    setSkillsArray(newArray);
   };
 
 
@@ -101,7 +109,19 @@ const CreativeOnboardProfessional = () => {
                       <button className='skillBtn' onClick={handleSkillSubmit}>+</button>
                     </div>
 
-                    <span>{console.log(skilsArray)}</span>
+                    <div className='skillMainDiv'>
+                      {
+                        skilsArray.map((mySkill, index) => (
+                          <div key={index} className='skillDiv'>
+                            <div>
+                              <span>{mySkill}</span>
+                              <IoClose style={{cursor : 'pointer'}} onClick={() => handleRemoveSkill(index)} color='orange'  />
+                            </div>
+                          </div>
+                        ))
+                      }
+                    </div>
+
                 </div>
 
 
