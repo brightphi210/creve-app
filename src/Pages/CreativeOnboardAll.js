@@ -183,7 +183,7 @@ const CreativeOnboardAll = () => {
                         <p>{successMessage}</p>
                         <div className='succssModalBtn'>
                             <button id='firstBtn' onClick={()=>{setSuccessMessage(false)}}>Cancle</button>
-                            <Link to={'/' + 'dashboardMain'}><button>Continue Dashboard</button></Link>
+                            <Link to={'/' + 'dashboardMain'}><button>Dashboard</button></Link>
                         </div>
                     </div>
                 </div>
