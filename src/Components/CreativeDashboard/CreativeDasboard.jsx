@@ -1,10 +1,11 @@
 
-import React,{useState} from 'react'
+import React,{useState, useEffect} from 'react'
 import { jwtDecode } from "jwt-decode";
 import './CreativeDashboad.scss'
 import myImg from './images/img3.png'
 import myImg1 from './images/img4.png'
 import prof from './images/Avatars1.png'
+import profilePicsImport from './images/profilePics.png'
 
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
@@ -18,9 +19,15 @@ import { LuArrowUpRightFromCircle } from "react-icons/lu";
 const CreativeDasboard = () => {
   
   const [isLoading, setIsLoading] = useState(true)
-  const [profilePics, setProfilePics] = useState(null)
   let [authTokens, setAuthTokens] = useState(()=> localStorage.getItem('authTokens') ? JSON.parse(localStorage.getItem('authTokens')) : null)
   const decoded = jwtDecode(authTokens.access);
+  
+  const [name, setName] = useState('Loadin . . .')
+  const [profilePics, setProfilePics] = useState(null)
+  const [summaryProfile, setSummaryProfile] = useState('Loading . . .')
+
+
+  console.log(profilePics)
 
 
   const responsive = {
@@ -40,6 +47,39 @@ const CreativeDasboard = () => {
       slidesToSlide: 1
     }
 };
+
+
+
+const fetchUserData = async (e) => {
+
+  setIsLoading(true)
+
+  try {
+    const response = await fetch(`https://creve.onrender.com/auth/creativeprofile/${decoded.profile_id}/`, {
+      method: 'GET',
+      headers: {
+        "Authorization": `Bearer ${authTokens.access}`,
+        "Content-Type": "application/json"
+      },
+    });
+
+    setIsLoading(false)
+    const userData = await response.json();
+    console.log("This is the user data: " + JSON.stringify(userData));
+
+    setName(userData.display_name);
+    setProfilePics(userData.profile_pics)
+    setSummaryProfile(userData.summary_of_profile)
+    
+  } catch (error) {
+    console.error('Error fetching user data:', error);
+    setIsLoading(false)
+  }
+};
+
+useEffect(() => {
+  fetchUserData();
+}, []);
 
   return (
     <div className='creativeDashDiv'>
@@ -103,11 +143,11 @@ const CreativeDasboard = () => {
           <div className='creativeDashProfile creativeDashProfileHide' >
             <div className='profileCard'>
               <div>
-                <img src={prof} alt="" width={60}/> 
+                <img src={profilePics} alt="" width={60}/> 
               </div>
               <div>
-                <h3>{decoded.name}</h3>
-                <p>Web Developer(Python, Django)</p>
+                <h3>{name}</h3>
+                <p>{summaryProfile}</p>
               </div>
             </div>
 
@@ -193,11 +233,14 @@ const CreativeDasboard = () => {
           <div className='creativeDashProfile creativeDashProfileShow'>
             <div className='profileCard'>
               <div>
-                <img src={prof} alt="" width={60}/> 
+                {profilePics === null ? 
+                (
+                  <img src={profilePicsImport} alt="" width={50}/>
+                ) : (<img src={profilePics} alt="" width={50}/> )}
               </div>
               <div>
-                <h3>{decoded.name}</h3>
-                <p>Web Developer(Python, Django)</p>
+                <h3>{name}</h3>
+                <p>{summaryProfile}</p>
               </div>
             </div>
 

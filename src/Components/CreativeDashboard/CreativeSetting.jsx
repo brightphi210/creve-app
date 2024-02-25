@@ -64,7 +64,7 @@ const CreativeSetting = () => {
 
     useEffect(() => {
         fetchUserData();
-      }, []);
+    }, []);
 
 
       function handleSubmit(e) {
