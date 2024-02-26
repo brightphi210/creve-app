@@ -88,13 +88,12 @@ const TalentCompo = () => {
         <div className='talentSection'>
             <div className='talentExplore'>
                     <h2>Explore the Best <br /> talents around Africa</h2>
+                    <div className='talentDivArrow'>
+                        <p><IoIosArrowRoundForward /></p>
+                        <span>Become a creative</span>
+                    </div>
             </div>
             
-            <div className='talentDivArrow'>
-                <p><IoIosArrowRoundForward /></p>
-                <button>Become a creative</button>
-            </div>
-
             <div className='talentImgDiv'>
                 <img src={myImage} alt="" />
             </div>
