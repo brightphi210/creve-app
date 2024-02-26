@@ -17,6 +17,8 @@ import { RiNotificationLine } from "react-icons/ri";
 import { TbSmartHome } from "react-icons/tb";
 import { LuUserCircle } from "react-icons/lu";
 import { BiMessageSquareDots } from "react-icons/bi";
+import Narvbar from '../NavComponent/Narvbar';
+import { IoCloseCircleOutline } from "react-icons/io5";
 
 
 
@@ -52,6 +54,17 @@ const CreativeDasboard = () => {
     }
 };
 
+
+const [show, setShow] = useState(false)
+const [show2, setShow2] = useState(false)
+
+const openModal = () =>{
+  setShow(true);
+}
+
+const closeModal = () =>{
+  setShow(false);
+}
 
 
 const fetchUserData = async (e) => {
@@ -90,6 +103,9 @@ useEffect(() => {
       <div className='creativeDashDivFlex'>
         <div className='creativeBannerAndInput'>
 
+          <div style={{display : 'none'}}>
+            <Narvbar openModal={openModal} show={show} setShow={setShow}/>
+          </div>
 
           <div className='creativeBannerDiv'>
           <Carousel
@@ -317,6 +333,38 @@ useEffect(() => {
         </div>
       </div>
 
+      {show && (
+      <div className='navNotifyModal'>
+        <div className='navNotifyContent'>
+          <div className='notDiv'>
+            <h2>Notifications</h2>
+            <p onClick={closeModal}><IoCloseCircleOutline /></p>
+          </div>
+
+
+          <div>
+            <hr />
+            <div className='notProf'>
+              <img src={prof} alt="" width={20}/>
+              <div>
+                <p>We have Exciting new talents in Web Development. Explore now!</p>
+                <p>3 days ago</p>
+              </div>
+            </div>
+            <hr />
+            <div className='notProf'>
+              <img src={prof} alt="" width={30}/>
+              <div>
+                <p>We have Exciting new talents in Web Development. Explore now!</p>
+                <p>3 days ago</p>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    )}
+
 
       <div className='bottomBar'>
         <div className='bottomBarInner'>
@@ -329,7 +377,7 @@ useEffect(() => {
               {/* <p></p> */}
             </div>
 
-            <div className='userNavIcon'>
+            <div className='userNavIcon' onClick={openModal}>
               <Link to={'/dashboardMain'}><RiNotificationLine className='userIcon'/></Link>
               {/* <p></p> */}
             </div>

@@ -30,9 +30,9 @@ import './UserNavbar.scss'
 import prof from './images/profilePics.png'
 
 
-const UserNavbar = () => {
+const UserNavbar = ({show, openModal, setShow}) => {
 
-  const [show, setShow] = useState(false)
+  // const [show, setShow] = useState(false)
   const [show2, setShow2] = useState(false)
   const [showSearch, setShowSearch] = useState(false)
 
@@ -46,9 +46,9 @@ const UserNavbar = () => {
   const [isLoading, setIsLoading] = useState(true)
 
 
-  const openModal = () =>{
-    setShow(true);
-  }
+  // const openModal = () =>{
+  //   setShow(true);
+  // }
 
 
   const closeModal = () =>{
