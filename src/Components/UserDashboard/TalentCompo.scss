@@ -35,6 +35,18 @@
 }
 
 
+.talentDivArrow{
+    
+}
+
+.talentSection button{
+    padding: 13px 30px;
+    background-color: white;
+    color: black;
+    border: none;
+    border-radius: 5px;
+}
+
 
 // ====================== Find Main section ==============================
 
@@ -243,7 +255,7 @@
     .talentSection{
         display: block;
         padding: 50px 6%;
-        padding-bottom: 10px;
+        // padding-bottom: 10px;
         border-radius: 10px;
     }
     
@@ -274,6 +286,7 @@
 
     .talentImgDiv img{
         width: 60%;
+        display: none;
     }
 
     .findDiv{

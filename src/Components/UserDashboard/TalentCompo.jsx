@@ -20,6 +20,7 @@ import MapSearched from './MapSearched'
 
 import UserNotificationModal from './UserNotificationModal'
 import BottomBar from './BottomBar'
+import { IoIosArrowRoundForward } from "react-icons/io";
 
  
 
@@ -87,10 +88,15 @@ const TalentCompo = () => {
         <div className='talentSection'>
             <div className='talentExplore'>
                     <h2>Explore the Best <br /> talents around Africa</h2>
-                </div>
+            </div>
+            
+            <div className='talentDivArrow'>
+                <p><IoIosArrowRoundForward /></p>
+                <button>Become a creative</button>
+            </div>
 
-                <div className='talentImgDiv'>
-                    <img src={myImage} alt="" />
+            <div className='talentImgDiv'>
+                <img src={myImage} alt="" />
             </div>
         </div>
 
