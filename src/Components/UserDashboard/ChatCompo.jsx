@@ -3,27 +3,38 @@ import './ChatCompo.scss'
 
 import ava from './images/Avatars1.png'
 
-import { GrEmoji } from "react-icons/gr";
-import { MdAdd } from "react-icons/md";
-import { IoSend } from "react-icons/io5";
 import { IoArrowBack } from "react-icons/io5";
 import ChatHeader from './ChatItems/ChatHeader';
 import ChatBody from './ChatItems/ChatBody';
 import ChatBottom from './ChatItems/ChatBottom';
+import UserNotificationModal from './UserNotificationModal';
+import BottomBar from './BottomBar';
 
 
 const ChatCompo = () => {
 
-    const [show, setShow] = useState(false)
+    const [show1, setShow1] = useState(false)
 
     const showFunc = () =>{
-        setShow(true)
+        setShow1(true)
     }
 
 
     const hideFunc = () =>{
-        setShow(false)
+        setShow1(false)
     }
+
+    const [show, setShow] = useState(false)
+
+    const openModal = () =>{
+      setShow(true)
+    }
+
+    const closeModal =()=>{
+      setShow(false)
+    }
+
+
   return (
     <div className='chatSec'>
         <div className='sideBar'>
@@ -58,6 +69,14 @@ const ChatCompo = () => {
                     </div>
                     <div className='unreadCount'><p>1</p></div>
                 </div>
+
+
+
+                {show && (
+                    <UserNotificationModal closeModal={closeModal}/>
+                )}
+                
+                <BottomBar openModal={openModal}/>
             </div>
         </div>
 
@@ -70,7 +89,7 @@ const ChatCompo = () => {
         </div>
 
 
-        {show && (
+        {show1 && (
             <div className='smallMessage'>
 
                 <div className='smallMessageContent'>

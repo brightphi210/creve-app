@@ -8,7 +8,7 @@ const Favourite = () => {
     <div>
         <UserNavbar />
         <FavouritesCompo />
-        <Footer />
+        {/* <Footer /> */}
     </div>
   )
 }

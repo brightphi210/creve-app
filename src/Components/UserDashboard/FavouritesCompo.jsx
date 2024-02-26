@@ -10,8 +10,12 @@ import { MdOutlineVerified } from "react-icons/md";
 import { PiMapPinLineFill } from "react-icons/pi";
 import { IoIosStar } from "react-icons/io";
 
+
+
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
+import UserNotificationModal from './UserNotificationModal'
+import BottomBar from './BottomBar'
 
 
 const FavouritesCompo = () => {
@@ -277,6 +281,14 @@ const FavouritesCompo = () => {
                 </div>
             </div>
         </div>
+
+
+        {show && (
+            <UserNotificationModal closeModal={closeModal}/>
+        )}
+
+        <BottomBar openModal={openModal}/>
+        
     </div>
   )
 }

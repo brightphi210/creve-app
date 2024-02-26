@@ -30,9 +30,9 @@ import './UserNavbar.scss'
 import prof from './images/profilePics.png'
 
 
-const UserNavbar = ({show, openModal, setShow}) => {
+const UserNavbar = () => {
 
-  // const [show, setShow] = useState(false)
+  const [show, setShow] = useState(false)
   const [show2, setShow2] = useState(false)
   const [showSearch, setShowSearch] = useState(false)
 
@@ -46,9 +46,9 @@ const UserNavbar = ({show, openModal, setShow}) => {
   const [isLoading, setIsLoading] = useState(true)
 
 
-  // const openModal = () =>{
-  //   setShow(true);
-  // }
+  const openModal = () =>{
+    setShow(true);
+  }
 
 
   const closeModal = () =>{
@@ -176,7 +176,7 @@ const UserNavbar = ({show, openModal, setShow}) => {
 
 {/* ========================= Notify ============================= */}
     {show && (
-      <div className='navNotifyModal'>
+      <div className='navNotifyModal' onClick={closeModal}>
         <div className='navNotifyContent'>
           <div className='notDiv'>
             <h2>Notifications</h2>
@@ -214,7 +214,7 @@ const UserNavbar = ({show, openModal, setShow}) => {
 {/* =========================== Profile ==================================== */}
 
 {show2 && (
-      <div className='navNotifyModal'>
+      <div className='navNotifyModal' onClick={closeModal2}>
         <div className='navNotifyContent'>
           <div className='notDiv'>
             <h2>{fullname}</h2>
@@ -257,7 +257,7 @@ const UserNavbar = ({show, openModal, setShow}) => {
           </div>
           
           <div className='userNavIcon' onClick={openModal}>
-            <Link to={'/dashboard'}><RiNotificationLine className='userIcon'/></Link>
+            <Link to={''}><RiNotificationLine className='userIcon'/></Link>
             <p></p>
           </div>
 

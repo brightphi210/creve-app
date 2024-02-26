@@ -24,6 +24,9 @@ import { RiNotificationLine } from "react-icons/ri";
 import { TbSmartHome } from "react-icons/tb";
 import { BiMessageSquareDots } from "react-icons/bi";
 import { RiHeartLine } from "react-icons/ri";
+import { IoCloseCircleOutline } from "react-icons/io5";
+import UserNotificationModal from './UserNotificationModal'
+import BottomBar from './BottomBar'
 
  
 
@@ -353,28 +356,11 @@ const TalentCompo = () => {
         {showMap && <MapSearched closeModal={closeModalMap}/>}
 
 
-        
-      <div className='bottomBar'>
-        <div className='bottomBarInner'>
-        <div className='userNavIcon'>
-              <Link to={'/dashboardMain'} className='link'><TbSmartHome className='userIcon'/></Link>
-            </div>
-
-            <div className='userNavIcon'>
-              <Link to={'/dashboardMain'}><BiMessageSquareDots className='userIcon'/></Link>
-              {/* <p></p> */}
-            </div>
-
-            <div className='userNavIcon'>
-              <Link to={'/dashboardMain'}><RiNotificationLine className='userIcon'/></Link>
-              {/* <p></p> */}
-            </div>
-            
-            <div className='userNavIcon'>
-              <Link to={''} className='link'><RiHeartLine className='userIcon'/></Link>
-            </div>
-        </div>
-      </div>
+        {show && (
+            <UserNotificationModal closeModal={closeModal}/>
+        )}
+                
+        <BottomBar openModal={openModal}/>
 
     </div>
   )
