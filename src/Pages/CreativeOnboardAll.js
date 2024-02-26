@@ -16,6 +16,8 @@ const CreativeOnboardAll = () => {
     const [selectedSkill, setSelectedSkill] = useState('');
     const [skilsArray, setSkillsArray] = useState([]); 
 
+    console.log(skilsArray)
+
 
   const handleImageChange = (e) => {
     const image = e.target.files[0];

@@ -11,8 +11,12 @@ import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 
 import { FiSearch } from "react-icons/fi";
-import { GrNotification } from "react-icons/gr";
+import { Link } from 'react-router-dom'
 import { LuArrowUpRightFromCircle } from "react-icons/lu";
+import { RiNotificationLine } from "react-icons/ri";
+import { TbSmartHome } from "react-icons/tb";
+import { LuUserCircle } from "react-icons/lu";
+import { BiMessageSquareDots } from "react-icons/bi";
 
 
 
@@ -259,7 +263,7 @@ useEffect(() => {
           </div>
 
           <div className='creativeDashProfile'>
-            <h2>Notifications <GrNotification /></h2>
+            <h2>Notifications <RiNotificationLine /></h2>
 
             <div className='creativeDashNot'>
               <div>
@@ -312,6 +316,30 @@ useEffect(() => {
           
         </div>
       </div>
+
+
+      <div className='bottomBar'>
+        <div className='bottomBarInner'>
+        <div className='userNavIcon'>
+              <Link to={'/dashboardMain'} className='link'><TbSmartHome className='userIcon'/></Link>
+            </div>
+
+            <div className='userNavIcon'>
+              <Link to={'/dashboardMain'}><BiMessageSquareDots className='userIcon'/></Link>
+              {/* <p></p> */}
+            </div>
+
+            <div className='userNavIcon'>
+              <Link to={'/dashboardMain'}><RiNotificationLine className='userIcon'/></Link>
+              {/* <p></p> */}
+            </div>
+            
+            <div className='userNavIcon'>
+              <Link to={''} className='link'><LuUserCircle className='userIcon'/></Link>
+            </div>
+        </div>
+      </div>
+
 
 
 

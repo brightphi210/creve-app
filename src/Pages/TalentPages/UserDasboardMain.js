@@ -34,7 +34,7 @@ const UserDasboardMain = () => {
       )}
 
 
-        <Footer />
+        {/* <Footer /> */}
     </div>
   )
 }

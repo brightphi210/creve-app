@@ -287,7 +287,6 @@ hr{
     .userNavIcon{
         padding: 5px;
         background-color: rgb(238, 238, 238);
-        // background-color: burlywood;
         width: 100%;
     }
 
@@ -301,6 +300,10 @@ hr{
 
     .userNavSecondDiv{
         gap: 15px;
+    }
+
+    .userNavSecondDiv .userNavIcon{
+        display: none;
     }
 
     
@@ -369,7 +372,12 @@ hr{
     // .navNotifyContent p{
     //     font-size: 15px !important;
     // }
+
+
 }
+
+
+
 
 
 @media only screen and (min-width: 481px) and (max-width: 768px) {

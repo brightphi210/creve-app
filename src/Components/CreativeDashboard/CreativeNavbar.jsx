@@ -16,6 +16,12 @@ import { MdOutlineLogout } from "react-icons/md";
 import { GrHomeRounded } from "react-icons/gr";
 import { MdOutlineManageAccounts } from "react-icons/md";
 
+
+import { RiNotificationLine } from "react-icons/ri";
+import { TbSmartHome } from "react-icons/tb";
+import { LuUserCircle } from "react-icons/lu";
+import { BiMessageSquareDots } from "react-icons/bi";
+
 import {useNavigate } from 'react-router-dom';
 
 
@@ -211,24 +217,24 @@ const CreativeNavbar = () => {
         <div className='userNavSecondDiv' onClick={(e) => e.stopPropagation()}>
           
           <div className='userNavIcon'>
-            <Link to={'/dashboardMain'} className='link'><GrHomeRounded className='userIcon'/></Link>
+            <Link to={'/dashboardMain'} className='link'><TbSmartHome className='userIcon'/></Link>
           </div>
 
     
           <div className='userNavIcon' onClick={openModal}>
-            <Link to={'/dashboardMain'}><GrNotification className='userIcon'/></Link>
+            <Link to={'/dashboardMain'}><RiNotificationLine className='userIcon'/></Link>
             <p></p>
           </div>
 
           <div className='userNavIcon'>
-            <Link to={'/dashboardMain'}><AiOutlineMessage className='userIcon'/></Link>
+            <Link to={'/dashboardMain'}><BiMessageSquareDots className='userIcon'/></Link>
             <p></p>
           </div>
 
 
           
           <div className='userNavIcon' onClick={openModal}>
-            <Link to={''} className='link'><MdOutlineManageAccounts className='userIcon'/></Link>
+            <Link to={''} className='link'><LuUserCircle className='userIcon'/></Link>
           </div>
 
           <div className='userNavProfile' onClick={openModal2}>
@@ -245,6 +251,7 @@ const CreativeNavbar = () => {
             </div>
           </div>
         </div>
+
 
 
         {isLoading ? 

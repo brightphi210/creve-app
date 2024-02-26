@@ -137,6 +137,9 @@
     display: none;
 }
 
+.bottomBar{
+    display: none;
+}
 // ====================== Responsive ====================
 
 @media only screen and (min-width: $small-One) and (max-width: $small-Two) {
@@ -152,7 +155,8 @@
 
     .creativeDashDiv{
         padding: 20% 5%;
-        padding-bottom: 20px;
+        padding-bottom: 80px;
+        position: relative;
     }
     
     .creativeDashDivFlex {
@@ -238,6 +242,38 @@
         padding: 20px 0;
         padding-bottom: 10px;
         font-size: 15px;
+    }
+
+
+
+    .bottomBar{
+        position: fixed;
+        bottom: 0;
+        display: flex;
+        background-color :#f7f7fa;
+        padding: 15px 0;
+        width: 100%;
+        justify-content: center;
+        border-top: #e0e0e0 solid 1px;
+        left: 0;
+    }
+
+    .bottomBar .bottomBarInner{
+        display: flex;
+        align-items: center;
+        gap: 50px;
+    }
+
+    .bottomBarInner .userNavIcon{
+        background:none ;
+        cursor: pointer;
+        position: relative;
+        
+    }
+
+    .bottomBarInner .userNavIcon .userIcon{
+        font-size: 23px !important;
+        color: #1d2b36;
     }
     
 }
@@ -421,5 +457,9 @@
     .completeProf p{
         font-size: 12px;
     }
+
+
+
+
     
 }

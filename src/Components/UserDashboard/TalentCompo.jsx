@@ -17,6 +17,15 @@ import "react-multi-carousel/lib/styles.css";
 import { useState } from 'react'
 import CreativeProfileView from './CreativeProfileView'
 import MapSearched from './MapSearched'
+
+
+import { LuArrowUpRightFromCircle } from "react-icons/lu";
+import { RiNotificationLine } from "react-icons/ri";
+import { TbSmartHome } from "react-icons/tb";
+import { LuUserCircle } from "react-icons/lu";
+import { BiMessageSquareDots } from "react-icons/bi";
+import { RiHeartLine } from "react-icons/ri";
+
  
 
 
@@ -343,6 +352,30 @@ const TalentCompo = () => {
 
         {show && <CreativeProfileView closeModal={closeModal}/>}
         {showMap && <MapSearched closeModal={closeModalMap}/>}
+
+
+        
+      <div className='bottomBar'>
+        <div className='bottomBarInner'>
+        <div className='userNavIcon'>
+              <Link to={'/dashboardMain'} className='link'><TbSmartHome className='userIcon'/></Link>
+            </div>
+
+            <div className='userNavIcon'>
+              <Link to={'/dashboardMain'}><BiMessageSquareDots className='userIcon'/></Link>
+              {/* <p></p> */}
+            </div>
+
+            <div className='userNavIcon'>
+              <Link to={'/dashboardMain'}><RiNotificationLine className='userIcon'/></Link>
+              {/* <p></p> */}
+            </div>
+            
+            <div className='userNavIcon'>
+              <Link to={''} className='link'><RiHeartLine className='userIcon'/></Link>
+            </div>
+        </div>
+      </div>
 
     </div>
   )
