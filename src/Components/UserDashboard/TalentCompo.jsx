@@ -18,13 +18,6 @@ import { useState } from 'react'
 import CreativeProfileView from './CreativeProfileView'
 import MapSearched from './MapSearched'
 
-
-import { LuArrowUpRightFromCircle } from "react-icons/lu";
-import { RiNotificationLine } from "react-icons/ri";
-import { TbSmartHome } from "react-icons/tb";
-import { BiMessageSquareDots } from "react-icons/bi";
-import { RiHeartLine } from "react-icons/ri";
-import { IoCloseCircleOutline } from "react-icons/io5";
 import UserNotificationModal from './UserNotificationModal'
 import BottomBar from './BottomBar'
 
@@ -61,6 +54,18 @@ const TalentCompo = () => {
 
       const closeModal =()=>{
         setShow(false)
+      }
+
+
+
+      const [show1, setShow1] = useState(false)
+
+      const openModal1 = () =>{
+        setShow1(true)
+      }
+
+      const closeModal1 =()=>{
+        setShow1(false)
       }
 
 
@@ -104,7 +109,7 @@ const TalentCompo = () => {
                 <div className='imagecard'>
 
 
-                    <Link to={'/talentsProfiles'}>
+                    {/* <Link to={'/talentsProfiles'}> */}
                     <div className='cardDiv'>
                         <div className='imgCard'><img src={imageCard} alt="" /></div>
                         <div className='cardProfileDiv'>
@@ -122,17 +127,17 @@ const TalentCompo = () => {
                                 </div>
                             </div>
 
-                            <div>
-                                <h3>Frontend developer proficient in CSS</h3>
+                            <div className='mytitle'>
+                                <h3>Frontend developer</h3>
                                 <p>N20,000</p>
                             </div>
                         </div>
                     </div>
-                    </Link>
+                    {/* </Link> */}
 
 
 
-                    <div className='cardDiv' onClick={openModal}>
+                    <div className='cardDiv' onClick={openModal1}>
                         <div className='imgCard'><img src={imageCard} alt="" /></div>
                         <div className='cardProfileDiv'>
                             <div className='cardProfileDiv2'>
@@ -149,8 +154,8 @@ const TalentCompo = () => {
                                 </div>
                             </div>
 
-                            <div>
-                                <h3>Frontend developer proficient in CSS</h3>
+                            <div className='mytitle'>
+                                <h3>Frontend developer</h3>
                                 <p>N20,000</p>
                             </div>
                         </div>
@@ -158,7 +163,7 @@ const TalentCompo = () => {
 
 
 
-                    <div className='cardDiv' onClick={openModal}>
+                    <div className='cardDiv' onClick={openModal1}>
                         <div className='imgCard'><img src={imageCard} alt="" /></div>
                         <div className='cardProfileDiv'>
                             <div className='cardProfileDiv2'>
@@ -175,8 +180,8 @@ const TalentCompo = () => {
                                 </div>
                             </div>
 
-                            <div>
-                                <h3>Frontend developer proficient in CSS</h3>
+                            <div className='mytitle'>
+                                <h3>Frontend developer</h3>
                                 <p>N20,000</p>
                             </div>
                         </div>
@@ -184,7 +189,7 @@ const TalentCompo = () => {
 
 
 
-                    <div className='cardDiv' onClick={openModal}>
+                    <div className='cardDiv' onClick={openModal1}>
                         <div className='imgCard'><img src={imageCard} alt="" /></div>
                         <div className='cardProfileDiv'>
                             <div className='cardProfileDiv2'>
@@ -201,8 +206,8 @@ const TalentCompo = () => {
                                 </div>
                             </div>
 
-                            <div>
-                                <h3>Frontend developer proficient in CSS</h3>
+                            <div className='mytitle'>
+                                <h3>Frontend developer</h3>
                                 <p>N20,000</p>
                             </div>
                         </div>
@@ -244,8 +249,8 @@ const TalentCompo = () => {
                                 </div>
                             </div>
 
-                            <div>
-                                <h3>Frontend developer proficient in CSS</h3>
+                            <div className='mytitle'>
+                                <h3>Frontend developer</h3>
                                 <p>N20,000</p>
                             </div>
                         </div>
@@ -268,33 +273,8 @@ const TalentCompo = () => {
                                 </div>
                             </div>
 
-                            <div>
-                                <h3>Frontend developer proficient in CSS</h3>
-                                <p>N20,000</p>
-                            </div>
-                        </div>
-                    </div>
-
-
-                    <div className='cardDiv cardDivCarol' onClick={openModal}>
-                        <div className='imgCard'><img src={imageCard} alt="" /></div>
-                        <div className='cardProfileDiv'>
-                            <div className='cardProfileDiv2'>
-                                <div className='cardProfileDivImg'>
-                                    <img src={avatar} alt="" />
-                                    <div>
-                                        <p>Cassie Daniels</p>
-                                        <p>4.0 <IoIosStar /> </p>
-                                    </div>
-                                </div>
-
-                                <div className='cardProBtn2'>
-                                    <button><MdOutlineVerified/> Verified</button>
-                                </div>
-                            </div>
-
-                            <div>
-                                <h3>Frontend developer proficient in CSS</h3>
+                            <div className='mytitle'>
+                                <h3>Frontend developer</h3>
                                 <p>N20,000</p>
                             </div>
                         </div>
@@ -318,8 +298,33 @@ const TalentCompo = () => {
                                 </div>
                             </div>
 
-                            <div>
-                                <h3>Frontend developer proficient in CSS</h3>
+                            <div className='mytitle'>
+                                <h3>Frontend developer</h3>
+                                <p>N20,000</p>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div className='cardDiv cardDivCarol' onClick={openModal}>
+                        <div className='imgCard'><img src={imageCard} alt="" /></div>
+                        <div className='cardProfileDiv'>
+                            <div className='cardProfileDiv2'>
+                                <div className='cardProfileDivImg'>
+                                    <img src={avatar} alt="" />
+                                    <div>
+                                        <p>Cassie Daniels</p>
+                                        <p>4.0 <IoIosStar /> </p>
+                                    </div>
+                                </div>
+
+                                <div className='cardProBtn2'>
+                                    <button><MdOutlineVerified/> Verified</button>
+                                </div>
+                            </div>
+
+                            <div className='mytitle'>
+                                <h3>Frontend developer</h3>
                                 <p>N20,000</p>
                             </div>
                         </div>
@@ -352,7 +357,7 @@ const TalentCompo = () => {
             </div>
         </div>
 
-        {show && <CreativeProfileView closeModal={closeModal}/>}
+        {show1 && <CreativeProfileView closeModal={closeModal1}/>}
         {showMap && <MapSearched closeModal={closeModalMap}/>}
 
 

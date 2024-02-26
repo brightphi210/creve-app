@@ -42,14 +42,14 @@ const CreativeProfileView = () => {
   };
 
 
-  const [show, setShow] = useState(false);
+  const [show1, setShow1] = useState(false);
 
-  const closeModal = () =>{
-    setShow(false);
+  const closeModal1 = () =>{
+    setShow1(false);
   }
 
   const toggleShow = () =>{
-    setShow(!show);
+    setShow1(!show1);
   }
 
 
@@ -58,7 +58,7 @@ const CreativeProfileView = () => {
   const closeShow2 = () =>{setShow2(false)}
 
   return (
-    <div className='creativeProfileModal' onClick={closeModal}>
+    <div className='creativeProfileModal' onClick={closeModal1}>
       <div className='creativeProfileContent'>
 
         {/* <p className='creativeViewcloseBtn' ><IoArrowBackOutline /></p> */}
@@ -104,7 +104,7 @@ const CreativeProfileView = () => {
 
 
 
-              { show && (
+              { show1 && (
                 <div className='messageModalDiv' >
                 <div>
                   <p className='messageModalTitle'>Phone number</p>
