@@ -11,14 +11,11 @@ import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 
 import { FiSearch } from "react-icons/fi";
-import { Link } from 'react-router-dom'
 import { LuArrowUpRightFromCircle } from "react-icons/lu";
 import { RiNotificationLine } from "react-icons/ri";
-import { TbSmartHome } from "react-icons/tb";
-import { LuUserCircle } from "react-icons/lu";
-import { BiMessageSquareDots } from "react-icons/bi";
 import Narvbar from '../NavComponent/Narvbar';
 import { IoCloseCircleOutline } from "react-icons/io5";
+import CreativeBottomBar from './CreativeBottomBar';
 
 
 
@@ -365,32 +362,7 @@ useEffect(() => {
       </div>
     )}
 
-
-      <div className='bottomBar'>
-        <div className='bottomBarInner'>
-        <div className='userNavIcon'>
-              <Link to={'/dashboardMain'} className='link'><TbSmartHome className='userIcon'/></Link>
-            </div>
-
-            <div className='userNavIcon'>
-              <Link to={'/dashboardMain'}><BiMessageSquareDots className='userIcon'/></Link>
-              {/* <p></p> */}
-            </div>
-
-            <div className='userNavIcon' onClick={openModal}>
-              <Link to={'/dashboardMain'}><RiNotificationLine className='userIcon'/></Link>
-              {/* <p></p> */}
-            </div>
-            
-            <div className='userNavIcon'>
-              <Link to={''} className='link'><LuUserCircle className='userIcon'/></Link>
-            </div>
-        </div>
-      </div>
-
-
-
-
+        <CreativeBottomBar openModal={openModal}/>
     </div>
   )
 }
