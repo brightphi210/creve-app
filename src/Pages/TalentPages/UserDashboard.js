@@ -25,7 +25,6 @@ const UserDashboard = () => {
         <>
           <UserNavbar />
           <TalentCompo />
-          <Footer />
         </>
       ) : (
         <>

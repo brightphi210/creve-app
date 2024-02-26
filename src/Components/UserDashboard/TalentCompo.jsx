@@ -22,7 +22,6 @@ import MapSearched from './MapSearched'
 import { LuArrowUpRightFromCircle } from "react-icons/lu";
 import { RiNotificationLine } from "react-icons/ri";
 import { TbSmartHome } from "react-icons/tb";
-import { LuUserCircle } from "react-icons/lu";
 import { BiMessageSquareDots } from "react-icons/bi";
 import { RiHeartLine } from "react-icons/ri";
 

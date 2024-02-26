@@ -232,6 +232,7 @@ const CreativeNavbar = () => {
             <Link to={''} className='link'><LuUserCircle className='userIcon'/></Link>
           </div>
 
+
           <div className='userNavProfile' onClick={openModal2}>
             <div className='myStatic'>
 
