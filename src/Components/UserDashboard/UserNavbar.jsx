@@ -5,9 +5,6 @@ import logo from './images/Logo2.png'
 import avatar from './images/Avatars1.png'
 
 import { RiSearch2Line } from "react-icons/ri";
-import { MdFavoriteBorder } from "react-icons/md";
-import { GrNotification } from "react-icons/gr";
-import { AiOutlineMessage } from "react-icons/ai";
 
 import { IoCloseCircleOutline } from "react-icons/io5";
 
@@ -15,10 +12,14 @@ import { IoSettingsSharp } from "react-icons/io5";
 import { IoPersonAddOutline } from "react-icons/io5";
 import { FaExchangeAlt } from "react-icons/fa";
 import { MdOutlineLogout } from "react-icons/md";
-import { GrHomeRounded } from "react-icons/gr";
 
 import {useNavigate } from 'react-router-dom';
 import { MdArrowBack } from "react-icons/md";
+
+import { RiNotificationLine } from "react-icons/ri";
+import { TbSmartHome } from "react-icons/tb";
+import { BiMessageSquareDots } from "react-icons/bi";
+import { RiHeartLine } from "react-icons/ri";
 
 
 import { jwtDecode } from "jwt-decode";
@@ -241,22 +242,22 @@ const UserNavbar = () => {
         <div className='userNavSecondDiv' onClick={(e) => e.stopPropagation()}>
           
           <div className='userNavIcon'>
-            <Link to={'/dashboard'} className='link'><GrHomeRounded className='userIcon'/></Link>
+            <Link to={'/dashboard'} className='link'><TbSmartHome className='userIcon'/></Link>
           </div>
 
 
           <div className='userNavIcon'>
-            <Link to={'/favourites'} className='link'><MdFavoriteBorder className='userIcon'/></Link>
+            <Link to={'/favourites'} className='link'><RiHeartLine className='userIcon'/></Link>
           </div>
 
           
           <div className='userNavIcon'>
-            <Link to={'/chats'}><AiOutlineMessage className='userIcon'/></Link>
+            <Link to={'/chats'}><BiMessageSquareDots className='userIcon'/></Link>
             <p></p>
           </div>
           
           <div className='userNavIcon' onClick={openModal}>
-            <Link to={'/dashboard'}><GrNotification className='userIcon'/></Link>
+            <Link to={'/dashboard'}><RiNotificationLine className='userIcon'/></Link>
             <p></p>
           </div>
 

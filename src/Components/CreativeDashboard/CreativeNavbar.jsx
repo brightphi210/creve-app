@@ -4,8 +4,6 @@ import { Link } from 'react-router-dom'
 import logo from './images/Logo2.png'
 import avatar from './images/Avatars1.png'
 
-import { GrNotification } from "react-icons/gr";
-import { AiOutlineMessage } from "react-icons/ai";
 
 import { IoCloseCircleOutline } from "react-icons/io5";
 
@@ -13,8 +11,6 @@ import { IoSettingsSharp } from "react-icons/io5";
 import { IoPersonAddOutline } from "react-icons/io5";
 import { FaExchangeAlt } from "react-icons/fa";
 import { MdOutlineLogout } from "react-icons/md";
-import { GrHomeRounded } from "react-icons/gr";
-import { MdOutlineManageAccounts } from "react-icons/md";
 
 
 import { RiNotificationLine } from "react-icons/ri";
@@ -27,7 +23,6 @@ import {useNavigate } from 'react-router-dom';
 
 import prof from './images/profilePics.png'
 import { jwtDecode } from "jwt-decode";
-import apiEnpoint from '../api/api';
 
 
 
