@@ -1,0 +1,107 @@
+
+
+@import '../variables.scss';
+
+*{@include default}
+
+// ===================== Creative Profile Setting =========
+
+.creativeProfileSettingSection{
+    padding: 100px 8%;
+    background-color: white;
+}
+
+.creativeProfileSectionOne{
+    width: 80%;
+}
+
+
+.creativeEdit{
+    display: flex;
+    align-items: center;
+
+}
+
+.creativeEdit button{
+    margin-left: auto;
+    padding: 10px 30px;
+    background-color: $my-blue;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    cursor: pointer;
+    font-size: 13px;
+}
+
+.creativeEdit span{
+    font-size: 20px;
+    font-weight: bold;
+}
+
+
+.creativeProfilePics{
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+}
+
+
+.creativeProfilePics img{
+    width: 80px;
+}
+
+.creativeVerifiedDiv{
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+.creativeVerifiedDiv span{
+    background-color: $my-blue;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 30px;
+    color: white;
+    font-size: 11px;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.creativeLocate{
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.creativeProfilePics p{
+    font-size: 13px;
+    padding-top: 5px;
+}
+
+
+
+
+
+
+
+
+.creativeSideBar{
+    position: fixed;
+    right: 0;
+    width: 20%;
+    top: 0;
+    padding: 0 30px;
+    padding-top: 100px;
+    background-color: $my-gray;
+    height: 100vh;
+    border-left: rgb(231, 231, 231) solid 1px;
+}
+
+

@@ -21,6 +21,7 @@ import UserDasboardMain from "./Pages/TalentPages/UserDasboardMain";
 import CreativeOnboardCategory from "./Pages/CreativeProfileCreate/CreativeOnboardCategory";
 import CreatingSetting from "./Pages/CreatingSetting";
 import CreativeOnboardAll from "./Pages/CreativeOnboardAll";
+import CreativeProfilePage from "./Pages/CreativeProfilePage";
 
 
 
@@ -52,9 +53,8 @@ function App() {
             <Route path="/creative-settings" element={<CreatingSetting />}></Route>
             <Route path="/creativeProfileCategory" element={<CreativeOnboardCategory />}></Route>
             <Route path="/creative-onboard-all" element={<CreativeOnboardAll />}></Route>
+            <Route path="/creativeProfile" element={<CreativeProfilePage />}></Route>
           </Route>
-
-
         </Routes>
       </BrowserRouter>
     </div>

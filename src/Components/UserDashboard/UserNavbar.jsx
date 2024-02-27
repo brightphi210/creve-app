@@ -43,7 +43,7 @@ const UserNavbar = () => {
   const decoded = jwtDecode(tokentoken.access);
   console.log(decoded.user_id);
 
-  const [isLoading, setIsLoading] = useState(true)
+  const [isLoading, setIsLoading] = useState(false)
 
 
   const openModal = () =>{

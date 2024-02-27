@@ -143,29 +143,6 @@ const CreativeProfileView = () => {
               <p>Port Harcourt, Nigeria</p>
             </div>
 
-            <div>
-              <h3>Work Hours</h3>
-              <div className='openDays'>
-                <p>Monday</p>
-                <p className='time'>9.00am - 7.00pm</p>
-              </div>
-
-              <div className='openDays'>
-                <p>Tuesday</p>
-                <p className='time'>9.00am - 7.00pm</p>
-              </div>
-
-              <div className='openDays'>
-                <p>Wenesday</p>
-                <p className='time'>9.00am - 7.00pm</p>
-              </div>
-
-              <div className='openDays'>
-                <p>Thursday</p>
-                <p className='time'>9.00am - 7.00pm</p>
-              </div>
-              
-            </div>
 
             <div>
               <h3>Physical store location</h3>

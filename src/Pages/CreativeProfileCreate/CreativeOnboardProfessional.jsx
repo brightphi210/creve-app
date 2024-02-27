@@ -23,7 +23,8 @@ const CreativeOnboardProfessional = ({
   selectedImage,
   imageArray,
   selectedSkill,
-  skilsArray,
+  skillsArray,
+  handleSubmit2
 }) => {
 
   const [isSidebarVisible, setSidebarVisible] = useState(false);
@@ -33,6 +34,8 @@ const CreativeOnboardProfessional = ({
     console.log('Click successfull')
   };
 
+
+  // console.log(skilsArray)
   
 
 
@@ -78,7 +81,7 @@ const CreativeOnboardProfessional = ({
                     required/>
                 </div>
 
-                <div>
+                <form>
                     <div style={{position : 'relative'}}>
                       <p >Skills* <span style={{color : 'gray', fontStyle : 'italic'}}>Maximum of 10 skills</span></p>
                       <input 
@@ -93,7 +96,7 @@ const CreativeOnboardProfessional = ({
 
                     <div className='skillMainDiv'>
                       {
-                        skilsArray.map((mySkill, index) => (
+                        skillsArray.map((mySkill, index) => (
                           <div key={index} className='skillDiv'>
                             <div>
                               <span>{mySkill}</span>
@@ -104,7 +107,8 @@ const CreativeOnboardProfessional = ({
                       }
                     </div>
 
-                </div>
+                      {/* <button onClick={handleSubmit2}>Submit</button> */}
+                </form>
 
 
                 <div className='uploadImage'>

@@ -39,7 +39,7 @@ const CreativeNavbar = () => {
   const decoded = jwtDecode(tokentoken.access);
   // console.log(decoded.user_id);
 
-  const [isLoading, setIsLoading] = useState(true)
+  const [isLoading, setIsLoading] = useState(false)
 
 
   const openModal = () =>{
@@ -228,8 +228,8 @@ const CreativeNavbar = () => {
 
 
           
-          <div className='userNavIcon' onClick={openModal}>
-            <Link to={''} className='link'><LuUserCircle className='userIcon'/></Link>
+          <div className='userNavIcon'>
+            <Link to={'/creativeProfile'} className='link'><LuUserCircle className='userIcon'/></Link>
           </div>
 
 

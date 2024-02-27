@@ -14,9 +14,10 @@ const CreativeOnboardAll = () => {
     const [imageArray, setImageArray] = useState([]);
 
     const [selectedSkill, setSelectedSkill] = useState('');
-    const [skilsArray, setSkillsArray] = useState([]); 
+    const [skillsArray, setSkillsArray] = useState([]); 
 
-    console.log(skilsArray)
+    // console.log(skilsArray)
+    // console.log(selectedSkill)
 
 
   const handleImageChange = (e) => {
@@ -52,7 +53,7 @@ const CreativeOnboardAll = () => {
 
 
   const handleRemoveSkill= (index) => {
-    const newArray = [...skilsArray];
+    const newArray = [...skillsArray];
     newArray.splice(index, 1);
     setSkillsArray(newArray);
   };
@@ -68,7 +69,6 @@ const CreativeOnboardAll = () => {
 
 
     const [formData, setFormData] = useState({
-        skills: [],
         display_name: "",
         summary_of_profile: "",
         location: "",
@@ -80,6 +80,8 @@ const CreativeOnboardAll = () => {
         starting_price: 0,
         
     })
+
+
 
 
     const handleAllChange = (e) => {
@@ -128,7 +130,45 @@ const CreativeOnboardAll = () => {
           console.error('Error updating profile picture:', error);
           setIsLoading(false)
         }
-      };
+    };
+
+
+
+
+    const skillUrl = `https://creve.onrender.com/auth/skills/${decoded.profile_id}/`
+
+    const handleSubmit2 = async (e) => {
+      e.preventDefault();
+
+      setIsLoading(true);
+
+      const formProfileData = new FormData();
+      formProfileData.append('skill_list', skillsArray);
+  
+      try {
+        const response = await fetch(skillUrl, {
+          method: 'POST',
+          headers: {
+            "Authorization": `Bearer ${authTokens.access}`
+          },
+          body: formProfileData,
+
+        });
+  
+        if (response.ok || response.status === 200 ) {
+          setSuccessMessage('Profile Setup Successfull')
+          setIsLoading(false)
+          console.log('Profile picture updated!');
+          
+        } else {
+          console.error('Failed to update profile picture');
+          setIsLoading(false)
+        }
+      } catch (error) {
+        console.error('Error updating profile picture:', error);
+        setIsLoading(false)
+      }
+  };
 
 
 
@@ -148,6 +188,7 @@ const CreativeOnboardAll = () => {
                 formData={formData} 
                 setFormData={setFormData} 
                 onSubmit={handleSubmit} 
+                handleSubmit2 = {handleSubmit2}
                 onChange={handleAllChange}
                 handleImageChange={handleImageChange}
                 handleSkillChange={handleSkillChange}
@@ -158,11 +199,11 @@ const CreativeOnboardAll = () => {
                 selectedImage = {selectedImage}
                 imageArray ={imageArray}
                 selectedSkill ={selectedSkill}
-                skilsArray={skilsArray}
                 setSelectedImage={setSelectedImage}
                 setImageArray={setImageArray}
                 setSelectedSkill={setSelectedSkill}
                 setSkillsArray={setSkillsArray}
+                skillsArray={skillsArray}
                 
                 
             />
