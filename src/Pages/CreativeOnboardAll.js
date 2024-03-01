@@ -20,6 +20,9 @@ const CreativeOnboardAll = () => {
     // console.log(selectedSkill)
 
 
+  
+
+
   const handleImageChange = (e) => {
     const image = e.target.files[0];
     setSelectedImage(image);
@@ -37,12 +40,23 @@ const CreativeOnboardAll = () => {
     setSelectedImage(null);
   };
 
+  const [skillList, setSkillList] = useState({ skills: [] });
 
   const handleSkillSubmit = (e) => {
     e.preventDefault();
-    setSkillsArray((prevArray) => [...prevArray, selectedSkill]);
+    setSkillList(prevState => ({
+      skills: [...prevState.skills, selectedSkill]
+    }));
     setSelectedSkill('');
   };
+
+  // const handleSkillSubmit = (e) => {
+  //   e.preventDefault();
+  //   setSkillsArray((prevArray) => [...prevArray, selectedSkill]);
+  //   setSelectedSkill('');
+  // };
+  
+
 
 
   const handleRemoveImage = (index) => {
@@ -133,6 +147,11 @@ const CreativeOnboardAll = () => {
     };
 
 
+    const [inputData, setInputData] = useState('');
+
+    const handleInputChange = (event) => {
+      setInputData(event.target.value);
+    };
 
 
     const skillUrl = `https://creve.onrender.com/auth/skills/${decoded.profile_id}/`
@@ -140,20 +159,27 @@ const CreativeOnboardAll = () => {
     const handleSubmit2 = async (e) => {
       e.preventDefault();
 
-      setIsLoading(true);
+      const skillData = new FormData();
+      skillList.skills.forEach(skill => {
+        skillData.append('skill_list', skill);
+      });
 
-      const formProfileData = new FormData();
-      formProfileData.append('skill_list', skillsArray);
-  
+      
+
+      setIsLoading(true);
       try {
         const response = await fetch(skillUrl, {
           method: 'POST',
           headers: {
+            // 'Content-Type': 'application/json',
             "Authorization": `Bearer ${authTokens.access}`
           },
-          body: formProfileData,
+          body: skillData,
 
         });
+
+        console.log(skillData)
+        console.log(skillList)
   
         if (response.ok || response.status === 200 ) {
           setSuccessMessage('Profile Setup Successfull')
@@ -204,8 +230,8 @@ const CreativeOnboardAll = () => {
                 setSelectedSkill={setSelectedSkill}
                 setSkillsArray={setSkillsArray}
                 skillsArray={skillsArray}
-                
-                
+                inputData={inputData}
+                handleInputChange={handleInputChange}
             />
         }
     }

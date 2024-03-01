@@ -24,7 +24,9 @@ const CreativeOnboardProfessional = ({
   imageArray,
   selectedSkill,
   skillsArray,
-  handleSubmit2
+  handleSubmit2,
+  handleInputChange,
+  inputData
 }) => {
 
   const [isSidebarVisible, setSidebarVisible] = useState(false);
@@ -88,6 +90,8 @@ const CreativeOnboardProfessional = ({
                         type="text" 
                         placeholder='E.g. Java'
                         required
+                        
+                        
                         value={selectedSkill}
                         onChange={handleSkillChange}
                       />
@@ -107,7 +111,7 @@ const CreativeOnboardProfessional = ({
                       }
                     </div>
 
-                      {/* <button onClick={handleSubmit2}>Submit</button> */}
+                      <button onClick={handleSubmit2}>Submit</button>
                 </form>
 
 

@@ -12,7 +12,7 @@
 }
 
 .creativeProfileSectionOne{
-    width: 80%;
+    width: 82%;
 }
 
 
@@ -24,7 +24,7 @@
 
 .creativeEdit button{
     margin-left: auto;
-    padding: 10px 30px;
+    padding: 10px 20px;
     background-color: $my-blue;
     color: white;
     border: none;
@@ -37,7 +37,7 @@
 }
 
 .creativeEdit span{
-    font-size: 20px;
+    font-size: 16px;
     font-weight: bold;
 }
 
@@ -45,6 +45,7 @@
 .creativeProfilePics{
     margin-top: 10px;
     display: flex;
+    gap: 30px;
     align-items: center;
     padding: 30px;
     border-radius: 10px;
@@ -86,7 +87,137 @@
 }
 
 
+.creativeProfileInfo{
+    display: flex;
+    gap: 30px;
+    margin-top: 30px;
+}
 
+.creativeProfileLeft{
+    width: 40%;
+    box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+    padding: 30px;
+    border-radius: 10px;
+}
+
+
+.creativeProfileLeft h2{
+    font-size: 16px;
+    font-weight: 400;
+}
+
+
+.creativeProDiv h3{
+    font-size: 15px;
+    padding-top: 20px;
+}
+
+.creativeProDiv p{
+    display: flex;
+    padding-top: 5px;
+    gap: 5px;
+    align-items: center;
+    font-size: 13px;
+}
+
+.creativeProfileRight{
+    width: 60%;
+    box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+    padding: 30px;
+    border-radius: 10px;
+}
+
+.creativeProfileRight h2{
+    font-size: 16px;
+    font-weight: 400;
+}
+
+.creativeProfileSkill{
+    display: flex;
+    align-items: center;
+    padding-top: 20px;
+}
+
+.creativeProfileSkill h3{
+    font-size: 20px;
+}
+
+.creativeProfileSkill div{
+    margin-left: auto;
+}
+
+
+.creativeProfileWeb p{
+    padding: 20px 0;
+    font-size: 13px;
+}
+
+
+.creativeProfileWeb ul{
+    display: flex;
+    gap: 10px;
+}
+
+
+.container {
+    display: flex !important;
+    position: relative;
+    padding-left: 0;
+}
+
+.creativeProfileWeb ul li{
+    list-style: none;
+    background-color: white;
+    padding: 6px 20px;
+    border: solid 1px gray;
+    border-radius: 5px;
+}
+
+.creativeProfileSetImageDiv{
+    width: 100%;
+    height: 300px;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+.creativeProfileSetImageDiv img{
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+}
+
+
+.creativeProfileSetGenImageDiv{
+    display: flex;
+    gap: 10px;
+}
+
+.creativeProfileSetGenImageDiv div{
+    width: 100%;
+    border-radius: 5px;
+}
+
+.creativeProfileSetGenImageDiv div img{
+    width: 100%;
+    border-radius: 5px;
+}
+
+.creativeProfileDiv {
+    text-align: center;
+    padding: 30px;
+}
+
+.creativeReviewProfile img{
+    width: 40px;
+}
+
+.creativeReviewProfile{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    justify-content: center;
+    padding-bottom: 10px;
+}
 
 
 
@@ -95,7 +226,7 @@
 .creativeSideBar{
     position: fixed;
     right: 0;
-    width: 20%;
+    width: 18%;
     top: 0;
     padding: 0 30px;
     padding-top: 100px;
@@ -104,4 +235,51 @@
     border-left: rgb(231, 231, 231) solid 1px;
 }
 
+.creativeSideBar h2{
+    font-size: 20px;
+    text-align: left;
+    padding-bottom: 30px;
+}
 
+
+.creativeSideBar {
+    text-align: center;
+}
+
+.creativeSideBar img{
+    width: 80%;
+}
+
+.creativeProDo{
+    text-align: left;
+    padding-top: 30px;
+}
+
+.creativeProDo h3{
+    font-size: 17px;
+}
+
+.creativeProDo h4{
+    padding-top: 10px;
+}
+
+
+.creativeProDo p{
+    // font-size: 13px;
+    padding-top: 20px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+}
+
+
+.creativeProDo p:hover{
+    transform: scale(1.04);
+    transition: all ease 0.5s;
+}
+
+.react-multiple-carousel__arrow {
+    background: rgba(0, 0, 0, 0.2);
+    bottom: 20px;
+}

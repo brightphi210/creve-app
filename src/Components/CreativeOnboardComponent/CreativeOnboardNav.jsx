@@ -19,15 +19,9 @@ import prof from './profilePics.png'
 import { jwtDecode } from "jwt-decode";
 
 import { VscMenu } from "react-icons/vsc";
-import { GrClose } from "react-icons/gr";
-import apiEnpoint from '../api/api';
-
 
 
 const CreativeOnboardNav = ({onclick}) => {
-
-
-
 
   const [show, setShow] = useState(false)
   const [show2, setShow2] = useState(false)
@@ -40,7 +34,7 @@ const CreativeOnboardNav = ({onclick}) => {
   const decoded = jwtDecode(tokentoken.access);
   console.log(decoded.user_id);
 
-  const [isLoading, setIsLoading] = useState(true)
+  const [isLoading, setIsLoading] = useState(false)
 
 
   const openModal = () =>{
