@@ -10,18 +10,22 @@ import { GrLanguage } from "react-icons/gr";
 import { BsWhatsapp } from "react-icons/bs";
 import { FaRegAddressBook } from "react-icons/fa6";
 import bigImage from './images/bigImage.png'
-import { FiEdit3 } from "react-icons/fi";
+import { FaRegEdit } from "react-icons/fa";
 
 import profComplete from './images/profComplete.png'
+
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 import FrequentQuestion from './CreativeModalUpdate/FrequentQuestion';
+import WorkType from './CreativeModalUpdate/WorkTypeSocialLocation';
 
-const CreativeProfileSetting = () => {
+const CreativeProfileSetting = ({showSideBar, setShowSideBar}) => {
 
-
+  AOS.init();
   const responsive = {
     desktop: {
       breakpoint: { max: 3000, min: 1024 },
@@ -50,6 +54,20 @@ const CreativeProfileSetting = () => {
   const closeModal = () =>{
     setShowModal(false);
   }
+
+
+  const [showAllModal, setShowAllModal] = useState(true)
+
+  const openAllModal = () =>{
+    setShowAllModal(true);
+  }
+
+  const closeAllModal = () =>{
+    setShowAllModal(false);
+  }
+
+
+
 
  
   return (
@@ -263,25 +281,29 @@ const CreativeProfileSetting = () => {
         </div>
 
       </div>
-
-      <div className='creativeSideBar'>
-        <h2>Profile Completion</h2>
-
-        <div>
-          <img src={profComplete} alt="" />
-        </div>
-
-        <div className='creativeProDo'>
-          <h3>Profile To-Do</h3>
-          <h4>Click on each to edit</h4>
-          <p onClick={openModal}><FiEdit3 />Frequently Asked Question</p>
-          <p><FiEdit3 /> Work Type</p>
-          <p><FiEdit3 /> Social Media</p>
-          <p><FiEdit3 /> Location</p>
-        </div>
-      </div>
+      
+      {showSideBar && (
+             <div className={ 'creativeSideBar'} data-aos="fade-left">
+             <h2>Profile Completion</h2>
+     
+             <div>
+               <img src={profComplete} alt="" />
+             </div>
+     
+             <div className='creativeProDo'>
+               <h3>Profile To-Do</h3>
+               <h4>Click on each to edit</h4>
+               <p onClick={openModal}><FaRegEdit />Frequently Asked Question</p>
+               <p onClick={openAllModal}><FaRegEdit /> Work Type</p>
+               <p onClick={openAllModal}><FaRegEdit /> Social Media</p>
+               <p onClick={openAllModal}><FaRegEdit /> Location</p>
+             </div>
+           </div>
+      )}
+ 
 
       <FrequentQuestion openModal={openModal} showModal={showModal} closeModal={closeModal}/>
+      <WorkType openAllModal={openAllModal} showAllModal={showAllModal} closeAllModal={closeAllModal}/>
     </div>
   )
 }

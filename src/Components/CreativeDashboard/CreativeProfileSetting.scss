@@ -235,6 +235,7 @@
     border-left: rgb(231, 231, 231) solid 1px;
 }
 
+
 .creativeSideBar h2{
     font-size: 20px;
     text-align: left;
@@ -265,7 +266,6 @@
 
 
 .creativeProDo p{
-    // font-size: 13px;
     padding-top: 20px;
     display: flex;
     align-items: center;
@@ -275,7 +275,7 @@
 
 
 .creativeProDo p:hover{
-    transform: scale(1.04);
+    transform: scale(0.95);
     transition: all ease 0.5s;
 }
 

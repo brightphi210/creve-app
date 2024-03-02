@@ -20,13 +20,15 @@ import { BiMessageSquareDots } from "react-icons/bi";
 
 import {useNavigate } from 'react-router-dom';
 
+import { SlMenu } from "react-icons/sl";
+
 
 import prof from './images/profilePics.png'
 import { jwtDecode } from "jwt-decode";
 
 
 
-const CreativeNavbar = () => {
+const CreativeNavbar = ({handleShowSideBar}) => {
 
   const [show, setShow] = useState(false)
   const [show2, setShow2] = useState(false)
@@ -241,12 +243,18 @@ const CreativeNavbar = () => {
               {isLoading === false ? <img src={profilePics} alt="" width={30} className='myOnTop'/>  : '' }
             </div>
 
+
             <div className='nameEmail'>
               <p className=''>{fullname}</p>
               {/* <p className=''>{decoded.email}</p> */}
             </div>
           </div>
+
+
+          <p onClick={handleShowSideBar}><SlMenu /></p>
         </div>
+
+
 
 
 

@@ -5,6 +5,8 @@
 
 // =============MODAL UPDATE ===============
 
+
+// ================ FREQUENT =================
 .frequentModal{
     display: flex;
     position: fixed;
@@ -20,10 +22,12 @@
 
 .frequestModalContent{
     background: white;
-    position: relative;
     padding: 30px;
     width: 40%; 
-    max-height: 80vh;
+    height: 75vh;
+    border-radius: 10px;
+    z-index: 100;
+    
 }
 
 .frequentClose {
@@ -42,7 +46,12 @@
     align-items: center;
 }
 
-.frequestAdd button{
+
+.frequestAdd h3{
+    font-weight: 400;
+}
+
+.frequestAdd span{
     display: flex;
     align-items: center;
     gap: 5px;
@@ -57,6 +66,11 @@
 }
 
 
+.frequestInputPart{
+    padding-top: 20px;
+    
+}
+
 .frequestInputPart input, textarea{
     width: 100%;
     display: block;
@@ -64,6 +78,8 @@
     margin-top: 10px;
     border: rgb(193, 193, 193) 1px solid;
     border-radius: 5px;
+    outline: none;
+    font-size: 15px;
 }
 
 .frequestInputPart textarea{
@@ -73,7 +89,210 @@
     min-height: 130px;
 }
 
+
+.renderedText{
+    overflow-y: scroll;
+    height: 250px;
+
+}
 .frequestRender{
+    border: rgb(193, 193, 193) 1px solid;
+    padding: 20px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+}
+
+
+.editDiv{
+    display: flex;
+    gap: 30px;
+    align-items: center;
+    padding-bottom: 10px;
+}
+
+.editDiv div{
+    margin-left: auto;
+    display: flex;
+    // align-items: center;
+    gap: 10px;
+}
+
+.editBtn{
+    color: $my-blue;
+    font-size: 20px;
+    padding: 0;
+    cursor: pointer;
+}
+
+.deleteBtns{
+    color: orangered;
+    font-size: 20px;
+    padding: 0;
+    cursor: pointer;
+}
+
+
+
+.frequestRender form{
+    padding-top: 10px;
+}
+
+
+.frequestRender form input, textarea{
+    border: solid 1px rgb(197, 197, 197);
+    padding: 20px;
+    width: 100%;
+    font-size: 15px;
+    border-radius: 5px;
+    outline: none;
+}
+
+.frequestRender textarea{
+    max-height: 100px;
+    min-height: 100px;
+    max-width: 100%;
+    min-width: 100%;
+}
+
+.updateBtns{
+    width: 20%;
+    background-color: gainsboro;
+    color: black;
+    border: none;
+    padding: 10px;
+    font-size: 15px;
+    margin-top: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+
+.updateBtn{
+    width: 100%;
+    background-color: $my-blue;
+    color: white;
+    border: none;
+    padding: 15px;
+    font-size: 15px;
+    margin-top: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.updateDisableBtn{
+    width: 100%;
+    background-color: rgb(80, 80, 103);
+    color: white;
+    border: none;
+    padding: 15px;
+    font-size: 15px;
+    margin-top: 10px;
+    border-radius: 5px;
+}
+
+
+
+// ================= WORK TYPE ==================
+
+.workTypeAndAllModal{
+    display: flex;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.3);
+    align-items: center;
+    justify-content: center;
+    // z-index: 100;
+}
+
+.workTypeAndAllModalContent{
+    background: white;
+    padding: 30px;
+    width: 40%; 
+    height: 75vh;
+    border-radius: 10px;
+    z-index: 100;
     
 }
+
+.workTypeAndAllModalContent form{
+    padding-top: 20px;
+}
+
+
+
+
+.mySelect {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    text-indent: 1px;
+    text-overflow: '';
+}
+
+.custom-dropdown {
+    position: relative;
+    display: inline-block;
+    width: 100%;
+}
+
+.custom-dropdown select {
+    padding: 15px;
+    font-size: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #fff;
+    width: 100%;
+    outline: none;
+    cursor: pointer;
+}
+
+/* Style the dropdown arrow */
+.custom-dropdown select::after {
+    content: '\25BC';
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+    font-size: 15px;
+}
+
+/* Style options */
+.custom-dropdown select option {
+    background-color: #fff;
+}
+
+
+.whatsAppLocationDiv{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    gap: 30px;
+}
+
+
+.whatsappDiv{
+    padding-top: 20px;
+    width: 100%;
+}
+
+.whatsappDiv h3{
+    margin-bottom: 5px;
+    font-size: 15px;
+    font-weight: 500;
+}
+
+.whatsappDiv input{
+    border: 1px solid #ccc;
+    padding: 15px;
+    width: 100%;
+    font-size: 15px;
+    border-radius: 5px;
+    outline: none;
+}
+
 
