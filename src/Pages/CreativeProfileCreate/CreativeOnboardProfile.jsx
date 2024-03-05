@@ -37,8 +37,20 @@ const CreativeOnboardProfile = ({formData, setFormData, onSubmit, onChange}) => 
                   <input 
                     type="text" 
                     placeholder='Enter Display Name e.g Joe Branding.'
-                    name='summary_of_profile'
-                    value={formData.summary_of_profile}
+                    name='display_name'
+                    value={formData.display_name}
+                    onChange={onChange}
+                    required/>
+                </div>
+
+
+                <div>
+                  <p >Phone Number*</p>
+                  <input 
+                    type="text" 
+                    placeholder='Enter Phone Number e.g 08094422887'
+                    name='phone_number'
+                    value={formData.phone_number}
                     onChange={onChange}
                     required/>
                 </div>
@@ -67,8 +79,8 @@ const CreativeOnboardProfile = ({formData, setFormData, onSubmit, onChange}) => 
                 <div>
                   <p >Whatsapp Link*</p>
                   <input type="text" 
-                    name='medium_url'
-                    value={formData.medium_url}
+                    name='whatsapp_link'
+                    value={formData.whatsapp_link}
                     onChange={onChange}
                     placeholder='Enter Whatsapp link e.g https://whatsapplink.com' 
                     required/>

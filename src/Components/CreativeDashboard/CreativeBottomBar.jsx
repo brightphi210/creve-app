@@ -26,7 +26,7 @@ const CreativeBottomBar = ({openModal}) => {
                 </div>
                 
                 <div className='userNavIcon'>
-                    <Link to={''} className='link'><LuUserCircle className='userIcon'/></Link>
+                    <Link to={'/creativeProfile'} className='link'><LuUserCircle className='userIcon'/></Link>
                 </div>
             </div>
       </div>

@@ -22,12 +22,31 @@
 
 }
 
-.creativeEdit button{
+.creativeEdit div{
     margin-left: auto;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.creativeEdit button{
     padding: 10px 20px;
     background-color: $my-blue;
     color: white;
     border: none;
+    border-radius: 5px;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    cursor: pointer;
+    font-size: 13px;
+}
+
+.creativeEdit .creativeEditBtn2{
+    padding: 10px 20px;
+    background-color: white;
+    color: $my-blue;
+    border: solid $my-blue 1px;
     border-radius: 5px;
     display: flex;
     gap: 10px;
@@ -53,8 +72,27 @@
 }
 
 
-.creativeProfilePics img{
+
+
+
+.myCreativePics{
     width: 80px;
+    height: 80px;
+    overflow: hidden;
+    border-radius: 50%;
+  
+}
+
+.myCreativePics div{
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    margin: auto;
+    text-align: center;
+}
+
+.creativeProfilePics img{
+    width: 150px;
 }
 
 .creativeVerifiedDiv{
@@ -86,6 +124,67 @@
     padding-top: 5px;
 }
 
+@media only screen and (min-width: $small-One) and (max-width: $medium-Two) {
+    .creativeProfileSettingSection{
+        padding: 100px 5%;
+    }
+    
+    .creativeEdit{
+        display: block;    
+    }
+
+    .creativeEdit h2{
+        font-size: 20px;
+        font-weight: 500;   
+    }
+
+    .creativeEdit div{
+        padding-top: 10px;
+    }
+
+    .creativeEdit div button{
+        padding: 6px 12px !important;
+        font-size: 12px;
+    }
+
+    .creativeProfileSectionOne{
+        width: 100%;
+        
+    }
+
+
+    .creativeProfilePics{
+        padding: 20px;
+        margin-top: 30px;
+    }
+
+    .creativeVerifiedDiv{
+        display: flex;
+    }
+
+
+    .creativeVerifiedDiv h2{
+        font-size: 16px;
+        width: 100%;
+    }
+
+    .creativeVerifiedDiv span{
+        width: 50%;
+        margin: 0;
+        margin: 5px 0;
+        font-size: 8px;
+    }
+
+    .creativeVerifiedDiv p{
+        font-size: 12px;
+    }
+        
+
+}
+
+
+
+// =============== Creative Profiel Info =============
 
 .creativeProfileInfo{
     display: flex;
@@ -114,10 +213,10 @@
 
 .creativeProDiv p{
     display: flex;
-    padding-top: 5px;
+    padding-top: 10px;
     gap: 5px;
     align-items: center;
-    font-size: 13px;
+    font-size: 15px;
 }
 
 .creativeProfileRight{
@@ -146,10 +245,22 @@
     margin-left: auto;
 }
 
-
 .creativeProfileWeb p{
     padding: 20px 0;
     font-size: 13px;
+}
+
+
+.creativeProfileWeb div{
+    display: flex;
+    padding: 20px 0;
+    align-items: center;
+    gap: 10px;
+}
+.creativeProfileWeb div p{
+    font-size: 13px;
+    color: rgb(109, 0, 212);
+    padding: 0;
 }
 
 
@@ -221,8 +332,102 @@
 
 
 
+@media only screen and (min-width: $small-One) and (max-width: $medium-Two) {
+    .creativeProfileInfo{
+        display: block;
+    }
+    
+    .creativeProfileLeft{
+        padding: 20px;
+        width: 100%;
+        margin-bottom: 20px;
+    }
 
 
+    .creativeProDiv h3{
+        font-size: 15px;
+    }
+
+
+    .creativeProDiv p{
+        font-size: 12px;
+    }
+
+
+    .creativeProfileRight{
+        padding: 20px;
+        width: 100%;
+    }
+
+    .creativeProfileSkill{
+        display: block;
+    }
+
+    .creativeProfileSkill div{
+        padding-top: 10px;
+    }
+
+    .creativeProfileWeb div{
+        display: block;
+    }
+
+    .creativeProfileWeb ul{
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+
+    .creativeProfileSetImageDiv{
+        width: 100%;
+        height: 200px;
+        overflow: hidden;
+    }
+
+
+    .creativeProfileSetImageDiv img{
+        width: 100%;
+    }
+
+
+    .creativeProfileSetGenImageDiv{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .creativeProfileSetGenImageDiv img{
+        border-radius: 10px;
+    }
+
+
+
+
+    .creativeReviewDiv{
+        padding-top: 30px;
+    }
+
+
+    .creativeProfileDiv{
+        padding: 20px 0;
+    }
+
+    .creativeReviewProfile{
+        gap: 10px;
+    }
+
+
+    .creativeReviewName{
+        text-align: left;
+    }
+
+    .creativeProfileDiv p{
+        font-size: 12px;
+    }
+}
+
+
+
+
+// ===================== creative Side bar =================
 .creativeSideBar{
     position: fixed;
     right: 0;
@@ -233,6 +438,7 @@
     background-color: $my-gray;
     height: 100vh;
     border-left: rgb(231, 231, 231) solid 1px;
+    z-index: 3;
 }
 
 
@@ -279,7 +485,55 @@
     transition: all ease 0.5s;
 }
 
-.react-multiple-carousel__arrow {
-    background: rgba(0, 0, 0, 0.2);
-    bottom: 20px;
+// .react-multiple-carousel__arrow {
+//     background: rgba(0, 0, 0, 0.2);
+//     bottom: 20px;
+// }
+
+
+.loader1 {
+    width: 20px;
+    height: 20px;
+    border: 2px solid #FFF;
+    border-bottom-color: $my-blue;
+    border-radius: 50%;
+    display: inline-block;
+    box-sizing: border-box;
+    animation: rotation 1s linear infinite;
+    }
+
+    @keyframes rotation {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+} 
+
+.dashLoader{
+
+    display: flex;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.3);
+    align-items: center;
+    justify-content: center;
+    z-index: 3;
+
 }
+
+
+
+@media only screen and (min-width: $small-One) and (max-width: $medium-Two) {
+    .creativeSideBar{
+        display: none;
+    }
+
+}
+
+
+

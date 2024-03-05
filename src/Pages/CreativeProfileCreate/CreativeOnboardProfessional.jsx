@@ -66,8 +66,8 @@ const CreativeOnboardProfessional = ({
                   <p >Summary Of Profile*</p>
                   <input type="Full" 
                     placeholder='E.g. Frontend Developer with  React'
-                    name='display_name'
-                    value={formData.display_name}
+                    name='summary_of_profile'
+                    value={formData.summary_of_profile}
                     onChange={onChange}
                     required/>
                 </div>

@@ -1,5 +1,5 @@
-import React, { useState } from 'react'
-import profImage from './images/Avatars1.png'
+import React, { useState, useLayoutEffect } from 'react'
+import prof from './images/profilePics.png'
 import './CreativeProfileSetting.scss'
 import { HiStar } from "react-icons/hi2";
 import { RiVerifiedBadgeFill } from "react-icons/ri";
@@ -8,11 +8,14 @@ import { CiEdit } from "react-icons/ci";
 import { MdOutlineWorkspaces } from "react-icons/md";
 import { GrLanguage } from "react-icons/gr";
 import { BsWhatsapp } from "react-icons/bs";
-import { FaRegAddressBook } from "react-icons/fa6";
+import { CgFileDocument } from "react-icons/cg";
 import bigImage from './images/bigImage.png'
 import { FaRegEdit } from "react-icons/fa";
+import { MdAddCircleOutline } from "react-icons/md";
+import { jwtDecode } from "jwt-decode";
 
 import profComplete from './images/profComplete.png'
+import { Link } from 'react-router-dom';
 
 import AOS from 'aos';
 import 'aos/dist/aos.css';
@@ -22,6 +25,7 @@ import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 import FrequentQuestion from './CreativeModalUpdate/FrequentQuestion';
 import WorkType from './CreativeModalUpdate/WorkTypeSocialLocation';
+import CreativeBottomBar from './CreativeBottomBar';
 
 const CreativeProfileSetting = ({showSideBar, setShowSideBar}) => {
 
@@ -56,7 +60,7 @@ const CreativeProfileSetting = ({showSideBar, setShowSideBar}) => {
   }
 
 
-  const [showAllModal, setShowAllModal] = useState(true)
+  const [showAllModal, setShowAllModal] = useState(false)
 
   const openAllModal = () =>{
     setShowAllModal(true);
@@ -67,28 +71,89 @@ const CreativeProfileSetting = ({showSideBar, setShowSideBar}) => {
   }
 
 
+  let [authTokens, setAuthTokens] = useState(()=> localStorage.getItem('authTokens') ? JSON.parse(localStorage.getItem('authTokens')) : null)
+
+  const decoded = jwtDecode(authTokens.access);
+
+  const [userData, setUserData] = useState([])
+  const [isLoading, setIsLoading] = useState(true)
+  const profileUrl = `https://creve.onrender.com/auth/creativeprofile/${decoded.profile_id}/`
 
 
- 
+  const getUserProfile = async ()=>{
+    try {
+      const response = await fetch(profileUrl,{
+        method: 'GET',
+        headers : {
+          'Authorization' : `Bearer ${authTokens.access}`,
+          'Content-Type':'Application/json'
+        },
+      })
+
+      setIsLoading(false)
+      const data = await response.json()
+      setUserData(data)
+
+    } catch (error) {
+      console.log(error)
+      setIsLoading(false)
+    }
+  }
+
+
+  useLayoutEffect(() => {
+    getUserProfile()
+  },[])
+
+
+  console.log(userData)
+
+
+  
+  
   return (
     <div className='creativeProfileSettingSection'>
+
+      {isLoading && (
+        <div className='dashLoader'>
+          <div className='dashLoaderContent'>
+            <span class="loader1"></span>
+          </div>
+        </div>
+      )}
+
       <div className='creativeProfileSectionOne'>
 
         <div className='creativeEdit'>
           <h2>My Profile</h2>
-          <button><span><CiEdit /></span>Edit Profile</button>
+          <div>
+            <button onClick={openAllModal}><span><CiEdit /></span>Edit Profile</button>
+            <button onClick={openModal} className='creativeEditBtn2'><span><MdAddCircleOutline /></span>Add FAQ</button>
+          </div>
         </div>
 
         <div className='creativeProfilePics'>
-          <img src={profImage}alt="" />
+          <div className='myCreativePics'>
+            <div>
+
+              {isLoading ? (
+                
+                <img src={prof} alt="" width={80} height={80}/>
+              ) : (
+
+              <img src={userData.profile_pics}alt="" />
+              )}
+
+            </div>
+          </div>
           <div>
             <div className='creativeVerifiedDiv'>
-              <h2>Cassie Daniels </h2>
+              <h2>{userData.display_name}</h2>
               <span><RiVerifiedBadgeFill />verified</span>
             </div>
             <div>
               <p><HiStar /><HiStar />4.8/5.0 (12 reviews)</p>
-              <p className='creativeLocate'><GrLocation /> Port Harcourt, Nigeria</p>
+              <p className='creativeLocate'><GrLocation /> {userData.location}</p>
             </div>
           </div>
         </div>
@@ -104,19 +169,19 @@ const CreativeProfileSetting = ({showSideBar, setShowSideBar}) => {
 
             <div className='creativeProDiv'>
               <h3>Location</h3>
-              <p><GrLocation />Port Harcourt, Nigeria</p>
+              <p><GrLocation />{userData.location}</p>
             </div>
 
             <div className='creativeProDiv'>
               <h3>Language</h3>
-              <p><GrLanguage />English</p>
+              <p><GrLanguage />{userData.language}</p>
             </div>
 
 
             <div className='creativeProDiv'>
               <h3>Link</h3>
-              <p><BsWhatsapp />Whatsapp</p>
-              <p><FaRegAddressBook />Resume</p>
+              <Link to={userData.whatsapp_link}><p><BsWhatsapp />Whatsapp</p></Link>
+              <Link to={userData.resume_link}><p><CgFileDocument />Resume</p></Link>
             </div>
 
           </div>
@@ -127,19 +192,22 @@ const CreativeProfileSetting = ({showSideBar, setShowSideBar}) => {
               <h2>Details</h2>
 
               <div className='creativeProfileSkill'>
-                <h3>Frontend Developer JavaScript and React</h3>
+                <h3>{userData.summary_of_profile}</h3>
                 <div>
-                  <h4>#20,000</h4>
+                  <h4>&#8358;{userData.starting_price}</h4>
                   <p>Starting Price</p>
                 </div>
               </div>
 
 
               <div className='creativeProfileWeb'>
-                <p>Website Portfolio</p>
+                <div>
+                  <span>Website: </span>
+                  <Link to={userData.website_link}><p>{userData.website_link}</p></Link>
+                </div>
 
                 <ul>
-                  <li>Web development</li>
+                  <li>Website dev</li>
                   <li>JavaScript</li>
                   <li>React</li>
                   <li>HTML</li>
@@ -148,9 +216,7 @@ const CreativeProfileSetting = ({showSideBar, setShowSideBar}) => {
 
 
                 <p>
-                  Hi, I’m Cassie, Lorem ipsum dolor sit amet, 
-                  consectetur adipiscing elit, sed do eiusmod 
-                  tempor incididunt ut labore et dolore magnaex ea commodo consequat.
+                  <b>Bio: </b>{userData.about}
                 </p>
               </div>
 
@@ -215,7 +281,7 @@ const CreativeProfileSetting = ({showSideBar, setShowSideBar}) => {
               </div>
 
 
-              <div>
+              <div className='creativeReviewDiv'>
                 <h2>Reviews</h2>
 
                 <div>
@@ -252,11 +318,11 @@ const CreativeProfileSetting = ({showSideBar, setShowSideBar}) => {
 
                       <div className='creativeReviewProfile'>
                           <div>
-                            <img src={profImage} alt="" />
+                            <img src={prof} alt="" />
                           </div>
 
-                          <div>
-                            <p>Jane Doe</p>
+                          <div className='creativeReviewName'>
+                            <h3>Jane Doe</h3>
                             <p><HiStar /><HiStar />5.0</p>
                           </div>
                       </div>
@@ -281,7 +347,7 @@ const CreativeProfileSetting = ({showSideBar, setShowSideBar}) => {
         </div>
 
       </div>
-      
+
       {showSideBar && (
              <div className={ 'creativeSideBar'} data-aos="fade-left">
              <h2>Profile Completion</h2>
@@ -304,6 +370,9 @@ const CreativeProfileSetting = ({showSideBar, setShowSideBar}) => {
 
       <FrequentQuestion openModal={openModal} showModal={showModal} closeModal={closeModal}/>
       <WorkType openAllModal={openAllModal} showAllModal={showAllModal} closeAllModal={closeAllModal}/>
+
+
+      <CreativeBottomBar openModal={openModal}/>
     </div>
   )
 }

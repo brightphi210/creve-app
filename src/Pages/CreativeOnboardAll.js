@@ -83,13 +83,14 @@ const CreativeOnboardAll = () => {
 
 
     const [formData, setFormData] = useState({
+        phone_number : "",
         display_name: "",
         summary_of_profile: "",
         location: "",
         language: "",
         about : "",
         website_link: "",
-        medium_url: "",
+        whatsapp_link: "",
         resume_link: "",
         starting_price: 0,
         
@@ -112,13 +113,15 @@ const CreativeOnboardAll = () => {
         setIsLoading(true);
 
         const formProfileData = new FormData();
+        formProfileData.append('phone_number', formData.phone_number);
         formProfileData.append('display_name', formData.display_name);
         formProfileData.append('summary_of_profile', formData.summary_of_profile);
         formProfileData.append('language', formData.language);
         formProfileData.append('location', formData.location);
-        formProfileData.append('resume_link', formData.resume_link);
         formProfileData.append('about', formData.about);
-        formProfileData.append('medium_url', formData.medium_url);
+        formProfileData.append('website_link', formData.website_link);
+        formProfileData.append('whatsapp_link', formData.whatsapp_link);
+        formProfileData.append('resume_link', formData.resume_link);
         formProfileData.append('starting_price', formData.starting_price);
     
         try {
@@ -259,18 +262,18 @@ const CreativeOnboardAll = () => {
             </div>
         )}
             
-            {page === 0 &&
-            
+              {page === 0 &&
+                
                 <div className='personalDetailsBtn'>
-                    <button className='btnBlue2' onClick={(()=>setPage(1))}>Next</button>
+                    <button type='submit' className='btnBlue2' onClick={(()=>setPage(1))}>Next</button>
                 </div> 
 
             }
 
             { page === 1 &&
                 <div className='personalDetailsBtn'>
-                    <button className='btnBlue1' onClick={()=>{setPage(0)}}>Back</button>
-                    <button className='btnBlue2' onClick={handleSubmit}>{isLoading ? <span className="loader"></span> : 'Submit'}</button>
+                    <button type='submit' className='btnBlue1' onClick={()=>{setPage(0)}}>Back</button>
+                    <button type='submit' className='btnBlue2' onClick={handleSubmit}>{isLoading ? <span className="loader"></span> : 'Submit'}</button>
                 </div> 
             }
 
