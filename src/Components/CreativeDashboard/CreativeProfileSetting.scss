@@ -64,7 +64,7 @@
 .creativeProfilePics{
     margin-top: 10px;
     display: flex;
-    gap: 30px;
+    gap: 20px;
     align-items: center;
     padding: 30px;
     border-radius: 10px;
@@ -97,20 +97,13 @@
 
 .creativeVerifiedDiv{
     display: flex;
-    gap: 20px;
+    gap: 5px;
     align-items: center;
 }
 
-.creativeVerifiedDiv span{
-    background-color: $my-blue;
-    padding: 5px 10px;
-    border: none;
-    border-radius: 30px;
-    color: white;
-    font-size: 11px;
-    display: flex;
-    align-items: center;
-    gap: 5px;
+.creativeVerifiedDiv p{
+    color: $my-verify;
+    font-size: 30px;
 }
 
 .creativeLocate{
@@ -158,6 +151,11 @@
         margin-top: 30px;
     }
 
+    .creativeProfilePics p{
+        font-size: 11px;
+        padding-top: 5px;
+    }
+
     .creativeVerifiedDiv{
         display: flex;
     }
@@ -165,21 +163,13 @@
 
     .creativeVerifiedDiv h2{
         font-size: 16px;
-        width: 100%;
     }
 
-    .creativeVerifiedDiv span{
-        width: 50%;
-        margin: 0;
-        margin: 5px 0;
-        font-size: 8px;
-    }
 
     .creativeVerifiedDiv p{
-        font-size: 12px;
+        font-size: 13px;
     }
         
-
 }
 
 
@@ -345,12 +335,12 @@
 
 
     .creativeProDiv h3{
-        font-size: 15px;
+        font-size: 13px;
     }
 
 
     .creativeProDiv p{
-        font-size: 12px;
+        font-size: 11px;
     }
 
 
@@ -367,8 +357,16 @@
         padding-top: 10px;
     }
 
+    .creativeProfileSkill h3{
+        font-size: 20px;
+    }
+
     .creativeProfileWeb div{
         display: block;
+    }
+
+    .creativeProfileWeb p{
+        font-size: 11px;
     }
 
     .creativeProfileWeb ul{
@@ -376,6 +374,9 @@
         flex-wrap: wrap;
     }
 
+    .creativeProfileWeb ul li{
+        font-size: 11px;
+    }
 
     .creativeProfileSetImageDiv{
         width: 100%;

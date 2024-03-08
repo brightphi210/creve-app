@@ -139,29 +139,29 @@ const CreativeProfileSetting = ({showSideBar, setShowSideBar}) => {
           : 
 
           <div className='creativeProfilePics'>
-          <div className='myCreativePics'>
-            <div>
+            <div className='myCreativePics'>
+              <div>
 
-              {isLoading ? (
-                
-                <img src={prof} alt="" width={80} height={80}/>
-              ) : (
+                {isLoading ? (
+                  
+                  <img src={prof} alt="" width={80} height={80}/>
+                ) : (
 
-              <img src={userData.profile_pics}alt="" />
-              )}
+                <img src={userData.profile_pics}alt="" />
+                )}
 
-            </div>
-          </div>
-          <div>
-            <div className='creativeVerifiedDiv'>
-              <h2>{userData.display_name}</h2>
-              <span><RiVerifiedBadgeFill />verified</span>
+              </div>
             </div>
             <div>
-              <p><HiStar /><HiStar />4.8/5.0 (12 reviews)</p>
-              <p className='creativeLocate'><GrLocation /> {userData.location}</p>
+              <div className='creativeVerifiedDiv'>
+                <h2>{userData.display_name}</h2>
+                <p><RiVerifiedBadgeFill /></p>
+              </div>
+              <div>
+                <p><HiStar /><HiStar />4.8/5.0 (12 reviews)</p>
+                <p className='creativeLocate'><GrLocation /> {userData.location}</p>
+              </div>
             </div>
-          </div>
           </div>
 
         }
