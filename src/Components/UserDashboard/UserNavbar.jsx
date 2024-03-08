@@ -28,6 +28,7 @@ import { jwtDecode } from "jwt-decode";
 import './UserNavbar.scss'
 
 import prof from './images/profilePics.png'
+import { BASE_URL } from '../api/api';
 
 
 const UserNavbar = () => {
@@ -81,8 +82,8 @@ const UserNavbar = () => {
 
   
 
-  const url = `https://creve.onrender.com/auth/user/${decoded.user_id}/`
-  const profileUrl = `https://creve.onrender.com/auth/userprofile/${decoded.profile_id}`
+  const url = `${BASE_URL}/user/${decoded.user_id}/`
+  const profileUrl = `${BASE_URL}/userprofile/${decoded.profile_id}`
 
   const getUserDetails = async ()=>{
     try {

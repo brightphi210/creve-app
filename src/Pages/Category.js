@@ -51,7 +51,7 @@ const Category = () => {
                 <p>We Provide the best talents on all kinds of talent. Whether it’s skilled or <br /> unskilled, you are in the right place.</p>
             </div>
             <div className='catSeconDiv'>
-                <Link to={'/dashboard'}><button>Explore All Talent</button></Link>
+                <Link to={'/dashboardMain'}><button>Explore All Talent</button></Link>
             </div>
         </div>
 

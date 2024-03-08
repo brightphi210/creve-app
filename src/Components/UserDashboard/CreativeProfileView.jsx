@@ -8,13 +8,14 @@ import { FaEye } from "react-icons/fa6";
 import { HiStar } from "react-icons/hi2";
 import { RiVerifiedBadgeFill } from "react-icons/ri";
 import { HiLocationMarker } from "react-icons/hi";
-import { GrFavorite } from "react-icons/gr";
 import { MdOutlineKeyboardArrowDown } from "react-icons/md";
 import { BsChatDots } from "react-icons/bs";
 import { FaRegCopy } from "react-icons/fa6";
 import { IoIosCloseCircleOutline } from "react-icons/io";
 import { RiSendPlaneFill } from "react-icons/ri";
+import { HiOutlineArrowLeft } from "react-icons/hi";
 
+import { useNavigate } from 'react-router-dom';
 
 
 import Carousel from "react-multi-carousel";
@@ -32,12 +33,12 @@ const CreativeProfileView = () => {
     tablet: {
       breakpoint: { max: 1024, min: 464 },
       items: 1,
-      slidesToSlide: 1 // optional, default to 1.
+      slidesToSlide: 1 
     },
     mobile: {
       breakpoint: { max: 464, min: 0 },
       items: 1,
-      slidesToSlide: 1 // optional, default to 1.
+      slidesToSlide: 1 
     }
   };
 
@@ -52,6 +53,12 @@ const CreativeProfileView = () => {
     setShow1(!show1);
   }
 
+  const navigate = useNavigate()
+
+  const goBack = () =>{
+    navigate(-1);
+  }
+
 
   const [show2, setShow2] = useState(false);
   const openShow2 = () =>{setShow2(!show2)}
@@ -61,29 +68,35 @@ const CreativeProfileView = () => {
     <div className='creativeProfileModal' onClick={closeModal1}>
       <div className='creativeProfileContent'>
 
-        {/* <p className='creativeViewcloseBtn' ><IoArrowBackOutline /></p> */}
+        <p className='creativeViewcloseBtn' onClick={goBack}><HiOutlineArrowLeft /></p>
 
         <div className='creativeProfilePart'>
           <div className='creativeLeftPart'>
-            <img src={profImage} alt=""  width={80}/>
+            
+            <div className='creativeLeftDivPart'>
+              <img src={profImage} alt=""  width={80}/>
+            </div>
 
             <div className='subLeftPart'>
               <div>
                 <h2>Cassie Daniels</h2>
-                <span><RiVerifiedBadgeFill />Verified</span>
+                <RiVerifiedBadgeFill />
               </div>
 
               <p>
-                <span><HiStar className='creativeViewIcons'/><HiStar className='creativeViewIcons'/><HiStar className='creativeViewIcons'/><HiStar className='creativeViewIcons'/><HiStar className='creativeViewIcons'/>
+                <span>
+                  <HiStar className='creativeViewIcons'/>
+                  <HiStar className='creativeViewIcons'/>
+                  <HiStar className='creativeViewIcons'/>
+                  <HiStar className='creativeViewIcons'/>
+                  <HiStar className='creativeViewIcons'/>
                 </span> 4.8/5.0 (12 reviews)
               </p>
               <p className='creativeProfileLocation'><HiLocationMarker className='creativeViewIcons'/> Port Harcourt, Nigeria</p>
             </div>
-
           </div>
 
           <div className='creativeRightPart' onClick={(e) => e.stopPropagation()}>
-              <p className='favo'><GrFavorite /></p>
 
               <div >
                 <button className='start' onClick={openShow2}>Start Chat <BsChatDots className='creatIconsBtn'/></button>
@@ -98,7 +111,7 @@ const CreativeProfileView = () => {
                       <span><RiSendPlaneFill className='spaIcon'/></span>
                     </form>
                   </div>
-                ) : <button onClick={toggleShow}>View Contact <FaEye className='creatIconsBtn'/></button>}
+                ) : <button onClick={toggleShow}>View Contact<FaEye className='creatIconsBtn'/></button>}
               </div>
 
 

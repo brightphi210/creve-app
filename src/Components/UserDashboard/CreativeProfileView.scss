@@ -34,7 +34,8 @@
 .creativeProfilePart{
     display: flex;
     margin-top: 20px;
-    background-color: white;
+    background-color: $my-blue;
+    color: white;
     padding: 20px;
     border-radius: 10px;
     box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
@@ -53,7 +54,7 @@
 .subLeftPart div{
     display: flex;
     align-items: center;
-    gap: 20px;
+    gap: 5px;
 }
 
 
@@ -81,7 +82,7 @@
 
 
 .creativeViewIcons{
-    color: $my-blue;
+    color: white;
 }
 
 
@@ -115,9 +116,10 @@
 
 
 .creativeRightPart button{
-    padding: 10px 30px;
+    padding: 15px 30px;
     border-radius: 5px;
     border: none;
+    border: solid white 1px;
     background-color: $my-blue;
     color: white;
     display: flex;
@@ -146,6 +148,7 @@
     top: 100%;
     right: 0;
     background-color: white;
+    color: black;
     width: 300px;
     padding: 30px;
     border-radius: 6px;
@@ -162,6 +165,7 @@
     display: flex;
     align-items: center;
     margin-top: 20px;
+    // color: black;
     // justify-content: flex-end;
 }
 
@@ -191,7 +195,7 @@
 
 
 .messageChat form span{
-    background-color: $my-blue;
+    border: white solid 1px;
     padding: 13px;
     color: white;
     cursor: pointer;
@@ -493,7 +497,7 @@ hr{
     .creativeProfilePart{
         display: block;
         margin-top: 20px;
-        background-color: white;
+        background-color: $my-blue;
         padding: 20px;
         border-radius: 10px;
     }
@@ -503,11 +507,22 @@ hr{
     }
 
     .creativeLeftPart{
-        display: block;
-        gap: 10px;
+        display: flex;
+        gap: 20px;
         align-items: center;
     }
 
+    .creativeLeftDivPart{
+        width: 70px;
+        height: 70px;
+        overflow: hidden;
+        border-radius: 50%;
+    }
+
+    .creativeLeftPart img{
+        width: 70px;
+
+    }
 
     .subLeftPart div h2{
         font-size: 18px;
@@ -532,14 +547,14 @@ hr{
 
     .creativeRightPart  button{
         box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
-        padding: 7px 15px;
+        padding: 15px 15px;
         display: flex;
         align-items: center;
         gap: 6px;
         font-size: 12px;
         background-color: $my-blue;
         color: white;
-        border: none;
+        border: white solid 1px;
     }
 
 
@@ -556,8 +571,6 @@ hr{
 
 
     .messageModalDiv{
-        
-        // box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
         box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
         position: absolute;
         top: 120%;

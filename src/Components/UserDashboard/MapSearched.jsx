@@ -22,26 +22,29 @@ const MapSearched = ({closeModal}) => {
 
                     <div className='mapDivInputsLoca'>
                         <p>Enter Location</p>
-                        <input type="text" placeholder='Enter your email address'/>
+                        <input type="text" placeholder='Enter Location'/>
                     </div>
 
                     <div className='mapDivInputsFilt'>
                         <p>Other Filters</p>
 
                         <select name="" id="">
-                            <option value="">Category</option>
+                            <option value="">Select</option>
+                            <option value="">Digital</option>
+                            <option value="">Non-Digital</option>
                         </select>
 
                         <select name="" id="">
-                            <option value="">Verification Status</option>
+                            <option value="">Status</option>
+                            <option value="">Verified</option>
+                            <option value="">Unverified</option>
                         </select>
                         
                         <select name="" id="">
                             <option value="">Work type</option>
-                        </select>
-
-                        <select name="" id="">
-                            <option value="">Starting Price</option>
+                            <option value="">Remote</option>
+                            <option value="">Hybrid</option>
+                            <option value="">Onsite</option>
                         </select>
                     </div>
                     <button>Search</button>

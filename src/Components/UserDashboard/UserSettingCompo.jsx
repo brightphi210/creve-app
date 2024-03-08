@@ -8,6 +8,7 @@ import {useNavigate} from 'react-router-dom'
 import prof from './images/profilePics.png'
 import { AiOutlineClose } from "react-icons/ai";
 import { jwtDecode } from "jwt-decode";
+import { BASE_URL } from '../api/api';
 
 const UserSettingCompo = () => {
 
@@ -19,7 +20,6 @@ const UserSettingCompo = () => {
     console.log(decoded.user_id)
 
     const [isLoading, setIsLoading] = useState(false);
-    const navigate = useNavigate()
     const [fullname, setName] = useState('')
     const [successMessage, setSuccessMessage] = useState(false)
     const [profile_pics, setProfilePics] = useState(null)
@@ -31,9 +31,8 @@ const UserSettingCompo = () => {
 
 
 
-
     const refreshPage = () => {
-      window.location.reload();
+      setSuccessMessage(false)
     };
 
 
@@ -42,7 +41,7 @@ const UserSettingCompo = () => {
         setIsLoading(true)
 
         try {
-          const response = await fetch(`https://creve.onrender.com/auth/user/${decoded.user_id}/`, {
+          const response = await fetch(`${BASE_URL}/user/${decoded.user_id}/`, {
             method: 'GET',
             headers: {
               "Authorization": `Bearer ${authTokens.access}`,
@@ -74,7 +73,7 @@ const UserSettingCompo = () => {
         const newFormData = new FormData();
         newFormData.append('fullname', fullname);
       
-        fetch(`https://creve.onrender.com/auth/user/${decoded.user_id}/`, {
+        fetch(`${BASE_URL}/user/${decoded.user_id}/`, {
           method: 'PUT',
           headers: {
             "Authorization": `Bearer ${authTokens.access}`
@@ -100,7 +99,7 @@ const UserSettingCompo = () => {
 
       // ===================== Profile Pics ===============================
 
-      const profileUrl = `https://creve.onrender.com/auth/userprofile/${decoded.profile_id}/`
+      const profileUrl = `${BASE_URL}/userprofile/${decoded.profile_id}/`
 
 
       const handleImageChange = (e) => {

@@ -12,6 +12,9 @@ import avatar from './images/Avatars1.png'
 import { MdOutlineVerified } from "react-icons/md";
 import { IoIosStar } from "react-icons/io";
 import CreativeProfileView from './CreativeProfileView';
+import { useNavigate } from 'react-router-dom';
+import { HiOutlineArrowLeft } from "react-icons/hi";
+
 
 
 const SearchedResultCompo = () => {
@@ -25,11 +28,18 @@ const SearchedResultCompo = () => {
     const closeModal =()=>{
       setShow(false);
     }
+
+    const navigate = useNavigate()
+    const goBack = () =>{
+      navigate(-1);
+    }
     
   return (
     
     <div>
         <div className='searchedResultDiv'>
+        <p className='creativeViewcloseBtn' onClick={goBack}><HiOutlineArrowLeft /></p>
+
             <h2>Search Result for Hair Dresser</h2>
             <div className='searchedBtnsDiv'>
                 <p>Filter Option</p>

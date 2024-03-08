@@ -87,11 +87,8 @@ const TalentCompo = () => {
 
         <div className='talentSection'>
             <div className='talentExplore'>
-                    <h2>Explore the Best <br /> talents around Africa</h2>
-                    <div className='talentDivArrow'>
-                        <p><IoIosArrowRoundForward /></p>
-                        <span>Become a creative</span>
-                    </div>
+                <h2>Explore the Best <br /> talents around Africa</h2>
+                <button className='talentDivArrow'>Become a creative <IoIosArrowRoundForward className='myBTN'/></button>
             </div>
             
             <div className='talentImgDiv'>
@@ -142,7 +139,7 @@ const TalentCompo = () => {
 
 
 
-                    <div className='cardDiv' onClick={openModal1}>
+                    <div className='cardDiv'>
                         <div className='imgCard'><img src={imageCard} alt="" /></div>
                         <div className='cardProfileDiv'>
                             <div className='cardProfileDiv2'>
@@ -168,7 +165,7 @@ const TalentCompo = () => {
 
 
 
-                    <div className='cardDiv' onClick={openModal1}>
+                    <div className='cardDiv'>
                         <div className='imgCard'><img src={imageCard} alt="" /></div>
                         <div className='cardProfileDiv'>
                             <div className='cardProfileDiv2'>
@@ -194,7 +191,7 @@ const TalentCompo = () => {
 
 
 
-                    <div className='cardDiv' onClick={openModal1}>
+                    <div className='cardDiv'>
                         <div className='imgCard'><img src={imageCard} alt="" /></div>
                         <div className='cardProfileDiv'>
                             <div className='cardProfileDiv2'>

@@ -9,6 +9,7 @@ import { IoMdArrowDropdown } from "react-icons/io";
 import { Navigate, useNavigate } from 'react-router-dom';
 
 import './Navbar.scss'
+import { jwtDecode } from "jwt-decode";
 
 
 
@@ -22,6 +23,8 @@ const Narvbar = () => {
     let [tokentoken, setAuthTokens] = useState(()=> localStorage.getItem('authTokens') ? JSON.parse(localStorage.getItem('authTokens')) : null)
   
     // const [user, setUser] = useState(() => token)
+    // const decoded = jwtDecode(tokentoken.access);
+    // console.log(decoded)
     
 
   const toggleNav = () => {
@@ -57,7 +60,17 @@ const Narvbar = () => {
             <div className='navUl'>
               <p>How it works</p>
               <p>About us</p>
-              <Link to={'/category'}><p className='dropDown'>Category <IoMdArrowDropdown /></p></Link>
+
+              {/* {
+                decoded.role === 'Talent' ? 
+                (
+                  <Link to={'/category'}><p className='dropDown'>Who is a Creative<IoMdArrowDropdown /></p></Link>
+
+                  ) : (
+                    
+                    )
+                  } */}
+                  <Link to={'/category'}><p className='dropDown'>Category <IoMdArrowDropdown /></p></Link>
               <p>Find Talent</p>
             </div>
           </div>
