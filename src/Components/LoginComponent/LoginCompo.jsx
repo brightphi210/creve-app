@@ -15,6 +15,7 @@ import { Navigate, useNavigate } from 'react-router-dom';
 import { jwtDecode } from "jwt-decode";
 import apiEnpoint from '../api/api';
 import logo from './images/Logo2.png'
+import { BASE_URL } from '../api/api';
 
 
 
@@ -57,7 +58,7 @@ const LoginCompo = () => {
 
   let updateToken = async ()=> {
 
-    let response = await fetch(`https://creve.onrender.com/api/token/refresh/`, {
+    let response = await fetch(`${BASE_URL}/api/token/refresh/`, {
         method:'POST',
         headers:{
             'Content-Type':'application/json'
@@ -80,7 +81,7 @@ const LoginCompo = () => {
     setIsLoading(true);
     e.preventDefault();
     try {
-      const response = await fetch('https://creve.onrender.com/api/token/', {
+      const response = await fetch(`${BASE_URL}/api/token/`, {
           method: 'POST',
           headers: {
               'Content-Type': 'application/json',

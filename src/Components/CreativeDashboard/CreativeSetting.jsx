@@ -9,7 +9,7 @@ import {useNavigate} from 'react-router-dom'
 import prof from './images/profilePics.png'
 import { AiOutlineClose } from "react-icons/ai";
 import { jwtDecode } from "jwt-decode";
-
+import { BASE_URL } from '../api/api';
 const CreativeSetting = () => {
 
 
@@ -43,7 +43,7 @@ const CreativeSetting = () => {
         setIsLoading(true)
 
         try {
-          const response = await fetch(`https://creve.onrender.com/auth/creative/${decoded.user_id}/`, {
+          const response = await fetch(`${BASE_URL}/creative/${decoded.user_id}/`, {
             method: 'GET',
             headers: {
               "Authorization": `Bearer ${authTokens.access}`,
@@ -75,7 +75,7 @@ const CreativeSetting = () => {
         const newFormData = new FormData();
         newFormData.append('fullname', fullname);
       
-        fetch(`https://creve.onrender.com/auth/creative/${decoded.user_id}/`, {
+        fetch(`${BASE_URL}/creative/${decoded.user_id}/`, {
           method: 'PUT',
           headers: {
             "Authorization": `Bearer ${authTokens.access}`
@@ -101,7 +101,7 @@ const CreativeSetting = () => {
 
       // ===================== Profile Pics ===============================
 
-      const profileUrl = `https://creve.onrender.com/auth/creativeprofile/${decoded.profile_id}/`
+      const profileUrl = `${BASE_URL}/creativeprofile/${decoded.profile_id}/`
 
 
       const handleImageChange = (e) => {
@@ -128,6 +128,8 @@ const CreativeSetting = () => {
           if (response.ok || response.status === 200 ) {
             setSuccessMessage('Profile Successfully Updated')
             setIsLoading(false)
+            navigate('/creative-settings')
+
 
             console.log('Profile picture updated!');
             
@@ -166,7 +168,7 @@ const CreativeSetting = () => {
   
     useLayoutEffect(() => {
       getUserProfile()
-    },[])
+    }, [])
 
 
 

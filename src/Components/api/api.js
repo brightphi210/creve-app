@@ -1,4 +1,2 @@
 
-const apiEnpoint = 'http://creve.onrender.com/'
-
-export default apiEnpoint
+export const BASE_URL = 'https://creve.onrender.com'

@@ -32,6 +32,11 @@
 .welcomeSection p{
     font-size: 15px;
     padding: 20px 0;
+    width: 70%;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    margin: auto;
 }
 
 
@@ -42,8 +47,9 @@
     background-color: $my-blue;
     color: white;
     border: none;
-    border-radius: 30px;
+    border-radius: 5px;
     cursor: pointer;
+    width: 50%;
 }
 
 

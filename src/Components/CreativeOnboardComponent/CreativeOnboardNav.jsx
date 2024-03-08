@@ -19,6 +19,7 @@ import prof from './profilePics.png'
 import { jwtDecode } from "jwt-decode";
 
 import { VscMenu } from "react-icons/vsc";
+import { BASE_URL } from '../api/api';
 
 
 const CreativeOnboardNav = ({onclick}) => {
@@ -67,7 +68,7 @@ const CreativeOnboardNav = ({onclick}) => {
   
 
   // const url = `https://creve.onrender.com/auth/creative/${decoded.user_id}/`
-  const profileUrl = `https://creve.onrender.com/auth/creativeprofile/${decoded.profile_id}`
+  const profileUrl = `${BASE_URL}/auth/creativeprofile/${decoded.profile_id}`
 
   // const getUserDetails = async ()=>{
   //   try {

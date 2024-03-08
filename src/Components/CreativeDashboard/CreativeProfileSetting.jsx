@@ -26,6 +26,7 @@ import "react-multi-carousel/lib/styles.css";
 import FrequentQuestion from './CreativeModalUpdate/FrequentQuestion';
 import WorkType from './CreativeModalUpdate/WorkTypeSocialLocation';
 import CreativeBottomBar from './CreativeBottomBar';
+import { BASE_URL } from '../api/api';
 
 const CreativeProfileSetting = ({showSideBar, setShowSideBar}) => {
 
@@ -77,7 +78,7 @@ const CreativeProfileSetting = ({showSideBar, setShowSideBar}) => {
 
   const [userData, setUserData] = useState([])
   const [isLoading, setIsLoading] = useState(true)
-  const profileUrl = `https://creve.onrender.com/auth/creativeprofile/${decoded.profile_id}/`
+  const profileUrl = `${BASE_URL}/creativeprofile/${decoded.profile_id}/`
 
 
   const getUserProfile = async ()=>{
@@ -114,13 +115,6 @@ const CreativeProfileSetting = ({showSideBar, setShowSideBar}) => {
   return (
     <div className='creativeProfileSettingSection'>
 
-      {isLoading && (
-        <div className='dashLoader'>
-          <div className='dashLoaderContent'>
-            <span class="loader1"></span>
-          </div>
-        </div>
-      )}
 
       <div className='creativeProfileSectionOne'>
 
@@ -132,7 +126,19 @@ const CreativeProfileSetting = ({showSideBar, setShowSideBar}) => {
           </div>
         </div>
 
-        <div className='creativeProfilePics'>
+        {isLoading ? 
+          <div class="profile-section">
+            <div class="profile-image"></div>
+            <div class="profile-info">
+              <div class="profile-name"></div>
+              <div class="profile-details"></div>
+            </div>
+          </div>  
+          
+          
+          : 
+
+          <div className='creativeProfilePics'>
           <div className='myCreativePics'>
             <div>
 
@@ -156,7 +162,10 @@ const CreativeProfileSetting = ({showSideBar, setShowSideBar}) => {
               <p className='creativeLocate'><GrLocation /> {userData.location}</p>
             </div>
           </div>
-        </div>
+          </div>
+
+        }
+
 
         <div className='creativeProfileInfo'>
           <div className='creativeProfileLeft'>

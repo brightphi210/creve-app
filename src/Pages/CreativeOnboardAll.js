@@ -5,6 +5,7 @@ import { Link } from 'react-router-dom'
 import { jwtDecode } from "jwt-decode";
 
 import succesImg from './successImg.png'
+import { BASE_URL } from '../Components/api/api';
 
 const CreativeOnboardAll = () => {
 
@@ -105,7 +106,7 @@ const CreativeOnboardAll = () => {
         setFormData({ ...formData, [name]: newValue });
     }
 
-    const profileUrl = `https://creve.onrender.com/auth/creativeprofile/${decoded.profile_id}/`
+    const profileUrl = `${BASE_URL}/creativeprofile/${decoded.profile_id}/`
 
     const handleSubmit = async (e) => {
         e.preventDefault();
@@ -157,7 +158,7 @@ const CreativeOnboardAll = () => {
     };
 
 
-    const skillUrl = `https://creve.onrender.com/auth/skills/${decoded.profile_id}/`
+    const skillUrl = `${BASE_URL}/skills/${decoded.profile_id}/`
 
     const handleSubmit2 = async (e) => {
       e.preventDefault();

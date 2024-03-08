@@ -25,6 +25,7 @@ import { SlMenu } from "react-icons/sl";
 
 import prof from './images/profilePics.png'
 import { jwtDecode } from "jwt-decode";
+import { BASE_URL } from '../api/api';
 
 
 
@@ -74,7 +75,7 @@ const CreativeNavbar = ({handleShowSideBar}) => {
   
 
   // const url = `https://creve.onrender.com/auth/creative/${decoded.user_id}/`
-  const profileUrl = `https://creve.onrender.com/auth/creativeprofile/${decoded.profile_id}`
+  const profileUrl = `${BASE_URL}/creativeprofile/${decoded.profile_id}`
 
   // const getUserDetails = async ()=>{
   //   try {

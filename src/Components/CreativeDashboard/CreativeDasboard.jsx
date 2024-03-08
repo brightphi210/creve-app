@@ -16,6 +16,8 @@ import { RiNotificationLine } from "react-icons/ri";
 import Narvbar from '../NavComponent/Narvbar';
 import { IoCloseCircleOutline } from "react-icons/io5";
 import CreativeBottomBar from './CreativeBottomBar';
+import { BASE_URL } from '../api/api';
+import { Link } from 'react-router-dom';
 
 
 
@@ -69,7 +71,7 @@ const fetchUserData = async (e) => {
   setIsLoading(true)
 
   try {
-    const response = await fetch(`https://creve.onrender.com/auth/creativeprofile/${decoded.profile_id}/`, {
+    const response = await fetch(`${BASE_URL}/creativeprofile/${decoded.profile_id}/`, {
       method: 'GET',
       headers: {
         "Authorization": `Bearer ${authTokens.access}`,
@@ -249,12 +251,14 @@ useEffect(() => {
 
           <div className='creativeDashProfile creativeDashProfileShow'>
             <div className='profileCard'>
-              <div>
+             <Link to={'/' + 'creative-settings'}>
+             <div>
                 {profilePics === null ? 
                 (
                   <img src={profilePicsImport} alt="" width={50}/>
                 ) : (<img src={profilePics} alt="" width={50}/> )}
               </div>
+             </Link>
               <div>
                 <h3>{name}</h3>
                 <p>{summaryProfile}</p>

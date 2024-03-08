@@ -13,7 +13,7 @@ import { AiOutlineClose } from "react-icons/ai";
 
 import { Navigate, useNavigate } from 'react-router-dom';
 import { jwtDecode } from "jwt-decode";
-import apiEnpoint from '../api/api';
+import apiEnpoint, { BASE_URL } from '../api/api';
 
 
 
@@ -46,7 +46,7 @@ const LoginCompo2 = () => {
     setIsLoading(true);
     e.preventDefault();
     try {
-      const response = await fetch('https://creve.onrender.com/api/token/', {
+      const response = await fetch(`${BASE_URL}/api/token/`, {
           method: 'POST',
           headers: {
               'Content-Type': 'application/json',
