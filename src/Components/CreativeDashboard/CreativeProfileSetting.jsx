@@ -171,6 +171,7 @@ const CreativeProfileSetting = ({showSideBar, setShowSideBar}) => {
         <div className='creativeProfileInfo'>
           <div className='creativeProfileLeft'>
             <h2>General Information</h2>
+            <hr />
 
             <div className='creativeProDiv'>
               <h3>Work Type</h3>
@@ -200,6 +201,7 @@ const CreativeProfileSetting = ({showSideBar, setShowSideBar}) => {
 
             <div>
               <h2>Details</h2>
+              <hr />
 
               <div className='creativeProfileSkill'>
                 <h3>{userData.summary_of_profile}</h3>

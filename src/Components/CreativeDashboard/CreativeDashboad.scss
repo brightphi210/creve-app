@@ -17,6 +17,11 @@
 
 }
 
+.creativeEdit h2{
+    font-size: 20px;
+    color: $my-blue;
+}
+
 
 .creativeBanner{
     background-color: $my-blue;
@@ -146,6 +151,12 @@
     .creativeDashProfileHide{
         display: block;
     }
+
+    
+.creativeEdit h2{
+    font-size: 15px !important;
+    color: $my-blue;
+}
 
 
     .creativeDashProfileShow {
