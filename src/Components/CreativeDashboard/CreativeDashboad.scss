@@ -250,7 +250,7 @@
         position: fixed;
         bottom: 0;
         display: flex;
-        background-color :#f7f7fa;
+        background-color :$my-blue;
         padding: 15px 0;
         width: 100%;
         justify-content: center;
@@ -274,7 +274,7 @@
 
     .bottomBarInner .userNavIcon .userIcon{
         font-size: 23px !important;
-        color: #1d2b36;
+        color: white;
     }
     
 }

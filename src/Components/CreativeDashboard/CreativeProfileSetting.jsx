@@ -12,6 +12,7 @@ import { CgFileDocument } from "react-icons/cg";
 import bigImage from './images/bigImage.png'
 import { FaRegEdit } from "react-icons/fa";
 import { MdAddCircleOutline } from "react-icons/md";
+import { TbExternalLink } from "react-icons/tb";
 import { jwtDecode } from "jwt-decode";
 
 import profComplete from './images/profComplete.png'
@@ -211,8 +212,8 @@ const CreativeProfileSetting = ({showSideBar, setShowSideBar}) => {
 
               <div className='creativeProfileWeb'>
                 <div>
-                  <span>Website: </span>
-                  <Link to={userData.website_link}><p>{userData.website_link}</p></Link>
+                  
+                  <Link to={userData.website_link}><p style={{display : 'flex', gap : 5}}><TbExternalLink /><span>Website Link. . </span></p></Link>
                 </div>
 
                 <ul>
