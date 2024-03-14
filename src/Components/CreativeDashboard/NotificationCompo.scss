@@ -1,0 +1,17 @@
+@import '../variables.scss';
+
+*{@include default}
+
+
+// =============== NOTFICATION COMPO  =================
+
+.notificationSection{
+    padding: 100px 5%;
+}
+
+
+.notifyDiv{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}

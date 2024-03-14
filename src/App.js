@@ -22,6 +22,7 @@ import CreativeOnboardCategory from "./Pages/CreativeProfileCreate/CreativeOnboa
 import CreatingSetting from "./Pages/CreatingSetting";
 import CreativeOnboardAll from "./Pages/CreativeOnboardAll";
 import CreativeProfilePage from "./Pages/CreativeProfilePage";
+import NotificationPage from "./Pages/NotificationPage";
 
 
 
@@ -54,6 +55,8 @@ function App() {
             <Route path="/creativeProfileCategory" element={<CreativeOnboardCategory />}></Route>
             <Route path="/creative-onboard-all" element={<CreativeOnboardAll />}></Route>
             <Route path="/creativeProfile" element={<CreativeProfilePage />}></Route>
+
+            <Route path="/creative-notification-all" element={<NotificationPage />}/>
           </Route>
         </Routes>
       </BrowserRouter>
