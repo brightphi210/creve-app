@@ -221,7 +221,7 @@
     }
 
     .frequentClose{
-        padding-top: 30px;
+        padding-top: 20px;
     }
     .frequentClose p{
         margin-left: auto;
@@ -422,4 +422,30 @@
     border: none;
     border-radius: 5px;
     margin-top: 10px;
+}
+
+
+@media only screen and (min-width: $small-One) and (max-width: $small-Two) {
+    .workTypeAndAllModal{
+        display: flex;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.3);
+        align-items: center;
+        justify-content: center;
+        z-index: 100;
+    }
+    
+    .workTypeAndAllModalContent{
+        background: white;
+        padding: 20px;
+        width: 100%; 
+        height: 100vh;
+        border-radius: 10px;
+        z-index: 100;
+        
+    }
 }
