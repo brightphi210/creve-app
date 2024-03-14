@@ -26,7 +26,7 @@ const WorkType = ({closeAllModal, showAllModal}) => {
                 </select>
               </div>
 
-              <div className='whatsAppLocationDiv'>
+              <div className='whatsAppLocationDiv whatNew' >
                 <div className='whatsappDiv'>
                   <h3>Display Name: </h3>
                   <input type="text" placeholder='Display Name: ' required/>
@@ -50,7 +50,7 @@ const WorkType = ({closeAllModal, showAllModal}) => {
                 </div>
               </div>
 
-              <div className='whatsAppLocationDiv'>
+              <div className='whatsAppLocationDiv whatNew'>
                 <div className='whatsappDiv'>
                   <h3>Summary Of profile</h3>
                   <input type="text" placeholder='Profile Summary: ' required/>
@@ -62,7 +62,7 @@ const WorkType = ({closeAllModal, showAllModal}) => {
                 </div>
               </div>
 
-              <div className='whatsAppLocationDiv'>
+              <div className='whatsAppLocationDiv whatNew'>
                 <div className='whatsappDiv'>
                   <h3>Website Link</h3>
                   <input type="text" placeholder='Website Link: ' required/>
@@ -75,7 +75,7 @@ const WorkType = ({closeAllModal, showAllModal}) => {
               </div>
 
               <div className='whatsappDivText'>
-                <h3>Resume Link</h3>
+                <h3>Bio</h3>
                 <textarea name="" placeholder='Bio'></textarea>
               </div>
 

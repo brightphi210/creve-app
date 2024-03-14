@@ -445,7 +445,18 @@
         width: 100%; 
         height: 100vh;
         border-radius: 10px;
-        z-index: 100;
-        
+        z-index: 100;   
+    }
+
+    .whatsAppLocationDiv {
+        display: block;
+    }
+
+    .whatNew {
+        display: flex;
+    }
+
+    .whatsappDiv h3{
+        display: none;
     }
 }
