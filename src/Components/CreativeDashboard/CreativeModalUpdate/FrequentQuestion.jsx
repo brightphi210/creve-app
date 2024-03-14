@@ -86,7 +86,7 @@ const FrequentQuestion = ({openModal, showModal, closeModal}) => {
                                 </div>
                             </div>
 
-                            <p>
+                            <p className='editDivp'>
                                 Hi, I’m Cassie, Lorem ipsum dolor sit amet, 
                                 consectetur adipiscing elit, sed do eiusmod 
                                 tempor incididunt ut labore et dolore magna aliqua. 

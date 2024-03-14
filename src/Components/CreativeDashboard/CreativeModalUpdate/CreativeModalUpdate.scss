@@ -92,7 +92,7 @@
 
 .renderedText{
     overflow-y: scroll;
-    height: 250px;
+    height: 200px;
 
 }
 .frequestRender{
@@ -193,7 +193,73 @@
 }
 
 @media only screen and (min-width: $small-One) and (max-width: $small-Two) {
+    .frequestModalContent{
+        background: white;
+        padding: 20px;
+        width: 93%; 
+        height: 78vh;
+    }
+
+    .frequentClose p{
+        margin-left: auto;
+        font-size: 25px !important;
+        cursor: pointer;
+    }
     
+    .frequentClose h2{
+        font-weight: 500;
+        font-size: 18px;
+    }
+
+
+    .frequestInputPart{
+        padding-top: 10px;
+    }
+
+    .frequestAdd h3{
+        font-size: 13px;
+    }
+
+    .frequestAdd span{
+        font-size: 12px;
+    } 
+
+    .frequestInputPart input, textarea{
+        font-size: 13px;
+        padding: 14px;
+    }
+
+    .editDiv h3{
+        font-size: 15px;
+    }
+
+    .editBtn,
+    .editBtn,
+    .deleteBtns {
+        font-size: 18px;
+    }
+
+    .editDivp{
+        font-size: 12px;
+    }
+
+    .frequestRender form input, textarea{
+        font-size: 13px;
+        padding: 10px;
+    }
+
+
+    .frequestRender form button{
+        font-size: 13px;
+        width: 50%;
+    }
+
+
+    .updateDisableBtn,
+    .updateBtn{
+        font-size: 13px;
+        padding: 10px;
+    }
 }
 
 
