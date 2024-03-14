@@ -1,11 +1,10 @@
 import React from 'react'
 import { RiNotificationLine } from "react-icons/ri";
-import './NotificationCompo.scss';
 import imageNotificate from './images/Avatars1.png'
-import CreativeBottomBar from './CreativeBottomBar';
+import BottomBar from './BottomBar';
 
 
-const NotificationCompo = () => {
+const UserNotificationCompo = () => {
   return (
     <div className='notificationSection'>
         <div className='notifyDiv'>
@@ -58,9 +57,9 @@ const NotificationCompo = () => {
             
         </div>
 
-        <CreativeBottomBar/>
+        <BottomBar />
     </div>
   )
 }
 
-export default NotificationCompo
+export default UserNotificationCompo

@@ -23,6 +23,7 @@ import CreatingSetting from "./Pages/CreatingSetting";
 import CreativeOnboardAll from "./Pages/CreativeOnboardAll";
 import CreativeProfilePage from "./Pages/CreativeProfilePage";
 import NotificationPage from "./Pages/NotificationPage";
+import UserNotificationPage from "./Pages/UserNotificationPage";
 
 
 
@@ -57,6 +58,7 @@ function App() {
             <Route path="/creativeProfile" element={<CreativeProfilePage />}></Route>
 
             <Route path="/creative-notification-all" element={<NotificationPage />}/>
+            <Route path="/user-notification-all" element={<UserNotificationPage /> }/>
           </Route>
         </Routes>
       </BrowserRouter>

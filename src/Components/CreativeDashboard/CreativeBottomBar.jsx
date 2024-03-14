@@ -17,12 +17,10 @@ const CreativeBottomBar = ({openModal}) => {
 
                 <div className='userNavIcon'>
                     <Link to={'/dashboardMain'}><BiMessageSquareDots className='userIcon'/></Link>
-                {/* <p></p> */}
                 </div>
 
-                <div className='userNavIcon' onClick={openModal}>
-                    <Link to={''}><RiNotificationLine className='userIcon'/></Link>
-                {/* <p></p> */}
+                <div className='userNavIcon'>
+                    <Link to={'/creative-notification-all'}><RiNotificationLine className='userIcon'/></Link>
                 </div>
                 
                 <div className='userNavIcon'>

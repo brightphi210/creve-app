@@ -202,6 +202,11 @@ const UserNavbar = () => {
                 <p>3 days ago</p>
               </div>
             </div>
+
+            <div className='seeAllNot'>
+              <Link to={'/' + 'user-notification-all'}><button className=''>See All</button></Link>
+            </div>
+
           </div>
 
         </div>
@@ -258,7 +263,7 @@ const UserNavbar = () => {
           </div>
           
           <div className='userNavIcon' onClick={openModal}>
-            <Link to={''}><RiNotificationLine className='userIcon'/></Link>
+            <RiNotificationLine className='userIcon'/>
             <p></p>
           </div>
 

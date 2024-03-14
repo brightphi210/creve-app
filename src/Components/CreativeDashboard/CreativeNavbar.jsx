@@ -174,6 +174,12 @@ const CreativeNavbar = ({handleShowSideBar}) => {
                 <p>3 days ago</p>
               </div>
             </div>
+
+            <div className='seeAllNot'>
+              <Link to={'/' + 'creative-notification-all'}><button className=''>See All</button></Link>
+            </div>
+
+
           </div>
 
         </div>
@@ -220,7 +226,7 @@ const CreativeNavbar = ({handleShowSideBar}) => {
 
     
           <div className='userNavIcon' onClick={openModal}>
-            <Link to={'/dashboardMain'}><RiNotificationLine className='userIcon'/></Link>
+            <RiNotificationLine className='userIcon notIcon'/>
             <p></p>
           </div>
 

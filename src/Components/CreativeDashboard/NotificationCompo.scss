@@ -6,7 +6,7 @@
 // =============== NOTFICATION COMPO  =================
 
 .notificationSection{
-    padding: 100px 5%;
+    padding: 100px 10%;
 }
 
 
@@ -14,4 +14,88 @@
     display: flex;
     align-items: center;
     gap: 10px;
+    padding-bottom: 20px;
+}
+
+
+.allNotDiv{
+    padding: 30px;
+    background-color: $my-gray;
+    border-radius: 10px;
+}
+
+
+.eachNotDiv{
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    padding: 10px 20px;
+}
+
+.eachNotDiv:hover{
+    background-color: rgb(231, 231, 231);
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 10px;
+}
+
+
+
+.eachNotDivImg img{
+    width: 60px;
+}
+
+.eachNotDivText h2{
+    font-size: 15px;
+}
+
+
+@media only screen and (min-width: $small-One) and (max-width: $small-Two) {
+    .notificationSection{
+        padding: 100px 5%;
+    }
+    
+    
+    .notifyDiv{
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        padding-bottom: 20px;
+    }
+    
+    
+    .allNotDiv{
+        padding: 20px;
+        background-color: $my-gray;
+        border-radius: 10px;
+    }
+    
+    
+    .eachNotDiv{
+        display: flex;
+        gap: 10px;
+        align-items: center;
+        padding: 10px;
+    }
+    
+    .eachNotDiv:hover{
+        background-color: rgb(231, 231, 231);
+        padding: 10px;
+        cursor: pointer;
+        border-radius: 10px;
+    }
+    
+    
+    .eachNotDivImg img{
+        width: 40px;
+    }
+    
+    .eachNotDivText h2{
+        font-size: 13px;
+    }
+
+    .eachNotDivText p{
+        font-size: 12px;
+        padding-top: 10px;
+    }
 }

@@ -83,10 +83,7 @@
 
 
 .userNavIcon{
-    background-color: rgb(244, 244, 244);
     width: 10%;
-    padding: 8px 15px;
-    border-radius: 50%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -106,8 +103,8 @@
 
 
 .userIcon{
-    font-size: 18px;
-    color: black;
+    font-size: 25px;
+    color: rgb(79, 79, 79);
     display: flex;
 }
 
@@ -194,6 +191,15 @@
 .notProf p{
     font-size: 12px;
     font-weight: 300;
+}
+
+.seeAllNot button{
+    padding: 10px 30px;
+    margin-top: 20px;
+    background-color: white;
+    border-radius: 10px;
+    border: solid 1px gray;
+    cursor: pointer;
 }
 
 hr{
