@@ -255,11 +255,12 @@ const CreativeSetting = () => {
 
 
         {isLoading ? 
-      (<>
-        <div className='loaderModal'>
-          <span className="loader"></span>
-        </div>
-      </>) : ''}
+          (<>
+            <div className='loaderModal'>
+              <span className="loader"></span>
+            </div>
+          </>) : 
+        ''}
     </div>
   )
 }

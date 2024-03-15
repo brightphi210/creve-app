@@ -1,7 +1,63 @@
-import React from 'react'
 import { IoIosCloseCircleOutline } from "react-icons/io";
+import React,{useState} from 'react'
+import {useNavigate} from 'react-router-dom'
+import { jwtDecode } from "jwt-decode";
+import { BASE_URL } from "../../api/api";
 
 const WorkType = ({closeAllModal, showAllModal}) => {
+
+  const [isLoading, setIsLoading] = useState(false);
+  const navigate = useNavigate()
+  const [fullname, setName] = useState('')
+  const [successMessage, setSuccessMessage] = useState(false)
+  const [profile_pics, setProfilePics] = useState(null)
+
+
+  let [authTokens, setAuthTokens] = useState(()=> localStorage.getItem('authTokens') ? JSON.parse(localStorage.getItem('authTokens')) : null)
+
+  const decoded = jwtDecode(authTokens.access);
+
+  console.log(decoded.user_id)
+
+  
+  const profileUrl = `${BASE_URL}/creativeprofile/${decoded.profile_id}/`
+  const handleUpdateProfilePic = async (e) => {
+    e.preventDefault();
+    setIsLoading(true);
+
+    const formProfileData = new FormData();
+    formProfileData.append('profile_pics', profile_pics);
+    formProfileData.append('profile_pics', profile_pics);
+
+    try {
+      const response = await fetch(profileUrl, {
+        method: 'PATCH',
+        headers: {
+          "Authorization": `Bearer ${authTokens.access}`
+        },
+        body: formProfileData,
+
+      });
+
+      if (response.ok || response.status === 200 ) {
+        setSuccessMessage('Profile Successfully Updated')
+        setIsLoading(false)
+        navigate('/' + 'dashboardMain')
+
+
+        console.log('Profile picture updated!');
+        
+      } else {
+        console.error('Failed to update profile picture');
+        setIsLoading(false)
+      }
+    } catch (error) {
+      console.error('Error updating profile picture:', error);
+      setIsLoading(false)
+    }
+  };
+
+
   return (
 
     <div>
@@ -70,7 +126,7 @@ const WorkType = ({closeAllModal, showAllModal}) => {
               
                 <div className='whatsappDiv'>
                   <h3>Resume Link</h3>
-                  <input type="number" placeholder='Resume Link: ' required/>
+                  <input type="text" placeholder='Resume Link: ' required/>
                 </div>
               </div>
 
@@ -86,6 +142,14 @@ const WorkType = ({closeAllModal, showAllModal}) => {
           </div>
       </div>
       }
+
+        {isLoading ? 
+          (<>
+            <div className='loaderModal'>
+              <span className="loader"></span>
+            </div>
+          </>) : 
+        ''}
     </div>
   )
 }
