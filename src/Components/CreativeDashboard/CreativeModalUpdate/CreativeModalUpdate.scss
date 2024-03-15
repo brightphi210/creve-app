@@ -454,9 +454,33 @@
 
     .whatNew {
         display: flex;
+        gap: 5px;
+    }
+
+    .whatsappDiv{
+        padding-top: 14px;
+    }
+    .whatsappDiv input{
+        padding: 15px;
     }
 
     .whatsappDiv h3{
         display: none;
+    }
+
+    .whatsappDivText h3{
+        display: none;
+    }
+
+    .whatsappDivText{
+        padding-top: 10px;
+    }
+
+    .mySelect option {
+        font-size: 12px;
+    }
+
+    .mySelect{
+        font-size: 12px;
     }
 }

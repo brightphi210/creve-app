@@ -128,7 +128,7 @@ const CreativeSetting = () => {
           if (response.ok || response.status === 200 ) {
             setSuccessMessage('Profile Successfully Updated')
             setIsLoading(false)
-            navigate('/creative-settings')
+            navigate('/' + 'dashboardMain')
 
 
             console.log('Profile picture updated!');
