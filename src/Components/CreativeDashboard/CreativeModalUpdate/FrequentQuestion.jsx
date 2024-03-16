@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import './CreativeModalUpdate.scss'
 import { IoIosCloseCircleOutline } from "react-icons/io";
 import { MdAddCircleOutline } from "react-icons/md";
@@ -7,13 +7,20 @@ import { FaRegEdit } from "react-icons/fa";
 import { MdDelete } from "react-icons/md";
 import { FaAngleDown } from "react-icons/fa6";
 import { FaAngleUp } from "react-icons/fa6";
+import { BASE_URL } from '../../api/api';
+import { jwtDecode } from "jwt-decode";
+
 
 
 const FrequentQuestion = ({openModal, showModal, closeModal}) => {
 
+    let [authTokens, setAuthTokens] = useState(()=> localStorage.getItem('authTokens') ? JSON.parse(localStorage.getItem('authTokens')) : null)
+
+    const decoded = jwtDecode(authTokens.access);
+
 
     const [showEditModal, setEditModal] = useState(false);
-    const [showCreateQuestion, setCreateQuestion] = useState(false);
+    const [showCreateQuestion, setShowCreateQuestion] = useState(false);
 
     const handleShowEdithModal = (e)=>{
         setEditModal(true)
@@ -27,13 +34,44 @@ const FrequentQuestion = ({openModal, showModal, closeModal}) => {
 
     const handleShowCreateQuestion = (e)=>{
         e.preventDefault();
-        setCreateQuestion(true)
+        setShowCreateQuestion(true)
     }
 
     const handleHideCreateQuestion = (e)=>{
         e.preventDefault();
-        setCreateQuestion(false)
+        setShowCreateQuestion(false)
     }
+
+
+    const [creativeQuestion, setCreateQuestion] = useState([])
+
+
+    // https://creve.onrender.com/questions/2/
+
+    const fetchQuestion = async () => {
+        try {
+            const res = await fetch(`${BASE_URL}/questions/${decoded.profile_id}`, {
+                method: 'GET',
+                headers : {
+                    'Content-Type': 'application/json',
+                    'Authorization' : `Bearer ${authTokens.access}`,
+                },
+            })
+            const data = await res.json()
+            setCreateQuestion(data)
+
+        } catch (error) {
+            
+        }
+    }
+
+
+    useEffect(()=>{
+        fetchQuestion()
+    }, [])
+
+
+    console.log(creativeQuestion)
     
 
   return (
