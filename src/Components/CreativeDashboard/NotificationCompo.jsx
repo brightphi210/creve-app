@@ -1,66 +1,66 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react';
 import { RiNotificationLine } from "react-icons/ri";
 import './NotificationCompo.scss';
-import imageNotificate from './images/Avatars1.png'
+import imageNotificate from './images/Avatars1.png';
 import CreativeBottomBar from './CreativeBottomBar';
 
-
 const NotificationCompo = () => {
+  const [messages, setMessages] = useState([]); // Use plural for clarity
+  const [websocket, setWebsocket] = useState(null);
+
+  useEffect(() => {
+    const socket = new WebSocket('wss://creve.onrender.com/ws/clientnotifications/');
+    setWebsocket(socket);
+
+    socket.onopen = () => {
+      console.log("WebSocket connected");
+    };
+
+    socket.onmessage = (event) => {
+      const newMessage = JSON.parse(event.data);
+
+
+      setMessages([...messages, newMessage.notification]);
+      console.log(newMessage)
+    };
+
+    socket.onclose = () => {
+      console.log("WebSocket closed");
+    };
+
+    return () => {
+      socket.close();
+    };
+  }, []);
+
+
+  console.log(messages)
+
   return (
     <div className='notificationSection'>
-        <div className='notifyDiv'>
-            <h2>Notification</h2>
-            <RiNotificationLine />
-        </div>
+      <div className='notifyDiv'>
+        <h2>Notifications</h2>
+        <RiNotificationLine />
+      </div>
 
-        <div className='allNotDiv'>
-            <div className='eachNotDiv'>
-                <div className='eachNotDivImg'>
-                    <img src={imageNotificate} alt="" />
-                </div>
-
-                <div className='eachNotDivText'>
-                    <h2>We Have exciting news in web dev, explore now</h2>
-                    <p>2days ago</p>
-                </div>
-
+      <div className='allNotDiv'>
+        {messages.map((message, index) => (
+          <div className='eachNotDiv' key={index}>
+            <div className='eachNotDivImg'>
+              <img src={imageNotificate} alt="" />
             </div>
 
-            <hr />
-
-            <div className='eachNotDiv'>
-                <div className='eachNotDivImg'>
-                    <img src={imageNotificate} alt="" />
-                </div>
-
-                <div className='eachNotDivText'>
-                    <h2>We Have exciting news in web dev, explore now</h2>
-                    <p>2days ago</p>
-                </div>
-
+            <div className='eachNotDivText'>
+              <h2>{message.title}</h2> 
+              <p>{message.time}</p> 
             </div>
+          </div>
+        ))}
+      </div>
 
-            <hr />
-
-            <div className='eachNotDiv'>
-                <div className='eachNotDivImg'>
-                    <img src={imageNotificate} alt="" />
-                </div>
-
-                <div className='eachNotDivText'>
-                    <h2>We Have exciting news in web dev, explore now</h2>
-                    <p>2days ago</p>
-                </div>
-
-            </div>
-
-            <hr />
-            
-        </div>
-
-        <CreativeBottomBar/>
+      <CreativeBottomBar />
     </div>
-  )
-}
+  );
+};
 
-export default NotificationCompo
+export default NotificationCompo;

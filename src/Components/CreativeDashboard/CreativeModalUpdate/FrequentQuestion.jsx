@@ -50,7 +50,7 @@ const FrequentQuestion = ({openModal, showModal, closeModal}) => {
 
     const fetchQuestion = async () => {
         try {
-            const res = await fetch(`${BASE_URL}/questions/${decoded.profile_id}`, {
+            const res = await fetch(`${BASE_URL}/questions/`, {
                 method: 'GET',
                 headers : {
                     'Content-Type': 'application/json',
@@ -108,6 +108,8 @@ const FrequentQuestion = ({openModal, showModal, closeModal}) => {
                     </div>
 
                     <div className='renderedText'>
+
+                        {}
                         <div className='frequestRender'>
                             <div className='editDiv'>
                                 <h3>What style do we use in development</h3>
