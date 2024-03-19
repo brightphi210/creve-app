@@ -9,6 +9,7 @@ import { FaAngleDown } from "react-icons/fa6";
 import { FaAngleUp } from "react-icons/fa6";
 import { BASE_URL } from '../../api/api';
 import { jwtDecode } from "jwt-decode";
+import {useNavigate } from 'react-router-dom';
 
 
 
@@ -45,10 +46,14 @@ const FrequentQuestion = ({openModal, showModal, closeModal}) => {
 
     const [creativeQuestion, setCreateQuestion] = useState([])
 
+    const [isLoading, setIsLoading] = useState(false)
+
 
     // https://creve.onrender.com/questions/2/
 
     const fetchQuestion = async () => {
+
+        setIsLoading(true)
         try {
             const res = await fetch(`${BASE_URL}/questions/`, {
                 method: 'GET',
@@ -59,9 +64,10 @@ const FrequentQuestion = ({openModal, showModal, closeModal}) => {
             })
             const data = await res.json()
             setCreateQuestion(data)
+            setIsLoading(false)
 
         } catch (error) {
-            
+            setIsLoading(false)
         }
     }
 
@@ -71,8 +77,44 @@ const FrequentQuestion = ({openModal, showModal, closeModal}) => {
     }, [])
 
 
-    console.log(creativeQuestion)
+    // console.log(creativeQuestion)
+
+
+    const [question , setPostQuestion] = useState('')
+    const [answer, setPostAnswer] = useState('')
+
+    const navigate = useNavigate()
     
+
+    const handleQuestionPost = async (e) =>{
+        e.preventDefault();
+        setIsLoading(true)
+
+        try {
+
+            const res = await fetch(`${BASE_URL}/questions/`, {
+                method : 'POST',
+                headers : {
+                    'Authorization' : `Bearer ${authTokens.access}`,
+                    'Content-Type': 'application/json',
+                    
+                },
+                body: JSON.stringify({ question, answer }),
+            })
+
+            if(res.ok){
+                console.log('FAQS Created Successfully')
+                navigate('/' + 'creativeProfile')
+                setIsLoading(false)
+            }
+            
+            else{
+                console.log('error occured while creating FAQS')
+            }
+        } catch (error) {
+            
+        }
+    }
 
   return (
       <div>
@@ -90,67 +132,95 @@ const FrequentQuestion = ({openModal, showModal, closeModal}) => {
                         <div className='frequestAdd'>
                             <h3>Frequent Asked  Question</h3>
 
-                            {showCreateQuestion ? (
+                            {/* {showCreateQuestion ? (
                                 
                                 <span onClick={handleHideCreateQuestion}>Hide <LuMinusCircle /></span>
                                 ) : (
                                     
                                     <span onClick={handleShowCreateQuestion}>Add <MdAddCircleOutline /></span>
-                            )}
+                            )} */}
                         </div>
 
-                        {showCreateQuestion && 
+                        {/* {showCreateQuestion &&  */}
                             <div>
-                                <input type="text" placeholder='Enter quetion' required/>
-                                <textarea name="" placeholder='Enter answer' required></textarea>
+                                <input type="text" 
+                                    placeholder='Enter quetion' 
+                                    required
+                                    value={question}
+                                    onChange={(e)=>setPostQuestion(e.target.value)}
+                                />
+                                <textarea name="" 
+                                    placeholder='Enter answer' 
+                                    required
+                                    value={answer}
+                                    onChange={(e)=>setPostAnswer(e.target.value)}
+                                >
+                                </textarea>
+
                             </div>
-                        }
+
+                        {/* } */}
                     </div>
 
                     <div className='renderedText'>
 
-                        {}
-                        <div className='frequestRender'>
-                            <div className='editDiv'>
-                                <h3>What style do we use in development</h3>
-                                <div>
+                        {creativeQuestion.map((creativeQuestionOne)=>(
+                            <div className='frequestRender'>
+                                <div className='editDiv'>
+                                    <h3>{creativeQuestionOne.question}</h3>
                                     <div>
-                                        {showEditModal &&
-                                            <p className='editBtn' onClick={handleHideEdithModal}><FaAngleDown /></p> 
-                                            // <p className='editBtn'><FaAngleUp /></p> 
-                                        }
+                                        <div>
+                                            {showEditModal &&
+                                                <p className='editBtn' onClick={handleHideEdithModal}><FaAngleDown /></p> 
+                                                // <p className='editBtn'><FaAngleUp /></p> 
+                                            }
 
+                                        </div>
+                                        <p className='editBtn' onClick={handleShowEdithModal}><FaRegEdit /></p>
+                                        <p className='deleteBtns'><MdDelete /></p>
                                     </div>
-                                    <p className='editBtn' onClick={handleShowEdithModal}><FaRegEdit /></p>
-                                    <p className='deleteBtns'><MdDelete /></p>
                                 </div>
-                            </div>
 
-                            <p className='editDivp'>
-                                Hi, I’m Cassie, Lorem ipsum dolor sit amet, 
-                                consectetur adipiscing elit, sed do eiusmod 
-                                tempor incididunt ut labore et dolore magna aliqua. 
-                                Ut enim ad minim veniam
-                            </p>
+                                <p className='editDivp'>{creativeQuestionOne.answer}</p>
 
-                            <div>
-                                {showEditModal && 
-                                    <form action="">
-                                        <input type="text" placeholder='Edit here: '  required/>
-                                        <textarea name="" placeholder='Edit here: ' required></textarea>
-                                        <button className='updateBtns'>Update</button>
-                                    </form>
-                                }
-                            </div>
+                                <div>
+                                    {showEditModal && 
+                                        <form action="">
+                                            <input type="text" 
+                                                placeholder='Edit here: ' 
+                                                 required
+                                                 value={creativeQuestionOne.question}
+                                            />
 
-                        </div> 
+                                            <textarea name="" 
+                                                placeholder='Edit here: ' 
+                                                required
+                                                value={creativeQuestionOne.answer}
+                                            ></textarea>
+
+
+                                            <button className='updateBtns'>Update</button>
+                                        </form>
+                                    }
+                                </div>
+
+                            </div> 
+                        ))}
                     </div>
 
-                    <button disabled={showCreateQuestion === false}  className={showCreateQuestion === false ? 'updateDisableBtn' : 'updateBtn'}>Submit</button>
+                    <button onClick={handleQuestionPost} disabled={showCreateQuestion === false}  className={showCreateQuestion === false ? 'updateDisableBtn' : 'updateBtn'}>Submit</button>
                 </form>
             </div>
         </div>
        )}
+
+        {isLoading ? 
+          (<>
+            <div className='loaderModal'>
+              <span className="loader"></span>
+            </div>
+          </>) : ''
+        }
     </div>
   )
 }
