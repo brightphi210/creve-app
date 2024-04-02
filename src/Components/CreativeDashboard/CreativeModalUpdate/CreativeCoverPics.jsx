@@ -4,7 +4,9 @@ import { AiOutlineCloudUpload } from "react-icons/ai";
 import { FaImage } from "react-icons/fa6";
 import { MdDelete } from "react-icons/md";
 import { IoCloseCircleOutline } from "react-icons/io5";
-
+import { jwtDecode } from "jwt-decode";
+import { BASE_URL } from '../../api/api';
+import {useNavigate} from 'react-router-dom'
 
 const CreativeCoverPics = ({closeCoverModal, showCoverModal}) => {
 
@@ -15,10 +17,59 @@ const CreativeCoverPics = ({closeCoverModal, showCoverModal}) => {
       console.log('Click successfull')
     };
 
-    
 
+    
     const [image, setImage] = useState(null)
+    const [cover_image, setCover_image] = useState(null)
     const [fileName, setFileName] = useState("No Selected File Name")
+    const [isLoading, setIsLoading] = useState(false)
+    const [messages, setSuccessMessage] = useState('')
+
+    let [authTokens, setAuthTokens] = useState(()=> localStorage.getItem('authTokens') ? JSON.parse(localStorage.getItem('authTokens')) : null)
+
+    const decoded = jwtDecode(authTokens.access);
+    const profileUrl = `${BASE_URL}/creativeprofile/${decoded.profile_id}/`
+
+
+    let navigate = useNavigate()
+
+
+    const handleUpdateProfilePic = async (e) => {
+      e.preventDefault();
+      setIsLoading(true);
+  
+      const formProfileData = new FormData();
+      formProfileData.append('cover_image', cover_image);
+      try {
+        const response = await fetch(profileUrl, {
+          method: 'PATCH',
+          headers: {
+            "Authorization": `Bearer ${authTokens.access}`
+          },
+          body: formProfileData,
+  
+        });
+  
+        if (response.ok || response.status === 200 ) {
+          setSuccessMessage('Profile Successfully Updated')
+          setIsLoading(false)
+          navigate('/' + 'dashboardMain')
+          
+  
+  
+          console.log('Profile picture updated!');
+          
+        } else {
+          console.error('Failed to update profile picture');
+          setIsLoading(false)
+        }
+      } catch (error) {
+        console.error('Error updating profile picture:', error);
+        setIsLoading(false)
+      }
+    };
+
+
   return (
 
     <>
@@ -41,6 +92,7 @@ const CreativeCoverPics = ({closeCoverModal, showCoverModal}) => {
                             files[0] && setFileName(files[0].name)
                             if(files){
                                 setImage(URL.createObjectURL(files[0]))
+                                setCover_image(files[0])
                             }
                         }}
                     />
@@ -67,7 +119,7 @@ const CreativeCoverPics = ({closeCoverModal, showCoverModal}) => {
                     </div>
                 </div>
 
-                <button className='myCreativeCover'>Save</button>
+                <button className='myCreativeCover' onClick={handleUpdateProfilePic}>Save</button>
             </div>
 
         </div>
