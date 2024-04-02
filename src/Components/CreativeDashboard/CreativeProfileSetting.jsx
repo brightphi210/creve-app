@@ -120,7 +120,7 @@ const CreativeProfileSetting = ({showSideBar, setShowSideBar}) => {
   },[])
 
 
-  console.log(userData)
+  console.log('This is Data' , userData)
 
 
   
@@ -247,45 +247,12 @@ const CreativeProfileSetting = ({showSideBar, setShowSideBar}) => {
 
 
               <div>
-                <Carousel
-                  additionalTransfrom={0}
-                  arrows
-                  autoPlaySpeed={3000}
-                  centerMode={false}
-                  className=""
-                  containerClass="container"
-                  dotListClass=""
-                  draggable
-                  focusOnSelect={false}
-                  infinite
-                  itemClass=""
-                  keyBoardControl
-                  minimumTouchDrag={80}
-                  pauseOnHover
-                  renderArrowsWhenDisabled={false}
-                  renderButtonGroupOutside={false}
-                  renderDotsOutside={false}
-                  responsive={responsive}
-                  rewind={false}
-                  rewindWithAnimation={false}
-                  rtl={false}
-                  shouldResetAutoplay
-                  showDots
-                  sliderClass=""
-                  slidesToSlide={1}
-                  swipeable
-                >
-
-                  <div className='creativeProfileSetImageDiv'>
-                    <img src={bigImage} alt="" />
-                  </div>
 
 
-                  <div className='creativeProfileSetImageDiv'>
-                    <img src={bigImage} alt="" />
-                  </div>
+                <div className='creativeProfileSetImageDiv'>
+                  <img src={userData.cover_image} alt="" />
+                </div>
 
-                </Carousel>
                 <div className='creativeProfileSetGenImageDiv'>
                     <div className=''>
                       <img src={bigImage} alt="" />

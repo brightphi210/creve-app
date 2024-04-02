@@ -35,8 +35,8 @@ const CreativeCoverPics = ({closeCoverModal, showCoverModal}) => {
 
 
     const handleUpdateProfilePic = async (e) => {
-      e.preventDefault();
-      setIsLoading(true);
+        e.preventDefault();
+        setIsLoading(true)
   
       const formProfileData = new FormData();
       formProfileData.append('cover_image', cover_image);
@@ -49,11 +49,14 @@ const CreativeCoverPics = ({closeCoverModal, showCoverModal}) => {
           body: formProfileData,
   
         });
+
+
+        setIsLoading(true);
   
         if (response.ok || response.status === 200 ) {
           setSuccessMessage('Profile Successfully Updated')
-          setIsLoading(false)
-          navigate('/' + 'dashboardMain')
+          navigate('/' + 'creativeProfile')
+          setIsLoading(false);
           
   
   
@@ -119,7 +122,8 @@ const CreativeCoverPics = ({closeCoverModal, showCoverModal}) => {
                     </div>
                 </div>
 
-                <button className='myCreativeCover' onClick={handleUpdateProfilePic}>Save</button>
+
+                <button className='myCreativeCover' onClick={handleUpdateProfilePic}>{isLoading === false ? "Save" : <p>Loading . . .</p>}</button>
             </div>
 
         </div>
