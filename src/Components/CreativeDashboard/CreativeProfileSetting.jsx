@@ -28,6 +28,7 @@ import FrequentQuestion from './CreativeModalUpdate/FrequentQuestion';
 import WorkType from './CreativeModalUpdate/WorkTypeSocialLocation';
 import CreativeBottomBar from './CreativeBottomBar';
 import { BASE_URL } from '../api/api';
+import CreativeCoverPics from './CreativeModalUpdate/CreativeCoverPics';
 
 const CreativeProfileSetting = ({showSideBar, setShowSideBar}) => {
 
@@ -70,6 +71,17 @@ const CreativeProfileSetting = ({showSideBar, setShowSideBar}) => {
 
   const closeAllModal = () =>{
     setShowAllModal(false);
+  }
+
+
+  const [showCoverModal, setShowCoverModal] = useState(false)
+
+  const openCoverModal = () =>{
+    setShowCoverModal(true);
+  }
+
+  const closeCoverModal = () =>{
+    setShowCoverModal(false);
   }
 
 
@@ -123,7 +135,8 @@ const CreativeProfileSetting = ({showSideBar, setShowSideBar}) => {
           <h2>My Profile</h2>
           <div>
             <button onClick={openAllModal}><span><CiEdit /></span>Edit Profile</button>
-            <button onClick={openModal} className='creativeEditBtn2'><span><MdAddCircleOutline /></span>Add FAQ</button>
+            <button onClick={openModal} className='creativeEditBtn2'><span><MdAddCircleOutline /></span>FAQ</button>
+            <button onClick={openCoverModal} className='creativeEditBtn2'><span><MdAddCircleOutline /></span>Cover Image</button>
           </div>
         </div>
 
@@ -382,6 +395,7 @@ const CreativeProfileSetting = ({showSideBar, setShowSideBar}) => {
 
       <FrequentQuestion openModal={openModal} showModal={showModal} closeModal={closeModal}/>
       <WorkType openAllModal={openAllModal} showAllModal={showAllModal} closeAllModal={closeAllModal}/>
+      <CreativeCoverPics openCoverModal={openCoverModal} showCoverModal={showCoverModal} closeCoverModal={closeCoverModal}/>
 
 
       <CreativeBottomBar openModal={openModal}/>

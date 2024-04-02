@@ -6,7 +6,6 @@ import { jwtDecode } from "jwt-decode";
 
 import succesImg from './successImg.png'
 import { BASE_URL } from '../Components/api/api';
-import CreativeCoverPics from './CreativeProfileCreate/CreativeCoverPics';
 
 const CreativeOnboardAll = () => {
 
@@ -95,44 +94,17 @@ const CreativeOnboardAll = () => {
         whatsapp_link: "",
         resume_link: "",
         starting_price: 0,
-        cover_image : null
         
     })
 
 
 
-    const [image, setImage] = useState(null)
-    const [fileName, setFileName] = useState("No Selected File Name")
-
 
     const handleAllChange = (e) => {
-      const { name, value, type } = e.target;
-      const newValue = type === "file" ? e.target.files[0] : value;
-  
-      // Handling file name and image preview
-      if (type === "file") {
-          setFileName(newValue.name);
-          setImage(URL.createObjectURL(newValue));
-      }
-  
-      setFormData({ ...formData, [name]: newValue });
-  }
-
-
-  //   const handleAllChange = (e) => {
-  //       const { name, value, type } = e.target;
-  //       const newValue = type === "file" ? e.target.files[0] : value;
-  //       setFormData({ ...formData, [name]: newValue });
-  //   }
-
-
-
-  //   {({target: {files}}) =>{
-  //     files[0] && setFileName(files[0].name)
-  //     if(files){
-  //         setImage(URL.createObjectURL(files[0]))
-  //     }
-  // }
+        const { name, value, type } = e.target;
+        const newValue = type === "file" ? e.target.files[0] : value;
+        setFormData({ ...formData, [name]: newValue });
+    }
 
     const profileUrl = `${BASE_URL}/creativeprofile/${decoded.profile_id}/`
 
@@ -152,7 +124,6 @@ const CreativeOnboardAll = () => {
         formProfileData.append('whatsapp_link', formData.whatsapp_link);
         formProfileData.append('resume_link', formData.resume_link);
         formProfileData.append('starting_price', formData.starting_price);
-        formProfileData.append('cover_image', formData.cover_image);
     
         try {
           const response = await fetch(profileUrl, {
@@ -241,20 +212,8 @@ const CreativeOnboardAll = () => {
                 onChange={handleAllChange}
             />
         }
-
-
-        if(page ===1){
-          return <CreativeCoverPics 
-            onChange={handleAllChange}
-            formData={formData} 
-            image={image}
-            fileName={fileName}
-            setFileName={setFileName}
-            setImage={setImage}
-          />
-        }
         
-        if (page === 2){
+        if (page === 1){
             return <CreativeOnboardProfessional 
                 formData={formData} 
                 setFormData={setFormData} 
@@ -279,9 +238,6 @@ const CreativeOnboardAll = () => {
                 handleInputChange={handleInputChange}
             />
         }
-
-
-
     }
 
 
@@ -315,17 +271,9 @@ const CreativeOnboardAll = () => {
 
             }
 
-
             { page === 1 &&
                 <div className='personalDetailsBtn'>
                     <button type='submit' className='btnBlue1' onClick={()=>{setPage(0)}}>Back</button>
-                    <button type='submit' className='btnBlue2' onClick={(()=>setPage(2))}>Next</button>
-                </div> 
-            }
-
-            { page === 2 &&
-                <div className='personalDetailsBtn'>
-                    <button type='submit' className='btnBlue1' onClick={()=>{setPage(1)}}>Back</button>
                     <button type='submit' className='btnBlue2' onClick={handleSubmit}>{isLoading ? <span className="loader"></span> : 'Submit'}</button>
                 </div> 
             }

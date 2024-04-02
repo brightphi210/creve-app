@@ -111,7 +111,7 @@ const CreativeOnboardProfessional = ({
                       }
                     </div>
 
-                      <button onClick={handleSubmit2}>Submit</button>
+                      {/* <button onClick={handleSubmit2}>Submit</button> */}
                 </form>
 
 
