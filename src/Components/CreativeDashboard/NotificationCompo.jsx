@@ -5,36 +5,36 @@ import imageNotificate from './images/Avatars1.png';
 import CreativeBottomBar from './CreativeBottomBar';
 
 const NotificationCompo = () => {
-  const [messages, setMessages] = useState([]); // Use plural for clarity
-  const [websocket, setWebsocket] = useState(null);
+  // const [messages, setMessages] = useState([]);
+  // const [websocket, setWebsocket] = useState(null);
 
-  useEffect(() => {
-    const socket = new WebSocket('wss://creve.onrender.com/ws/clientnotifications/');
-    setWebsocket(socket);
+  // useEffect(() => {
+  //   const socket = new WebSocket('wss://creve.onrender.com/ws/clientnotifications/');
+  //   setWebsocket(socket);
 
-    socket.onopen = () => {
-      console.log("WebSocket connected");
-    };
+  //   socket.onopen = () => {
+  //     console.log("WebSocket connected");
+  //   };
 
-    socket.onmessage = (event) => {
-      const newMessage = JSON.parse(event.data);
-
-
-      setMessages([...messages, newMessage.notification]);
-      console.log(newMessage)
-    };
-
-    socket.onclose = () => {
-      console.log("WebSocket closed");
-    };
-
-    return () => {
-      socket.close();
-    };
-  }, []);
+  //   socket.onmessage = (event) => {
+  //     const newMessage = JSON.parse(event.data);
 
 
-  console.log(messages)
+  //     setMessages([...messages, newMessage.notification]);
+  //     // console.log(newMessage)
+  //   };
+
+  //   socket.onclose = () => {
+  //     console.log("WebSocket closed");
+  //   };
+
+  //   return () => {
+  //     socket.close();
+  //   };
+  // }, []);
+
+
+
 
   return (
     <div className='notificationSection'>
@@ -43,7 +43,7 @@ const NotificationCompo = () => {
         <RiNotificationLine />
       </div>
 
-      <div className='allNotDiv'>
+      {/* <div className='allNotDiv'>
         {messages.map((message, index) => (
           <div className='eachNotDiv' key={index}>
             <div className='eachNotDivImg'>
@@ -56,7 +56,7 @@ const NotificationCompo = () => {
             </div>
           </div>
         ))}
-      </div>
+      </div> */}
 
       <CreativeBottomBar />
     </div>

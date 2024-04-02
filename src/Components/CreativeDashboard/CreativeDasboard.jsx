@@ -171,7 +171,9 @@ useEffect(() => {
             </div>
 
             <div className='completeProf'>
-              <p>Complete your profile</p>
+              <Link to={'/' + 'creativeProfile'}>
+                <p>Complete your profile</p>
+              </Link>
 
               <div className='progressDiv'>
                 <div className='grayProgress'></div>
@@ -266,7 +268,9 @@ useEffect(() => {
             </div>
 
             <div className='completeProf'>
-              <p>Complete your profile</p>
+              <Link to={'/' + 'creativeProfile'}>
+                <p>Complete your profile</p>
+              </Link>
 
               <div className='progressDiv'>
                 <div className='grayProgress'></div>

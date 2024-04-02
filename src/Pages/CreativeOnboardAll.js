@@ -6,6 +6,7 @@ import { jwtDecode } from "jwt-decode";
 
 import succesImg from './successImg.png'
 import { BASE_URL } from '../Components/api/api';
+import CreativeCoverPics from './CreativeProfileCreate/CreativeCoverPics';
 
 const CreativeOnboardAll = () => {
 
@@ -212,8 +213,13 @@ const CreativeOnboardAll = () => {
                 onChange={handleAllChange}
             />
         }
+
+
+        if(page ===1){
+          return <CreativeCoverPics />
+        }
         
-        if (page === 1){
+        if (page === 2){
             return <CreativeOnboardProfessional 
                 formData={formData} 
                 setFormData={setFormData} 
@@ -238,6 +244,9 @@ const CreativeOnboardAll = () => {
                 handleInputChange={handleInputChange}
             />
         }
+
+
+
     }
 
 
@@ -271,9 +280,17 @@ const CreativeOnboardAll = () => {
 
             }
 
+
             { page === 1 &&
                 <div className='personalDetailsBtn'>
                     <button type='submit' className='btnBlue1' onClick={()=>{setPage(0)}}>Back</button>
+                    <button type='submit' className='btnBlue2' onClick={(()=>setPage(2))}>Next</button>
+                </div> 
+            }
+
+            { page === 2 &&
+                <div className='personalDetailsBtn'>
+                    <button type='submit' className='btnBlue1' onClick={()=>{setPage(1)}}>Back</button>
                     <button type='submit' className='btnBlue2' onClick={handleSubmit}>{isLoading ? <span className="loader"></span> : 'Submit'}</button>
                 </div> 
             }

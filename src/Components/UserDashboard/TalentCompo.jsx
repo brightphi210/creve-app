@@ -1,4 +1,3 @@
-// import React, { useEffect, useState } from 'react'
 import './TalentCompo.scss'
 import { Link } from 'react-router-dom'
 
@@ -14,19 +13,27 @@ import { IoIosStar } from "react-icons/io";
 
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import CreativeProfileView from './CreativeProfileView'
 import MapSearched from './MapSearched'
 
 import UserNotificationModal from './UserNotificationModal'
 import BottomBar from './BottomBar'
 import { IoIosArrowRoundForward } from "react-icons/io";
-
+import { BASE_URL } from '../api/api'
+import { jwtDecode } from "jwt-decode";
+// import { useNavigation } from 'react-router-dom'
  
 
 
 
 const TalentCompo = () => {
+
+    // const navigate = useNavigation()
+
+    let [authTokens, setAuthTokens] = useState(()=> localStorage.getItem('authTokens') ? JSON.parse(localStorage.getItem('authTokens')) : null)
+
+    const decoded = jwtDecode(authTokens.access);
 
         const responsive = {
         desktop: {
@@ -81,6 +88,41 @@ const TalentCompo = () => {
         setShowMap(false);
       }
 
+
+      const [ isLoading, setIsLoading] = useState(true)
+
+      const [talentData, setTalentData] = useState([])
+
+
+      const fetchTalentData = async ()=>{
+        try {
+          const response = await fetch(`${BASE_URL}/creativeprofile/`,{
+            method: 'GET',
+            headers : {
+              'Authorization' : `Bearer ${authTokens.access}`,
+              'Content-Type':'Application/json'
+            },
+          })
+    
+          setIsLoading(false)
+          const data = await response.json()
+          console.log(data)
+          setTalentData(data)
+          
+        } catch (error) {
+          console.log(error)
+          setIsLoading(false)
+        }
+      }
+    
+    
+      useEffect(() => {
+        fetchTalentData()
+      },[])
+
+
+
+
   return (
     <div>
         <div className='talentSectionDiv'>
@@ -111,109 +153,33 @@ const TalentCompo = () => {
                 <div className='imagecard'>
 
 
-                    {/* <Link to={'/talentsProfiles'}> */}
-                    <div className='cardDiv'>
-                        <div className='imgCard'><img src={imageCard} alt="" /></div>
-                        <div className='cardProfileDiv'>
-                            <div className='cardProfileDiv2'>
-                                <div className='cardProfileDivImg'>
-                                    <img src={avatar} alt="" />
-                                    <div>
-                                        <p>Cassie Daniels</p>
-                                        <p>4.0 <IoIosStar /> </p>
+                    {talentData.map((singleTalent)=>(
+                        <div className='cardDiv' >
+                            <div className='imgCard'><img src={imageCard} alt="" /></div>
+                            <div className='cardProfileDiv'>
+                                <div className='cardProfileDiv2'>
+                                    <div className='cardProfileDivImg'>
+                                        <div className='cardProfImageDiv' >
+                                            <img src={singleTalent.profile_pics} alt="" />
+                                        </div>
+                                        <div style={{display : 'flex', alignItems : 'center', gap : 5}}>
+                                            <p>{singleTalent.display_name}</p>
+                                            <p><IoIosStar /> </p>
+                                        </div>
+                                    </div>
+
+                                    <div className='cardProBtn2'>
+                                        <button><MdOutlineVerified/> Verified</button>
                                     </div>
                                 </div>
 
-                                <div className='cardProBtn2'>
-                                    <button><MdOutlineVerified/> Verified</button>
+                                <div className='mytitle'>
+                                    <h3>{singleTalent.summary_of_profile}</h3>
+                                    <p>N{singleTalent.starting_price}</p>
                                 </div>
-                            </div>
-
-                            <div className='mytitle'>
-                                <h3>Frontend developer</h3>
-                                <p>N20,000</p>
                             </div>
                         </div>
-                    </div>
-                    {/* </Link> */}
-
-
-
-                    <div className='cardDiv'>
-                        <div className='imgCard'><img src={imageCard} alt="" /></div>
-                        <div className='cardProfileDiv'>
-                            <div className='cardProfileDiv2'>
-                                <div className='cardProfileDivImg'>
-                                    <img src={avatar} alt="" />
-                                    <div>
-                                        <p>Cassie Daniels</p>
-                                        <p>4.0 <IoIosStar /></p>
-                                    </div>
-                                </div>
-
-                                <div className='cardProBtn'>
-                                    <button><MdOutlineVerified/> Verified</button>
-                                </div>
-                            </div>
-
-                            <div className='mytitle'>
-                                <h3>Frontend developer</h3>
-                                <p>N20,000</p>
-                            </div>
-                        </div>
-                    </div>
-
-
-
-                    <div className='cardDiv'>
-                        <div className='imgCard'><img src={imageCard} alt="" /></div>
-                        <div className='cardProfileDiv'>
-                            <div className='cardProfileDiv2'>
-                                <div className='cardProfileDivImg'>
-                                    <img src={avatar} alt="" />
-                                    <div>
-                                        <p>Cassie Daniels</p>
-                                        <p>4.0 <IoIosStar /></p>
-                                    </div>
-                                </div>
-
-                                <div className='cardProBtn2'>
-                                    <button><MdOutlineVerified/> Verified</button>
-                                </div>
-                            </div>
-
-                            <div className='mytitle'>
-                                <h3>Frontend developer</h3>
-                                <p>N20,000</p>
-                            </div>
-                        </div>
-                    </div>
-
-
-
-                    <div className='cardDiv'>
-                        <div className='imgCard'><img src={imageCard} alt="" /></div>
-                        <div className='cardProfileDiv'>
-                            <div className='cardProfileDiv2'>
-                                <div className='cardProfileDivImg'>
-                                    <img src={avatar} alt="" />
-                                    <div>
-                                        <p>Cassie Daniels</p>
-                                        <p className='proRating'>4.0 <IoIosStar /></p>
-                                    </div>
-                                </div>
-
-                                <div className='cardProBtn'>
-                                    <button><MdOutlineVerified/> Verified</button>
-                                </div>
-                            </div>
-
-                            <div className='mytitle'>
-                                <h3>Frontend developer</h3>
-                                <p>N20,000</p>
-                            </div>
-                        </div>
-                    </div>
+                    ))}
 
                 </div>
             </div>
@@ -368,6 +334,13 @@ const TalentCompo = () => {
         )}
                 
         <BottomBar openModal={openModal}/>
+        {isLoading ? 
+          (<>
+            <div className='loaderModal'>
+              <span className="loader"></span>
+            </div>
+          </>) : ''
+        }
 
     </div>
   )
