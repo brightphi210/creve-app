@@ -6,7 +6,7 @@ import { AiOutlineCloudUpload } from "react-icons/ai";
 import { FaImage } from "react-icons/fa6";
 import { MdDelete } from "react-icons/md";
 
-const CreativeCoverPics = () => {
+const CreativeCoverPics = ({onChange, formData, image, fileName, setFileName, setImage}) => {
 
     const [isSidebarVisible, setSidebarVisible] = useState(false);
 
@@ -17,8 +17,7 @@ const CreativeCoverPics = () => {
 
     
 
-    const [image, setImage] = useState(null)
-    const [fileName, setFileName] = useState("No Selected File Name")
+
   return (
     <div>
 
@@ -29,17 +28,8 @@ const CreativeCoverPics = () => {
             <div className='creativeDetailSec coverImageDiv'>
                 <h2>Cover Pics</h2>
 
-                <form action=""
-                    onClick={()=> document.querySelector(".input-field").click()}
-                >
-                    <input type="file" accept='image/*' className='input-field' hidden
-                        onChange={({target: {files}}) =>{
-                            files[0] && setFileName(files[0].name)
-                            if(files){
-                                setImage(URL.createObjectURL(files[0]))
-                            }
-                        }}
-                    />
+                <form action="" onClick={()=> document.querySelector(".input-field").click()}>
+                    <input type="file" accept='image/*' className='input-field' hidden onChange={onChange}/>
 
                     {image ? 
                         <img src={image} alt=''/> : 
