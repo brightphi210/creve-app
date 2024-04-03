@@ -134,9 +134,14 @@
     margin-bottom: 30px;
 }
 
-.imgCard img{
-    border-radius: 5px;
+.imgCard {
+    height: 250px;
     overflow: hidden;
+    border-radius: 5px;
+}
+
+.imgCard img{
+    width: 100%;
 }
 
 
@@ -334,6 +339,17 @@
     .cardDiv{
         height: 350px;
         box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+    }
+    
+
+    .imgCard {
+        height: 230px;
+        overflow: hidden;
+        border-radius: 10px;
+    }
+    
+    .imgCard img{
+        width: 100%;
     }
     
 

@@ -148,158 +148,41 @@ const TalentCompo = () => {
             </div>
 
             <div className='imageSectionCard'>
-                <p className='imageSectP'>Recently Viewed</p>
+                <p className='imageSectP'>Talents</p>
 
                 <div className='imagecard'>
 
 
                     {talentData.map((singleTalent)=>(
-                        <div className='cardDiv' >
-                            <div className='imgCard'><img src={imageCard} alt="" /></div>
-                            <div className='cardProfileDiv'>
-                                <div className='cardProfileDiv2'>
-                                    <div className='cardProfileDivImg'>
-                                        <div className='cardProfImageDiv' >
-                                            <img src={singleTalent.profile_pics} alt="" />
+                        <Link to={`/talentsProfiles/${singleTalent.id}`}>
+                            <div className='cardDiv' >
+                                <div className='imgCard'><img src={singleTalent.cover_image} alt="" /></div>
+                                <div className='cardProfileDiv'>
+                                    <div className='cardProfileDiv2'>
+                                        <div className='cardProfileDivImg'>
+                                            <div className='cardProfImageDiv' >
+                                                <img src={singleTalent.profile_pics} alt="" />
+                                            </div>
+                                            <div style={{display : 'flex', alignItems : 'center', gap : 5}}>
+                                                <p>{singleTalent.display_name}</p>
+                                                <p><IoIosStar /> </p>
+                                            </div>
                                         </div>
-                                        <div style={{display : 'flex', alignItems : 'center', gap : 5}}>
-                                            <p>{singleTalent.display_name}</p>
-                                            <p><IoIosStar /> </p>
+
+                                        <div className='cardProBtn2'>
+                                            <button><MdOutlineVerified/> Verified</button>
                                         </div>
                                     </div>
 
-                                    <div className='cardProBtn2'>
-                                        <button><MdOutlineVerified/> Verified</button>
+                                    <div className='mytitle'>
+                                        <h3>{singleTalent.summary_of_profile}</h3>
+                                        <p>N{singleTalent.starting_price}</p>
                                     </div>
-                                </div>
-
-                                <div className='mytitle'>
-                                    <h3>{singleTalent.summary_of_profile}</h3>
-                                    <p>N{singleTalent.starting_price}</p>
                                 </div>
                             </div>
-                        </div>
+                        </Link>
                     ))}
 
-                </div>
-            </div>
-
-            <div className='imageSectionCard'>
-                <p className='imageSectP'>Verified Profiles</p>
-
-                <div className='imagecardCarol'>
-                <Carousel 
-                    responsive={responsive}
-                    autoPlay={true}
-                    swipeable={true}
-                    draggable={true}
-                    showDots={true}
-                    infinite={true}
-                    autoPlaySpeed={3000}
-                    keyBoardControl={true}
-                    removeArrowOnDeviceType={["mobile"]}
-                >
-
-                    <div className='cardDiv cardDivCarol'>
-                        <div className='imgCard'><img src={imageCard} alt="" /></div>
-                        <div className='cardProfileDiv' onClick={openModal}>
-                            <div className='cardProfileDiv2'>
-                                <div className='cardProfileDivImg'>
-                                    <img src={avatar} alt="" />
-                                    <div>
-                                        <p>Cassie Daniels</p>
-                                        <p>4.0 <IoIosStar /> </p>
-                                    </div>
-                                </div>
-
-                                <div className='cardProBtn2'>
-                                    <button><MdOutlineVerified/> Verified</button>
-                                </div>
-                            </div>
-
-                            <div className='mytitle'>
-                                <h3>Frontend developer</h3>
-                                <p>N20,000</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div className='cardDiv cardDivCarol' onClick={openModal}>
-                        <div className='imgCard'><img src={imageCard} alt="" /></div>
-                        <div className='cardProfileDiv'>
-                            <div className='cardProfileDiv2'>
-                                <div className='cardProfileDivImg'>
-                                    <img src={avatar} alt="" />
-                                    <div>
-                                        <p>Cassie Daniels</p>
-                                        <p>4.0 <IoIosStar /> </p>
-                                    </div>
-                                </div>
-
-                                <div className='cardProBtn2'>
-                                    <button><MdOutlineVerified/> Verified</button>
-                                </div>
-                            </div>
-
-                            <div className='mytitle'>
-                                <h3>Frontend developer</h3>
-                                <p>N20,000</p>
-                            </div>
-                        </div>
-                    </div>
-
-
-                    <div className='cardDiv cardDivCarol' onClick={openModal}>
-                        <div className='imgCard'><img src={imageCard} alt="" /></div>
-                        <div className='cardProfileDiv'>
-                            <div className='cardProfileDiv2'>
-                                <div className='cardProfileDivImg'>
-                                    <img src={avatar} alt="" />
-                                    <div>
-                                        <p>Cassie Daniels</p>
-                                        <p>4.0 <IoIosStar /> </p>
-                                    </div>
-                                </div>
-
-                                <div className='cardProBtn2'>
-                                    <button><MdOutlineVerified/> Verified</button>
-                                </div>
-                            </div>
-
-                            <div className='mytitle'>
-                                <h3>Frontend developer</h3>
-                                <p>N20,000</p>
-                            </div>
-                        </div>
-                    </div>
-
-
-                    <div className='cardDiv cardDivCarol' onClick={openModal}>
-                        <div className='imgCard'><img src={imageCard} alt="" /></div>
-                        <div className='cardProfileDiv'>
-                            <div className='cardProfileDiv2'>
-                                <div className='cardProfileDivImg'>
-                                    <img src={avatar} alt="" />
-                                    <div>
-                                        <p>Cassie Daniels</p>
-                                        <p>4.0 <IoIosStar /> </p>
-                                    </div>
-                                </div>
-
-                                <div className='cardProBtn2'>
-                                    <button><MdOutlineVerified/> Verified</button>
-                                </div>
-                            </div>
-
-                            <div className='mytitle'>
-                                <h3>Frontend developer</h3>
-                                <p>N20,000</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    
-                </Carousel>
                 </div>
             </div>
 

@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import profImage from './images/Avatars1.png'
 import map from './images/map.png'
 import mapImage from './images/bigImage.png'
@@ -16,10 +16,13 @@ import { RiSendPlaneFill } from "react-icons/ri";
 import { HiOutlineArrowLeft } from "react-icons/hi";
 
 import { useNavigate } from 'react-router-dom';
-
+import { jwtDecode } from "jwt-decode";
 
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
+import { BASE_URL } from '../api/api'
+
+import { useParams } from 'react-router-dom';
 
 const CreativeProfileView = () => {
 
@@ -60,9 +63,50 @@ const CreativeProfileView = () => {
   }
 
 
+  const {id} = useParams()
+
   const [show2, setShow2] = useState(false);
   const openShow2 = () =>{setShow2(!show2)}
   const closeShow2 = () =>{setShow2(false)}
+
+
+  const [talentData, setTalentData] = useState({})
+
+
+  let [authTokens, setAuthTokens] = useState(()=> localStorage.getItem('authTokens') ? JSON.parse(localStorage.getItem('authTokens')) : null)
+
+  const decoded = jwtDecode(authTokens.access);
+  const [ isLoading, setIsLoading] = useState(true)
+
+
+  const fetchTalentData = async ()=>{
+    try {
+      const response = await fetch(`${BASE_URL}/creativeprofile/${id}`,{
+        method: 'GET',
+        headers : {
+          'Authorization' : `Bearer ${authTokens.access}`,
+          'Content-Type':'Application/json'
+        },
+      })
+
+      setIsLoading(false)
+      const data = await response.json()
+      console.log(data)
+      setTalentData(data)
+      
+    } catch (error) {
+      console.log(error)
+      setIsLoading(false)
+    }
+  }
+
+
+  useEffect(() => {
+    fetchTalentData()
+  },[])
+
+  console.log('This is my data: ', talentData)
+
 
   return (
     <div className='creativeProfileModal' onClick={closeModal1}>
@@ -74,12 +118,12 @@ const CreativeProfileView = () => {
           <div className='creativeLeftPart'>
             
             <div className='creativeLeftDivPart'>
-              <img src={profImage} alt=""  width={80}/>
+              <img src={talentData.profile_pics} alt=""  width={80}/>
             </div>
 
             <div className='subLeftPart'>
               <div>
-                <h2>Cassie Daniels</h2>
+                <h2>{talentData.display_name}</h2>
                 <RiVerifiedBadgeFill />
               </div>
 
@@ -92,7 +136,7 @@ const CreativeProfileView = () => {
                   <HiStar className='creativeViewIcons'/>
                 </span> 4.8/5.0 (12 reviews)
               </p>
-              <p className='creativeProfileLocation'><HiLocationMarker className='creativeViewIcons'/> Port Harcourt, Nigeria</p>
+              <p className='creativeProfileLocation'><HiLocationMarker className='creativeViewIcons'/> {talentData.location}</p>
             </div>
           </div>
 

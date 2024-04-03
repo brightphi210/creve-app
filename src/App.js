@@ -45,7 +45,7 @@ function App() {
           <Route element={<PrivateRoute />}>
             <Route path="/dashboardMain" element={<UserDasboardMain />}></Route>
             <Route path="/dashboard" element={<UserDashboard />}></Route>
-            <Route path="/talentsProfiles" element={<CreativeProView />}></Route>
+            <Route path="/talentsProfiles/:id" element={<CreativeProView />}></Route>
             <Route path="/favourites" element={<Favourite />}></Route>
             <Route path="/searchedResult" element={<SearchResulte />}></Route>
             <Route path="/user-settings" element={<UserSetting />}></Route>

@@ -158,7 +158,7 @@ const SignUpCompo2 = () => {
 
               <p className='forget'>Forgot Password</p>
           
-              <button className='loginBtn' type='submit'>{isLoading ? <span className="loader"></span> : 'Join as Creative'}</button>
+              <button className='loginBtn' type='submit'>{isLoading ? <span className="loader2"></span> : 'Join as Creative'}</button>
 
               <div className='hrDiv'>
                 <hr /> <p>or</p> <hr />

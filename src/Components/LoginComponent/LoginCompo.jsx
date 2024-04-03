@@ -165,7 +165,9 @@ const LoginCompo = () => {
                     </div>
 
                     <p className='forget'>Forgot Password</p>
-                    <button className='loginBtn'>{ isLoading ? <span className="loader"></span> : 'Login'}</button>
+                    <button className='loginBtn'>{ isLoading ? <span className="loader2" style={{
+                      
+                    }}></span> : 'Login'}</button>
 
                     <div className='hrDiv'>
                       <hr /> <p>or</p> <hr />

@@ -349,8 +349,8 @@
 
 
 .loader {
-    width: 20px;
-    height: 20px;
+    width: 15px;
+    height: 15px;
     border: 2px solid #FFF;
     border-bottom-color: skyblue;
     border-radius: 50%;
@@ -367,6 +367,13 @@
         transform: rotate(360deg);
     }
     } 
+
+
+
+
+
+
+    
 
 // .loader {
 //     width: 16px;
@@ -395,3 +402,35 @@
 //       box-shadow: -24px 0 #FFF, 24px 0 $my-blue;
 //     }
 //   }
+
+
+
+.loader2 {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    display: block;
+    margin:  auto;
+    position: relative;
+    color: #FFF;
+    box-sizing: border-box;
+    animation: animloader 2s linear infinite;
+  }
+  
+  @keyframes animloader {
+    0% {
+      box-shadow: 14px 0 0 -2px,  38px 0 0 -2px,  -14px 0 0 -2px,  -38px 0 0 -2px;
+    }
+    25% {
+      box-shadow: 14px 0 0 -2px,  38px 0 0 -2px,  -14px 0 0 -2px,  -38px 0 0 2px;
+    }
+    50% {
+      box-shadow: 14px 0 0 -2px,  38px 0 0 -2px,  -14px 0 0 2px,  -38px 0 0 -2px;
+    }
+    75% {
+      box-shadow: 14px 0 0 2px,  38px 0 0 -2px,  -14px 0 0 -2px,  -38px 0 0 -2px;
+    }
+    100% {
+      box-shadow: 14px 0 0 -2px,  38px 0 0 2px,  -14px 0 0 -2px,  -38px 0 0 -2px;
+    }
+  }
