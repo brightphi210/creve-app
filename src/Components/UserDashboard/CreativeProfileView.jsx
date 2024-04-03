@@ -106,6 +106,7 @@ const CreativeProfileView = () => {
   },[])
 
   console.log('This is my data: ', talentData)
+  // console.log('This is my data: ', talentData)
 
 
   return (
@@ -210,7 +211,7 @@ const CreativeProfileView = () => {
 
             <div>
               <h3>Language</h3>
-              <p>English</p>
+              <p>{talentData.language}</p>
             </div>
 
             <div>
@@ -224,16 +225,16 @@ const CreativeProfileView = () => {
             <div className='detailsView'>
               <h2>Details</h2>
               <div className='detailsViewFLex'>
-                <h3>Frontend Developer Proficient in CSS, JavaScript and React</h3>
+                <h3>{talentData.summary_of_profile}</h3>
                 
                 <div>
-                  <h3>#20,000</h3>
+                  <h3>#{talentData.starting_price}</h3>
                   <p>Starting Price </p>
                 </div>
               </div>
 
               <div className='webViewsDiv'>
-                <p className='web'>Website Portfolio</p>
+                <p className='web' style={{paddingTop : 10}}>Website Portfolio</p>
                 <div >
                   <span>Web development</span>
                   <span>JavaScript</span>
@@ -242,33 +243,18 @@ const CreativeProfileView = () => {
                   <span>CSS</span>
                 </div>
                 <p className='bioView'>
-                  Hi, I’m Cassie, Lorem ipsum dolor sit amet, consectetur 
-                  adipiscing elit, sed do eiusmod tempor incididunt ut labore et 
-                  dolore magna aliqua. Ut enim ad minim veniam, quis nostrud 
-                  exercitation ullamco laboris nisi ut aliquip ex ea commodo 
-                  consequat.
+                  {talentData.about}
                 </p>
               </div>
             </div>
 
             <div className='creativeProfileViewRightImage'>
               <h2>Gallery</h2>
-              <Carousel 
-                    responsive={responsive}
-                    autoPlay={true}
-                    swipeable={true}
-                    draggable={true}
-                    showDots={true}
-                    infinite={true}
-                    autoPlaySpeed={3000}
-                    keyBoardControl={true}
-                    removeArrowOnDeviceType={["mobile"]}
-                >
-                <img src={mapImage} alt="" />
-                <img src={mapImage} alt="" />
-                <img src={mapImage} alt="" />
-                <img src={mapImage} alt="" />
-              </Carousel>
+
+                <div className='coverDisplayDiv'>
+                  <img src={talentData.cover_image} alt="" />
+                </div>
+
               <div className='rightImageDiv'>
                 <img src={mapImage} alt="" />
                 <img src={mapImage} alt="" />
