@@ -169,14 +169,25 @@ const TalentCompo = () => {
                                             </div>
                                         </div>
 
+
+                                        {singleTalent.verified === false ? (
+
+                                        <div className='cardProBtn2'>
+                                            <button><MdOutlineVerified/> Unverified</button>
+                                        </div>
+                                        ) : (
+
                                         <div className='cardProBtn2'>
                                             <button><MdOutlineVerified/> Verified</button>
                                         </div>
+                                        )}
+
+
                                     </div>
 
                                     <div className='mytitle'>
                                         <h3>{singleTalent.summary_of_profile}</h3>
-                                        <p>N{singleTalent.starting_price}</p>
+                                        <p>N{singleTalent.starting_price.toLocaleString()}</p>
                                     </div>
                                 </div>
                             </div>
