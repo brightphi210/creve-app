@@ -69,8 +69,8 @@
     }
 
     .sectionTwo h2{
-        font-size: 20px;
-        font-weight: bold;
+        font-size: 15px;
+        font-weight: 400;
     }
 
 
@@ -82,14 +82,13 @@
     
 
     .exploreDiv h3{
-        font-size: 20px;
-        font-weight: 500;
+        font-size: 15px;
+        font-weight: 400;
     }
 
     .exploreDiv p{
-        font-size: 11px;
         padding: 10px 0;
-        @include small-font
+        font-size: 11px;
     }
 
     .subSecTwo img{
