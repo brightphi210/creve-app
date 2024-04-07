@@ -92,7 +92,7 @@ const LoginCompo2 = () => {
           <div className='loginInputDiv'>
               <div>
                 {/* <img src={logo} alt="" width={80} /> */}
-                <Link to={'/registerOption'}><IoIosArrowDropleftCircle className='arrow'/></Link>
+                {/* <Link to={'/registerOption'}><IoIosArrowDropleftCircle className='arrow'/></Link> */}
                 
                 <h2>Welcome Back</h2>
 
