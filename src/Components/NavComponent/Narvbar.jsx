@@ -60,6 +60,7 @@ const Narvbar = () => {
             <div className='navUl'>
               <p>About us</p>
               <Link to={'/category'}><p className='dropDown'>Category <IoMdArrowDropdown /></p></Link>
+              <Link to={'/blog'}><p>Blog</p></Link>
               {tokentoken ? '' : <Link to={'/dashboardMain'}><p>Find Talent</p></Link>}
             </div>
           </div>

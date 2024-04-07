@@ -24,6 +24,7 @@ import CreativeOnboardAll from "./Pages/CreativeOnboardAll";
 import CreativeProfilePage from "./Pages/CreativeProfilePage";
 import NotificationPage from "./Pages/NotificationPage";
 import UserNotificationPage from "./Pages/UserNotificationPage";
+import Blog from "./Pages/Blog";
 
 
 
@@ -40,6 +41,8 @@ function App() {
           <Route path="/signupCreative" element={<SignUp2 />}></Route>
           <Route path="/category" element={<Category />}></Route>
           <Route path="/registerOption" element={<RegistraionOption />}></Route>
+          <Route path="/blog" element={<Blog /> }/>
+
 
           
           <Route element={<PrivateRoute />}>
