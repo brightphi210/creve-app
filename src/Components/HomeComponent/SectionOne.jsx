@@ -41,9 +41,9 @@ const SectionOne = () => {
         <div className='sectionOne'>
             
             <div className='sectionSubDiv'>
-                <h2 className='h2Show'>Hire the Best <br /> <span>Talents</span> Globally</h2>
+                <h2 className='h2Show'>Discover best <br /> <span>talents</span> here . .</h2>
 
-                <h2 className='h2Hide'>Hire the Best <span>Talents</span> Globally</h2>
+                <h2 className='h2Hide'>Discover best <span>talents</span> here . .</h2>
 
                 <p className='pOne'>
                     Find the right talent/client to work with. .
@@ -60,10 +60,12 @@ const SectionOne = () => {
 
                 <div className='popularDiv'>
                     <p className='Two'>Popular Service:</p>
-                    <button>Frontend Development</button>
-                    <button>UI/UX Design</button>
-                    <button>Shoe Making</button>
-                    <button>Fashion Design</button>
+                    <div className='popularDiv2'>
+                        <button>Web Dev</button>
+                        <button>UI/UX Design</button>
+                        <button>Fashion Design</button>
+                        <button>Furniture</button>
+                    </div>
                 </div>
         
             </div>
@@ -88,7 +90,7 @@ const SectionOne = () => {
                         <img src={sev1} alt="" />
                         <div class="overlay"></div>
                     </div>
-                    <p>Frontend Development</p>
+                    <p>Frontend Dev</p>
                 </div>
 
                 <div className='caroImageDiv'>

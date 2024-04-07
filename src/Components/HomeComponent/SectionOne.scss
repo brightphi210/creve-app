@@ -20,6 +20,7 @@
 }
 
 
+
 .sectionSubDiv span{
     color: $my-blue;
 }
@@ -116,6 +117,12 @@
     gap: 10px;
     justify-content: center;
     margin-top: 20px;
+    align-items: center;
+}
+
+.popularDiv2{
+    display: flex;
+    gap: 10px;
     align-items: center;
 }
 
@@ -251,9 +258,9 @@
     }
 
     .sectionOne h2{
-        font-size: 40px;
+        font-size: 35px;
         font-weight: 400;
-        line-height: 50px;
+        line-height: 45px;
         text-align: left;
     }
 
@@ -282,20 +289,26 @@
     
 
     .popularDiv{
-        display: grid;
-        grid-template-columns: 1fr;
-        justify-content: start;
-        text-align: left;
+        display: block;
+
     }
 
-  
+    .popularDiv2{
+        display: grid;
+        gap: 10px;
+        align-items: center;
+        grid-template-columns: 1fr 1fr;
+        justify-content: start;
+    }
+    
+    
     .popularDiv button{
         border: rgb(192, 192, 192) solid 1px;
         background-color: $my-white;
         cursor: pointer;
         width: 100%;
         @include button-style;
-        text-align: left;
+        text-align: center;
     }
 
     .smallImg{
@@ -326,8 +339,9 @@
     }
 
     .caroselSection h2{
-        font-size: 20px;
+        font-size: 15px;
         line-height: 25px;
+        font-weight: 400;
     }
 
 
@@ -341,7 +355,7 @@
         border-radius: 5px;
         font-size: 13px;
         gap: 5px;
-        width: 50%;
+        // width: 50%;
         margin: 0;
         align-self: center;
         text-align: left;
