@@ -50,7 +50,7 @@ const SectionOne = () => {
                 </p>
                 <div className='searchDiv'>
                     <RiSearch2Line className='searchIcon'/>
-                    <input type="text" placeholder='Search for any service...'/>
+                    <input type="text" required placeholder='Search for any service...'/>
                     <button>Search</button>
                 </div>
 
