@@ -45,7 +45,7 @@ const Narvbar = () => {
     <div className='navDivMain '> 
 
         <div className='maimLogo'>
-          <Link to={'/'}><div><img src={logo} alt="" width={100}/></div></Link>
+          <Link to={'/'}><div><img src={logo} alt="" width={80}/></div></Link>
 
           <div className='navIcons'>
             {openNavbar ? <VscMenu onClick={toggleNav}/> : <MdClose onClick={toggleNav}/>}
@@ -55,23 +55,12 @@ const Narvbar = () => {
 
         <div className={`navDiv ${openNavbar ? 'open' : ''}`}>
           <div className='firstNavDiv'>
-          <Link to={'/'}><div><img src={logo} alt="" width={100}/></div></Link>
+          <Link to={'/'}><div><img src={logo} alt="" width={80}/></div></Link>
 
             <div className='navUl'>
-              <p>How it works</p>
               <p>About us</p>
-
-              {/* {
-                decoded.role === 'Talent' ? 
-                (
-                  <Link to={'/category'}><p className='dropDown'>Who is a Creative<IoMdArrowDropdown /></p></Link>
-
-                  ) : (
-                    
-                    )
-                  } */}
-                  <Link to={'/category'}><p className='dropDown'>Category <IoMdArrowDropdown /></p></Link>
-              <p>Find Talent</p>
+              <Link to={'/category'}><p className='dropDown'>Category <IoMdArrowDropdown /></p></Link>
+              {tokentoken ? '' : <Link to={'/dashboardMain'}><p>Find Talent</p></Link>}
             </div>
           </div>
 
@@ -85,7 +74,6 @@ const Narvbar = () => {
           </>) :  
           (<>
             <div className='secondNavDiv'>
-              <Link to={'/signupCreative'}><p className='apply'>Apply as a Creative</p></Link>
               <Link to={'/login'}><button className='loginBtn'>Login</button></Link>
               <Link to={'/registerOption'}><button className='signupBtn'>Join Creve</button></Link>
             </div>
