@@ -60,14 +60,13 @@ const SectionFour = () => {
                 <div className='testimonyDiv'>
                     <BiSolidQuoteLeft className='qoute'/>
                     <p className='testimony'>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
                         sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
                         Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
                     </p>
                     
                     <div className='testProDiv'>
                         <div>
-                            <img src={ava1} alt="" width={40}/>
+                            <img src={ava1} alt="" width={30}/>
                         </div>
                         <div>
                             <p>Jane Doe</p>
@@ -84,14 +83,13 @@ const SectionFour = () => {
                 <div className='testimonyDiv'>
                     <BiSolidQuoteLeft className='qoute'/>
                     <p className='testimony'>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
                         sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
                         Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
                     </p>
                     
                     <div className='testProDiv'>
                         <div>
-                            <img src={ava2} alt="" width={40}/>
+                            <img src={ava2} alt="" width={30}/>
                         </div>
                         <div>
                             <p>Jane Doe</p>
@@ -110,14 +108,13 @@ const SectionFour = () => {
                 <div className='testimonyDiv'>
                     <BiSolidQuoteLeft className='qoute'/>
                     <p className='testimony'>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
                         sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
                         Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
                     </p>
                     
                     <div className='testProDiv'>
                         <div>
-                            <img src={ava3} alt="" width={40}/>
+                            <img src={ava3} alt="" width={30}/>
                         </div>
                         <div>
                             <p>Jane Doe</p>
@@ -135,14 +132,13 @@ const SectionFour = () => {
                 <div className='testimonyDiv'>
                     <BiSolidQuoteLeft className='qoute'/>
                     <p className='testimony'>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
                         sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
                         Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
                     </p>
                     
                     <div className='testProDiv'>
                         <div>
-                            <img src={ava4} alt="" width={40}/>
+                            <img src={ava4} alt="" width={30}/>
                         </div>
                         <div>
                             <p>Jane Doe</p>
@@ -167,7 +163,7 @@ const SectionFour = () => {
             </div>
 
             <div className='hireText'>
-                <h3>Hire Talented Professionals <br /> for any Task</h3>
+                <h3>Hire Talented Professionals  for any Task</h3>
                 <p>Creve is your Go-To Platform for Both Digital and Local Services.</p>
                 <Link to={'/dashboard'}><button>Find Talent</button></Link>
             </div>

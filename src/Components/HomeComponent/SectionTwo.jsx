@@ -26,7 +26,7 @@ const SectionTwo = () => {
                         in digital skills, creative arts, and local expertise
                     </p>
                     {/* <Link to></Link> */}
-                    <Link to={'dashboard'}><button>Explore Talent <IoIosSend /></button></Link>
+                    {/* <Link to={'dashboard'}><button>Explore Talent <IoIosSend /></button></Link> */}
                 </div>
             </div>
 
@@ -40,7 +40,7 @@ const SectionTwo = () => {
                         Hire with confidence using our easy-to-use platform. 
                         Find the perfect talent for your project or task
                     </p>
-                    <Link to={'/dashboard'}><button>Explore Talent <IoIosSend /></button></Link>
+                    {/* <Link to={'/dashboard'}><button>Explore Talent <IoIosSend /></button></Link> */}
                 </div>
             </div>
 
@@ -54,7 +54,7 @@ const SectionTwo = () => {
                         Make informed decisions with our review and 
                         rating system. See what others say about each talent
                     </p>
-                    <Link to={'/dashboard'}><button>Explore Talent <IoIosSend /></button></Link>
+                    {/* <Link to={'/dashboard'}><button>Explore Talent <IoIosSend /></button></Link> */}
                 </div>
             
             </div>
