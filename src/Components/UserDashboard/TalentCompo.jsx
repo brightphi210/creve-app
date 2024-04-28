@@ -210,7 +210,7 @@ const TalentCompo = () => {
 
                                     <div className='mytitle'>
                                         <h4>{singleTalent.summary_of_profile}</h4>
-                                        <p>Rate: N{singleTalent.starting_price}</p>
+                                        <p>N{(singleTalent.starting_price).toLocaleString()}</p>
                                     </div>
 
                                 </div>

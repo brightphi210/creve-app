@@ -125,6 +125,7 @@
     border-radius: 5px;
     cursor: pointer;
     padding: 10px;
+    padding-bottom: 0;
     width: 100%;
     height: fit-content;
     position: relative;
@@ -185,10 +186,11 @@
     box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
     top: 10%;
     left: 30%;
+    border: solid 4px white;
 }
 
-.cardProfileDivImg img{
-    width: 100px;
+.cardProfImageDiv img{
+    width: 110px;
 }
 
 
@@ -244,7 +246,6 @@
     padding-bottom: 5px;
 }
 
-.mytitle
 
 // ======================== Explore Section =========================
 .ExploreCategoryAll{
@@ -290,16 +291,21 @@
 
 
 @media only screen and (min-width: $small-One) and (max-width: $small-Two) {
-    
+    .findMainSection{
+        padding: 30px 4%;
+        padding-bottom: 100px;
+    }
+   
+   
     .talentSectionDiv{
-        padding: 20% 5%;
+        padding: 20% 3%;
         padding-bottom: 0;
     }
 
 
     .talentSection{
         display: block;
-        padding: 50px 6%;
+        padding: 50px 3%;
         border-radius: 10px;
     }
     
@@ -406,13 +412,19 @@
         padding: 20px 5px;
         color: black;
     }
+
+
+    .cardProfImageDiv{
+        width: 100px;
+        height: 100px;
+        left: 10%;
+        top: 15%;
+    }
     
 
-    .cardProfileDivImg img{
-        width: 30px;
-        border-radius: 50%;
+    .cardProfImageDiv img{
+        width: 110px;
     }
-
 
 
     .cardProfileDivImg p{
@@ -435,11 +447,12 @@
 
     .cardProfileDiv2 {
         align-items: center;
+        padding-top: 20px;
     }
 
     .cardProBtn2 button{
         font-size: 9px;
-        border-radius: 5px;
+        border-radius: 20px;
         padding: 5px 10px;
     }
 
