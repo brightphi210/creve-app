@@ -198,7 +198,7 @@ const CreativeProfileView = () => {
 
             <div>
               <h3>Location</h3>
-              <p>Port Harcourt, Nigeria</p>
+              <p>{talentData.location}</p>
             </div>
 
 
@@ -228,7 +228,7 @@ const CreativeProfileView = () => {
                 <h3>{talentData.summary_of_profile}</h3>
                 
                 <div>
-                  <h3>#{talentData.starting_price}</h3>
+                  <h3>N{talentData.starting_price}</h3>
                   <p>Starting Price </p>
                 </div>
               </div>
@@ -250,10 +250,6 @@ const CreativeProfileView = () => {
 
             <div className='creativeProfileViewRightImage'>
               <h2>Gallery</h2>
-
-                <div className='coverDisplayDiv'>
-                  <img src={talentData.cover_image} alt="" />
-                </div>
 
               <div className='rightImageDiv'>
                 <img src={mapImage} alt="" />
