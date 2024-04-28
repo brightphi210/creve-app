@@ -126,7 +126,8 @@
     cursor: pointer;
     padding: 10px;
     width: 100%;
-    height: 400px;
+    height: 320px;
+    position: relative;
 }
 
 .cardDivCarol{
@@ -135,9 +136,10 @@
 }
 
 .imgCard {
-    height: 250px;
+    height: 200px;
     overflow: hidden;
     border-radius: 5px;
+    box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
 }
 
 .imgCard img{
@@ -174,15 +176,18 @@
 }
 
 .cardProfImageDiv{
-    width: 30px;
-    height: 30px;
+    position: absolute;
+    width: 120px;
+    height: 120px;
     border-radius: 50%;
     overflow: hidden;
     box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+    top: 15%;
+    left: 30%;
 }
 
 .cardProfileDivImg img{
-    width: 40px;
+    width: 130px;
 }
 
 
@@ -338,15 +343,16 @@
 
 
     .cardDiv{
-        height: 350px;
+        height: 300px;
         box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
     }
     
 
     .imgCard {
-        height: 200px;
+        height: 180px;
         overflow: hidden;
         border-radius: 10px;
+        box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
     }
     
     .imgCard img{
