@@ -184,14 +184,14 @@ const TalentCompo = () => {
                                 </div>
                                 <div className='cardProfileDiv'>
                                     <div className='cardProfileDiv2'>
-                                        <div className='cardProfileDivImg'>
-                                            <div className='cardProfImageDiv' >
-                                                <img src={singleTalent.profile_pics} alt="" />
-                                            </div>
-                                            <div style={{display : 'flex', alignItems : 'center', gap : 5}}>
-                                                <p>{singleTalent.display_name}</p>
-                                                <p><IoIosStar /> </p>
-                                            </div>
+
+                                        <div className='cardProfImageDiv' >
+                                            <img src={singleTalent.profile_pics} alt="" />
+                                        </div>
+
+
+                                        <div style={{display : 'flex', alignItems : 'center', gap : 5}}>
+                                            <p>{singleTalent.display_name}</p>
                                         </div>
 
 
@@ -206,15 +206,13 @@ const TalentCompo = () => {
                                             <button><MdOutlineVerified/> Verified</button>
                                         </div>
                                         )}
-
-
                                     </div>
 
                                     <div className='mytitle'>
-                                        <h3>{singleTalent.summary_of_profile}</h3>
-                                        {/* <p>N{singleTalent.starting_price.toLocaleString()}</p> */}
-                                        <p>N{singleTalent.starting_price}</p>
+                                        <h4>{singleTalent.summary_of_profile}</h4>
+                                        <p>Rate: N{singleTalent.starting_price}</p>
                                     </div>
+
                                 </div>
                             </div>
                         </Link>

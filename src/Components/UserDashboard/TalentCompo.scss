@@ -102,8 +102,8 @@
 
 .imagecard{
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    gap: 30px;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    gap: 20px;
     align-items: center;
 }
 
@@ -126,7 +126,7 @@
     cursor: pointer;
     padding: 10px;
     width: 100%;
-    height: 320px;
+    height: fit-content;
     position: relative;
 }
 
@@ -136,7 +136,7 @@
 }
 
 .imgCard {
-    height: 200px;
+    height: 100px;
     overflow: hidden;
     border-radius: 5px;
     box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
@@ -158,13 +158,14 @@
 }
 
 .cardProfileDiv p{
-    font-size: 15px;
+    font-size: 12px;
 }
 
 
 .cardProfileDiv2{
     display: flex;
     align-items: center;
+    padding-top: 15px;
 }
 
 
@@ -177,17 +178,17 @@
 
 .cardProfImageDiv{
     position: absolute;
-    width: 120px;
-    height: 120px;
+    width: 100px;
+    height: 100px;
     border-radius: 50%;
     overflow: hidden;
     box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
-    top: 15%;
+    top: 10%;
     left: 30%;
 }
 
 .cardProfileDivImg img{
-    width: 130px;
+    width: 100px;
 }
 
 
@@ -204,32 +205,46 @@
 
 .cardProBtn2 {
     margin-left: auto;
+    align-items: center;
+    display: flex;
 }
 
 .cardProBtn button{
     display: flex;
     gap: 5px;
-    padding: 8px 20px;
+    padding: 5px 20px;
     border: none;
     background-color: $my-blue;
     color: $my-white;
     align-items: center;
     border-radius: 20px;
+    font-size: 12px;
 }
 
 
 .cardProBtn2 button{
     display: flex;
     gap: 5px;
-    padding: 8px 20px;
+    padding: 5px 10px;
     border: none;
     background-color: rgb(231, 231, 231);
     color: $my-blue;
     align-items: center;
     border-radius: 20px;
+    font-size: 9px;
 }
 
 
+.mytitle{
+    padding-top: 20px;
+}
+
+.mytitle h4{
+    font-weight: 600;
+    padding-bottom: 5px;
+}
+
+.mytitle
 
 // ======================== Explore Section =========================
 .ExploreCategoryAll{
@@ -285,7 +300,6 @@
     .talentSection{
         display: block;
         padding: 50px 6%;
-        // padding-bottom: 10px;
         border-radius: 10px;
     }
     
@@ -316,7 +330,6 @@
 
     .talentImgDiv img{
         width: 70%;
-        // display: none;
         padding-top: 50px;
     }
 
@@ -343,20 +356,20 @@
 
 
     .cardDiv{
-        height: 300px;
         box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
     }
     
 
     .imgCard {
-        height: 180px;
+        height: 100px;
         overflow: hidden;
-        border-radius: 10px;
+        border-radius: 5px;
         box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
     }
     
     .imgCard img{
         width: 100%;
+        border-radius: 5px;
     }
     
 
@@ -421,25 +434,23 @@
     }
 
     .cardProfileDiv2 {
-        align-items: flex-start;
+        align-items: center;
     }
 
     .cardProBtn2 button{
-        font-size: 12px;
+        font-size: 9px;
         border-radius: 5px;
         padding: 5px 10px;
     }
 
 
     .cardProBtn button{
-        font-size: 12px;
+        font-size: 9px;
         border-radius: 5px;
         padding: 5px 10px;
     }
 
     .mytitle{
-        display: flex;
-        align-items: center;
         gap: 20px;
         padding-top: 10px;
     }
@@ -447,7 +458,6 @@
 
     .mytitle h3{
         font-size: 13px;
-        font-weight: 400;
     }
 
     .mytitle p{
