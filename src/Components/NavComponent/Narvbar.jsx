@@ -32,7 +32,6 @@ const Narvbar = () => {
   }
 
   const logout = async (e) => {
-
     e.preventDefault()
     setAuthTokens(null)
     localStorage.removeItem('authTokens')

@@ -4,16 +4,31 @@ import './MapSearched.scss'
 import map2 from './images/map2.png'
 
 import { IoArrowBackOutline } from "react-icons/io5";
+import GoogleMapReact from 'google-map-react';
 const MapSearched = ({closeModal}) => {
 
+
+    const defaultProps = {
+        center: {
+          lat: 10.99835602,
+          lng: 77.01502627
+        },
+        zoom: 11
+      };
+    
   return (
     <div className='mapModal'>
 
         <div className='mapModalContent'>
         <p className='creativeViewcloseBtn' onClick={closeModal}><IoArrowBackOutline /></p>
             <div className='mapDivFlex'>
-                <div>
-                    <img src={map2} alt="" />
+                <div className='mapDivImage'>
+                    <GoogleMapReact
+                        bootstrapURLKeys={{ key: "AIzaSyB-PKFDC-s-6HljidZb4us2ORv6tF9n3W8" }}
+                        defaultCenter={defaultProps.center}
+                        defaultZoom={defaultProps.zoom}
+                    >
+                    </GoogleMapReact>
                 </div>
 
                 <div className='mapDivInputs'>

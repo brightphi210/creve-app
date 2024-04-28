@@ -6,7 +6,7 @@
 // ==================== searchedResultDiv ====================
 
 .searchedResultDiv{
-    padding: 130px 5%;
+    padding: 100px 5%;
     padding-bottom: 50px;
 }
 
@@ -25,15 +25,19 @@
 }
 
 
-.searchedBtnsDiv p{
+.searchedResultDiv h2{
     font-size: 20px;
+}
+
+.searchedBtnsDiv p{
+    font-size: 15px;
     font-weight: 400;
 }
 
 .searchedSpanDiv{
     display: flex;
     align-items: center;
-    gap: 20px;
+    gap: 10px;
 }
 
 .searchedBtnsDiv span{
@@ -41,8 +45,9 @@
     align-items: center;
     gap: 5px;
     border: 1px solid grey;
-    padding: 10px 20px;
-    border-radius: 6px;
+    padding: 8px 15px;
+    border-radius: 5px;
+    font-size: 12px;
 }
 
 
@@ -53,7 +58,8 @@
     padding: 30px 0;
 }
 .searchedImagecard{
-    display: flex;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
     gap: 30px;
     align-items: center;
     // flex-wrap: wrap;
@@ -161,6 +167,10 @@
     margin-top: 20px;
 }
 
+.searchedArror p{
+
+}
+
 
 .searchArrorDiv{
     display: flex;
@@ -169,8 +179,9 @@
     background-color: $my-blue;
     padding: 8px 20px;
     color: $my-white;
-    border-radius: 10px;
+    border-radius: 5px;
     cursor: pointer;
+    font-size: 12px;
 }
 
 .first{
@@ -178,6 +189,23 @@
     color: $my-blue !important;
     border: solid 1px $my-blue !important;
 }
+
+
+.searchTalentAbove{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 50px;
+    padding-top: 100px;
+}
+
+.searchTalentAbove p{
+    font-size: 80px;
+    padding: 0;
+    color: rgb(219, 219, 219);
+}
+
 
 @media only screen and (min-width: $small-One) and (max-width: $small-Two) {
     

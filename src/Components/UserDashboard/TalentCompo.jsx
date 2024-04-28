@@ -22,14 +22,16 @@ import BottomBar from './BottomBar'
 import { IoIosArrowRoundForward } from "react-icons/io";
 import { BASE_URL } from '../api/api'
 import { jwtDecode } from "jwt-decode";
-// import { useNavigation } from 'react-router-dom'
- 
+
 
 
 
 const TalentCompo = () => {
 
     // const navigate = useNavigation()
+
+
+  
 
     let [authTokens, setAuthTokens] = useState(()=> localStorage.getItem('authTokens') ? JSON.parse(localStorage.getItem('authTokens')) : null)
 
@@ -76,6 +78,8 @@ const TalentCompo = () => {
         setShow1(false)
       }
 
+
+  
 
 
       const [showMap, setShowMap] = useState(false)
@@ -141,10 +145,30 @@ const TalentCompo = () => {
         </div>
 
         <div className='findMainSection'>
+          <div className='ExploreCategoryAll'>
+                <div className='exploreDivAll'>
+                    <h2>Explore by categories</h2>
+                    
+                    {/* <p><Link to={'/searchedResult'}>See All</Link></p> */}
+                    
+                </div>
+                <div className='categorybtn'>
+                    <span>Furniture</span>
+                    <span>Fashion Design</span>
+                    <span>Electrician</span>
+                    <span>Graphic Design</span>
+                    <span>Backend Dev</span>
+                    <span>Frontend Dev</span>
+                    <span>UI/UX Design</span>
+                    <span>Shoe Making</span>
+                </div>
+            </div>
+
             <div className='findDiv'>
                 <p>Find Talents by Location <PiMapPinLineFill className='mapIcon'/></p>
-                <button onClick={openModalMap}>Search </button>
-                {/* <Link to={'/searchedResult'}><button>Search Link</button></Link> */}
+                {/* <input type="text" placeholder='search' style={{padding : 10, paddingInline : 30}}/> */}
+                {/* <button onClick={openModalMap}>Search </button> */}
+                <Link to={'/searchedResult'}><button>Search Talents</button></Link>
             </div>
 
             <div className='imageSectionCard'>
@@ -152,11 +176,12 @@ const TalentCompo = () => {
 
                 <div className='imagecard'>
 
-
                     {talentData.map((singleTalent)=>(
                         <Link to={`/talentsProfiles/${singleTalent.id}`}>
                             <div className='cardDiv' >
-                                <div className='imgCard'><img src={singleTalent.cover_image} alt="" /></div>
+                                <div className='imgCard'>
+                                  <img src={singleTalent.cover_image} alt="" />
+                                </div>
                                 <div className='cardProfileDiv'>
                                     <div className='cardProfileDiv2'>
                                         <div className='cardProfileDivImg'>
@@ -187,34 +212,14 @@ const TalentCompo = () => {
 
                                     <div className='mytitle'>
                                         <h3>{singleTalent.summary_of_profile}</h3>
-                                        <p>N{singleTalent.starting_price.toLocaleString()}</p>
+                                        {/* <p>N{singleTalent.starting_price.toLocaleString()}</p> */}
+                                        <p>N{singleTalent.starting_price}</p>
                                     </div>
                                 </div>
                             </div>
                         </Link>
                     ))}
 
-                </div>
-            </div>
-
-            <div className='ExploreCategoryAll'>
-                <div className='exploreDivAll'>
-                    <h2>Explore by categories</h2>
-                    <p>See All</p>
-                </div>
-                <div className='categorybtn'>
-                    <span>Furniture</span>
-                    <span>Fashion Design</span>
-                    <span>Mechanics</span>
-                    <span>Accessories Repair</span>
-                    <span>Content Creation</span>
-                    <span>Electrician</span>
-                    <span>Graphic Design</span>
-                    <span>Backend Dev</span>
-                    <span>Mobile Dev</span>
-                    <span>Frontend Dev</span>
-                    <span>UI/UX Design</span>
-                    <span>Shoe Making</span>
                 </div>
             </div>
         </div>

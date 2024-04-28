@@ -20,6 +20,7 @@ import { RiNotificationLine } from "react-icons/ri";
 import { TbSmartHome } from "react-icons/tb";
 import { BiMessageSquareDots } from "react-icons/bi";
 import { RiHeartLine } from "react-icons/ri";
+import { LuSearch } from "react-icons/lu";
 
 
 import { jwtDecode } from "jwt-decode";
@@ -31,7 +32,7 @@ import prof from './images/profilePics.png'
 import { BASE_URL } from '../api/api';
 
 
-const UserNavbar = () => {
+const UserNavbar = ({handleChange, handleSearch}) => {
 
   const [show, setShow] = useState(false)
   const [show2, setShow2] = useState(false)
@@ -158,19 +159,20 @@ const UserNavbar = () => {
             <Link to={'/'}><img src={logo} alt="" width={40}/></Link>
           </div>
 
-          <div className='userSearchDiv'>
+          <form className='userSearchDiv' onSubmit={handleSearch}>
                 <RiSearch2Line className='userSearchIcon'/>
-                <input type="text" placeholder='Search for any service...'/>
-                <button>Search</button>
-            </div>
+                <input required type="text" onChange={handleChange} placeholder='Search for any service...'/>
+                <button type='submit'>Search</button>
+          </form>
         </div>
         <div className='searchIconDiv' onClick={showSearchFun}><RiSearch2Line className='searchBtn'/></div>
 
       {showSearch && (
-        <div className='smallSearchInput'>
+        <form className='smallSearchInput' onSubmit={handleSearch}>
           <p className='arrowback' onClick={hideSearchFun}><MdArrowBack /></p>
-          <input type="text" placeholder='search for any service . . .'/>
-        </div>
+          <input type="text" onChange={handleChange} placeholder='search for any service . . .'/>
+          <button type='submit' className='arrorSearch'><LuSearch /></button>
+        </form>
       )}
 
 

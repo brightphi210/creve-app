@@ -120,6 +120,7 @@ const LoginCompo = () => {
   }
 
 
+
   return (
     <div className=''>
         <div className='loginSection'>

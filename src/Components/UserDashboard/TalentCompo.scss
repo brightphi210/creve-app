@@ -37,7 +37,7 @@
 
 .talentDivArrow{
     background-color: white;
-    padding: 15px 20px;
+    padding: 10px 20px;
     display: flex;
     align-items: center;
     gap: 5px;
@@ -86,7 +86,7 @@
 .findDiv button{ 
     padding: 10px 40px;
     border: none;
-    border-radius: 10px;
+    border-radius: 5px;
     background-color: $my-blue;
     color: $my-white;
     cursor: pointer;
@@ -230,7 +230,7 @@
 .ExploreCategoryAll{
     background-color: rgb(243, 243, 243);
     padding: 30px;
-    margin-top: 30px;
+    margin-bottom: 30px;
     border-radius: 10px;
 }
 
@@ -250,16 +250,16 @@
 
 .categorybtn{
     display: flex;
-    flex-wrap: wrap;
     gap: 20px;
     padding-top: 10px;
+    width: 100%;
 }
 
 .categorybtn span{
+    
     padding: 10px 15px;
     border-radius: 10px;
     border: gray 1px solid;
-    // background-color: white;
     background: nones;
     cursor: pointer;
 }
@@ -310,8 +310,9 @@
 
 
     .talentImgDiv img{
-        width: 60%;
-        display: none;
+        width: 70%;
+        // display: none;
+        padding-top: 50px;
     }
 
     .findDiv{
@@ -343,7 +344,7 @@
     
 
     .imgCard {
-        height: 230px;
+        height: 200px;
         overflow: hidden;
         border-radius: 10px;
     }
@@ -368,7 +369,8 @@
     }
 
     .categorybtn{
-        display: flex;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
         flex-wrap: wrap;
         gap: 10px;
         padding-top: 20px;
@@ -434,6 +436,12 @@
         align-items: center;
         gap: 20px;
         padding-top: 10px;
+    }
+
+
+    .mytitle h3{
+        font-size: 13px;
+        font-weight: 400;
     }
 
     .mytitle p{

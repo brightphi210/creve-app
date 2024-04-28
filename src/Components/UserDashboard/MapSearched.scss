@@ -21,7 +21,7 @@
     background: white;
     position: relative;
     padding: 30px;
-    width: 53%; 
+    width: 60%; 
     max-height: 80vh;
 }
 
@@ -32,12 +32,13 @@
     margin-top: 20px;
 }
 
-.mapDivFlex div{
+.mapDivFlex div{ 
     width: 100%;
 }
 
-.mapDivFlex div img{
+.mapDivFlex .mapDivImage{
     width: 100%;
+    height: 500px;
 }
 
 
