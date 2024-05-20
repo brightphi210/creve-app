@@ -349,10 +349,10 @@
 
 
 .loader {
-    width: 15px;
-    height: 15px;
+    width: 25px;
+    height: 25px;
     border: 2px solid #FFF;
-    border-bottom-color: skyblue;
+    border-bottom-color: rgb(239, 18, 3);
     border-radius: 50%;
     display: inline-block;
     box-sizing: border-box;
@@ -366,7 +366,7 @@
     100% {
         transform: rotate(360deg);
     }
-    } 
+} 
 
 
 

@@ -7,7 +7,7 @@
 // ===================== TalentCompo ==============================
 
 .talentSectionDiv{
-    padding: 7% 8%;
+    padding: 7% 5%;
     padding-bottom: 10px;
 }
 .talentSection{
@@ -61,7 +61,7 @@
 // ====================== Find Main section ==============================
 
 .findMainSection{
-    padding: 30px 8%;
+    padding: 30px 5%;
     padding-bottom: 100px;
 }
 
@@ -102,7 +102,7 @@
 
 .imagecard{
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
     gap: 20px;
     align-items: center;
 }
@@ -120,15 +120,10 @@
 }
 
 .cardDiv{
-    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
-    background-color: $my-white;
     border-radius: 5px;
     cursor: pointer;
-    padding: 10px;
     padding-bottom: 0;
     width: 100%;
-    height: fit-content;
-    position: relative;
 }
 
 .cardDivCarol{
@@ -137,10 +132,9 @@
 }
 
 .imgCard {
-    height: 100px;
+    height: 250px;
     overflow: hidden;
     border-radius: 5px;
-    box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
 }
 
 .imgCard img{
@@ -149,7 +143,7 @@
 
 
 .cardProfileDiv{
-    padding: 20px 10px;
+    padding: 15px 0;
 }
 
 
@@ -166,7 +160,7 @@
 .cardProfileDiv2{
     display: flex;
     align-items: center;
-    padding-top: 15px;
+    gap: 10px;
 }
 
 
@@ -178,19 +172,14 @@
 }
 
 .cardProfImageDiv{
-    position: absolute;
-    width: 100px;
-    height: 100px;
-    border-radius: 50%;
+    width: 30px;
+    height: 30px;
     overflow: hidden;
-    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
-    top: 10%;
-    left: 30%;
-    border: solid 4px white;
+    border-radius: 50%;
 }
 
 .cardProfImageDiv img{
-    width: 110px;
+    width: 32px;
 }
 
 
@@ -205,23 +194,29 @@
 }
 
 
+.cardProfilePrice{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+}
+
+
+.cardProfilePrice button{
+    font-size: 10px;
+    border: none;
+    background-color: rgb(217, 216, 216);
+    padding: 2px 5px;
+    border-radius: 5px;
+}
+
+
 .cardProBtn2 {
     margin-left: auto;
     align-items: center;
     display: flex;
 }
 
-.cardProBtn button{
-    display: flex;
-    gap: 5px;
-    padding: 5px 20px;
-    border: none;
-    background-color: $my-blue;
-    color: $my-white;
-    align-items: center;
-    border-radius: 20px;
-    font-size: 12px;
-}
 
 
 .cardProBtn2 button{
@@ -229,8 +224,8 @@
     gap: 5px;
     padding: 5px 10px;
     border: none;
-    background-color: rgb(231, 231, 231);
-    color: $my-blue;
+    background-color: rgb(182, 141, 219);
+    color: white;
     align-items: center;
     border-radius: 20px;
     font-size: 9px;
@@ -296,6 +291,10 @@
         padding-bottom: 100px;
     }
    
+    
+    .findDiv p{
+        font-size: 12px;
+    }
    
     .talentSectionDiv{
         padding: 20% 3%;
@@ -308,7 +307,7 @@
         padding: 50px 3%;
         border-radius: 10px;
     }
-    
+
 
     
     .imagecard{
@@ -327,6 +326,11 @@
     }
 
 
+    .talentExplore{
+        padding: 20px;
+    }
+
+
     .talentExplore h2{
         font-size: 25px;
         line-height: 30px;
@@ -337,16 +341,18 @@
     .talentImgDiv img{
         width: 70%;
         padding-top: 50px;
+        display: none;
     }
 
     .findDiv{
-        display: block;
+        display: flex;
     }
 
 
     .findDiv button{
-        margin-top: 10px;
-        padding: 10px 60px;
+        padding: 10px;
+        font-size: 12px;
+        margin: 0;
     }
 
     .imagecardCarol{
@@ -361,20 +367,14 @@
     }
 
 
-    .cardDiv{
-        box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
-    }
-    
-
     .imgCard {
-        height: 100px;
+        height: 250px;
         overflow: hidden;
         border-radius: 5px;
-        box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
     }
     
     .imgCard img{
-        width: 100%;
+        width: 102%;
         border-radius: 5px;
     }
     
@@ -382,7 +382,7 @@
     // ================== Explore Div ======================
     .ExploreCategoryAll{
         padding: 20px 20px;
-        margin-bottom: 60px;
+        margin-bottom: 20px;
     }
 
     .exploreDivAll h2{
@@ -409,21 +409,18 @@
 
 
     .cardProfileDiv{
-        padding: 20px 5px;
+        padding: 10px 5px;
         color: black;
     }
 
 
     .cardProfImageDiv{
-        width: 100px;
-        height: 100px;
-        left: 10%;
-        top: 15%;
+        width: 30px;
     }
     
 
     .cardProfImageDiv img{
-        width: 110px;
+        width: 32px;
     }
 
 
@@ -447,7 +444,7 @@
 
     .cardProfileDiv2 {
         align-items: center;
-        padding-top: 20px;
+        padding-top: 0;
     }
 
     .cardProBtn2 button{

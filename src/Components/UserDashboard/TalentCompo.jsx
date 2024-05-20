@@ -23,15 +23,16 @@ import { IoIosArrowRoundForward } from "react-icons/io";
 import { BASE_URL } from '../api/api'
 import { jwtDecode } from "jwt-decode";
 
+import { Swiper, SwiperSlide } from 'swiper/react';
 
+import 'swiper/css';
+import 'swiper/css/pagination';
+import 'swiper/css/navigation';
+import { Pagination, Navigation } from 'swiper/modules';
 
 
 const TalentCompo = () => {
 
-    // const navigate = useNavigation()
-
-
-  
 
     let [authTokens, setAuthTokens] = useState(()=> localStorage.getItem('authTokens') ? JSON.parse(localStorage.getItem('authTokens')) : null)
 
@@ -77,10 +78,6 @@ const TalentCompo = () => {
       const closeModal1 =()=>{
         setShow1(false)
       }
-
-
-  
-
 
       const [showMap, setShowMap] = useState(false)
 
@@ -149,8 +146,6 @@ const TalentCompo = () => {
                 <div className='exploreDivAll'>
                     <h2>Explore by categories</h2>
                     
-                    {/* <p><Link to={'/searchedResult'}>See All</Link></p> */}
-                    
                 </div>
                 <div className='categorybtn'>
                     <span>Furniture</span>
@@ -168,6 +163,7 @@ const TalentCompo = () => {
                 <p>Find Talents by Location <PiMapPinLineFill className='mapIcon'/></p>
                 {/* <input type="text" placeholder='search' style={{padding : 10, paddingInline : 30}}/> */}
                 {/* <button onClick={openModalMap}>Search </button> */}
+
                 <Link to={'/searchedResult'}><button>Search Talents</button></Link>
             </div>
 
@@ -190,8 +186,9 @@ const TalentCompo = () => {
                                         </div>
 
 
-                                        <div style={{display : 'flex', alignItems : 'center', gap : 5}}>
+                                        <div className='cardProfilePrice'>
                                             <p>{singleTalent.display_name}</p>
+                                            <button>{singleTalent.starting_price}</button>
                                         </div>
 
 
@@ -207,12 +204,6 @@ const TalentCompo = () => {
                                         </div>
                                         )}
                                     </div>
-
-                                    <div className='mytitle'>
-                                        <h4>{singleTalent.summary_of_profile}</h4>
-                                        <p>N{(singleTalent.starting_price).toLocaleString()}</p>
-                                    </div>
-
                                 </div>
                             </div>
                         </Link>
