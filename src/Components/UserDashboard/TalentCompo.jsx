@@ -185,7 +185,6 @@ const TalentCompo = () => {
                                             <img src={singleTalent.profile_pics} alt="" />
                                         </div>
 
-
                                         <div className='cardProfilePrice'>
                                             <p>{singleTalent.display_name}</p>
                                             <button>{singleTalent.starting_price}</button>
