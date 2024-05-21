@@ -23,7 +23,7 @@ const CreativeWelcom = () => {
               <p>Clients are looking for talented individuals like you, 
                   and your profile is the key to making a lasting impression.
               </p>
-              <Link to={`${'/'}creativeProfileCategory`}>
+              <Link to={`${'/'}creative-onboard-all`}>
                 <button>Create a Profile</button>
               </Link>
           </div>

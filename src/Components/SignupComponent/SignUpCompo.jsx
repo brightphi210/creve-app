@@ -162,16 +162,12 @@ const SignUpCompo = () => {
               <p className='forget'>Forgot Password</p>
               <button className='loginBtn' type='submit'>{isLoading ? <span className="loader2"></span> : 'Join as User'}</button>
 
-
-              <div className='hrDiv'>
-                <hr /> <p>or</p> <hr />
+              <div className='createAccDiv'>
+                <p className=''>Already have an account?</p>
+                <p className='dontpFlex'>
+                  <Link to={'/login'}>Login</Link>
+                </p>
               </div>
-
-              <div className='googleDiv'>
-                <button><IoLogoGoogle />Signup with Google</button>
-                <p className='dontFlex'>Already have an account? <p className='dontpFlex'><Link to={'/login'}>Login to account</Link></p></p>
-              </div>
-
 
               <div className='warining'>
                 <p>Password: At least 8 characters, alphanumeric, upper & lower case</p>

@@ -20,7 +20,6 @@ const CreativeOnboardProfile = ({formData, setFormData, onSubmit, onChange}) => 
 
         <div className='CreativeDetailsGenSec'>
 
-          <p className={`sidebar ${isSidebarVisible ? 'visible' : 'hidden'}`}><CreativeOnbardSide /></p>
           <div className='creativeDetailSec'>
 
           <div className='creativeIconText'>

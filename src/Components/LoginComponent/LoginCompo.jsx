@@ -170,13 +170,11 @@ const LoginCompo = () => {
                       
                     }}></span> : 'Login'}</button>
 
-                    <div className='hrDiv'>
-                      <hr /> <p>or</p> <hr />
-                    </div>
-
-                    <div className='googleDiv'>
-                      <button><IoLogoGoogle />Login with Google</button>
-                      <p className='dontFlex'>Don’t have an account? <p className='dontpFlex'><Link to={'/registerOption'}>Create New Account</Link></p></p>
+                    <div className='createAccDiv'>
+                      <p className=''>Don’t have an account? </p>
+                      <p className='dontpFlex'>
+                        <Link to={'/registerOption'}>Register</Link>
+                      </p>
                     </div>
                   </div>
                 </form>

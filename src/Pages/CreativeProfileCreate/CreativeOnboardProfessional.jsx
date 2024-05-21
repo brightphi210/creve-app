@@ -49,7 +49,6 @@ const CreativeOnboardProfessional = ({
 
         <div className='CreativeDetailsGenSec'>
 
-          <p className={`sidebar ${isSidebarVisible ? 'visible' : 'hidden'}`}><CreativeOnbardSide /></p>
           <div className='creativeDetailSec'>
 
 
@@ -83,64 +82,6 @@ const CreativeOnboardProfessional = ({
                     required/>
                 </div>
 
-                <form>
-                    <div style={{position : 'relative'}}>
-                      <p >Skills* <span style={{color : 'gray', fontStyle : 'italic'}}>Maximum of 10 skills</span></p>
-                      <input 
-                        type="text" 
-                        placeholder='E.g. Java'
-                        required
-                        
-                        
-                        value={selectedSkill}
-                        onChange={handleSkillChange}
-                      />
-                      <button className='skillBtn' disabled={selectedSkill === ''} onClick={handleSkillSubmit}>+</button>
-                    </div>
-
-                    <div className='skillMainDiv'>
-                      {
-                        skillsArray.map((mySkill, index) => (
-                          <div key={index} className='skillDiv'>
-                            <div>
-                              <span>{mySkill}</span>
-                              <IoClose style={{cursor : 'pointer'}} onClick={() => handleRemoveSkill(index)} color='orange'  />
-                            </div>
-                          </div>
-                        ))
-                      }
-                    </div>
-
-                      {/* <button onClick={handleSubmit2}>Submit</button> */}
-                </form>
-
-
-                <div className='uploadImage'>
-                    <p >Gallery* <span style={{color : 'gray', fontStyle : 'italic'}}>Maximum of 10 skills</span></p>
-
-                    <div>
-                      <input type="file" id="" onChange={handleImageChange} />   
-                      <button onClick={handleImageSubmit} disabled={selectedImage === null} style={{fontSize : '20px', padding : '10px'}}>Add</button>
-                    </div>
-                </div>
-
-
-                <div className='imageShow'>
-                
-                  {
-                    imageArray.map((myImage, index) => (
-                      <div key={index} className=''>
-                        <div>
-                          <img src={URL.createObjectURL(myImage)} alt={`Image ${index}`} />
-                          <MdDelete onClick={() => handleRemoveImage(index)} color='orange' />
-                        </div>
-                        {console.log('This is my Image', myImage.name)}
-                      </div>
-                    ))
-                  }
-                  
-                </div>
-
 
                 <div>
                   <p >Website Link</p>
@@ -167,6 +108,8 @@ const CreativeOnboardProfessional = ({
               </form>
             </div>
           </div>
+
+
         </div>
     </div>
   )
